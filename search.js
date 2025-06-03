@@ -8,14 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.insertAdjacentHTML('afterbegin', loadingHTML);
 
     const container = document.getElementById('appContainer');
-    const searchInput = document.getElementById('searchInput');
     const archiveUser = 'legacyios_archive';
+
+    console.log("Starting fetch..."); // Debug log
 
     // Fetch all collections
     fetch(`https://archive.org/services/search/v1/scrape?fields=identifier&q=collection:(${archiveUser})&count=100`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.json();
+        })
         .then(collections => {
+            console.log("Collections found:", collections.items.length); // Debug log
+            if (!collections.items || collections.items.length === 0) {
+                throw new Error("No collections found");
+            }
+
             const appPromises = collections.items.map(collection => {
+                console.log("Fetching collection:", collection.identifier); // Debug log
                 return fetch(`https://archive.org/metadata/${collection.identifier}`)
                     .then(res => res.json())
                     .then(data => {
@@ -23,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             file.name.endsWith('.ipa') && 
                             !file.name.includes('_meta.xml')
                         );
+                        console.log(`Found ${ipaFiles.length} IPAs in ${collection.identifier}`); // Debug log
                         return ipaFiles.map(ipa => ({
                             name: cleanAppName(ipa.name),
                             link: `https://archive.org/download/${collection.identifier}/${ipa.name}`,
@@ -36,19 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(appsArrays => {
             const allApps = appsArrays.flat();
+            console.log("Total apps loaded:", allApps.length); // Debug log
             renderApps(allApps);
-            
-            searchInput.addEventListener('input', () => {
-                const query = searchInput.value.toLowerCase();
-                const filtered = allApps.filter(app => 
-                    app.name.toLowerCase().includes(query)
-                );
-                renderApps(filtered);
-            });
         })
         .catch(error => {
             console.error("Error:", error);
-            document.querySelector('.loading-text').textContent = "Error loading apps. Refresh to try again.";
+            document.querySelector('.loading-text').textContent = "Error loading apps. Check console (F12) for details.";
+            container.innerHTML = `<div class="error">Failed to load apps: ${error.message}</div>`;
         })
         .finally(() => {
             setTimeout(() => {
@@ -58,50 +63,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         });
 
-    function cleanAppName(filename) {
-        return filename
-            .replace('.ipa', '')
-            .replace(/_/g, ' ')
-            .replace(/([a-z])([A-Z])/g, '$1 $2')
-            .replace(/\b\w/g, l => l.toUpperCase());
-    }
-
-    function findIconPath(files, ipaName, collectionId) {
-        const baseName = ipaName.replace('.ipa', '');
-        const possibleIcons = [
-            `${baseName}.png`,
-            `${baseName}.jpg`,
-            `${baseName}.jpeg`,
-            `${baseName}_icon.png`,
-            'icon.png'
-        ];
-        
-        const foundIcon = files.find(file => 
-            possibleIcons.includes(file.name.toLowerCase())
-        );
-        
-        return foundIcon ? 
-            `https://archive.org/download/${collectionId}/${foundIcon.name}` : 
-            'https://archive.org/download/legacyios_archive/default_app_icon.png';
-    }
-
-    function renderApps(apps) {
-        container.innerHTML = '';
-        if (apps.length === 0) {
-            container.innerHTML = '<p class="no-results">No apps found. Try another search.</p>';
-            return;
-        }
-        
-        apps.forEach(app => {
-            const card = document.createElement('div');
-            card.className = 'app-card';
-            card.innerHTML = `
-                <img src="${app.icon}" alt="${app.name}" onerror="this.src='https://archive.org/download/legacyios_archive/default_app_icon.png'">
-                <h2>${app.name}</h2>
-                ${app.format ? `<p>${app.format}</p>` : ''}
-                <a href="${app.link}" target="_blank">Download</a>
-            `;
-            container.appendChild(card);
-        });
-    }
+    // ... (keep the existing cleanAppName, findIconPath, and renderApps functions)
 });
