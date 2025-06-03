@@ -1,70 +1,96 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Show loading screen
-    const loadingHTML = `
-    <div class="loading-container">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">Loading Legacy iOS Apps...</div>
-    </div>`;
-    document.body.insertAdjacentHTML('afterbegin', loadingHTML);
-
+    // Simple loading screen
     const container = document.getElementById('appContainer');
-    const searchInput = document.getElementById('searchInput');
-    const archiveUser = 'legacyios_archive'; // Your Archive.org username
+    container.innerHTML = `
+        <div class="loading" style="
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+            color: #666;
+        ">
+            Loading apps...
+        </div>
+    `;
 
-    // Step 1: Fetch ALL your public items
-    fetch(`https://archive.org/services/search/v1/scrape?fields=identifier&q=uploader:(${archiveUser})&count=1000`)
+    // Your Archive.org username
+    const ARCHIVE_USER = 'legacyios_archive';
+    
+    // More reliable API endpoint
+    const API_URL = `https://archive.org/advancedsearch.php?q=uploader:${ARCHIVE_USER}&output=json&rows=100`;
+
+    console.log("Starting app load...");
+
+    // First fetch all your Archive.org items
+    fetch(API_URL)
         .then(response => {
-            if (!response.ok) throw new Error("Failed to fetch your Archive.org items");
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             return response.json();
         })
         .then(data => {
-            const allItems = data.items.map(item => item.identifier);
-            console.log("Found items:", allItems);
+            console.log("Found items:", data.response.docs.length);
             
-            // Step 2: Scan each item for IPAs
-            return Promise.all(
-                allItems.map(itemId => 
-                    fetch(`https://archive.org/metadata/${itemId}`)
-                        .then(res => res.json())
-                        .then(itemData => {
-                            const ipas = itemData.files.filter(f => 
-                                f.name.endsWith('.ipa') && 
-                                !f.name.includes('_meta.xml')
-                            );
-                            return ipas.map(ipa => ({
-                                name: formatAppName(ipa.name),
-                                link: `https://archive.org/download/${itemId}/${ipa.name}`,
-                                icon: findBestIcon(itemData.files, ipa.name, itemId),
-                                item: itemId,
-                                size: ipa.size ? (ipa.size/1000000).toFixed(1) + ' MB' : ''
-                            }));
-                        })
-                        .catch(e => {
-                            console.warn(`Skipping ${itemId}:`, e.message);
-                            return []; // Skip failed items
-                        })
-                )
-            );
+            // Process each item to find IPAs
+            const processItem = async (item) => {
+                try {
+                    const itemData = await fetch(`https://archive.org/metadata/${item.identifier}`)
+                        .then(res => res.json());
+                    
+                    const ipaFiles = itemData.files.filter(file => 
+                        file.name.endsWith('.ipa') && 
+                        !file.name.includes('_meta.xml')
+                    );
+                    
+                    return ipaFiles.map(ipa => ({
+                        name: formatName(ipa.name),
+                        link: `https://archive.org/download/${item.identifier}/${ipa.name}`,
+                        icon: findIcon(itemData.files, ipa.name, item.identifier),
+                        size: ipa.size ? (ipa.size/1000000).toFixed(1) + ' MB' : ''
+                    }));
+                } catch (e) {
+                    console.warn(`Failed to process ${item.identifier}:`, e);
+                    return [];
+                }
+            };
+            
+            // Process all items in parallel
+            return Promise.all(data.response.docs.map(processItem));
         })
         .then(appsArrays => {
             const allApps = appsArrays.flat();
             console.log("Total apps found:", allApps.length);
             
-            if (allApps.length === 0) throw new Error("No IPA files found in your account");
+            if (allApps.length === 0) {
+                throw new Error("No IPA files found in your Archive.org items");
+            }
             
             renderApps(allApps);
             setupSearch(allApps);
         })
         .catch(error => {
-            console.error("Fatal error:", error);
-            showError(error.message);
-        })
-        .finally(() => {
-            document.querySelector('.loading-container')?.remove();
+            console.error("Loading failed:", error);
+            container.innerHTML = `
+                <div class="error" style="
+                    text-align: center;
+                    padding: 20px;
+                    color: #d00;
+                ">
+                    <h2>⚠️ Loading Failed</h2>
+                    <p>${error.message}</p>
+                    <button onclick="window.location.reload()" style="
+                        padding: 8px 15px;
+                        background: #e0e0e0;
+                        border: none;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                    ">Retry</button>
+                </div>
+            `;
         });
 
-    // Helper Functions
-    function formatAppName(filename) {
+    // Helper functions
+    function formatName(filename) {
         return filename
             .replace('.ipa', '')
             .replace(/_/g, ' ')
@@ -72,19 +98,19 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/\b\w/g, l => l.toUpperCase());
     }
 
-    function findBestIcon(files, ipaName, itemId) {
+    function findIcon(files, ipaName, itemId) {
         const base = ipaName.replace('.ipa', '');
         const patterns = [
             `${base}.png`, `${base}.jpg`, `${base}.jpeg`,
             `${base}_icon.png`, 'icon.png', 'thumbnail.jpg'
         ];
         
-        const iconFile = files.find(f => 
+        const icon = files.find(f => 
             patterns.some(p => f.name.toLowerCase() === p.toLowerCase())
         );
         
-        return iconFile ? 
-            `https://archive.org/download/${itemId}/${iconFile.name}` : 
+        return icon ? 
+            `https://archive.org/download/${itemId}/${icon.name}` : 
             `https://archive.org/services/img/${itemId}`;
     }
 
@@ -92,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         container.innerHTML = apps.map(app => `
             <div class="app-card">
                 <img src="${app.icon}" alt="${app.name}" 
-                     onerror="this.src='https://archive.org/services/img/${app.item}'">
+                     onerror="this.src='https://archive.org/services/img/${ARCHIVE_USER}'">
                 <h2>${app.name}</h2>
                 ${app.size ? `<p>${app.size}</p>` : ''}
                 <a href="${app.link}" target="_blank">Download</a>
@@ -101,24 +127,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function setupSearch(allApps) {
+        const searchInput = document.getElementById('searchInput');
         searchInput.addEventListener('input', () => {
             const query = searchInput.value.toLowerCase();
             renderApps(
-                query ? allApps.filter(a => 
-                    a.name.toLowerCase().includes(query) : 
-                    allApps
+                query ? allApps.filter(app => 
+                    app.name.toLowerCase().includes(query)
+                ) : allApps
             );
         });
-    }
-
-    function showError(msg) {
-        container.innerHTML = `
-            <div class="error">
-                <h2>⚠️ Loading Failed</h2>
-                <p>${msg}</p>
-                <p><small>Check browser console (F12) for details</small></p>
-                <button onclick="window.location.reload()">Retry</button>
-            </div>
-        `;
     }
 });
