@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iOS App Archive</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
     <header>
         <h1>iOS App Archive</h1>
-        <input type="text" id="searchInput" placeholder="Search for any app...">
+        <input type="text" id="searchInput" placeholder="Search apps...">
     </header>
-    <main id="appContainer"></main>
+    
+    <div id="appContainer"></div>
+    
+    <!-- Load these 3 files in THIS ORDER -->
+    <link rel="stylesheet" href="style.css">
+    <script src="ipa-data.json"></script>
     <script src="search.js"></script>
 </body>
-</html>
