@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy iOS Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Loading animation */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 1000;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #6db3f2;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Modal animation */
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <h2>Loading iOS App Archive</h2>
+        <p>Fetching apps from Archive.org...</p>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-mobile-alt"></i> iOS App Archive</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search apps...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div id="appContainer" class="app-list"></div>
+    </main>
+    
+    <!-- App Detail Modal -->
+    <div id="appModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalAppName"></h2>
+                <button id="closeModal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="app-icon-container">
+                    <img id="modalAppIcon" src="" alt="App Icon">
+                </div>
+                <div class="app-details">
+                    <p><strong>Developer:</strong> <span id="modalDeveloper"></span></p>
+                    <p><strong>Released:</strong> <span id="modalDate"></span></p>
+                    <p><strong>Version:</strong> <span id="modalVersion"></span></p>
+                    <p><strong>Categories:</strong> <span id="modalCategories"></span></p>
+                    <p id="modalDescription"></p>
+                </div>
+                <div class="modal-actions">
+                    <a id="downloadLink" class="download-button" target="_blank">
+                        <i class="fas fa-download"></i> Download IPA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error container -->
+    <div id="errorContainer" class="error-container"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
