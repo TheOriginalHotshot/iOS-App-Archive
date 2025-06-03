@@ -1,0 +1,83 @@
+name: Update App Data
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight
+  workflow_dispatch: # Manual trigger
+  push: # Run when code changes
+
+jobs:
+  update-apps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Fetch and process data
+        run: |
+          pip install requests
+          python <<EOF
+          import requests
+          import json
+          import os
+
+          print("Fetching Archive.org data...")
+          response = requests.get(
+              "https://archive.org/advancedsearch.php",
+              params={
+                  "q": "uploader:legacyios_archive",
+                  "output": "json",
+                  "rows": 1000,
+                  "fl[]": "identifier"
+              }
+          )
+          items = response.json()['response']['docs']
+          print(f"Found {len(items)} items")
+
+          apps = []
+          for item in items:
+              try:
+                  print(f"Processing {item['identifier']}...")
+                  item_data = requests.get(
+                      f"https://archive.org/metadata/{item['identifier']}"
+                  ).json()
+                  
+                  ipa_files = [f for f in item_data['files'] if f['name'].lower().endswith('.ipa')]
+                  if not ipa_files:
+                      continue
+                      
+                  icon_files = [
+                      f for f in item_data['files'] 
+                      if f['name'].lower().endswith(('.png', '.jpg', '.jpeg'))
+                  ]
+                  
+                  metadata = item_data.get('metadata', {})
+                  apps.append({
+                      "id": item['identifier'],
+                      "name": metadata.get('title', item['identifier']),
+                      "developer": metadata.get('creator', 'Unknown'),
+                      "date": metadata.get('date', 'Unknown'),
+                      "version": metadata.get('version', '1.0'),
+                      "categories": metadata.get('subject', []),
+                      "description": metadata.get('description', 'No description'),
+                      "ipaUrl": f"https://archive.org/download/{item['identifier']}/{ipa_files[0]['name']}",
+                      "iconUrl": f"https://archive.org/download/{item['identifier']}/{icon_files[0]['name']}" if icon_files else f"https://archive.org/services/img/{item['identifier']}"
+                  })
+              except Exception as e:
+                  print(f"Error processing {item['identifier']}: {str(e)}")
+
+          print(f"Saving {len(apps)} apps")
+          with open('apps.json', 'w') as f:
+              json.dump(apps, f, indent=2)
+          EOF
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add apps.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update app data"
+          git push
