@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <title>Legacy iOS Archive</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Critical loading styles */
+        /* Loading animation */
         #loading {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
             z-index: 1000;
+            font-family: 'Helvetica Neue', sans-serif;
         }
         .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(255,255,255,0.3);
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
             border-radius: 50%;
             border-top-color: white;
-            animation: spin 1s ease-in-out infinite;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
         }
         @keyframes spin {
             to { transform: rotate(360deg); }
@@ -37,7 +40,8 @@
 <body>
     <div id="loading">
         <div class="spinner"></div>
-        <p>Loading apps...</p>
+        <h2>Loading Legacy iOS Apps</h2>
+        <p>Scanning Archive.org uploads...</p>
     </div>
 
     <header>
@@ -47,17 +51,7 @@
     
     <div id="appContainer"></div>
 
-    <script src="search.js"></script>
-    
-    <script>
-        // Simple error fallback
-        window.addEventListener('error', function() {
-            document.getElementById('loading').innerHTML = `
-                <h2>⚠️ Loading Failed</h2>
-                <p>Please refresh the page</p>
-                <button onclick="window.location.reload()">Retry</button>
-            `;
-        });
-    </script>
+    <!-- Cache-busting parameter to force update -->
+    <script src="search.js?v=4"></script>
 </body>
 </html>
