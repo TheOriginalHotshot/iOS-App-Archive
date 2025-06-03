@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legacy iOS Archive</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Loading animation */
@@ -36,10 +35,320 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Modal animation */
+        /* iOS 5 Theme */
+        body {
+            background-color: #ebebeb;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to bottom, #1a1a1a, #000);
+            padding: 15px 0;
+            border-bottom: 1px solid #000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header h1 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        
+        #searchInput {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border-radius: 25px;
+            border: 1px solid #444;
+            font-size: 16px;
+            background: #333;
+            color: white;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .fa-search {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8e8e93;
+        }
+        
+        /* App List Styles */
+        .app-list {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .app-row {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #d1d1d6;
+        }
+        
+        .app-row:nth-child(odd) {
+            background: #f0f0f0;
+        }
+        
+        .app-row:nth-child(even) {
+            background: #e5e5e5;
+        }
+        
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            margin-right: 15px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: white;
+            padding: 5px;
+            object-fit: contain;
+        }
+        
+        .app-info {
+            flex: 1;
+        }
+        
+        .app-name {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 3px;
+            color: #000;
+        }
+        
+        .app-developer {
+            font-size: 14px;
+            color: #8e8e93;
+        }
+        
+        .more-info-button {
+            padding: 8px 20px;
+            background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
+            color: #333;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #999;
+            box-shadow: 
+                inset 0 1px 0 rgba(255,255,255,0.4),
+                0 1px 2px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            min-width: 100px;
+            text-align: center;
+        }
+        
+        .more-info-button:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+            border-radius: 15px 15px 0 0;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 85%;
+            background: rgba(0,0,0,0.7);
+            z-index: 100;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+        .modal-content {
+            background: #f5f5f5;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+            animation: slideUp 0.4s ease-out;
+            overflow: hidden;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
         @keyframes slideUp {
             from { transform: translateY(100%); }
             to { transform: translateY(0); }
+        }
+        
+        .modal-header {
+            background: #dcdcdc;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .modal-header h2 {
+            font-size: 22px;
+            color: #000;
+        }
+        
+        #closeModal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+        }
+        
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .app-icon-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        #modalAppIcon {
+            width: 100px;
+            height: 100px;
+            border-radius: 18px;
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 8px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .app-details {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        
+        .app-details p {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .app-details strong {
+            color: #666;
+            display: inline-block;
+            width: 100px;
+        }
+        
+        .modal-actions {
+            text-align: center;
+        }
+        
+        .download-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(to bottom, #4cd964, #2daf50);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border: 1px solid #2daf50;
+            box-shadow: 
+                inset 0 1px 0 rgba(255,255,255,0.3),
+                0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-button:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+            border-radius: 25px 25px 0 0;
+        }
+        
+        /* Error Handling */
+        .error-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 500px;
+            width: 90%;
+            z-index: 200;
+        }
+        
+        .error-message {
+            background: #ff3b30;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .error-message button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .app-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .app-icon {
+                margin-bottom: 10px;
+            }
+            
+            .more-info-button {
+                align-self: flex-end;
+                margin-top: 10px;
+            }
         }
     </style>
 </head>
@@ -47,15 +356,14 @@
     <div id="loading">
         <div class="spinner"></div>
         <h2>Loading iOS App Archive</h2>
-        <p>Fetching apps from Archive.org...</p>
     </div>
 
     <header>
         <div class="header-content">
             <h1><i class="fas fa-mobile-alt"></i> iOS App Archive</h1>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search apps...">
                 <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search apps...">
             </div>
         </div>
     </header>
@@ -94,6 +402,144 @@
     <!-- Error container -->
     <div id="errorContainer" class="error-container"></div>
     
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const container = document.getElementById('appContainer');
+            const searchInput = document.getElementById('searchInput');
+            const loadingEl = document.getElementById('loading');
+            const errorContainer = document.getElementById('errorContainer');
+            const appModal = document.getElementById('appModal');
+            const closeModal = document.getElementById('closeModal');
+            
+            // Show error message
+            function showError(message) {
+                const errorEl = document.createElement('div');
+                errorEl.className = 'error-message';
+                errorEl.innerHTML = `
+                    <span>⚠️ ${message}</span>
+                    <button onclick="this.parentElement.remove()">&times;</button>
+                `;
+                errorContainer.appendChild(errorEl);
+                
+                setTimeout(() => {
+                    errorEl.remove();
+                }, 5000);
+            }
+            
+            // Load app data
+            function loadAppData() {
+                return fetch('apps.json')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Failed to load app data');
+                        return response.json();
+                    })
+                    .catch(error => {
+                        showError('Failed to load app data. Using fallback...');
+                        // Fallback to sample data
+                        return [
+                            {
+                                "id": "fallback",
+                                "name": "Sample App",
+                                "developer": "Apple Inc.",
+                                "date": "2023-01-01",
+                                "version": "1.0",
+                                "categories": ["Utilities"],
+                                "description": "This is sample data while the app loads",
+                                "ipaUrl": "#",
+                                "iconUrl": "https://archive.org/services/img/legacyios_archive"
+                            }
+                        ];
+                    });
+            }
+            
+            // Render apps to the list
+            function renderApps(apps) {
+                container.innerHTML = '';
+                
+                if (apps.length === 0) {
+                    container.innerHTML = '<div class="app-row"><p>No apps found</p></div>';
+                    return;
+                }
+                
+                apps.forEach(app => {
+                    const appRow = document.createElement('div');
+                    appRow.className = 'app-row';
+                    appRow.innerHTML = `
+                        <img src="${app.iconUrl}" alt="${app.name}" class="app-icon" 
+                             onerror="this.src='https://archive.org/services/img/legacyios_archive'">
+                        <div class="app-info">
+                            <div class="app-name">${app.name}</div>
+                            <div class="app-developer">${app.developer}</div>
+                        </div>
+                        <button class="more-info-button" data-id="${app.id}">More Info</button>
+                    `;
+                    container.appendChild(appRow);
+                });
+                
+                // Add event listeners to buttons
+                document.querySelectorAll('.more-info-button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const appId = this.getAttribute('data-id');
+                        const app = apps.find(a => a.id === appId);
+                        if (app) showAppDetail(app);
+                    });
+                });
+            }
+            
+            // Show app detail modal
+            function showAppDetail(app) {
+                document.getElementById('modalAppName').textContent = app.name;
+                document.getElementById('modalDeveloper').textContent = app.developer;
+                document.getElementById('modalDate').textContent = app.date;
+                document.getElementById('modalVersion').textContent = app.version;
+                document.getElementById('modalCategories').textContent = app.categories.join(', ');
+                document.getElementById('modalDescription').textContent = app.description;
+                document.getElementById('modalAppIcon').src = app.iconUrl;
+                document.getElementById('downloadLink').href = app.ipaUrl;
+                
+                appModal.style.display = 'flex';
+            }
+            
+            // Initialize the app
+            async function init() {
+                try {
+                    const apps = await loadAppData();
+                    renderApps(apps);
+                    
+                    // Setup search
+                    searchInput.addEventListener('input', () => {
+                        const query = searchInput.value.toLowerCase();
+                        const filtered = apps.filter(app => 
+                            app.name.toLowerCase().includes(query) || 
+                            app.developer.toLowerCase().includes(query) ||
+                            (app.categories.join(', ').toLowerCase().includes(query)
+                        );
+                        renderApps(filtered);
+                    });
+                    
+                    // Close modal
+                    closeModal.addEventListener('click', () => {
+                        appModal.style.display = 'none';
+                    });
+                    
+                    // Close modal when clicking outside
+                    appModal.addEventListener('click', (e) => {
+                        if (e.target === appModal) {
+                            appModal.style.display = 'none';
+                        }
+                    });
+                    
+                } catch (error) {
+                    showError(`Initialization failed: ${error.message}`);
+                } finally {
+                    loadingEl.remove();
+                }
+            }
+            
+            // Start the app
+            init();
+        });
+    </script>
 </body>
 </html>
