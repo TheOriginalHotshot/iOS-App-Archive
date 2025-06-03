@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <title>Legacy iOS Archive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* iOS 5 App Store Theme */
+        :root {
+            --header-bg: linear-gradient(to bottom, #1a1a1a, #000);
+            --row-bg-1: #f0f0f0;
+            --row-bg-2: #e5e5e5;
+            --modal-bg: #f5f5f5;
+            --modal-header: #dcdcdc;
+            --button-gloss: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+            --ios-blue: #007aff;
+            --ios-grey: #8e8e93;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e9e9e9;
+            color: #333;
+            line-height: 1.6;
+        }
+
         /* Loading animation */
         #loading {
             position: fixed;
@@ -13,7 +39,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #0a0a0a;
+            background: rgba(0,0,0,0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -22,6 +48,7 @@
             z-index: 1000;
             font-family: 'Helvetica Neue', sans-serif;
         }
+
         .spinner {
             width: 50px;
             height: 50px;
@@ -31,21 +58,14 @@
             animation: spin 1s linear infinite;
             margin-bottom: 20px;
         }
+
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
-        
-        /* iOS 5 Theme */
-        body {
-            background-color: #ebebeb;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        
+
         /* Header Styles */
         header {
-            background: linear-gradient(to bottom, #1a1a1a, #000);
+            background: var(--header-bg);
             padding: 15px 0;
             border-bottom: 1px solid #000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.4);
@@ -53,13 +73,13 @@
             top: 0;
             z-index: 100;
         }
-        
+
         .header-content {
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         header h1 {
             color: white;
             font-size: 24px;
@@ -69,11 +89,11 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .search-container {
             position: relative;
         }
-        
+
         #searchInput {
             width: 100%;
             padding: 12px 20px 12px 45px;
@@ -84,7 +104,7 @@
             color: white;
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
         }
-        
+
         .fa-search {
             position: absolute;
             left: 15px;
@@ -92,7 +112,7 @@
             transform: translateY(-50%);
             color: #8e8e93;
         }
-        
+
         /* App List Styles */
         .app-list {
             max-width: 1000px;
@@ -102,22 +122,26 @@
             overflow: hidden;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
-        
+
         .app-row {
             display: flex;
             align-items: center;
             padding: 15px 20px;
             border-bottom: 1px solid #d1d1d6;
         }
-        
+
         .app-row:nth-child(odd) {
-            background: #f0f0f0;
+            background: var(--row-bg-1);
         }
-        
+
         .app-row:nth-child(even) {
-            background: #e5e5e5;
+            background: var(--row-bg-2);
         }
-        
+
+        .app-row:hover {
+            background: #dbeaf9;
+        }
+
         .app-icon {
             width: 60px;
             height: 60px;
@@ -128,23 +152,23 @@
             padding: 5px;
             object-fit: contain;
         }
-        
+
         .app-info {
             flex: 1;
         }
-        
+
         .app-name {
             font-size: 18px;
             font-weight: 500;
             margin-bottom: 3px;
             color: #000;
         }
-        
+
         .app-developer {
             font-size: 14px;
-            color: #8e8e93;
+            color: var(--ios-grey);
         }
-        
+
         .more-info-button {
             padding: 8px 20px;
             background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
@@ -163,7 +187,7 @@
             min-width: 100px;
             text-align: center;
         }
-        
+
         .more-info-button:after {
             content: "";
             position: absolute;
@@ -171,10 +195,10 @@
             left: 0;
             right: 0;
             height: 50%;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+            background: var(--button-gloss);
             border-radius: 15px 15px 0 0;
         }
-        
+
         /* Modal Styles */
         .modal {
             display: none;
@@ -188,9 +212,9 @@
             justify-content: center;
             align-items: flex-end;
         }
-        
+
         .modal-content {
-            background: #f5f5f5;
+            background: var(--modal-bg);
             width: 100%;
             max-width: 700px;
             border-radius: 20px 20px 0 0;
@@ -201,26 +225,26 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         @keyframes slideUp {
             from { transform: translateY(100%); }
             to { transform: translateY(0); }
         }
-        
+
         .modal-header {
-            background: #dcdcdc;
+            background: var(--modal-header);
             padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #ccc;
         }
-        
+
         .modal-header h2 {
             font-size: 22px;
             color: #000;
         }
-        
+
         #closeModal {
             background: none;
             border: none;
@@ -228,7 +252,7 @@
             color: #666;
             cursor: pointer;
         }
-        
+
         .modal-body {
             padding: 20px;
             overflow-y: auto;
@@ -236,12 +260,12 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         .app-icon-container {
             text-align: center;
             margin-bottom: 20px;
         }
-        
+
         #modalAppIcon {
             width: 100px;
             height: 100px;
@@ -251,7 +275,7 @@
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+
         .app-details {
             background: white;
             border-radius: 12px;
@@ -259,22 +283,22 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             margin-bottom: 20px;
         }
-        
+
         .app-details p {
             margin-bottom: 12px;
             font-size: 16px;
         }
-        
+
         .app-details strong {
             color: #666;
             display: inline-block;
             width: 100px;
         }
-        
+
         .modal-actions {
             text-align: center;
         }
-        
+
         .download-button {
             display: inline-block;
             padding: 12px 30px;
@@ -291,7 +315,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .download-button:after {
             content: "";
             position: absolute;
@@ -299,10 +323,10 @@
             left: 0;
             right: 0;
             height: 50%;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+            background: var(--button-gloss);
             border-radius: 25px 25px 0 0;
         }
-        
+
         /* Error Handling */
         .error-container {
             position: fixed;
@@ -313,7 +337,7 @@
             width: 90%;
             z-index: 200;
         }
-        
+
         .error-message {
             background: #ff3b30;
             color: white;
@@ -325,7 +349,7 @@
             align-items: center;
             animation: slideUp 0.3s ease-out;
         }
-        
+
         .error-message button {
             background: none;
             border: none;
@@ -333,7 +357,7 @@
             font-size: 20px;
             cursor: pointer;
         }
-        
+
         /* Responsive */
         @media (max-width: 600px) {
             .app-row {
@@ -412,6 +436,8 @@
             const appModal = document.getElementById('appModal');
             const closeModal = document.getElementById('closeModal');
             
+            let allApps = []; // Will store our app data
+
             // Show error message
             function showError(message) {
                 const errorEl = document.createElement('div');
@@ -426,33 +452,36 @@
                     errorEl.remove();
                 }, 5000);
             }
-            
-            // Load app data
-            function loadAppData() {
-                return fetch('apps.json')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Failed to load app data');
-                        return response.json();
-                    })
-                    .catch(error => {
-                        showError('Failed to load app data. Using fallback...');
-                        // Fallback to sample data
-                        return [
-                            {
-                                "id": "fallback",
-                                "name": "Sample App",
-                                "developer": "Apple Inc.",
-                                "date": "2023-01-01",
-                                "version": "1.0",
-                                "categories": ["Utilities"],
-                                "description": "This is sample data while the app loads",
-                                "ipaUrl": "#",
-                                "iconUrl": "https://archive.org/services/img/legacyios_archive"
-                            }
-                        ];
-                    });
+
+            // Load app data from apps.json
+            async function loadAppData() {
+                try {
+                    const response = await fetch('apps.json');
+                    if (!response.ok) {
+                        throw new Error('Failed to load app data');
+                    }
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error loading app data:', error);
+                    showError('Failed to load apps. Using sample data...');
+                    
+                    // Fallback sample data
+                    return [
+                        {
+                            "id": "sample-app",
+                            "name": "Sample App",
+                            "developer": "Apple Inc.",
+                            "date": "2023-01-01",
+                            "version": "1.0",
+                            "categories": ["Utilities", "Sample"],
+                            "description": "This is sample data while the real apps load",
+                            "ipaUrl": "#",
+                            "iconUrl": "https://archive.org/services/img/legacyios_archive"
+                        }
+                    ];
+                }
             }
-            
+
             // Render apps to the list
             function renderApps(apps) {
                 container.innerHTML = '';
@@ -481,39 +510,41 @@
                 document.querySelectorAll('.more-info-button').forEach(button => {
                     button.addEventListener('click', function() {
                         const appId = this.getAttribute('data-id');
-                        const app = apps.find(a => a.id === appId);
+                        const app = allApps.find(a => a.id === appId);
                         if (app) showAppDetail(app);
                     });
                 });
             }
-            
+
             // Show app detail modal
             function showAppDetail(app) {
                 document.getElementById('modalAppName').textContent = app.name;
                 document.getElementById('modalDeveloper').textContent = app.developer;
                 document.getElementById('modalDate').textContent = app.date;
                 document.getElementById('modalVersion').textContent = app.version;
-                document.getElementById('modalCategories').textContent = app.categories.join(', ');
+                document.getElementById('modalCategories').textContent = Array.isArray(app.categories) ? app.categories.join(', ') : app.categories;
                 document.getElementById('modalDescription').textContent = app.description;
                 document.getElementById('modalAppIcon').src = app.iconUrl;
                 document.getElementById('downloadLink').href = app.ipaUrl;
                 
                 appModal.style.display = 'flex';
             }
-            
+
             // Initialize the app
             async function init() {
                 try {
-                    const apps = await loadAppData();
-                    renderApps(apps);
+                    allApps = await loadAppData();
+                    renderApps(allApps);
                     
                     // Setup search
                     searchInput.addEventListener('input', () => {
                         const query = searchInput.value.toLowerCase();
-                        const filtered = apps.filter(app => 
+                        const filtered = allApps.filter(app => 
                             app.name.toLowerCase().includes(query) || 
                             app.developer.toLowerCase().includes(query) ||
-                            (app.categories.join(', ').toLowerCase().includes(query)
+                            (Array.isArray(app.categories) ? 
+                                app.categories.join(' ').toLowerCase().includes(query) :
+                                String(app.categories).toLowerCase().includes(query))
                         );
                         renderApps(filtered);
                     });
