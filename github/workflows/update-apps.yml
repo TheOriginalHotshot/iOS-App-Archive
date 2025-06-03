@@ -1,0 +1,64 @@
+name: Update App Data
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update-apps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        
+      - name: Fetch Archive.org data
+        run: |
+          curl "https://archive.org/advancedsearch.php?q=uploader:legacyios_archive&output=json&rows=1000&fl[]=identifier" -o items.json
+          
+      - name: Process data
+        id: process
+        run: |
+          echo "Processing data..."
+          npm install jq
+          sudo apt-get install jq
+          
+          # Extract identifiers
+          jq '.response.docs[].identifier' items.json > identifiers.txt
+          
+          # Fetch metadata for each item
+          while read id; do
+            id=${id//\"/}
+            curl "https://archive.org/metadata/$id" -o "$id.json"
+          done < identifiers.txt
+          
+          # Process into apps.json
+          echo '[' > apps.json
+          first=true
+          for file in *.json; do
+            if [ "$file" != "items.json" ]; then
+              if [ "$first" = false ]; then
+                echo ',' >> apps.json
+              fi
+              jq '{
+                id: .metadata.identifier,
+                name: .metadata.title,
+                developer: .metadata.creator,
+                date: .metadata.date,
+                version: (.metadata.version // (.metadata.description | match("v(\\d+\\.\\d+)")?.captures[0].string // "1.0")),
+                categories: (.metadata.subject // []),
+                description: .metadata.description,
+                ipaUrl: (.files[] | select(.name | endswith(".ipa")) | "https://archive.org/download/\(.dir)/\(.name)"),
+                iconUrl: (.files[] | select(.name | test("\\.(png|jpg|jpeg)$", "i")) | "https://archive.org/download/\(.dir)/\(.name)" | first)
+              }' $file >> apps.json
+              first=false
+            fi
+          done
+          echo ']' >> apps.json
+          
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add apps.json
+          git commit -m "Update app data" || echo "No changes"
+          git push
