@@ -35,13 +35,40 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+        
+        /* Error styling */
+        .error {
+            text-align: center;
+            padding: 40px;
+            color: #ff6b6b;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .error ul {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .error button {
+            padding: 10px 20px;
+            background: #4a9ce8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="loading">
         <div class="spinner"></div>
         <h2>Loading Legacy iOS Apps</h2>
-        <p>Scanning Archive.org uploads...</p>
+        <p>Scanning your Archive.org uploads...</p>
     </div>
 
     <header>
@@ -51,7 +78,7 @@
     
     <div id="appContainer"></div>
 
-    <!-- Cache-busting parameter to force update -->
-    <script src="search.js?v=4"></script>
+    <!-- Updated script with cache busting -->
+    <script src="search.js?v=5"></script>
 </body>
 </html>
