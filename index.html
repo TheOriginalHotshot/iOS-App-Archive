@@ -3,99 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Critical security headers -->
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
-    <!-- Preconnect to Archive.org for faster loading -->
-    <link rel="preconnect" href="https://archive.org">
-    <link rel="preconnect" href="https://archive.org" crossorigin>
     <title>Legacy iOS Archive</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Critical loading styles (works before CSS loads) */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            margin: 0;
-            background: #f0f0f0;
-        }
-        #initial-load {
+        /* Critical loading styles */
+        #loading {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background: rgba(0,0,0,0.8);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #000;
             color: white;
-            z-index: 9999;
+            z-index: 1000;
         }
-        /* Will be replaced by JS */
-        .js-only {
-            display: none;
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <!-- Initial loading screen (replaced by JS) -->
-    <div id="initial-load">
-        Loading Legacy iOS Archive...
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Loading apps...</p>
     </div>
 
-    <!-- Main content (hidden until JS loads) -->
-    <div class="js-only">
-        <header>
-            <h1>Legacy iOS Archive</h1>
-            <input type="text" id="searchInput" placeholder="Search apps..." disabled>
-        </header>
-        <div id="appContainer"></div>
-    </div>
+    <header>
+        <h1>Legacy iOS Archive</h1>
+        <input type="text" id="searchInput" placeholder="Search apps..." disabled>
+    </header>
+    
+    <div id="appContainer"></div>
 
+    <script src="search.js"></script>
+    
     <script>
-        // Remove initial loader and show content
-        document.getElementById('initial-load').remove();
-        document.querySelector('.js-only').style.display = 'block';
-        
-        // Modern feature detection
-        if (!window.Promise || !window.fetch) {
-            document.getElementById('appContainer').innerHTML = `
-                <div class="error">
-                    <h2>Browser Not Supported</h2>
-                    <p>Please use a modern browser like Chrome, Firefox or Safari</p>
-                </div>
+        // Simple error fallback
+        window.addEventListener('error', function() {
+            document.getElementById('loading').innerHTML = `
+                <h2>⚠️ Loading Failed</h2>
+                <p>Please refresh the page</p>
+                <button onclick="window.location.reload()">Retry</button>
             `;
-        }
-    </script>
-
-    <!-- Main app script with cache busting -->
-    <script src="search.js?v=3"></script>
-
-    <!-- Fallback error handling -->
-    <script>
-        window.addEventListener('error', function(e) {
-            const container = document.getElementById('appContainer') || document.body;
-            container.innerHTML = `
-                <div class="error" style="
-                    padding: 20px;
-                    text-align: center;
-                    color: #d00;
-                ">
-                    <h2>⚠️ Script Error</h2>
-                    <p>${e.message}</p>
-                    <p><small>Check console (F12) for details</small></p>
-                    <button onclick="window.location.reload()" style="
-                        padding: 8px 15px;
-                        background: #6db3f2;
-                        color: white;
-                        border: none;
-                        border-radius: 5px;
-                        margin-top: 10px;
-                    ">Retry</button>
-                </div>
-            `;
-            document.querySelector('.loading-container')?.remove();
         });
     </script>
 </body>
