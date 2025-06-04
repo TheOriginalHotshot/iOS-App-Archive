@@ -14,38 +14,55 @@
         }
 
         :root {
-            --header-bg: linear-gradient(145deg, #3a3a3c, #1c1c1e);
-            --list-bg-1: #e8e8e8;
-            --list-bg-2: #d8d8d8;
-            --button-bg: linear-gradient(145deg, #d0d0d0, #b0b0b0);
-            --modal-bg: linear-gradient(145deg, #e6e6e6, #c6c6c6);
-            --shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            --text-dark: #333;
-            --text-light: #fff;
-            --accent: #007aff;
-            --red-text: #ff3b30;
+            --header-bg: linear-gradient(145deg, #2c2c2e, #1a1a1c);
+            --list-bg-1: #3a3a3c;
+            --list-bg-2: #333335;
+            --button-bg: linear-gradient(145deg, #4a4a4c, #3a3a3c);
+            --modal-bg: linear-gradient(145deg, #4a4a4c, #3a3a3c);
+            --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            --text-dark: #111;
+            --text-light: #f0f0f0;
+            --accent: #0a84ff;
+            --red-text: #ff453a;
             --modal-height: 85vh;
+            --card-gradient: linear-gradient(145deg, #3a3a3c, #2a2a2c);
         }
 
         body {
-            background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+            background: linear-gradient(135deg, #1a1a1c, #2c2c2e);
             min-height: 100vh;
             padding-bottom: 60px;
             overflow-x: hidden;
+            color: #e0e0e0;
         }
 
-        /* Compact Header */
+        /* Glossy Header */
         header {
             background: var(--header-bg);
             height: 60px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
+            /* Gloss effect */
+            position: relative;
+            overflow: hidden;
+        }
+
+        header:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
+            opacity: 0.3;
+            border-radius: 0 0 50% 50% / 20%;
+            pointer-events: none;
         }
 
         .header-content {
@@ -76,6 +93,32 @@
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
+        /* Featured Apps Header */
+        .featured-header {
+            max-width: 800px;
+            margin: 30px auto 20px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .featured-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(145deg, #000, #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .featured-header i {
+            font-size: 32px;
+            background: linear-gradient(145deg, #000, #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         /* Search Container */
         .search-container {
             display: none;
@@ -93,34 +136,26 @@
 
         .search-input {
             flex: 1;
-            padding: 12px 50px 12px 15px;
+            padding: 12px 15px;
             border-radius: 30px;
             border: none;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(40, 40, 42, 0.8);
             color: white;
             font-size: 16px;
-            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
         }
 
         .search-input:focus {
             outline: none;
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 0 2px var(--accent);
-        }
-
-        .search-container i {
-            position: absolute;
-            left: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 16px;
+            background: rgba(50, 50, 52, 0.9);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 2px var(--accent);
         }
 
         .cancel-btn {
             background: var(--button-bg);
             border: none;
-            color: var(--text-dark);
+            color: var(--text-light);
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
@@ -130,10 +165,11 @@
             position: relative;
             overflow: hidden;
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            display: none;
         }
 
         .cancel-btn:before {
@@ -143,23 +179,23 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
             border-radius: 20px 20px 0 0;
         }
 
         .cancel-btn:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
             transform: translateY(-2px);
             box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .cancel-btn:active {
             transform: translateY(1px);
             box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+                0 1px 2px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         /* Main Content */
@@ -173,8 +209,8 @@
         .app-list {
             display: none;
             flex-direction: column;
-            gap: 2px;
-            margin-top: 20px;
+            gap: 10px;
+            margin-top: 10px;
         }
 
         .app-list.active {
@@ -184,11 +220,12 @@
         .app-item {
             display: flex;
             align-items: center;
-            padding: 12px 15px;
+            padding: 15px;
             background: var(--list-bg-1);
-            border-radius: 8px;
+            border-radius: 12px;
             transition: all 0.3s ease;
             position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .app-item:nth-child(even) {
@@ -196,25 +233,34 @@
         }
 
         .app-item:hover {
-            background: #e0e0e0;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #3f3f41;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         .app-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             margin-right: 15px;
             flex-shrink: 0;
+            background: #2a2a2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .app-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .app-icon i {
+            font-size: 28px;
+            color: #888;
         }
 
         .app-info {
@@ -224,33 +270,33 @@
         .app-title {
             font-size: 18px;
             font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 3px;
+            color: var(--text-light);
+            margin-bottom: 5px;
         }
 
         .app-developer {
             font-size: 14px;
-            color: #666;
+            color: #aaa;
         }
 
         /* View Details Button */
         .app-button {
             background: var(--button-bg);
             border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
+            padding: 10px 18px;
+            border-radius: 8px;
             font-size: 14px;
             font-weight: 600;
-            color: var(--text-dark);
+            color: var(--text-light);
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.3);
             flex-shrink: 0;
         }
 
@@ -261,23 +307,23 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-            border-radius: 5px 5px 0 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            border-radius: 8px 8px 0 0;
         }
 
         .app-button:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
             transform: translateY(-2px);
             box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .app-button:active {
             transform: translateY(1px);
             box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+                0 1px 2px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         /* Search Results */
@@ -293,27 +339,31 @@
         }
 
         .app-card {
-            background: linear-gradient(to bottom, #ffffff, #eaeaea);
+            background: var(--card-gradient);
             border-radius: 16px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
-            border: 1px solid #ddd;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .app-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
         }
 
         .card-icon {
             width: 80px;
             height: 80px;
-            border-radius: 16px;
+            border-radius: 18px;
             margin: 0 auto 15px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: #2a2a2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .card-icon img {
@@ -322,31 +372,36 @@
             object-fit: cover;
         }
 
+        .card-icon i {
+            font-size: 36px;
+            color: #888;
+        }
+
         .card-name {
             font-size: 16px;
             font-weight: 600;
-            color: var(--text-dark);
+            color: var(--text-light);
             margin-bottom: 5px;
         }
 
         .card-developer {
             font-size: 13px;
-            color: #666;
+            color: #aaa;
             margin-bottom: 15px;
         }
 
         .card-button {
             background: var(--button-bg);
             border: none;
-            color: var(--text-dark);
-            padding: 8px 15px;
+            color: var(--text-light);
+            padding: 10px 15px;
             border-radius: 15px;
             cursor: pointer;
             font-weight: 500;
             font-size: 14px;
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.2s ease;
             width: 100%;
             position: relative;
@@ -360,23 +415,23 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
             border-radius: 15px 15px 0 0;
         }
 
         .card-button:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
             transform: translateY(-2px);
             box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .card-button:active {
             transform: translateY(1px);
             box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+                0 1px 2px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         /* Bottom Navigation Bar */
@@ -386,10 +441,10 @@
             left: 0;
             right: 0;
             height: 60px;
-            background: linear-gradient(to top, #3a3a3c, #1c1c1e);
+            background: linear-gradient(to top, #2c2c2e, #1a1a1c);
             display: flex;
-            border-top: 1px solid #444;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
             z-index: 100;
         }
 
@@ -404,23 +459,23 @@
             position: relative;
             transition: all 0.3s ease;
             color: #999;
-            background: linear-gradient(to top, #2a2a2a, #1a1a1a);
+            background: linear-gradient(to top, #2a2a2c, #1a1a1c);
             border-top: 3px solid transparent;
         }
 
         .tab.active {
             color: white;
-            border-top: 3px solid #007aff;
-            background: linear-gradient(to top, #3a3a3a, #1f1f1f);
-            box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.3);
+            border-top: 3px solid var(--accent);
+            background: linear-gradient(to top, #3a3a3c, #1f1f21);
+            box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.4);
         }
 
         .tab:first-child {
-            border-right: 1px solid #333;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .tab:last-child {
-            border-left: 1px solid #333;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .tab.active::after {
@@ -430,18 +485,18 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: #007aff;
-            box-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
+            background: var(--accent);
+            box-shadow: 0 0 10px rgba(10, 132, 255, 0.5);
         }
 
-        /* Modal Styles (Preserved from original) */
+        /* Modal Styles */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -465,9 +520,10 @@
             overflow-y: auto;
             transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
             padding: 25px;
             position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .modal-overlay.active .modal-content {
@@ -485,14 +541,14 @@
             border-radius: 50%;
             font-size: 22px;
             cursor: pointer;
-            color: #666;
+            color: #ddd;
             z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             overflow: hidden;
         }
@@ -504,23 +560,23 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
             border-radius: 50% 50% 0 0;
         }
 
         .close-modal:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
             transform: translateY(-2px);
             box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .close-modal:active {
             transform: translateY(1px);
             box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+                0 1px 2px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .modal-header {
@@ -528,7 +584,7 @@
             align-items: center;
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .modal-icon {
@@ -537,7 +593,11 @@
             border-radius: 16px;
             overflow: hidden;
             margin-right: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: #2a2a2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .modal-icon img {
@@ -546,16 +606,21 @@
             object-fit: cover;
         }
 
+        .modal-icon i {
+            font-size: 36px;
+            color: #888;
+        }
+
         .modal-title {
             font-size: 26px;
             font-weight: 700;
-            color: var(--text-dark);
+            color: var(--text-light);
             margin-bottom: 5px;
         }
 
         .modal-developer {
             font-size: 16px;
-            color: #666;
+            color: #aaa;
         }
 
         .modal-section {
@@ -565,7 +630,7 @@
         .modal-section h3 {
             font-size: 18px;
             margin-bottom: 12px;
-            color: #444;
+            color: #ddd;
             display: flex;
             align-items: center;
         }
@@ -578,7 +643,7 @@
         .modal-section p {
             font-size: 15px;
             line-height: 1.5;
-            color: #444;
+            color: #ccc;
             margin-bottom: 12px;
         }
 
@@ -589,16 +654,16 @@
         }
 
         .version-group {
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(50, 50, 52, 0.5);
             border-radius: 10px;
             padding: 12px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .version-group h4 {
             font-size: 15px;
             margin-bottom: 8px;
-            color: #444;
+            color: #ddd;
         }
 
         .version-list {
@@ -606,11 +671,13 @@
         }
 
         .version-list li {
-            padding: 6px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             font-size: 14px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            color: #ccc;
         }
 
         .version-list li:last-child {
@@ -626,7 +693,7 @@
         .compatibility-text {
             font-size: 15px;
             margin-bottom: 15px;
-            color: #444;
+            color: #ccc;
         }
 
         .download-button {
@@ -636,16 +703,16 @@
             border-radius: 5px;
             font-size: 13px;
             font-weight: 600;
-            color: var(--text-dark);
+            color: var(--text-light);
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.3);
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -659,23 +726,23 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
             border-radius: 5px 5px 0 0;
         }
 
         .download-button:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
             transform: translateY(-2px);
             box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .download-button:active {
             transform: translateY(1px);
             box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+                0 1px 2px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         /* Responsive */
@@ -706,6 +773,14 @@
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
                 gap: 15px;
             }
+            
+            .featured-header h2 {
+                font-size: 24px;
+            }
+            
+            .featured-header i {
+                font-size: 28px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -718,7 +793,7 @@
             }
             
             .search-input {
-                padding: 10px 45px 10px 15px;
+                padding: 10px 15px;
             }
             
             .cancel-btn {
@@ -731,18 +806,27 @@
             }
             
             .app-card {
-                padding: 12px;
+                padding: 15px;
             }
             
             .card-icon {
                 width: 70px;
                 height: 70px;
             }
+            
+            .app-item {
+                padding: 12px;
+            }
+            
+            .app-icon {
+                width: 50px;
+                height: 50px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Compact Header -->
+    <!-- Glossy Header -->
     <header>
         <div class="header-content">
             <div class="logo">
@@ -752,10 +836,15 @@
         </div>
     </header>
     
+    <!-- Featured Apps Header -->
+    <div class="featured-header">
+        <i class="fas fa-lightbulb"></i>
+        <h2>Featured Apps</h2>
+    </div>
+    
     <!-- Search Container (Hidden by default) -->
     <div class="search-container" id="searchContainer">
         <div class="search-box">
-            <i class="fas fa-search"></i>
             <input type="text" class="search-input" id="searchInput" placeholder="Search apps...">
             <button class="cancel-btn" id="cancelSearch">Cancel</button>
         </div>
@@ -784,7 +873,7 @@
     </div>
     
     <script>
-        // All your apps with complete information
+        // App data with download URLs
         const apps = [
             {
                 id: "escape-if-you-can",
@@ -792,12 +881,13 @@
                 developer: "mobigrow",
                 description: "Can You Escape - Deluxe - Out Now!\nAdvance to the next floor by solving the puzzles!\nYou can pick certain items up and use them from your inventory.\nKeep the Escape If You Can app, so we can notify you of new levels.\n9 floors available at the moment!\nSmartphone puzzles! Addicting mini puzzles!\nGorgeous graphics and different themed floors!\nConstant updates of New Floors!\nit's FREE!",
                 versions: {
-                    archived: ["1.3.3"],
+                    archived: [
+                        { version: "1.3.3", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/com.dozengames.FloorsEscape-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                    ],
                     unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
-                downloadUrl: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/com.dozengames.FloorsEscape-iOS4.3-%28Clutch-2.0.4%29.ipa"
+                icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg"
             },
             {
                 id: "jelly-car-3",
@@ -805,7 +895,10 @@
                 developer: "Disney",
                 description: "The wobbly, bouncy, jelly-licious driving game is back!\nDrive through squishy worlds with new vehicles and obstacles.\nUnique jelly physics make every drive different.\nColorful, imaginative levels to explore.\nSimple controls with challenging gameplay.\nPerfect for quick gaming sessions.",
                 versions: {
-                    archived: ["1.0", "1.0.1"],
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar%203%20Lite%201.0%20%283998555%29.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar%203%20Lite%201.0.1%20%284155986%29.ipa" }
+                    ],
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.3 and Later",
@@ -817,7 +910,9 @@
                 developer: "Disney",
                 description: "Check your Disney Gift Card balance anytime.\nSecure and easy to use.\nManage multiple gift cards in one place.\nView transaction history.\nRedeem new gift cards with your camera.\nOfficial Disney app with trusted security.",
                 versions: {
-                    archived: ["1.0"],
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/com.disney.DisneyGiftCard-iOS3.1.2-%28Clutch-2.0.4%29.ipa" }
+                    ],
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.2 and Later",
@@ -829,7 +924,14 @@
                 developer: "Disney",
                 description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
                 versions: {
-                    archived: ["1.0", "1.0.1", "1.1", "1.2", "1.2.1", "1.2.2"],
+                    archived: [
+                        { version: "1.0.0", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.0.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.1.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.1.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.ipa" },
+                        { version: "1.2.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.1.ipa" },
+                        { version: "1.2.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.2.ipa" }
+                    ],
                     unarchived: []
                 },
                 compatibility: "iOS 4.0 and Later",
@@ -841,7 +943,12 @@
                 developer: "dotGears",
                 description: "The infamous challenging flying game!\nTap to keep the bird flying through pipes.\nSimple controls, extremely difficult to master.\nCompete with friends for high scores.\nMinimalist pixel art style.\nAddictive one-more-try gameplay.",
                 versions: {
-                    archived: ["1.0", "1.1", "1.2", "1.3"],
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.0.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.1.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.2.ipa" },
+                        { version: "1.3", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.3.ipa" }
+                    ],
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
@@ -868,7 +975,8 @@
                 
                 appItem.innerHTML = `
                     <div class="app-icon">
-                        <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
+                        ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                        '<i class="fas fa-mobile-alt"></i>'}
                     </div>
                     <div class="app-info">
                         <div class="app-title">${app.title}</div>
@@ -895,7 +1003,7 @@
             searchResults.innerHTML = '';
             
             if (filteredApps.length === 0) {
-                searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #666;">No apps found. Try a different search term.</p>';
+                searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
                 return;
             }
             
@@ -905,7 +1013,8 @@
                 
                 appCard.innerHTML = `
                     <div class="card-icon">
-                        <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
+                        ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                        '<i class="fas fa-mobile-alt"></i>'}
                     </div>
                     <div class="card-name">${app.title}</div>
                     <div class="card-developer">${app.developer}</div>
@@ -940,16 +1049,12 @@
                             <h4>Archived Versions</h4>
                             <ul class="version-list">
                                 ${app.versions.archived.map(v => {
-                                    // Special case for Escape If You Can 1.3.3 with download button
-                                    if (app.id === "escape-if-you-can" && v === "1.3.3") {
-                                        return `<li>
-                                            ${v}
-                                            <a href="${app.downloadUrl}" download class="download-button">
-                                                <i class="fas fa-download"></i> Download IPA
-                                            </a>
-                                        </li>`;
-                                    }
-                                    return `<li>${v}</li>`;
+                                    return `<li>
+                                        <span>${v.version}</span>
+                                        <a href="${v.url}" download class="download-button">
+                                            <i class="fas fa-download"></i> Download IPA
+                                        </a>
+                                    </li>`;
                                 }).join('')}
                             </ul>
                         </div>
@@ -977,7 +1082,8 @@
                         <button class="close-modal">&times;</button>
                         <div class="modal-header">
                             <div class="modal-icon">
-                                <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                '<i class="fas fa-mobile-alt"></i>'}
                             </div>
                             <div>
                                 <h2 class="modal-title">${app.title}</h2>
@@ -1054,7 +1160,6 @@
                 } else if (tabName === 'search') {
                     featuredView.classList.remove('active');
                     searchContainer.style.display = 'block';
-                    searchInput.focus();
                     searchResults.classList.add('active');
                     renderSearchResults(apps);
                 }
@@ -1078,25 +1183,30 @@
             renderSearchResults(filteredApps);
         });
         
+        // Show cancel button when search input is focused
+        searchInput.addEventListener('focus', function() {
+            cancelSearch.style.display = 'block';
+        });
+        
+        // Hide cancel button when search input is blurred
+        searchInput.addEventListener('blur', function() {
+            if (this.value === '') {
+                cancelSearch.style.display = 'none';
+            }
+        });
+        
         // Cancel search
         cancelSearch.addEventListener('click', function() {
             searchInput.value = '';
-            tabs[0].click(); // Switch to Featured tab
+            searchInput.blur();
+            this.style.display = 'none';
+            renderSearchResults(apps);
         });
         
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             renderFeaturedApps();
             createModals();
-            
-            // Add event listeners to buttons
-            document.querySelectorAll('.app-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    document.getElementById(`${appId}Modal`).classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
         });
     </script>
 </body>
