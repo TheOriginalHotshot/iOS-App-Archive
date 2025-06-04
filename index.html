@@ -10,615 +10,360 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-
-        :root {
-            --header-bg: linear-gradient(145deg, #3a3a3c, #1c1c1e);
-            --list-bg-1: #e8e8e8;
-            --list-bg-2: #d8d8d8;
-            --button-bg: linear-gradient(145deg, #d0d0d0, #b0b0b0);
-            --modal-bg: linear-gradient(145deg, #e6e6e6, #c6c6c6);
-            --shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            --text-dark: #333;
-            --text-light: #fff;
-            --accent: #007aff;
-            --red-text: #ff3b30;
-            --modal-height: 85vh;
-        }
-
+        
         body {
-            background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: #fff;
             min-height: 100vh;
-            padding-bottom: 40px;
+            padding-bottom: 60px;
             overflow-x: hidden;
         }
-
-        /* Glossy Header Styles */
+        
+        /* Header Styles */
         header {
-            background: var(--header-bg);
-            padding: 15px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+            height: 50px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            padding: 0 20px;
-            gap: 20px;
+            justify-content: center;
+            padding: 0 15px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid #444;
         }
-
+        
+        .header-content {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
         .logo {
             display: flex;
             align-items: center;
-            color: var(--text-light);
+            font-weight: bold;
+            font-size: 20px;
         }
-
-        .logo i {
-            font-size: 32px;
-            margin-right: 12px;
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        
+        .download-icon {
+            margin-right: 10px;
+            font-size: 24px;
+            color: white;
         }
-
-        .logo h1 {
-            font-size: 28px;
-            font-weight: 600;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        
+        /* Search Container */
+        .search-container {
+            display: none;
+            max-width: 800px;
+            margin: 15px auto;
+            padding: 0 15px;
+            position: relative;
         }
-
-        /* Enhanced Glossy Search Bar */
-        .search-wrapper {
+        
+        .search-box {
             display: flex;
             align-items: center;
-            gap: 10px;
             width: 100%;
-            max-width: 500px;
-            justify-content: center;
         }
-
-        .search-container {
-            position: relative;
-            width: 300px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 30px;
-            padding: 5px;
-            box-shadow: 
-                inset 0 1px 4px rgba(0, 0, 0, 0.2),
-                0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-        .search-container input {
-            width: 100%;
-            padding: 10px 40px 10px 40px;
-            border-radius: 30px;
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border-radius: 20px;
             border: none;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
+            background: #333;
+            color: white;
             font-size: 16px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .search-input:focus {
             outline: none;
-            transition: all 0.3s ease;
+            background: #3a3a3a;
         }
-
-        .search-container input:focus {
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 2px var(--accent);
-        }
-
-        .search-container i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 16px;
-        }
-
-        /* Rectangular Glossy Cancel Button */
-        .search-cancel {
-            background: var(--button-bg);
-            border: none;
-            color: var(--text-dark);
-            font-size: 14px;
-            font-weight: 600;
+        
+        .cancel-btn {
+            background: linear-gradient(to bottom, #4a4a4a, #2a2a2a);
+            color: white;
+            border: 1px solid #555;
+            padding: 12px 20px;
+            border-radius: 20px;
+            margin-left: 10px;
             cursor: pointer;
-            padding: 10px 15px;
-            border-radius: 5px;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
         }
-
-        .search-cancel:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-            border-radius: 5px 5px 0 0;
+        
+        .cancel-btn:hover {
+            background: linear-gradient(to bottom, #5a5a5a, #3a3a3a);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
         }
-
-        .search-cancel.visible {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .search-cancel:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
-            transform: translateY(-2px);
-            box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-        }
-
-        .search-cancel:active {
+        
+        .cancel-btn:active {
             transform: translateY(1px);
-            box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
-
+        
         /* Main Content */
         .container {
             max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px;
+            margin: 20px auto;
+            padding: 0 15px;
         }
-
-        /* App List View */
+        
+        /* App List Styles */
         .app-list {
-            display: none; /* Hidden until search */
-            flex-direction: column;
-            gap: 2px;
-            margin-top: 20px;
+            display: none;
         }
-
+        
+        .app-list.active {
+            display: block;
+        }
+        
         .app-item {
             display: flex;
             align-items: center;
-            padding: 12px 15px;
-            background: var(--list-bg-1);
-            border-radius: 0;
-            transition: all 0.3s ease;
-            position: relative;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            background: #333;
+            transition: transform 0.2s ease;
         }
-
-        .app-item:nth-child(even) {
-            background: var(--list-bg-2);
+        
+        .app-item:nth-child(odd) {
+            background: #2a2a2a;
         }
-
+        
         .app-item:hover {
-            background: #e0e0e0;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-
+        
         .app-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             margin-right: 15px;
-            flex-shrink: 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         }
-
+        
         .app-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
+        
         .app-info {
-            flex-grow: 1;
+            flex: 1;
         }
-
-        .app-title {
+        
+        .app-name {
             font-size: 18px;
             font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 3px;
+            margin-bottom: 5px;
         }
-
+        
         .app-developer {
             font-size: 14px;
-            color: #666;
+            color: #aaa;
         }
-
-        /* Rectangular View Details Button */
-        .app-button {
-            background: var(--button-bg);
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-dark);
+        
+        .view-details {
+            background: linear-gradient(to bottom, #4a4a4a, #2a2a2a);
+            color: white;
+            border: 1px solid #555;
+            padding: 10px 20px;
+            border-radius: 20px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
         }
-
-        .app-button:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-            border-radius: 5px 5px 0 0;
+        
+        .view-details:hover {
+            background: linear-gradient(to bottom, #5a5a5a, #3a3a3a);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
         }
-
-        .app-button:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
-            transform: translateY(-2px);
-            box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-        }
-
-        .app-button:active {
+        
+        .view-details:active {
             transform: translateY(1px);
-            box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
-
-        /* Welcome Screen */
-        .welcome-screen {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-            text-align: center;
-            padding: 20px;
+        
+        /* Search Results */
+        .search-results {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-
-        .welcome-icon {
-            width: 120px;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
+        
+        .search-results.active {
+            display: grid;
         }
-
-        .welcome-icon i {
-            font-size: 100px;
-            color: #888;
-            opacity: 0.7;
-        }
-
-        .welcome-text {
-            font-size: 18px;
-            color: #666;
-            max-width: 300px;
-            line-height: 1.5;
-        }
-
-        /* Modal Styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .modal-content {
-            background: var(--modal-bg);
-            border-radius: 24px 24px 0 0;
-            width: 100%;
-            max-width: 800px;
-            max-height: var(--modal-height);
-            overflow-y: auto;
-            transform: translateY(100%);
-            transition: transform 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
-            padding: 25px;
-            position: relative;
-        }
-
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
-        }
-
-        /* Improved Glossy Close Button */
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            background: var(--button-bg);
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            font-size: 22px;
-            cursor: pointer;
-            color: #666;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-
-        .close-modal:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-            border-radius: 50% 50% 0 0;
-        }
-
-        .close-modal:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
-            transform: translateY(-2px);
-            box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-        }
-
-        .close-modal:active {
-            transform: translateY(1px);
-            box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
-        }
-
-        .modal-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .modal-icon {
-            width: 70px;
-            height: 70px;
+        
+        .app-card {
+            background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
             border-radius: 16px;
-            overflow: hidden;
-            margin-right: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            border: 1px solid #444;
         }
-
-        .modal-icon img {
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
-        .modal-title {
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--text-dark);
+        
+        .card-name {
+            font-size: 16px;
+            font-weight: 600;
             margin-bottom: 5px;
         }
-
-        .modal-developer {
-            font-size: 16px;
-            color: #666;
-        }
-
-        .modal-section {
-            margin-bottom: 20px;
-        }
-
-        .modal-section h3 {
-            font-size: 18px; /* Slightly smaller */
-            margin-bottom: 12px;
-            color: #444;
-            display: flex;
-            align-items: center;
-        }
-
-        .modal-section h3 i {
-            margin-right: 8px;
-            color: var(--accent);
-        }
-
-        .modal-section p {
-            font-size: 15px; /* Slightly smaller */
-            line-height: 1.5;
-            color: #444;
-            margin-bottom: 12px;
-        }
-
-        .versions-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .version-group {
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            padding: 12px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .version-group h4 {
-            font-size: 15px;
-            margin-bottom: 8px;
-            color: #444;
-        }
-
-        .version-list {
-            list-style-type: none;
-        }
-
-        .version-list li {
-            padding: 6px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-        }
-
-        .version-list li:last-child {
-            border-bottom: none;
-        }
-
-        .unarchived-label {
-            color: var(--red-text);
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
-        .compatibility-text {
-            font-size: 15px;
-            margin-bottom: 15px;
-            color: #444;
-        }
-
-        /* Download Button */
-        .download-button {
-            background: var(--button-bg);
-            border: none;
-            padding: 6px 12px;
-            border-radius: 5px;
+        
+        .card-developer {
             font-size: 13px;
-            font-weight: 600;
-            color: var(--text-dark);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-left: 10px;
+            color: #aaa;
+            margin-bottom: 15px;
         }
-
-        .download-button:before {
+        
+        .card-button {
+            background: linear-gradient(to bottom, #4a4a4a, #2a2a2a);
+            color: white;
+            border: 1px solid #555;
+            padding: 8px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        .card-button:hover {
+            background: linear-gradient(to bottom, #5a5a5a, #3a3a3a);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Bottom Navigation Bar */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, #2c2c2c, #1a1a1a);
+            display: flex;
+            border-top: 1px solid #444;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+        
+        .tab {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            color: #999;
+            background: linear-gradient(to top, #2a2a2a, #1a1a1a);
+            border-top: 3px solid transparent;
+        }
+        
+        .tab.active {
+            color: white;
+            border-top: 3px solid #007aff;
+            background: linear-gradient(to top, #3a3a3a, #1f1f1f);
+            box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tab:first-child {
+            border-right: 1px solid #333;
+        }
+        
+        .tab:last-child {
+            border-left: 1px solid #333;
+        }
+        
+        .tab.active::after {
             content: '';
             position: absolute;
-            top: 0;
+            top: -3px;
             left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-            border-radius: 5px 5px 0 0;
+            right: 0;
+            height: 3px;
+            background: #007aff;
+            box-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
         }
-
-        .download-button:hover {
-            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
-            transform: translateY(-2px);
-            box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
-        }
-
-        .download-button:active {
-            transform: translateY(1px);
-            box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 25px 0;
-            color: var(--text-dark);
-            font-size: 14px;
-            margin-top: 40px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                padding: 0 15px;
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .app-item {
+                padding: 12px;
             }
             
-            .search-wrapper {
-                width: 100%;
-                padding: 0 15px;
+            .app-icon {
+                width: 50px;
+                height: 50px;
             }
             
-            .container {
-                padding: 0 15px;
-            }
-
-            .modal-content {
-                padding: 20px 15px;
-            }
-
-            .modal-header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .modal-icon {
-                margin-right: 0;
-                margin-bottom: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 24px;
+            .app-name {
+                font-size: 16px;
             }
             
-            .search-container {
-                width: 100%;
+            .view-details {
+                padding: 8px 15px;
+                font-size: 14px;
             }
             
-            .search-cancel {
-                padding: 8px 12px;
+            .search-results {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 15px;
             }
             
-            .modal-title {
-                font-size: 22px;
+            .card-icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .card-name {
+                font-size: 15px;
             }
         }
     </style>
@@ -627,301 +372,213 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <i class="fab fa-apple"></i>
-                <h1>iOS App Archive</h1>
-            </div>
-            <div class="search-wrapper">
-                <div class="search-container">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="searchInput" placeholder="Search for apps...">
-                </div>
-                <button class="search-cancel" id="searchCancel">Cancel</button>
+                <i class="fas fa-download download-icon"></i>
+                <span>iOS App Archive</span>
             </div>
         </div>
     </header>
-
-    <div class="container">
-        <!-- Welcome Screen -->
-        <div class="welcome-screen" id="welcomeScreen">
-            <div class="welcome-icon">
-                <i class="fas fa-search"></i>
-            </div>
-            <p class="welcome-text">Click the search bar to find the apps you're looking for</p>
-        </div>
-
-        <!-- App List (hidden until search) -->
-        <div class="app-list" id="appList">
-            <!-- Apps will be loaded here automatically -->
+    
+    <div class="search-container" id="searchContainer">
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search apps...">
+            <button class="cancel-btn" id="cancelSearch">Cancel</button>
         </div>
     </div>
-
-    <div id="modalContainer"></div>
-
-    <footer>
-        <p>iOS App Archive • Created for GitHub Pages</p>
-    </footer>
-
+    
+    <div class="container">
+        <div class="app-list active" id="featuredView">
+            <!-- Featured apps will be loaded here -->
+        </div>
+        
+        <div class="search-results" id="searchResults">
+            <!-- Search results will be loaded here -->
+        </div>
+    </div>
+    
+    <div class="bottom-bar">
+        <div class="tab active" data-tab="featured">Featured</div>
+        <div class="tab" data-tab="search">Search</div>
+    </div>
+    
     <script>
-        // All your apps with complete information
-        const apps = [
-            {
-                id: "escape-if-you-can",
-                title: "Escape If You Can",
-                developer: "mobigrow",
-                description: "Can You Escape - Deluxe - Out Now!\nAdvance to the next floor by solving the puzzles!\nYou can pick certain items up and use them from your inventory.\nKeep the Escape If You Can app, so we can notify you of new levels.\n9 floors available at the moment!\nSmartphone puzzles! Addicting mini puzzles!\nGorgeous graphics and different themed floors!\nConstant updates of New Floors!\nit's FREE!",
-                versions: {
-                    archived: ["1.3.3"],
-                    unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
+        document.addEventListener('DOMContentLoaded', function() {
+            // App data
+            const apps = [
+                {
+                    id: 1,
+                    name: "Facebook",
+                    developer: "Facebook, Inc.",
+                    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png",
+                    version: "5.0",
+                    size: "13.5 MB",
+                    description: "Keeping up with friends is faster and easier than ever with the Facebook app.",
+                    screenshots: [
+                        "https://cdn.pocket-lint.com/r/s/1200x/assets/images/140007-apps-feature-facebook-tips-and-tricks-image1-ysd6s9t5nc.jpg",
+                        "https://www.androidauthority.com/wp-content/uploads/2015/04/facebook-messenger-chat-heads-aa-840x473.jpg"
+                    ]
                 },
-                compatibility: "iOS 4.3 and Later",
-                icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
-                downloadUrl: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/com.dozengames.FloorsEscape-iOS4.3-%28Clutch-2.0.4%29.ipa"
-            },
-            {
-                id: "jelly-car-3",
-                title: "JellyCar 3 Lite",
-                developer: "Disney",
-                description: "The wobbly, bouncy, jelly-licious driving game is back!\nDrive through squishy worlds with new vehicles and obstacles.\nUnique jelly physics make every drive different.\nColorful, imaginative levels to explore.\nSimple controls with challenging gameplay.\nPerfect for quick gaming sessions.",
-                versions: {
-                    archived: ["1.0", "1.0.1"],
-                    unarchived: []
+                {
+                    id: 2,
+                    name: "Twitter",
+                    developer: "Twitter, Inc.",
+                    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png",
+                    version: "4.3",
+                    size: "11.2 MB",
+                    description: "Join the conversation! See what's happening right now with the official Twitter app.",
+                    screenshots: [
+                        "https://cdn.vox-cdn.com/thumbor/PHL5Rw8GQ-8mG0F4iKdFwV4gFpU=/0x0:640x1136/1200x800/filters:focal(0x0:640x1136)/cdn.vox-cdn.com/uploads/chorus_image/image/46076375/Screen_Shot_2015-04-07_at_4.45.01_PM.0.0.png",
+                        "https://cdn.mos.cms.futurecdn.net/S5bicwPe8vbP9nt6iwTwwi-1200-80.jpg"
+                    ]
                 },
-                compatibility: "iPhoneOS 3.1.3 and Later",
-                icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png"
-            },
-            {
-                id: "disney-gift-card",
-                title: "Disney Gift Card",
-                developer: "Disney",
-                description: "Check your Disney Gift Card balance anytime.\nSecure and easy to use.\nManage multiple gift cards in one place.\nView transaction history.\nRedeem new gift cards with your camera.\nOfficial Disney app with trusted security.",
-                versions: {
-                    archived: ["1.0"],
-                    unarchived: []
+                {
+                    id: 3,
+                    name: "Instagram",
+                    developer: "Instagram",
+                    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png",
+                    version: "6.2",
+                    size: "15.8 MB",
+                    description: "Capture and share the world's moments on Instagram.",
+                    screenshots: [
+                        "https://cdn.vox-cdn.com/thumbor/2V-3nX7L8i1JYVB0zF3Gj8WZb1c=/0x0:640x1136/1200x800/filters:focal(0x0:640x1136)/cdn.vox-cdn.com/uploads/chorus_image/image/46076377/Screen_Shot_2015-04-07_at_4.45.48_PM.0.0.png",
+                        "https://www.techadvisor.com/wp-content/uploads/2022/06/instagram_reels.jpg?resize=1536%2C864"
+                    ]
                 },
-                compatibility: "iPhoneOS 3.1.2 and Later",
-                icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png"
-            },
-            {
-                id: "jelly-car-2",
-                title: "Jelly Car 2",
-                developer: "Disney",
-                description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
-                versions: {
-                    archived: ["1.0", "1.0.1", "1.1", "1.2", "1.2.1", "1.2.2"],
-                    unarchived: []
+                {
+                    id: 4,
+                    name: "WhatsApp Messenger",
+                    developer: "WhatsApp Inc.",
+                    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/479px-WhatsApp.svg.png",
+                    version: "2.11",
+                    size: "18.3 MB",
+                    description: "WhatsApp from Facebook is a FREE messaging and video calling app.",
+                    screenshots: [
+                        "https://www.androidauthority.com/wp-content/uploads/2018/03/whatsapp-dark-mode-aa-840x473.jpg",
+                        "https://cdn.mos.cms.futurecdn.net/8nXQuhqQyJQ9kLtoYrFbRA-1200-80.jpg"
+                    ]
                 },
-                compatibility: "iOS 4.0 and Later",
-                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg"
-            },
-            {
-                id: "flappy-bird",
-                title: "Flappy Bird",
-                developer: "dotGears",
-                description: "The infamous challenging flying game!\nTap to keep the bird flying through pipes.\nSimple controls, extremely difficult to master.\nCompete with friends for high scores.\nMinimalist pixel art style.\nAddictive one-more-try gameplay.",
-                versions: {
-                    archived: ["1.0", "1.1", "1.2", "1.3"],
-                    unarchived: []
-                },
-                compatibility: "iOS 6.0 and Later",
-                icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png"
+                {
+                    id: 5,
+                    name: "YouTube",
+                    developer: "Google LLC",
+                    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png",
+                    version: "11.45",
+                    size: "22.1 MB",
+                    description: "Get the official YouTube app on your phone or tablet.",
+                    screenshots: [
+                        "https://cdn.vox-cdn.com/thumbor/fUy8k7rM3s2p0x1GfQc3zUyQ8bQ=/0x0:640x1136/1200x800/filters:focal(0x0:640x1136)/cdn.vox-cdn.com/uploads/chorus_image/image/46076379/Screen_Shot_2015-04-07_at_4.46.41_PM.0.0.png",
+                        "https://cdn.mos.cms.futurecdn.net/6t8Zh249QiFmVnk9dCC7iK-1200-80.jpg"
+                    ]
+                }
+            ];
+            
+            // DOM Elements
+            const featuredView = document.getElementById('featuredView');
+            const searchResults = document.getElementById('searchResults');
+            const searchContainer = document.getElementById('searchContainer');
+            const searchInput = document.getElementById('searchInput');
+            const cancelSearch = document.getElementById('cancelSearch');
+            const tabs = document.querySelectorAll('.tab');
+            
+            // Render featured apps
+            function renderFeaturedApps() {
+                featuredView.innerHTML = '';
+                
+                apps.forEach((app, index) => {
+                    const appItem = document.createElement('div');
+                    appItem.className = 'app-item';
+                    
+                    appItem.innerHTML = `
+                        <div class="app-icon">
+                            <img src="${app.icon}" alt="${app.name}">
+                        </div>
+                        <div class="app-info">
+                            <div class="app-name">${app.name}</div>
+                            <div class="app-developer">${app.developer}</div>
+                        </div>
+                        <button class="view-details" data-id="${app.id}">View Details</button>
+                    `;
+                    
+                    featuredView.appendChild(appItem);
+                });
             }
-        ];
-
-        // Function to load all apps
-        function loadApps() {
-            const appList = document.getElementById('appList');
-            const modalContainer = document.getElementById('modalContainer');
-            const welcomeScreen = document.getElementById('welcomeScreen');
             
-            appList.innerHTML = '';
-            modalContainer.innerHTML = '';
-            
-            apps.forEach((app, index) => {
-                // Create app list item
-                const item = document.createElement('div');
-                item.className = 'app-item';
+            // Render search results
+            function renderSearchResults(filteredApps = []) {
+                searchResults.innerHTML = '';
                 
-                item.innerHTML = `
-                    <div class="app-icon">
-                        <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
-                    </div>
-                    <div class="app-info">
-                        <div class="app-title">${app.title}</div>
-                        <div class="app-developer">${app.developer}</div>
-                    </div>
-                    <button class="app-button" data-app-id="${app.id}">View Details</button>
-                `;
-                appList.appendChild(item);
-                
-                // Create modal
-                const modal = document.createElement('div');
-                modal.className = 'modal-overlay';
-                modal.id = `${app.id}Modal`;
-                
-                // Create version list items
-                let versionItems = '';
-                
-                // Add archived versions if they exist
-                if (app.versions.archived.length > 0) {
-                    versionItems += `
-                        <div class="version-group">
-                            <h4>Archived Versions</h4>
-                            <ul class="version-list">
-                                ${app.versions.archived.map(v => {
-                                    // Special case for Escape If You Can 1.3.3 with download button
-                                    if (app.id === "escape-if-you-can" && v === "1.3.3") {
-                                        return `<li>
-                                            ${v}
-                                            <a href="${app.downloadUrl}" download class="download-button">
-                                                <i class="fas fa-download"></i> Download IPA
-                                            </a>
-                                        </li>`;
-                                    }
-                                    return `<li>${v}</li>`;
-                                }).join('')}
-                            </ul>
-                        </div>
-                    `;
+                if (filteredApps.length === 0) {
+                    searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
+                    return;
                 }
                 
-                // Add unarchived versions if they exist
-                if (app.versions.unarchived.length > 0) {
-                    versionItems += `
-                        <div class="version-group">
-                            <h4 class="unarchived-label">Unarchived Versions</h4>
-                            <ul class="version-list">
-                                ${app.versions.unarchived.map(v => `<li>${v}</li>`).join('')}
-                            </ul>
+                filteredApps.forEach(app => {
+                    const appCard = document.createElement('div');
+                    appCard.className = 'app-card';
+                    
+                    appCard.innerHTML = `
+                        <div class="card-icon">
+                            <img src="${app.icon}" alt="${app.name}">
                         </div>
+                        <div class="card-name">${app.name}</div>
+                        <div class="card-developer">${app.developer}</div>
+                        <button class="card-button" data-id="${app.id}">View Details</button>
                     `;
-                }
-                
-                modal.innerHTML = `
-                    <div class="modal-content">
-                        <button class="close-modal">&times;</button>
-                        <div class="modal-header">
-                            <div class="modal-icon">
-                                <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
-                            </div>
-                            <div>
-                                <h2 class="modal-title">${app.title}</h2>
-                                <p class="modal-developer">${app.developer}</p>
-                            </div>
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
-                            <p class="compatibility-text">${app.compatibility}</p>
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-align-left"></i> App Store Description</h3>
-                            ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-code-branch"></i> Version History</h3>
-                            <div class="versions-container">
-                                ${versionItems}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                modalContainer.appendChild(modal);
-                
-                // Add click handler
-                item.querySelector(`[data-app-id="${app.id}"]`).addEventListener('click', function() {
-                    document.getElementById(`${app.id}Modal`).classList.add('active');
-                    document.body.style.overflow = 'hidden';
+                    
+                    searchResults.appendChild(appCard);
                 });
-            });
+            }
             
-            // Add modal close handlers
-            document.querySelectorAll('.close-modal').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.closest('.modal-overlay').classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            });
-            
-            // Close modal when clicking outside
-            document.querySelectorAll('.modal-overlay').forEach(modal => {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        this.classList.remove('active');
-                        document.body.style.overflow = 'auto';
+            // Tab switching
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide views
+                    if (tabName === 'featured') {
+                        featuredView.classList.add('active');
+                        searchContainer.style.display = 'none';
+                        searchResults.classList.remove('active');
+                    } else if (tabName === 'search') {
+                        featuredView.classList.remove('active');
+                        searchContainer.style.display = 'block';
+                        searchInput.focus();
+                        searchResults.classList.add('active');
+                        renderSearchResults(apps);
                     }
                 });
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-                        modal.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                    });
-                }
             });
             
             // Search functionality
-            const searchInput = document.getElementById('searchInput');
-            const searchCancel = document.getElementById('searchCancel');
-            const appListContainer = document.getElementById('appList');
-            const welcomeScreen = document.getElementById('welcomeScreen');
-            
             searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase().trim();
-                const appItems = document.querySelectorAll('.app-item');
-                let hasResults = false;
+                const searchTerm = this.value.toLowerCase();
                 
-                // Show/hide cancel button based on input
-                if (searchTerm.length > 0) {
-                    searchCancel.classList.add('visible');
-                    welcomeScreen.style.display = 'none';
-                    appListContainer.style.display = 'flex';
-                } else {
-                    searchCancel.classList.remove('visible');
-                    welcomeScreen.style.display = 'flex';
-                    appListContainer.style.display = 'none';
+                if (searchTerm.length === 0) {
+                    renderSearchResults(apps);
+                    return;
                 }
                 
-                // Filter apps
-                appItems.forEach(item => {
-                    const title = item.querySelector('.app-title').textContent.toLowerCase();
-                    if (title.includes(searchTerm)) {
-                        item.style.display = 'flex';
-                        hasResults = true;
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+                const filteredApps = apps.filter(app => 
+                    app.name.toLowerCase().includes(searchTerm) || 
+                    app.developer.toLowerCase().includes(searchTerm)
+                );
+                
+                renderSearchResults(filteredApps);
             });
             
             // Cancel search
-            searchCancel.addEventListener('click', function() {
+            cancelSearch.addEventListener('click', function() {
                 searchInput.value = '';
-                this.classList.remove('visible');
-                welcomeScreen.style.display = 'flex';
-                appListContainer.style.display = 'none';
-                searchInput.blur();
-                
-                // Show all apps again
-                document.querySelectorAll('.app-item').forEach(item => {
-                    item.style.display = 'flex';
-                });
+                renderSearchResults(apps);
+                tabs[0].click(); // Switch to Featured tab
             });
             
-            // Clicking outside search cancels it
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.search-wrapper') && searchInput.value.length > 0) {
-                    searchInput.blur();
-                }
-            });
-        }
-
-        // Load apps when page is ready
-        document.addEventListener('DOMContentLoaded', loadApps);
+            // Initialize
+            renderFeaturedApps();
+        });
     </script>
 </body>
 </html>
