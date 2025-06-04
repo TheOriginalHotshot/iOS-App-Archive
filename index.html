@@ -204,15 +204,19 @@
         .screen-content {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            background: white;
             border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 18px;
-            text-align: center;
-            padding: 20px;
+            overflow: hidden;
+        }
+
+        .screen-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: white;
         }
 
         .app-button {
@@ -302,12 +306,12 @@
             transform: translateY(0);
         }
 
-        /* Glossy Close Button */
+        /* Improved Glossy Close Button */
         .close-modal {
             position: absolute;
             top: 20px;
             right: 25px;
-            background: linear-gradient(145deg, #d0d0d0, #b0b0b0);
+            background: var(--button-bg);
             border: none;
             width: 40px;
             height: 40px;
@@ -322,7 +326,7 @@
             box-shadow: 
                 0 2px 4px rgba(0, 0, 0, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         .close-modal:before {
@@ -556,11 +560,11 @@
                 },
                 compatibility: "iOS 4.3 and Later",
                 icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
-                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Escape+Screenshot"
+                screenshot: "IMG_6233.jpeg"
             },
             {
                 id: "jelly-car-3",
-                title: "Jelly Car 3",
+                title: "JellyCar 3 Lite",
                 developer: "Disney",
                 description: "The wobbly, bouncy, jelly-licious driving game is back!\nDrive through squishy worlds with new vehicles and obstacles.\nUnique jelly physics make every drive different.\nColorful, imaginative levels to explore.\nSimple controls with challenging gameplay.\nPerfect for quick gaming sessions.",
                 versions: {
@@ -569,7 +573,7 @@
                 },
                 compatibility: "iOS 3.1.3 and Later",
                 icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png",
-                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Jelly+Car+3+Screenshot"
+                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=JellyCar+3+Screenshot"
             },
             {
                 id: "disney-gift-card",
@@ -582,12 +586,12 @@
                 },
                 compatibility: "iOS 3.1.2 and Later",
                 icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png",
-                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Disney+Gift+Card+Screenshot"
+                screenshot: "IMG_6234.jpeg"
             },
             {
                 id: "jelly-car-2",
                 title: "Jelly Car 2",
-                developer: "Walaber",
+                developer: "Disney",
                 description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
                 versions: {
                     archived: ["1.2.2"],
