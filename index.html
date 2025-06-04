@@ -25,7 +25,7 @@
             --accent: #0a84ff;
             --red-text: #ff453a;
             --modal-height: 85vh;
-            --card-gradient: linear-gradient(145deg, #3a3a3c, #2a2a2c);
+            --card-gradient: linear-gradient(145deg, #3f3f41, #2f2f31);
         }
 
         body {
@@ -47,7 +47,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Gloss effect */
             position: relative;
             overflow: hidden;
         }
@@ -93,30 +92,35 @@
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
-        /* Featured Apps Header */
-        .featured-header {
+        /* Page Headers */
+        .page-header {
             max-width: 800px;
             margin: 30px auto 20px;
             padding: 0 20px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 15px;
         }
 
-        .featured-header h2 {
+        .page-header h2 {
             font-size: 28px;
             font-weight: 700;
-            background: linear-gradient(145deg, #000, #444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: white;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        .featured-header i {
+        .page-header i {
             font-size: 32px;
-            background: linear-gradient(145deg, #000, #444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: white;
+        }
+
+        .page-header.featured {
+            display: flex;
+        }
+
+        .page-header.search {
+            display: none;
         }
 
         /* Search Container */
@@ -774,11 +778,11 @@
                 gap: 15px;
             }
             
-            .featured-header h2 {
+            .page-header h2 {
                 font-size: 24px;
             }
             
-            .featured-header i {
+            .page-header i {
                 font-size: 28px;
             }
         }
@@ -837,9 +841,15 @@
     </header>
     
     <!-- Featured Apps Header -->
-    <div class="featured-header">
-        <i class="fas fa-lightbulb"></i>
+    <div class="page-header featured" id="featuredHeader">
+        <i class="fas fa-star"></i>
         <h2>Featured Apps</h2>
+    </div>
+    
+    <!-- Search Page Header -->
+    <div class="page-header search" id="searchHeader">
+        <i class="fas fa-mobile-alt"></i>
+        <h2>Search</h2>
     </div>
     
     <!-- Search Container (Hidden by default) -->
@@ -887,7 +897,8 @@
                     unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg"
+                icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
+                featured: true
             },
             {
                 id: "jelly-car-3",
@@ -902,7 +913,8 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.3 and Later",
-                icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png"
+                icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png",
+                featured: true
             },
             {
                 id: "disney-gift-card",
@@ -916,7 +928,8 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.2 and Later",
-                icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png"
+                icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png",
+                featured: true
             },
             {
                 id: "jelly-car-2",
@@ -935,7 +948,8 @@
                     unarchived: []
                 },
                 compatibility: "iOS 4.0 and Later",
-                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg"
+                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg",
+                featured: true
             },
             {
                 id: "flappy-bird",
@@ -952,7 +966,41 @@
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png"
+                icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png",
+                featured: true
+            },
+            {
+                id: "lightbike-online",
+                title: "LightBike Online",
+                developer: "ArtyPig Entertainment",
+                description: "Experience the classic Tron lightcycle battle in this multiplayer online game!\nCompete against players worldwide in real-time battles.\nCustomize your lightbike with different colors and trails.\nClimb the global leaderboards and prove your skills.\nSimple controls with intense competitive gameplay.",
+                versions: {
+                    archived: [
+                        { version: "1.1.1", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike_v1.1.1_os22.ipa" },
+                        { version: "1.2.5", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike%201.2.5.ipa" },
+                        { version: "1.2.6", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike.v1.2.6.iPhone%20C4iD.ipa" },
+                        { version: "1.2.8", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBikeOnline%20v1.2.8%20artypig78.ipa" }
+                    ],
+                    unarchived: ["1.0", "1.1", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.7"]
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBikeOnline.jpg",
+                featured: false
+            },
+            {
+                id: "lightbike-2",
+                title: "LightBike 2",
+                developer: "ArtyPig Entertainment",
+                description: "The sequel to the popular LightBike Online game with enhanced graphics and gameplay!\nNew game modes including single player campaign and tournaments.\nImproved controls and physics for a smoother experience.\nMore customization options for your lightbike and rider.\nCompete in global leaderboards and tournaments.",
+                versions: {
+                    archived: [
+                        { version: "2.2.2", url: "https://archive.org/download/light-bike-2-v-2.2.2-clutch-1.3-3/LightBike2-v2.2.2-%28Clutch-1.3%29-3.ipa" }
+                    ],
+                    unarchived: ["1.0", "1.1", "1.2", "2.0", "2.1", "2.2", "2.2.1"]
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "https://archive.org/download/light-bike-2-v-2.2.2-clutch-1.3-3/LightBike2.jpg",
+                featured: false
             }
         ];
 
@@ -964,12 +1012,16 @@
         const cancelSearch = document.getElementById('cancelSearch');
         const tabs = document.querySelectorAll('.tab');
         const modalContainer = document.getElementById('modalContainer');
+        const featuredHeader = document.getElementById('featuredHeader');
+        const searchHeader = document.getElementById('searchHeader');
         
         // Render featured apps
         function renderFeaturedApps() {
             featuredView.innerHTML = '';
             
-            apps.forEach((app, index) => {
+            const featuredApps = apps.filter(app => app.featured);
+            
+            featuredApps.forEach((app, index) => {
                 const appItem = document.createElement('div');
                 appItem.className = 'app-item';
                 
@@ -1157,11 +1209,19 @@
                     searchContainer.style.display = 'none';
                     searchResults.classList.remove('active');
                     renderFeaturedApps();
+                    
+                    // Show featured header, hide search header
+                    featuredHeader.style.display = 'flex';
+                    searchHeader.style.display = 'none';
                 } else if (tabName === 'search') {
                     featuredView.classList.remove('active');
                     searchContainer.style.display = 'block';
                     searchResults.classList.add('active');
                     renderSearchResults(apps);
+                    
+                    // Show search header, hide featured header
+                    featuredHeader.style.display = 'none';
+                    searchHeader.style.display = 'flex';
                 }
             });
         });
