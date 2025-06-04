@@ -14,8 +14,8 @@
         }
 
         :root {
-            --header-bg: #1c1c1e;
-            --card-bg: linear-gradient(145deg, #f0f0f0, #d0d0d0);
+            --header-bg: linear-gradient(145deg, #3a3a3c, #1c1c1e);
+            --card-bg: linear-gradient(145deg, #e0e0e0, #c0c0c0);
             --button-bg: linear-gradient(145deg, #d0d0d0, #b0b0b0);
             --modal-bg: linear-gradient(145deg, #e6e6e6, #c6c6c6);
             --shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -32,14 +32,15 @@
             overflow-x: hidden;
         }
 
-        /* Header Styles */
+        /* Glossy Header Styles */
         header {
             background: var(--header-bg);
-            padding: 20px 0;
+            padding: 15px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .header-content {
@@ -60,22 +61,29 @@
         .logo i {
             font-size: 32px;
             margin-right: 12px;
-            color: var(--accent);
+            color: #ffffff; /* White Apple logo */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
         .logo h1 {
             font-size: 28px;
             font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
+        /* Integrated Search Bar */
         .search-container {
             position: relative;
             width: 400px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 30px;
+            padding: 5px;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
         }
 
         .search-container input {
             width: 100%;
-            padding: 14px 20px 14px 50px;
+            padding: 12px 20px 12px 50px;
             border-radius: 30px;
             border: none;
             background: rgba(255, 255, 255, 0.1);
@@ -106,27 +114,14 @@
             padding: 0 20px;
         }
 
-        .section-title {
-            font-size: 24px;
-            margin-bottom: 25px;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-        }
-
-        .section-title i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
-
         .apps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
-        /* App Card */
+        /* Darker App Card */
         .app-card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -153,11 +148,7 @@
             overflow: hidden;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             margin-bottom: 15px;
-            border: 3px solid white;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            /* Removed white border */
         }
 
         .app-icon img {
@@ -182,9 +173,10 @@
             text-align: center;
         }
 
+        /* Vertical Screenshot for 3.5-inch iPhone */
         .app-screenshot {
             width: 100%;
-            height: 180px;
+            height: 280px; /* Taller for vertical display */
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -194,12 +186,35 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
 
-        .app-screenshot img {
+        /* iPhone frame styling */
+        .iphone-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background: #333;
+            border-radius: 30px;
+            padding: 40px 8px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .screen-content {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
         }
 
         .app-button {
@@ -316,7 +331,6 @@
             overflow: hidden;
             margin-right: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            border: 3px solid white;
         }
 
         .modal-icon img {
@@ -393,14 +407,11 @@
             border-bottom: none;
         }
 
-        .compatibility-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 16px;
-            font-weight: 600;
+        /* Compatibility as plain text */
+        .compatibility-text {
+            font-size: 17px;
+            margin-bottom: 15px;
+            color: #444;
         }
 
         /* Footer */
@@ -464,6 +475,10 @@
             .modal-title {
                 font-size: 26px;
             }
+            
+            .app-screenshot {
+                height: 240px;
+            }
         }
     </style>
 </head>
@@ -482,8 +497,6 @@
     </header>
 
     <div class="container">
-        <h2 class="section-title"><i class="fas fa-mobile-alt"></i> Archived iOS Applications</h2>
-        
         <div class="apps-grid">
             <!-- Escape If You Can App -->
             <div class="app-card">
@@ -493,8 +506,10 @@
                 <h3 class="app-title">Escape If You Can</h3>
                 <p class="app-developer">mobigrow</p>
                 <div class="app-screenshot">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #a1c4fd, #c2e9fb); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; text-align: center; padding: 20px;">
-                        Puzzle Game Screenshot
+                    <div class="iphone-frame">
+                        <div class="screen-content">
+                            Escape Puzzle Screenshot
+                        </div>
                     </div>
                 </div>
                 <button class="app-button" data-app-id="escape">View Details</button>
@@ -508,8 +523,10 @@
                 <h3 class="app-title">Appventure</h3>
                 <p class="app-developer">Creative Labs</p>
                 <div class="app-screenshot">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #d4fc79, #96e6a1); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; text-align: center; padding: 20px;">
-                        Adventure Game Screenshot
+                    <div class="iphone-frame">
+                        <div class="screen-content">
+                            Adventure Game Screenshot
+                        </div>
                     </div>
                 </div>
                 <button class="app-button" data-app-id="appventure">View Details</button>
@@ -523,8 +540,10 @@
                 <h3 class="app-title">Puzzle Master</h3>
                 <p class="app-developer">Brain Games Inc</p>
                 <div class="app-screenshot">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #a3bded, #6991c7); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; text-align: center; padding: 20px;">
-                        Puzzle Game Screenshot
+                    <div class="iphone-frame">
+                        <div class="screen-content">
+                            Puzzle Game Screenshot
+                        </div>
                     </div>
                 </div>
                 <button class="app-button" data-app-id="puzzle">View Details</button>
@@ -546,8 +565,14 @@
                 </div>
             </div>
             
+            <!-- Compatibility moved above description -->
             <div class="modal-section">
-                <h3><i class="fas fa-align-left"></i> Description</h3>
+                <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
+                <p class="compatibility-text">iOS 4.3 and Later</p>
+            </div>
+            
+            <div class="modal-section">
+                <h3><i class="fas fa-align-left"></i> App Description</h3>
                 <p>Can You Escape - Deluxe - Out Now!</p>
                 <p>Advance to the next floor by solving the puzzles!</p>
                 <p>You can pick certain items up and use them from your inventory.</p>
@@ -585,12 +610,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
-                <p>This app is compatible with:</p>
-                <span class="compatibility-badge">iOS 4.3 and Later</span>
             </div>
         </div>
     </div>
