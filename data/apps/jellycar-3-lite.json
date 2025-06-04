@@ -1,0 +1,37 @@
+{
+  "id": "jellycar-3-lite",
+  "title": "JellyCar 3 Lite", 
+  "developer": "Disney",
+  "description": "TEST DRIVE JELLYCAR 3 FOR FREE!
+
+JellyCar is about driving squishy cars through squishy worlds. In this Lite version, try 10 levels of squishy goodness fully loaded with car customization, special abilities and secret exits. 
+
+DOWNLOAD THE FULL VERSION FOR A WHOLE NEW JELLY WORLD
+
+The full version of JellyCar 3 features new levels, more car customization, video replays, and so much more. So hop in, start your Jelly engines, and find the stop sign.
+
+NEW LEVELS
+JellyCar 3 includes 65 themed levels designed to maximize your squishy gameplay. With platforms and objects that move, rotate, and trigger special effects, each level is a new adventure! Race to the stop sign and keep an eye out for surprises.
+
+NEW CAR CUSTOMIZATION
+Choose your car then create a customized color-styled JellyCar. Add detail down to the hubcaps! You can even customize the sound of your JellyCar!
+
+NEW GHOST RACING
+Chase the Ghost Car and race against friends and the best times from the global leaderboards.
+
+NEW RECORD FEATURE
+Save replays, make flipbooks, and relive your best times.
+
+NEW REWIND TIME
+Go back in time and Rewind a level to correct mistakes and optimize your time. Includes 10 Rewinds. Buy additional Rewind Packs via in-app purchase.
+
+SQUISHY GOODNESS
+Soar over obstacles and reach goals with the Balloon ability, climb walls with Sticky Tires, tap your car to make it grow, and play along with great music and sounds effects. Everything that makes JellyCar awesome is here and more, so test-drive JellyCar 3 today!",
+  "versions": {
+    "archived": ["1.0"],
+    "unarchived": ["None"]
+  },
+  "compatibility": "iPhoneOS 3.1.3 and Later",
+  "icon": "jelly-car-3-lite.png",
+  "screenshots": ["jelly-car-3-lite-1.jpg"]
+}
