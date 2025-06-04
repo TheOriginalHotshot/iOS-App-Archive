@@ -61,7 +61,7 @@
         .logo i {
             font-size: 32px;
             margin-right: 12px;
-            color: #ffffff; /* White Apple logo */
+            color: #ffffff;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
@@ -148,7 +148,6 @@
             overflow: hidden;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             margin-bottom: 15px;
-            /* Removed white border */
         }
 
         .app-icon img {
@@ -176,7 +175,7 @@
         /* Vertical Screenshot for 3.5-inch iPhone */
         .app-screenshot {
             width: 100%;
-            height: 280px; /* Taller for vertical display */
+            height: 280px;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -189,7 +188,6 @@
             position: relative;
         }
 
-        /* iPhone frame styling */
         .iphone-frame {
             position: absolute;
             top: 0;
@@ -304,16 +302,53 @@
             transform: translateY(0);
         }
 
+        /* Glossy Close Button */
         .close-modal {
             position: absolute;
             top: 20px;
             right: 25px;
-            background: none;
+            background: linear-gradient(145deg, #d0d0d0, #b0b0b0);
             border: none;
-            font-size: 28px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
             cursor: pointer;
             color: #666;
             z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .close-modal:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+            border-radius: 50% 50% 0 0;
+        }
+
+        .close-modal:hover {
+            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 4px 8px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        .close-modal:active {
+            transform: translateY(1px);
+            box-shadow: 
+                0 1px 2px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
         }
 
         .modal-header {
@@ -407,7 +442,6 @@
             border-bottom: none;
         }
 
-        /* Compatibility as plain text */
         .compatibility-text {
             font-size: 17px;
             margin-bottom: 15px;
@@ -497,183 +531,222 @@
     </header>
 
     <div class="container">
-        <div class="apps-grid">
-            <!-- Escape If You Can App -->
-            <div class="app-card">
-                <div class="app-icon">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #ff9a9e, #fad0c4); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">E</div>
-                </div>
-                <h3 class="app-title">Escape If You Can</h3>
-                <p class="app-developer">mobigrow</p>
-                <div class="app-screenshot">
-                    <div class="iphone-frame">
-                        <div class="screen-content">
-                            Escape Puzzle Screenshot
-                        </div>
-                    </div>
-                </div>
-                <button class="app-button" data-app-id="escape">View Details</button>
-            </div>
-            
-            <!-- Sample App 1 -->
-            <div class="app-card">
-                <div class="app-icon">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #a6c0fe, #f68084); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">A</div>
-                </div>
-                <h3 class="app-title">Appventure</h3>
-                <p class="app-developer">Creative Labs</p>
-                <div class="app-screenshot">
-                    <div class="iphone-frame">
-                        <div class="screen-content">
-                            Adventure Game Screenshot
-                        </div>
-                    </div>
-                </div>
-                <button class="app-button" data-app-id="appventure">View Details</button>
-            </div>
-            
-            <!-- Sample App 2 -->
-            <div class="app-card">
-                <div class="app-icon">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #84fab0, #8fd3f4); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">P</div>
-                </div>
-                <h3 class="app-title">Puzzle Master</h3>
-                <p class="app-developer">Brain Games Inc</p>
-                <div class="app-screenshot">
-                    <div class="iphone-frame">
-                        <div class="screen-content">
-                            Puzzle Game Screenshot
-                        </div>
-                    </div>
-                </div>
-                <button class="app-button" data-app-id="puzzle">View Details</button>
-            </div>
+        <div class="apps-grid" id="appsContainer">
+            <!-- Apps will be loaded here automatically -->
         </div>
     </div>
 
-    <!-- Modal for Escape If You Can -->
-    <div class="modal-overlay" id="escapeModal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <div class="modal-header">
-                <div class="modal-icon">
-                    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #ff9a9e, #fad0c4); display: flex; align-items: center; justify-content: center; color: white; font-size: 32px; font-weight: bold;">E</div>
-                </div>
-                <div>
-                    <h2 class="modal-title">Escape If You Can</h2>
-                    <p class="modal-developer">mobigrow</p>
-                </div>
-            </div>
-            
-            <!-- Compatibility moved above description -->
-            <div class="modal-section">
-                <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
-                <p class="compatibility-text">iOS 4.3 and Later</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-align-left"></i> App Description</h3>
-                <p>Can You Escape - Deluxe - Out Now!</p>
-                <p>Advance to the next floor by solving the puzzles!</p>
-                <p>You can pick certain items up and use them from your inventory.</p>
-                <p>Keep the Escape If You Can app, so we can notify you of new levels.</p>
-                <p>9 floors available at the moment!</p>
-                <p>Smartphone puzzles! Addicting mini puzzles!</p>
-                <p>Gorgeous graphics and different themed floors!</p>
-                <p>Constant updates of New Floors!</p>
-                <p>it's FREE!</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-code-branch"></i> Version History</h3>
-                <div class="versions-container">
-                    <div class="version-group">
-                        <h4><i class="fas fa-archive"></i> Archived Versions</h4>
-                        <div class="version-list">
-                            <ul>
-                                <li>1.3.3</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="version-group">
-                        <h4><i class="fas fa-box-open"></i> Unarchived Versions</h4>
-                        <div class="version-list">
-                            <ul>
-                                <li>1.0.0</li>
-                                <li>1.1.0</li>
-                                <li>1.2.0</li>
-                                <li>1.3.0</li>
-                                <li>1.3.1</li>
-                                <li>1.3.2</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="modalContainer"></div>
 
     <footer>
-        <p>iOS App Archive • Created for GitHub Pages • Easily add your own apps</p>
+        <p>iOS App Archive • Created for GitHub Pages</p>
     </footer>
 
     <script>
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const appCards = document.querySelectorAll('.app-card');
+        // All your apps with complete information
+        const apps = [
+            {
+                id: "escape-if-you-can",
+                title: "Escape If You Can",
+                developer: "mobigrow",
+                description: "Can You Escape - Deluxe - Out Now!\nAdvance to the next floor by solving the puzzles!\nYou can pick certain items up and use them from your inventory.\nKeep the Escape If You Can app, so we can notify you of new levels.\n9 floors available at the moment!\nSmartphone puzzles! Addicting mini puzzles!\nGorgeous graphics and different themed floors!\nConstant updates of New Floors!\nit's FREE!",
+                versions: {
+                    archived: ["1.3.3"],
+                    unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
+                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Escape+Screenshot"
+            },
+            {
+                id: "jelly-car-3",
+                title: "Jelly Car 3",
+                developer: "Disney",
+                description: "The wobbly, bouncy, jelly-licious driving game is back!\nDrive through squishy worlds with new vehicles and obstacles.\nUnique jelly physics make every drive different.\nColorful, imaginative levels to explore.\nSimple controls with challenging gameplay.\nPerfect for quick gaming sessions.",
+                versions: {
+                    archived: ["3.1.3"],
+                    unarchived: ["3.0.0", "3.1.0", "3.1.1", "3.1.2"]
+                },
+                compatibility: "iOS 3.1.3 and Later",
+                icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png",
+                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Jelly+Car+3+Screenshot"
+            },
+            {
+                id: "disney-gift-card",
+                title: "Disney Gift Card",
+                developer: "Disney",
+                description: "Check your Disney Gift Card balance anytime.\nSecure and easy to use.\nManage multiple gift cards in one place.\nView transaction history.\nRedeem new gift cards with your camera.\nOfficial Disney app with trusted security.",
+                versions: {
+                    archived: ["3.1.2"],
+                    unarchived: ["3.0.0", "3.1.0", "3.1.1"]
+                },
+                compatibility: "iOS 3.1.2 and Later",
+                icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png",
+                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Disney+Gift+Card+Screenshot"
+            },
+            {
+                id: "jelly-car-2",
+                title: "Jelly Car 2",
+                developer: "Walaber",
+                description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
+                versions: {
+                    archived: ["1.2.2"],
+                    unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.2.1"]
+                },
+                compatibility: "iOS 4.0 and Later",
+                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg",
+                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Jelly+Car+2+Screenshot"
+            },
+            {
+                id: "flappy-bird",
+                title: "Flappy Bird",
+                developer: "dotGears",
+                description: "The infamous challenging flying game!\nTap to keep the bird flying through pipes.\nSimple controls, extremely difficult to master.\nCompete with friends for high scores.\nMinimalist pixel art style.\nAddictive one-more-try gameplay.",
+                versions: {
+                    archived: ["1.3"],
+                    unarchived: ["1.0", "1.1", "1.2"]
+                },
+                compatibility: "iOS 6.0 and Later",
+                icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png",
+                screenshot: "https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Flappy+Bird+Screenshot"
+            }
+        ];
+
+        // Function to load all apps
+        function loadApps() {
+            const appsContainer = document.getElementById('appsContainer');
+            const modalContainer = document.getElementById('modalContainer');
             
-            appCards.forEach(card => {
-                const title = card.querySelector('.app-title').textContent.toLowerCase();
-                if (title.includes(searchTerm)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
+            appsContainer.innerHTML = '';
+            modalContainer.innerHTML = '';
+            
+            apps.forEach(app => {
+                // Create app card
+                const card = document.createElement('div');
+                card.className = 'app-card';
+                card.innerHTML = `
+                    <div class="app-icon">
+                        <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
+                    </div>
+                    <h3 class="app-title">${app.title}</h3>
+                    <p class="app-developer">${app.developer}</p>
+                    <div class="app-screenshot">
+                        <div class="iphone-frame">
+                            <div class="screen-content">
+                                <img src="${app.screenshot}" alt="${app.title} Screenshot" onerror="this.src='https://via.placeholder.com/320x480/3a3a3c/ffffff?text=Screenshot'">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="app-button" data-app-id="${app.id}">View Details</button>
+                `;
+                appsContainer.appendChild(card);
+                
+                // Create modal
+                const modal = document.createElement('div');
+                modal.className = 'modal-overlay';
+                modal.id = `${app.id}Modal`;
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <button class="close-modal">&times;</button>
+                        <div class="modal-header">
+                            <div class="modal-icon">
+                                <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
+                            </div>
+                            <div>
+                                <h2 class="modal-title">${app.title}</h2>
+                                <p class="modal-developer">${app.developer}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
+                            <p class="compatibility-text">${app.compatibility}</p>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fas fa-align-left"></i> App Description</h3>
+                            ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fas fa-code-branch"></i> Version History</h3>
+                            <div class="versions-container">
+                                <div class="version-group">
+                                    <h4><i class="fas fa-archive"></i> Archived Versions</h4>
+                                    <div class="version-list">
+                                        <ul>
+                                            ${app.versions.archived.map(v => `<li>${v}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="version-group">
+                                    <h4><i class="fas fa-box-open"></i> Unarchived Versions</h4>
+                                    <div class="version-list">
+                                        <ul>
+                                            ${app.versions.unarchived.map(v => `<li>${v}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                modalContainer.appendChild(modal);
+                
+                // Add click handler
+                card.querySelector(`[data-app-id="${app.id}"]`).addEventListener('click', function() {
+                    document.getElementById(`${app.id}Modal`).classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Add modal close handlers
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.closest('.modal-overlay').classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+            
+            // Close modal when clicking outside
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    });
                 }
             });
-        });
-
-        // Modal functionality
-        const modal = document.getElementById('escapeModal');
-        const openModalBtns = document.querySelectorAll('.app-button');
-        const closeModalBtn = document.querySelector('.close-modal');
-        
-        // Open modal for Escape If You Can
-        document.querySelector('[data-app-id="escape"]').addEventListener('click', function() {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        // For other apps, show a placeholder message
-        document.querySelectorAll('.app-button:not([data-app-id="escape"])').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const appTitle = this.closest('.app-card').querySelector('.app-title').textContent;
-                alert(`Details for ${appTitle} would be displayed here.\n\nYou can add your own content when you integrate with your app data.`);
+            
+            // Search functionality
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const appCards = document.querySelectorAll('.app-card');
+                
+                appCards.forEach(card => {
+                    const title = card.querySelector('.app-title').textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
-        });
-        
-        // Close modal
-        closeModalBtn.addEventListener('click', function() {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-        
-        // Close modal when clicking outside
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-        
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
+        }
+
+        // Load apps when page is ready
+        document.addEventListener('DOMContentLoaded', loadApps);
     </script>
 </body>
 </html>
