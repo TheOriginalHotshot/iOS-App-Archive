@@ -15,15 +15,16 @@
 
         :root {
             --header-bg: linear-gradient(145deg, #3a3a3c, #1c1c1e);
-            --card-bg: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            --list-bg-1: #e8e8e8;
+            --list-bg-2: #d8d8d8;
             --button-bg: linear-gradient(145deg, #d0d0d0, #b0b0b0);
             --modal-bg: linear-gradient(145deg, #e6e6e6, #c6c6c6);
             --shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             --text-dark: #333;
             --text-light: #fff;
             --accent: #007aff;
-            --modal-height: 85vh;
             --red-text: #ff3b30;
+            --modal-height: 85vh;
         }
 
         body {
@@ -48,9 +49,10 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             padding: 0 20px;
+            gap: 20px;
         }
 
         .logo {
@@ -77,11 +79,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            width: 100%;
+            max-width: 500px;
+            justify-content: center;
         }
 
         .search-container {
             position: relative;
-            width: 350px;
+            width: 300px;
             background: rgba(0, 0, 0, 0.2);
             border-radius: 30px;
             padding: 5px;
@@ -92,7 +97,7 @@
 
         .search-container input {
             width: 100%;
-            padding: 12px 50px 12px 50px;
+            padding: 10px 40px 10px 40px;
             border-radius: 30px;
             border: none;
             background: rgba(255, 255, 255, 0.1);
@@ -109,24 +114,44 @@
 
         .search-container i {
             position: absolute;
-            left: 20px;
+            left: 15px;
             top: 50%;
             transform: translateY(-50%);
             color: rgba(255, 255, 255, 0.7);
-            font-size: 18px;
+            font-size: 16px;
         }
 
+        /* Rectangular Glossy Cancel Button */
         .search-cancel {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--button-bg);
             border: none;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 16px;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            padding: 8px 15px;
-            border-radius: 30px;
+            padding: 10px 15px;
+            border-radius: 5px;
             opacity: 0;
             pointer-events: none;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .search-cancel:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+            border-radius: 5px 5px 0 0;
         }
 
         .search-cancel.visible {
@@ -135,50 +160,61 @@
         }
 
         .search-cancel:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 4px 8px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        .search-cancel:active {
+            transform: translateY(1px);
+            box-shadow: 
+                0 1px 2px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
         }
 
         /* Main Content */
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 30px auto;
             padding: 0 20px;
         }
 
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 10px;
+        /* App List View */
+        .app-list {
+            display: none; /* Hidden until search */
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 20px;
         }
 
-        /* Darker App Card */
-        .app-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
+        .app-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: var(--list-bg-1);
+            border-radius: 0;
             transition: all 0.3s ease;
             position: relative;
-            padding: 25px 20px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
-        .app-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        .app-item:nth-child(even) {
+            background: var(--list-bg-2);
+        }
+
+        .app-item:hover {
+            background: #e0e0e0;
         }
 
         .app-icon {
-            width: 90px;
-            height: 90px;
-            border-radius: 18px;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            margin-right: 15px;
+            flex-shrink: 0;
         }
 
         .app-icon img {
@@ -187,76 +223,29 @@
             object-fit: cover;
         }
 
+        .app-info {
+            flex-grow: 1;
+        }
+
         .app-title {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 600;
             color: var(--text-dark);
-            text-align: center;
-            margin-bottom: 8px;
-            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+            margin-bottom: 3px;
         }
 
         .app-developer {
+            font-size: 14px;
             color: #666;
-            font-size: 16px;
-            margin-bottom: 15px;
-            text-align: center;
         }
 
-        /* Vertical Screenshot for 3.5-inch iPhone */
-        .app-screenshot {
-            width: 100%;
-            height: 280px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .iphone-frame {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #333;
-            border-radius: 30px;
-            padding: 40px 8px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-            z-index: 1;
-        }
-
-        .screen-content {
-            width: 100%;
-            height: 100%;
-            background: white;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .screen-content img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            background: white;
-        }
-
-        /* Rectangular App Button */
+        /* Rectangular View Details Button */
         .app-button {
             background: var(--button-bg);
             border: none;
-            padding: 12px 30px;
-            border-radius: 5px; /* Changed from rounded to rectangular */
-            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
             font-weight: 600;
             color: var(--text-dark);
             cursor: pointer;
@@ -264,12 +253,11 @@
             position: relative;
             overflow: hidden;
             box-shadow: 
-                0 4px 6px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.6);
             text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
             border: 1px solid rgba(0, 0, 0, 0.1);
-            margin-top: auto;
-            width: 80%;
+            flex-shrink: 0;
         }
 
         .app-button:before {
@@ -287,15 +275,65 @@
             background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
             transform: translateY(-2px);
             box-shadow: 
-                0 6px 10px rgba(0, 0, 0, 0.15),
+                0 4px 8px rgba(0, 0, 0, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 0.6);
         }
 
         .app-button:active {
             transform: translateY(1px);
             box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        /* Welcome Screen */
+        .welcome-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .welcome-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 22px;
+            background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                0 8px 16px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-icon:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+        }
+
+        .welcome-icon i {
+            font-size: 60px;
+            color: #666;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            color: #666;
+            max-width: 300px;
+            line-height: 1.5;
         }
 
         /* Modal Styles */
@@ -324,13 +362,13 @@
             background: var(--modal-bg);
             border-radius: 24px 24px 0 0;
             width: 100%;
-            max-width: 1000px;
+            max-width: 800px;
             max-height: var(--modal-height);
             overflow-y: auto;
             transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
             box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
-            padding: 30px;
+            padding: 25px;
             position: relative;
         }
 
@@ -345,10 +383,10 @@
             right: 25px;
             background: var(--button-bg);
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            font-size: 24px;
+            font-size: 22px;
             cursor: pointer;
             color: #666;
             z-index: 10;
@@ -391,17 +429,17 @@
         .modal-header {
             display: flex;
             align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .modal-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 16px;
             overflow: hidden;
-            margin-right: 20px;
+            margin-right: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
@@ -412,76 +450,84 @@
         }
 
         .modal-title {
-            font-size: 32px;
+            font-size: 26px;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 5px;
         }
 
         .modal-developer {
-            font-size: 18px;
+            font-size: 16px;
             color: #666;
         }
 
         .modal-section {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .modal-section h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
+            font-size: 18px; /* Slightly smaller */
+            margin-bottom: 12px;
             color: #444;
             display: flex;
             align-items: center;
         }
 
         .modal-section h3 i {
-            margin-right: 10px;
+            margin-right: 8px;
             color: var(--accent);
         }
 
         .modal-section p {
-            font-size: 17px;
-            line-height: 1.6;
+            font-size: 15px; /* Slightly smaller */
+            line-height: 1.5;
             color: #444;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .versions-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .version-list {
+        .version-group {
             background: rgba(255, 255, 255, 0.5);
-            border-radius: 12px;
-            padding: 15px;
+            border-radius: 10px;
+            padding: 12px;
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .version-list ul {
+        .version-group h4 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .version-list {
             list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
         .version-list li {
-            padding: 6px 12px;
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 4px;
-            font-size: 15px;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .version-list li:last-child {
+            border-bottom: none;
         }
 
         .unarchived-label {
             color: var(--red-text);
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-top: 10px;
         }
 
         .compatibility-text {
-            font-size: 17px;
+            font-size: 15px;
             margin-bottom: 15px;
             color: #444;
         }
@@ -490,9 +536,9 @@
         .download-button {
             background: var(--button-bg);
             border: none;
-            padding: 10px 20px;
+            padding: 6px 12px;
             border-radius: 5px;
-            font-size: 15px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text-dark);
             cursor: pointer;
@@ -504,10 +550,10 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.6);
             text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
             border: 1px solid rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            margin-left: 10px;
         }
 
         .download-button:before {
@@ -541,27 +587,23 @@
             text-align: center;
             padding: 25px 0;
             color: var(--text-dark);
-            font-size: 15px;
+            font-size: 14px;
             margin-top: 40px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
-                flex-direction: column;
-                gap: 20px;
+                padding: 0 15px;
             }
             
             .search-wrapper {
                 width: 100%;
+                padding: 0 15px;
             }
             
-            .search-container {
-                width: 100%;
-            }
-            
-            .apps-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            .container {
+                padding: 0 15px;
             }
 
             .modal-content {
@@ -575,7 +617,7 @@
 
             .modal-icon {
                 margin-right: 0;
-                margin-bottom: 15px;
+                margin-bottom: 12px;
             }
         }
 
@@ -584,21 +626,16 @@
                 font-size: 24px;
             }
             
-            .search-container input {
-                padding: 12px 15px 12px 45px;
-                font-size: 14px;
+            .search-container {
+                width: 100%;
             }
             
-            .apps-grid {
-                grid-template-columns: 1fr;
+            .search-cancel {
+                padding: 8px 12px;
             }
-
+            
             .modal-title {
-                font-size: 26px;
-            }
-            
-            .app-screenshot {
-                height: 240px;
+                font-size: 22px;
             }
         }
     </style>
@@ -621,7 +658,16 @@
     </header>
 
     <div class="container">
-        <div class="apps-grid" id="appsContainer">
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <p class="welcome-text">Click the search bar to find the apps you're looking for</p>
+        </div>
+
+        <!-- App List (hidden until search) -->
+        <div class="app-list" id="appList">
             <!-- Apps will be loaded here automatically -->
         </div>
     </div>
@@ -644,9 +690,8 @@
                     archived: ["1.3.3"],
                     unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
                 },
-                compatibility: "iPhoneOS 4.3 and Later",
+                compatibility: "iOS 4.3 and Later",
                 icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
-                screenshot: "IMG_6233.jpeg",
                 downloadUrl: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/com.dozengames.FloorsEscape-iOS4.3-%28Clutch-2.0.4%29.ipa"
             },
             {
@@ -659,8 +704,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.3 and Later",
-                icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png",
-                screenshot: ""
+                icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png"
             },
             {
                 id: "disney-gift-card",
@@ -672,8 +716,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.2 and Later",
-                icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png",
-                screenshot: "IMG_6234.jpeg"
+                icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png"
             },
             {
                 id: "jelly-car-2",
@@ -684,9 +727,8 @@
                     archived: ["1.0", "1.0.1", "1.1", "1.2", "1.2.1", "1.2.2"],
                     unarchived: []
                 },
-                compatibility: "iPhoneOS 4.0 and Later",
-                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg",
-                screenshot: ""
+                compatibility: "iOS 4.0 and Later",
+                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg"
             },
             {
                 id: "flappy-bird",
@@ -698,45 +740,35 @@
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png",
-                screenshot: ""
+                icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png"
             }
         ];
 
         // Function to load all apps
         function loadApps() {
-            const appsContainer = document.getElementById('appsContainer');
+            const appList = document.getElementById('appList');
             const modalContainer = document.getElementById('modalContainer');
+            const welcomeScreen = document.getElementById('welcomeScreen');
             
-            appsContainer.innerHTML = '';
+            appList.innerHTML = '';
             modalContainer.innerHTML = '';
             
-            apps.forEach(app => {
-                // Create app card
-                const card = document.createElement('div');
-                card.className = 'app-card';
+            apps.forEach((app, index) => {
+                // Create app list item
+                const item = document.createElement('div');
+                item.className = 'app-item';
                 
-                // Only add screenshot if it exists
-                const screenshotContent = app.screenshot ? `
-                    <div class="app-screenshot">
-                        <div class="iphone-frame">
-                            <div class="screen-content">
-                                <img src="${app.screenshot}" alt="${app.title} Screenshot">
-                            </div>
-                        </div>
-                    </div>
-                ` : '<div class="app-screenshot"></div>';
-                
-                card.innerHTML = `
+                item.innerHTML = `
                     <div class="app-icon">
                         <img src="${app.icon}" alt="${app.title} Icon" onerror="this.src='https://via.placeholder.com/100/007aff/ffffff?text=App'">
                     </div>
-                    <h3 class="app-title">${app.title}</h3>
-                    <p class="app-developer">${app.developer}</p>
-                    ${screenshotContent}
+                    <div class="app-info">
+                        <div class="app-title">${app.title}</div>
+                        <div class="app-developer">${app.developer}</div>
+                    </div>
                     <button class="app-button" data-app-id="${app.id}">View Details</button>
                 `;
-                appsContainer.appendChild(card);
+                appList.appendChild(item);
                 
                 // Create modal
                 const modal = document.createElement('div');
@@ -744,25 +776,42 @@
                 modal.id = `${app.id}Modal`;
                 
                 // Create version list items
-                const versionItems = [];
+                let versionItems = '';
                 
-                // Add archived versions
+                // Add archived versions if they exist
                 if (app.versions.archived.length > 0) {
-                    versionItems.push(...app.versions.archived.map(v => `<li>${v}</li>`));
+                    versionItems += `
+                        <div class="version-group">
+                            <h4>Archived Versions</h4>
+                            <ul class="version-list">
+                                ${app.versions.archived.map(v => {
+                                    // Special case for Escape If You Can 1.3.3 with download button
+                                    if (app.id === "escape-if-you-can" && v === "1.3.3") {
+                                        return `<li>
+                                            ${v}
+                                            <a href="${app.downloadUrl}" download class="download-button">
+                                                <i class="fas fa-download"></i> Download IPA
+                                            </a>
+                                        </li>`;
+                                    }
+                                    return `<li>${v}</li>`;
+                                }).join('')}
+                            </ul>
+                        </div>
+                    `;
                 }
                 
-                // Add unarchived versions with red label if they exist
+                // Add unarchived versions if they exist
                 if (app.versions.unarchived.length > 0) {
-                    versionItems.push(`<li class="unarchived-label">Unarchived Versions</li>`);
-                    versionItems.push(...app.versions.unarchived.map(v => `<li>${v}</li>`));
+                    versionItems += `
+                        <div class="version-group">
+                            <h4 class="unarchived-label">Unarchived Versions</h4>
+                            <ul class="version-list">
+                                ${app.versions.unarchived.map(v => `<li>${v}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
                 }
-                
-                // Add download button if URL exists
-                const downloadButton = app.downloadUrl ? `
-                    <a href="${app.downloadUrl}" download class="download-button">
-                        <i class="fas fa-download"></i> Download IPA
-                    </a>
-                ` : '';
                 
                 modal.innerHTML = `
                     <div class="modal-content">
@@ -783,19 +832,14 @@
                         </div>
                         
                         <div class="modal-section">
-                            <h3><i class="fas fa-align-left"></i> App Description</h3>
+                            <h3><i class="fas fa-align-left"></i> App Store Description</h3>
                             ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
                         </div>
                         
                         <div class="modal-section">
                             <h3><i class="fas fa-code-branch"></i> Version History</h3>
                             <div class="versions-container">
-                                <div class="version-list">
-                                    <ul>
-                                        ${versionItems.join('')}
-                                    </ul>
-                                    ${downloadButton}
-                                </div>
+                                ${versionItems}
                             </div>
                         </div>
                     </div>
@@ -803,7 +847,7 @@
                 modalContainer.appendChild(modal);
                 
                 // Add click handler
-                card.querySelector(`[data-app-id="${app.id}"]`).addEventListener('click', function() {
+                item.querySelector(`[data-app-id="${app.id}"]`).addEventListener('click', function() {
                     document.getElementById(`${app.id}Modal`).classList.add('active');
                     document.body.style.overflow = 'hidden';
                 });
@@ -840,25 +884,33 @@
             // Search functionality
             const searchInput = document.getElementById('searchInput');
             const searchCancel = document.getElementById('searchCancel');
+            const appListContainer = document.getElementById('appList');
+            const welcomeScreen = document.getElementById('welcomeScreen');
             
             searchInput.addEventListener('input', function() {
                 const searchTerm = this.value.toLowerCase();
-                const appCards = document.querySelectorAll('.app-card');
+                const appItems = document.querySelectorAll('.app-item');
+                let hasResults = false;
                 
                 // Show/hide cancel button based on input
                 if (searchTerm.length > 0) {
                     searchCancel.classList.add('visible');
+                    welcomeScreen.style.display = 'none';
+                    appListContainer.style.display = 'flex';
                 } else {
                     searchCancel.classList.remove('visible');
+                    welcomeScreen.style.display = 'flex';
+                    appListContainer.style.display = 'none';
                 }
                 
                 // Filter apps
-                appCards.forEach(card => {
-                    const title = card.querySelector('.app-title').textContent.toLowerCase();
+                appItems.forEach(item => {
+                    const title = item.querySelector('.app-title').textContent.toLowerCase();
                     if (title.includes(searchTerm)) {
-                        card.style.display = 'flex';
+                        item.style.display = 'flex';
+                        hasResults = true;
                     } else {
-                        card.style.display = 'none';
+                        item.style.display = 'none';
                     }
                 });
             });
@@ -867,9 +919,8 @@
             searchCancel.addEventListener('click', function() {
                 searchInput.value = '';
                 this.classList.remove('visible');
-                document.querySelectorAll('.app-card').forEach(card => {
-                    card.style.display = 'flex';
-                });
+                welcomeScreen.style.display = 'flex';
+                appListContainer.style.display = 'none';
                 searchInput.blur();
             });
             
