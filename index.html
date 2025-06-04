@@ -27,6 +27,9 @@
             --modal-height: 85vh;
             --card-gradient: linear-gradient(145deg, #3f3f41, #2f2f31);
             --category-bg: rgba(90, 90, 92, 0.3);
+            --carousel-height: 500px;
+            --card-width: 300px;
+            --card-height: 400px;
         }
 
         body {
@@ -105,14 +108,14 @@
         }
 
         .page-header h2 {
-            font-size: 24px; /* Smaller header text */
+            font-size: 24px;
             font-weight: 700;
             color: white;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .page-header i {
-            font-size: 28px; /* Smaller icon */
+            font-size: 28px;
             color: white;
         }
 
@@ -122,6 +125,176 @@
 
         .page-header.search {
             display: none;
+        }
+
+        /* Featured Carousel */
+        .carousel-container {
+            position: relative;
+            height: var(--carousel-height);
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 1200px;
+            perspective: 2000px;
+        }
+
+        .carousel {
+            display: flex;
+            position: relative;
+            height: 100%;
+            align-items: center;
+            transition: transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+
+        .carousel-item {
+            position: absolute;
+            width: var(--card-width);
+            height: var(--card-height);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            transition: all 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+            opacity: 0.5;
+            z-index: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            background: var(--card-gradient);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-item.active {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            z-index: 3;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-item.prev {
+            transform: translate(calc(-50% - 330px), -50%) scale(0.8);
+            opacity: 0.6;
+            z-index: 2;
+        }
+
+        .carousel-item.next {
+            transform: translate(calc(-50% + 330px), -50%) scale(0.8);
+            opacity: 0.6;
+            z-index: 2;
+        }
+
+        .app-card {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            border-radius: 24px;
+            background: var(--card-gradient);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .app-icon-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background: #2a2a2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-icon i {
+            font-size: 50px;
+            color: #888;
+        }
+
+        .app-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .app-description {
+            font-size: 16px;
+            color: #ddd;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            height: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .screenshot-placeholder {
+            flex: 1;
+            background: linear-gradient(145deg, #3a3a3c, #2c2c2e);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Reflection Effect */
+        .reflection {
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent);
+            mask-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            border-radius: 50%;
+            opacity: 0.4;
+            filter: blur(10px);
+            z-index: 4;
+        }
+
+        /* Carousel Navigation */
+        .carousel-nav {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: var(--accent);
+            transform: scale(1.2);
         }
 
         /* Search Container */
@@ -203,134 +376,6 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
-        /* Main Content */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        /* Featured View */
-        .app-list {
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .app-list.active {
-            display: flex;
-        }
-
-        .app-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background: var(--list-bg-1);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .app-item:nth-child(even) {
-            background: var(--list-bg-2);
-        }
-
-        .app-item:hover {
-            background: #3f3f41;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .app-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin-right: 15px;
-            flex-shrink: 0;
-            background: #2a2a2c;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .app-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .app-icon i {
-            font-size: 28px;
-            color: #888;
-        }
-
-        .app-info {
-            flex-grow: 1;
-        }
-
-        .app-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--text-light);
-            margin-bottom: 5px;
-        }
-
-        .app-developer {
-            font-size: 14px;
-            color: #aaa;
-        }
-
-        /* View Details Button */
-        .app-button {
-            background: var(--button-bg);
-            border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(0, 0, 0, 0.3);
-            flex-shrink: 0;
-        }
-
-        .app-button:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-            border-radius: 8px 8px 0 0;
-        }
-
-        .app-button:hover {
-            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
-            transform: translateY(-2px);
-            box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-        .app-button:active {
-            transform: translateY(1px);
-            box-shadow: 
-                0 1px 2px rgba(0, 0, 0, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
         /* Search Results */
         .search-results {
             display: none;
@@ -343,7 +388,7 @@
             display: grid;
         }
 
-        .app-card {
+        .app-card-grid {
             background: var(--card-gradient);
             border-radius: 16px;
             padding: 20px;
@@ -353,7 +398,7 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .app-card:hover {
+        .app-card-grid:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
         }
@@ -838,6 +883,23 @@
             .modal-title {
                 font-size: 24px;
             }
+            
+            .carousel-container {
+                height: 450px;
+            }
+            
+            .carousel-item {
+                width: 250px;
+                height: 380px;
+            }
+            
+            .carousel-item.prev {
+                transform: translate(calc(-50% - 280px), -50%) scale(0.8);
+            }
+
+            .carousel-item.next {
+                transform: translate(calc(-50% + 280px), -50%) scale(0.8);
+            }
         }
 
         @media (max-width: 480px) {
@@ -862,7 +924,7 @@
                 font-size: 22px;
             }
             
-            .app-card {
+            .app-card-grid {
                 padding: 15px;
             }
             
@@ -871,13 +933,29 @@
                 height: 70px;
             }
             
-            .app-item {
-                padding: 12px;
+            .carousel-container {
+                height: 400px;
             }
             
-            .app-icon {
-                width: 50px;
-                height: 50px;
+            .carousel-item {
+                width: 220px;
+                height: 350px;
+            }
+            
+            .carousel-item.prev {
+                transform: translate(calc(-50% - 240px), -50%) scale(0.8);
+            }
+
+            .carousel-item.next {
+                transform: translate(calc(-50% + 240px), -50%) scale(0.8);
+            }
+            
+            .app-title {
+                font-size: 24px;
+            }
+            
+            .app-description {
+                font-size: 14px;
             }
             
             .modal-title {
@@ -903,6 +981,17 @@
         <h2>Featured Apps</h2>
     </div>
     
+    <!-- Featured Carousel -->
+    <div class="carousel-container" id="carouselContainer">
+        <div class="carousel" id="carousel">
+            <!-- Carousel items will be added here -->
+        </div>
+        <div class="reflection"></div>
+        <div class="carousel-nav" id="carouselNav">
+            <!-- Navigation dots will be added here -->
+        </div>
+    </div>
+    
     <!-- Search Page Header -->
     <div class="page-header search" id="searchHeader">
         <i class="fas fa-mobile-alt"></i>
@@ -919,11 +1008,6 @@
     
     <!-- Main Content -->
     <div class="container">
-        <!-- Featured Apps View -->
-        <div class="app-list active" id="featuredView">
-            <!-- Featured apps will be loaded here -->
-        </div>
-        
         <!-- Search Results View -->
         <div class="search-results" id="searchResults">
             <!-- Search results will be loaded here -->
@@ -946,7 +1030,7 @@
                 id: "escape-if-you-can",
                 title: "Escape If You Can",
                 developer: "mobigrow",
-                description: "Can You Escape - Deluxe - Out Now!\nAdvance to the next floor by solving the puzzles!\nYou can pick certain items up and use them from your inventory.\nKeep the Escape If You Can app, so we can notify you of new levels.\n9 floors available at the moment!\nSmartphone puzzles! Addicting mini puzzles!\nGorgeous graphics and different themed floors!\nConstant updates of New Floors!\nit's FREE!",
+                description: "Can You Escape - Deluxe - Out Now! Advance to the next floor by solving the puzzles! You can pick certain items up and use them from your inventory.",
                 versions: {
                     archived: [
                         { version: "1.3.3", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/com.dozengames.FloorsEscape-iOS4.3-%28Clutch-2.0.4%29.ipa" }
@@ -962,7 +1046,7 @@
                 id: "jelly-car-3",
                 title: "JellyCar 3 Lite",
                 developer: "Disney",
-                description: "The wobbly, bouncy, jelly-licious driving game is back!\nDrive through squishy worlds with new vehicles and obstacles.\nUnique jelly physics make every drive different.\nColorful, imaginative levels to explore.\nSimple controls with challenging gameplay.\nPerfect for quick gaming sessions.",
+                description: "The wobbly, bouncy, jelly-licious driving game is back! Drive through squishy worlds with new vehicles and obstacles. Unique jelly physics make every drive different.",
                 versions: {
                     archived: [
                         { version: "1.0", url: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar%203%20Lite%201.0%20%283998555%29.ipa" },
@@ -979,7 +1063,7 @@
                 id: "disney-gift-card",
                 title: "Disney Gift Card",
                 developer: "Disney",
-                description: "Check your Disney Gift Card balance anytime.\nSecure and easy to use.\nManage multiple gift cards in one place.\nView transaction history.\nRedeem new gift cards with your camera.\nOfficial Disney app with trusted security.",
+                description: "Check your Disney Gift Card balance anytime. Secure and easy to use. Manage multiple gift cards in one place. View transaction history. Redeem new gift cards with your camera.",
                 versions: {
                     archived: [
                         { version: "1.0", url: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/com.disney.DisneyGiftCard-iOS3.1.2-%28Clutch-2.0.4%29.ipa" }
@@ -995,7 +1079,7 @@
                 id: "jelly-car-2",
                 title: "Jelly Car 2",
                 developer: "Disney",
-                description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
+                description: "The sequel to the original jelly physics driving game! New vehicles with unique jelly properties. More challenging levels and obstacles. Colorful, squishy environments to explore.",
                 versions: {
                     archived: [
                         { version: "1.0.0", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.0.ipa" },
@@ -1016,7 +1100,7 @@
                 id: "flappy-bird",
                 title: "Flappy Bird",
                 developer: "dotGears",
-                description: "The infamous challenging flying game!\nTap to keep the bird flying through pipes.\nSimple controls, extremely difficult to master.\nCompete with friends for high scores.\nMinimalist pixel art style.\nAddictive one-more-try gameplay.",
+                description: "The infamous challenging flying game! Tap to keep the bird flying through pipes. Simple controls, extremely difficult to master. Compete with friends for high scores.",
                 versions: {
                     archived: [
                         { version: "1.0", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.0.ipa" },
@@ -1030,46 +1114,13 @@
                 icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png",
                 featured: true,
                 categories: ["Action", "Entertainment"]
-            },
-            {
-                id: "lightbike-online",
-                title: "LightBike Online",
-                developer: "ArtyPig Entertainment",
-                description: "Experience the classic Tron lightcycle battle in this multiplayer online game!\nCompete against players worldwide in real-time battles.\nCustomize your lightbike with different colors and trails.\nClimb the global leaderboards and prove your skills.\nSimple controls with intense competitive gameplay.",
-                versions: {
-                    archived: [
-                        { version: "1.1.1", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike_v1.1.1_os22.ipa" },
-                        { version: "1.2.5", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike%201.2.5.ipa" },
-                        { version: "1.2.6", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike.v1.2.6.iPhone%20C4iD.ipa" },
-                        { version: "1.2.8", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBikeOnline%20v1.2.8%20artypig78.ipa" }
-                    ],
-                    unarchived: ["1.0", "1.1", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.7"]
-                },
-                compatibility: "iOS 4.3 and Later",
-                icon: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBikeOnline.jpg",
-                featured: false,
-                categories: ["Racing", "Action"]
-            },
-            {
-                id: "lightbike-2",
-                title: "LightBike 2",
-                developer: "ArtyPig Entertainment",
-                description: "The sequel to the popular LightBike Online game with enhanced graphics and gameplay!\nNew game modes including single player campaign and tournaments.\nImproved controls and physics for a smoother experience.\nMore customization options for your lightbike and rider.\nCompete in global leaderboards and tournaments.",
-                versions: {
-                    archived: [
-                        { version: "2.2.2", url: "https://archive.org/download/light-bike-2-v-2.2.2-clutch-1.3-3/LightBike2-v2.2.2-%28Clutch-1.3%29-3.ipa" }
-                    ],
-                    unarchived: ["1.0", "1.1", "1.2", "2.0", "2.1", "2.2", "2.2.1"]
-                },
-                compatibility: "iOS 7.0 and Later",
-                icon: "https://archive.org/download/light-bike-2-v-2.2.2-clutch-1.3-3/LightBike2.jpg",
-                featured: false,
-                categories: ["Racing", "Action"]
             }
         ];
 
         // DOM Elements
-        const featuredView = document.getElementById('featuredView');
+        const carouselContainer = document.getElementById('carouselContainer');
+        const carousel = document.getElementById('carousel');
+        const carouselNav = document.getElementById('carouselNav');
         const searchResults = document.getElementById('searchResults');
         const searchContainer = document.getElementById('searchContainer');
         const searchInput = document.getElementById('searchInput');
@@ -1079,39 +1130,136 @@
         const featuredHeader = document.getElementById('featuredHeader');
         const searchHeader = document.getElementById('searchHeader');
         
-        // Render featured apps
-        function renderFeaturedApps() {
-            featuredView.innerHTML = '';
+        // Carousel state
+        let currentIndex = 0;
+        let autoSlideInterval;
+        
+        // Initialize carousel
+        function initCarousel() {
+            // Clear existing items
+            carousel.innerHTML = '';
+            carouselNav.innerHTML = '';
             
-            const featuredApps = apps.filter(app => app.featured);
-            
-            featuredApps.forEach((app, index) => {
-                const appItem = document.createElement('div');
-                appItem.className = 'app-item';
+            // Create carousel items
+            apps.forEach((app, index) => {
+                if (!app.featured) return;
                 
-                appItem.innerHTML = `
-                    <div class="app-icon">
-                        ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                        '<i class="fas fa-mobile-alt"></i>'}
+                const carouselItem = document.createElement('div');
+                carouselItem.className = 'carousel-item';
+                carouselItem.dataset.index = index;
+                
+                carouselItem.innerHTML = `
+                    <div class="app-card">
+                        <div class="app-icon-container">
+                            <div class="app-icon">
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                '<i class="fas fa-mobile-alt"></i>'}
+                            </div>
+                        </div>
+                        <h3 class="app-title">${app.title}</h3>
+                        <p class="app-description">${app.description}</p>
+                        <div class="screenshot-placeholder">
+                            <div>Screenshot Placeholder</div>
+                        </div>
                     </div>
-                    <div class="app-info">
-                        <div class="app-title">${app.title}</div>
-                        <div class="app-developer">${app.developer}</div>
-                    </div>
-                    <button class="app-button" data-app-id="${app.id}">View Details</button>
                 `;
                 
-                featuredView.appendChild(appItem);
+                carousel.appendChild(carouselItem);
+                
+                // Create navigation dot
+                const navDot = document.createElement('div');
+                navDot.className = 'nav-dot';
+                navDot.dataset.index = index;
+                navDot.addEventListener('click', () => goToSlide(index));
+                carouselNav.appendChild(navDot);
             });
             
-            // Add event listeners to buttons
-            document.querySelectorAll('.app-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    document.getElementById(`${appId}Modal`).classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
+            // Set initial slide
+            updateCarousel();
+            
+            // Start auto slide
+            startAutoSlide();
+            
+            // Add swipe functionality
+            setupSwipe();
+        }
+        
+        // Update carousel position
+        function updateCarousel() {
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.nav-dot');
+            
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'prev', 'next');
+                
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index === (currentIndex - 1 + items.length) % items.length) {
+                    item.classList.add('prev');
+                } else if (index === (currentIndex + 1) % items.length) {
+                    item.classList.add('next');
+                }
             });
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        // Go to specific slide
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoSlide();
+        }
+        
+        // Next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % document.querySelectorAll('.carousel-item').length;
+            updateCarousel();
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            const items = document.querySelectorAll('.carousel-item');
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        }
+        
+        // Start auto slide
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 8000);
+        }
+        
+        // Reset auto slide timer
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+        
+        // Setup swipe functionality
+        function setupSwipe() {
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carouselContainer.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            carouselContainer.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    nextSlide();
+                }
+                
+                if (touchEndX > touchStartX + 50) {
+                    prevSlide();
+                }
+            }
         }
         
         // Render search results
@@ -1125,7 +1273,7 @@
             
             filteredApps.forEach(app => {
                 const appCard = document.createElement('div');
-                appCard.className = 'app-card';
+                appCard.className = 'app-card-grid';
                 
                 appCard.innerHTML = `
                     <div class="card-icon">
@@ -1279,23 +1427,18 @@
                 
                 // Show/hide views
                 if (tabName === 'featured') {
-                    featuredView.classList.add('active');
+                    carouselContainer.style.display = 'block';
+                    featuredHeader.style.display = 'flex';
                     searchContainer.style.display = 'none';
                     searchResults.classList.remove('active');
-                    renderFeaturedApps();
-                    
-                    // Show featured header, hide search header
-                    featuredHeader.style.display = 'flex';
                     searchHeader.style.display = 'none';
                 } else if (tabName === 'search') {
-                    featuredView.classList.remove('active');
+                    carouselContainer.style.display = 'none';
+                    featuredHeader.style.display = 'none';
                     searchContainer.style.display = 'block';
                     searchResults.classList.add('active');
-                    renderSearchResults(apps);
-                    
-                    // Show search header, hide featured header
-                    featuredHeader.style.display = 'none';
                     searchHeader.style.display = 'flex';
+                    renderSearchResults(apps);
                 }
             });
         });
@@ -1339,8 +1482,17 @@
         
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            renderFeaturedApps();
+            initCarousel();
             createModals();
+            
+            // Add keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
         });
     </script>
 </body>
