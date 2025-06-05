@@ -22,14 +22,15 @@
             --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
             --text-dark: #111;
             --text-light: #f0f0f0;
+            --text-medium: #d0d0d0;
             --accent: #0a84ff;
             --red-text: #ff453a;
             --modal-height: 85vh;
             --card-gradient: linear-gradient(145deg, #3f3f41, #2f2f31);
             --category-bg: rgba(90, 90, 92, 0.3);
-            --carousel-height: 500px;
-            --card-width: 300px;
-            --card-height: 400px;
+            --carousel-height: 550px;
+            --card-width: 320px;
+            --card-height: 460px;
         }
 
         body {
@@ -108,14 +109,14 @@
         }
 
         .page-header h2 {
-            font-size: 22px; /* Smaller header text */
+            font-size: 22px;
             font-weight: 700;
             color: white;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .page-header i {
-            font-size: 24px; /* Smaller icon */
+            font-size: 24px;
             color: white;
         }
 
@@ -159,7 +160,6 @@
             overflow: hidden;
             background: var(--card-gradient);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            /* Stitched border effect */
             border: 2px dashed rgba(255, 255, 255, 0.2);
         }
 
@@ -171,7 +171,7 @@
         }
 
         .carousel-item.next {
-            transform: translate(calc(-50% + 330px), -50%) scale(0.9);
+            transform: translate(calc(-50% + 350px), -50%) scale(0.9);
             opacity: 0.8;
             z-index: 2;
         }
@@ -181,7 +181,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            padding: 25px;
+            padding: 30px;
             border-radius: 24px;
             background: var(--card-gradient);
         }
@@ -193,8 +193,8 @@
         }
 
         .app-icon {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 22px;
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -211,23 +211,29 @@
         }
 
         .app-icon i {
-            font-size: 40px;
+            font-size: 50px;
             color: #888;
         }
 
         .app-title {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
             color: white;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
         }
 
-        .screenshot-placeholder {
+        .app-description {
+            font-size: 16px;
+            color: var(--text-medium);
+            text-align: center;
+            line-height: 1.5;
+            padding: 0 15px;
             flex: 1;
-            background: linear-gradient(145deg, #3a3a3c, #2c2c2e);
-            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Reflection Effect */
@@ -555,7 +561,7 @@
             color: #666;
         }
 
-        /* Modal Styles */
+        /* Modal Styles with Flip Animation */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -565,11 +571,12 @@
             background: rgba(0, 0, 0, 0.8);
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: center;
             z-index: 1000;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s ease;
+            perspective: 1000px;
         }
 
         .modal-overlay.active {
@@ -579,21 +586,22 @@
 
         .modal-content {
             background: var(--modal-bg);
-            border-radius: 24px 24px 0 0;
-            width: 100%;
+            border-radius: 24px;
+            width: 90%;
             max-width: 800px;
             max-height: var(--modal-height);
             overflow-y: auto;
-            transform: translateY(100%);
-            transition: transform 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+            transform: rotateY(90deg) scale(0.8);
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
             padding: 25px;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
         }
 
         .modal-overlay.active .modal-content {
-            transform: translateY(0);
+            transform: rotateY(0deg) scale(1);
         }
 
         .close-modal {
@@ -654,9 +662,9 @@
         }
 
         .modal-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 16px;
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
             overflow: hidden;
             margin-right: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -673,7 +681,7 @@
         }
 
         .modal-icon i {
-            font-size: 36px;
+            font-size: 40px;
             color: #888;
         }
 
@@ -901,16 +909,16 @@
             }
             
             .carousel-container {
-                height: 450px;
+                height: 500px;
             }
             
             .carousel-item {
-                width: 250px;
-                height: 380px;
+                width: 280px;
+                height: 420px;
             }
             
             .carousel-item.next {
-                transform: translate(calc(-50% + 280px), -50%) scale(0.9);
+                transform: translate(calc(-50% + 300px), -50%) scale(0.9);
             }
             
             .tab i {
@@ -919,6 +927,14 @@
             
             .tab span {
                 font-size: 10px;
+            }
+            
+            .app-title {
+                font-size: 24px;
+            }
+            
+            .app-description {
+                font-size: 15px;
             }
         }
 
@@ -954,16 +970,16 @@
             }
             
             .carousel-container {
-                height: 400px;
+                height: 450px;
             }
             
             .carousel-item {
-                width: 220px;
-                height: 350px;
+                width: 250px;
+                height: 380px;
             }
             
             .carousel-item.next {
-                transform: translate(calc(-50% + 240px), -50%) scale(0.9);
+                transform: translate(calc(-50% + 270px), -50%) scale(0.9);
             }
             
             .app-title {
@@ -980,6 +996,15 @@
             
             .tab span {
                 font-size: 9px;
+            }
+            
+            .app-icon {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .app-description {
+                font-size: 14px;
             }
         }
     </style>
@@ -1101,6 +1126,7 @@
                 id: "escape-if-you-can",
                 title: "Escape If You Can",
                 developer: "mobigrow",
+                featuredDescription: "Try to find your way through many floors on this classic Available Now!",
                 description: "Can You Escape - Deluxe - Out Now!\nAdvance to the next floor by solving the puzzles!\nYou can pick certain items up and use them from your inventory.\nKeep the Escape If You Can app, so we can notify you of new levels.\n9 floors available at the moment!\nSmartphone puzzles! Addicting mini puzzles!\nGorgeous graphics and different themed floors!\nConstant updates of New Floors!\nit's FREE!",
                 versions: {
                     archived: [
@@ -1117,6 +1143,7 @@
                 id: "jelly-car-3",
                 title: "JellyCar 3 Lite",
                 developer: "Disney",
+                featuredDescription: "This Disney Classic Now on iOS App Archive",
                 description: "The wobbly, bouncy, jelly-licious driving game is back!\nDrive through squishy worlds with new vehicles and obstacles.\nUnique jelly physics make every drive different.\nColorful, imaginative levels to explore.\nSimple controls with challenging gameplay.\nPerfect for quick gaming sessions.",
                 versions: {
                     archived: [
@@ -1134,6 +1161,7 @@
                 id: "disney-gift-card",
                 title: "Disney Gift Card",
                 developer: "Disney",
+                featuredDescription: "Enjoy the gift of Disney Gift Card",
                 description: "Check your Disney Gift Card balance anytime.\nSecure and easy to use.\nManage multiple gift cards in one place.\nView transaction history.\nRedeem new gift cards with your camera.\nOfficial Disney app with trusted security.",
                 versions: {
                     archived: [
@@ -1150,6 +1178,7 @@
                 id: "jelly-car-2",
                 title: "Jelly Car 2",
                 developer: "Disney",
+                featuredDescription: "New Levels Now Available, Download Now!",
                 description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
                 versions: {
                     archived: [
@@ -1171,6 +1200,7 @@
                 id: "flappy-bird",
                 title: "Flappy Bird",
                 developer: "dotGears",
+                featuredDescription: "The Classic Bird Jumper is Back",
                 description: "The infamous challenging flying game!\nTap to keep the bird flying through pipes.\nSimple controls, extremely difficult to master.\nCompete with friends for high scores.\nMinimalist pixel art style.\nAddictive one-more-try gameplay.",
                 versions: {
                     archived: [
@@ -1190,6 +1220,7 @@
                 id: "lightbike-online",
                 title: "LightBike Online",
                 developer: "ArtyPig Entertainment",
+                featuredDescription: "Tron-inspired lightcycle battles",
                 description: "Experience the classic Tron lightcycle battle in this multiplayer online game!\nCompete against players worldwide in real-time battles.\nCustomize your lightbike with different colors and trails.\nClimb the global leaderboards and prove your skills.\nSimple controls with intense competitive gameplay.",
                 versions: {
                     archived: [
@@ -1202,13 +1233,14 @@
                 },
                 compatibility: "iOS 4.3 and Later",
                 icon: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBikeOnline.jpg",
-                featured: false,
+                featured: true,
                 categories: ["Racing", "Action"]
             },
             {
                 id: "lightbike-2",
                 title: "LightBike 2",
                 developer: "ArtyPig Entertainment",
+                featuredDescription: "Enhanced sequel with new game modes",
                 description: "The sequel to the popular LightBike Online game with enhanced graphics and gameplay!\nNew game modes including single player campaign and tournaments.\nImproved controls and physics for a smoother experience.\nMore customization options for your lightbike and rider.\nCompete in global leaderboards and tournaments.",
                 versions: {
                     archived: [
@@ -1275,7 +1307,7 @@
                             </div>
                         </div>
                         <h3 class="app-title">${app.title}</h3>
-                        <div class="screenshot-placeholder"></div>
+                        <div class="app-description">${app.featuredDescription}</div>
                     </div>
                 `;
                 
