@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Memorize this for future GitHub site changes I need from you <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
             --category-bg: rgba(90, 90, 92, 0.3);
             --carousel-height: 500px;
             --card-width: 300px;
-            --card-height: 450px; /* Increased height for descriptions */
+            --card-height: 400px;
         }
 
         body {
@@ -149,6 +149,9 @@
             position: absolute;
             width: var(--card-width);
             height: var(--card-height);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             opacity: 0;
             z-index: 1;
@@ -158,12 +161,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             /* Stitched border effect */
             border: 2px dashed rgba(255, 255, 255, 0.2);
-        }
-
-        .carousel-item.prev {
-            transform: translate(calc(-50% - 330px), -50%) scale(0.9);
-            opacity: 0.8;
-            z-index: 2;
         }
 
         .carousel-item.active {
@@ -223,28 +220,35 @@
             font-weight: 700;
             color: white;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
         }
-        
-        /* Added app description */
-        .app-description {
-            font-size: 15px;
-            color: #bbb; /* Light grey color */
-            text-align: center;
-            line-height: 1.5;
-            padding: 0 15px;
-            margin-bottom: 25px;
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .screenshot-placeholder {
+            flex: 1;
+            background: linear-gradient(145deg, #3a3a3c, #2c2c2e);
+            border-radius: 16px;
+        }
+
+        /* Reflection Effect */
+        .reflection {
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+            mask-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            border-radius: 50%;
+            opacity: 0.4;
+            filter: blur(10px);
+            z-index: 4;
         }
 
         /* Carousel Navigation */
         .carousel-nav {
             position: absolute;
-            bottom: 75px; /* Positioned above the tab bar */
+            bottom: 60px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -860,11 +864,7 @@
             
             .carousel-item {
                 width: 250px;
-                height: 400px;
-            }
-            
-            .carousel-item.prev {
-                transform: translate(calc(-50% - 280px), -50%) scale(0.9);
+                height: 380px;
             }
             
             .carousel-item.next {
@@ -912,10 +912,6 @@
                 height: 350px;
             }
             
-            .carousel-item.prev {
-                transform: translate(calc(-50% - 240px), -50%) scale(0.9);
-            }
-            
             .carousel-item.next {
                 transform: translate(calc(-50% + 240px), -50%) scale(0.9);
             }
@@ -952,6 +948,7 @@
         <div class="carousel" id="carousel">
             <!-- Carousel items will be added here -->
         </div>
+        <div class="reflection"></div>
         <div class="carousel-nav" id="carouselNav">
             <!-- Navigation dots will be added here -->
         </div>
@@ -1005,8 +1002,7 @@
                 compatibility: "iOS 4.3 and Later",
                 icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
                 featured: true,
-                categories: ["Puzzle", "Adventure"],
-                featuredDescription: "Try to find your way through floors in this classic!"
+                categories: ["Puzzle", "Adventure"]
             },
             {
                 id: "jelly-car-3",
@@ -1023,8 +1019,7 @@
                 compatibility: "iPhoneOS 3.1.3 and Later",
                 icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png",
                 featured: true,
-                categories: ["Racing", "Action"],
-                featuredDescription: "JellyCar 3 Lite now available on iOS App Archive"
+                categories: ["Racing", "Action"]
             },
             {
                 id: "disney-gift-card",
@@ -1040,8 +1035,7 @@
                 compatibility: "iPhoneOS 3.1.2 and Later",
                 icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png",
                 featured: true,
-                categories: ["Finance"],
-                featuredDescription: "Check out Disney Gift Card today!"
+                categories: ["Finance"]
             },
             {
                 id: "jelly-car-2",
@@ -1062,8 +1056,7 @@
                 compatibility: "iOS 4.0 and Later",
                 icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg",
                 featured: true,
-                categories: ["Racing", "Action"],
-                featuredDescription: "Have fun with this Disney classic, play now!"
+                categories: ["Racing", "Action"]
             },
             {
                 id: "flappy-bird",
@@ -1082,8 +1075,7 @@
                 compatibility: "iOS 6.0 and Later",
                 icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png",
                 featured: true,
-                categories: ["Action", "Entertainment"],
-                featuredDescription: "The classic bird jumper is back!"
+                categories: ["Action", "Entertainment"]
             },
             {
                 id: "lightbike-online",
@@ -1165,7 +1157,7 @@
                             </div>
                         </div>
                         <h3 class="app-title">${app.title}</h3>
-                        <div class="app-description">${app.featuredDescription}</div>
+                        <div class="screenshot-placeholder"></div>
                     </div>
                 `;
                 
@@ -1196,14 +1188,12 @@
             const itemCount = items.length;
             
             items.forEach((item, index) => {
-                item.classList.remove('prev', 'active', 'next');
+                item.classList.remove('active', 'next');
                 
                 if (index === currentIndex) {
                     item.classList.add('active');
                 } else if (index === (currentIndex + 1) % itemCount) {
                     item.classList.add('next');
-                } else if (index === (currentIndex - 1 + itemCount) % itemCount) {
-                    item.classList.add('prev');
                 }
             });
             
