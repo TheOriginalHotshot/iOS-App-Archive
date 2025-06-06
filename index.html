@@ -33,6 +33,7 @@
             --card-width: 340px;
             --card-height: 500px;
             --background-gradient: linear-gradient(135deg, #2a2a2c, #3c3c3e);
+            --genius-color: #ff9f0a;
         }
 
         body {
@@ -102,7 +103,8 @@
         /* Featured Carousel */
         .carousel-container {
             position: relative;
-            height: var(--carousel-height);
+            height: calc(100vh - 120px);
+            min-height: 600px;
             overflow: hidden;
             margin: 0 auto;
             max-width: 1200px;
@@ -120,7 +122,8 @@
         .carousel-item {
             position: absolute;
             width: var(--card-width);
-            height: var(--card-height);
+            height: calc(100vh - 180px);
+            min-height: 480px;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%) scale(0.9);
@@ -211,6 +214,52 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        
+        .app-card .card-button {
+            background: var(--button-bg);
+            border: none;
+            color: var(--text-light);
+            padding: 12px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-top: 15px;
+            border-radius: 12px;
+        }
+
+        .app-card .card-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            border-radius: 12px 12px 0 0;
+        }
+
+        .app-card .card-button:hover {
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .app-card .card-button:active {
+            transform: translateY(1px);
+            box-shadow: 
+                0 1px 2px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         /* Carousel Navigation */
@@ -341,6 +390,9 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .app-card-grid:hover {
@@ -390,7 +442,7 @@
             border: none;
             color: var(--text-light);
             padding: 10px 15px;
-            border-radius: 15px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 500;
             font-size: 14px;
@@ -401,6 +453,8 @@
             width: 100%;
             position: relative;
             overflow: hidden;
+            margin-top: auto;
+            border-radius: 10px;
         }
 
         .card-button:before {
@@ -411,7 +465,7 @@
             width: 100%;
             height: 50%;
             background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-            border-radius: 15px 15px 0 0;
+            border-radius: 10px 10px 0 0;
         }
 
         .card-button:hover {
@@ -429,7 +483,7 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
-        /* Bottom Navigation Bar - Updated for iOS 5 Style */
+        /* Bottom Navigation Bar */
         .bottom-bar {
             position: fixed;
             bottom: 0;
@@ -468,6 +522,10 @@
             box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.4);
         }
 
+        .tab.active.genius {
+            border-top: 3px solid var(--genius-color);
+        }
+
         .tab:not(:last-child) {
             border-right: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -475,6 +533,10 @@
         .tab i {
             font-size: 22px;
             margin-bottom: 4px;
+        }
+
+        .tab.genius i {
+            color: var(--genius-color);
         }
 
         .tab.active::after {
@@ -486,6 +548,11 @@
             height: 3px;
             background: var(--accent);
             box-shadow: 0 0 10px rgba(10, 132, 255, 0.5);
+        }
+
+        .tab.active.genius::after {
+            background: var(--genius-color);
+            box-shadow: 0 0 10px rgba(255, 159, 10, 0.5);
         }
 
         /* Tab Content Areas */
@@ -526,7 +593,7 @@
             color: #666;
         }
 
-        /* Modal Styles with Flip Animation */
+        /* Modal Styles */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -669,6 +736,7 @@
             gap: 8px;
             flex-wrap: wrap;
             margin-bottom: 10px;
+            justify-content: center;
         }
         
         .category-tag {
@@ -706,7 +774,7 @@
             margin-bottom: 12px;
         }
 
-        /* Version History with Scrollable Container */
+        /* Version History */
         .versions-scroll-container {
             max-height: 200px;
             overflow-y: auto;
@@ -734,6 +802,7 @@
             font-size: 15px;
             margin-bottom: 8px;
             color: #ddd;
+            text-align: center;
         }
         
         .version-group h4.unarchived-label {
@@ -762,6 +831,7 @@
             font-size: 15px;
             margin-bottom: 15px;
             color: #ccc;
+            text-align: center;
         }
 
         .download-button {
@@ -995,7 +1065,7 @@
         </div>
     </div>
     
-    <!-- Search Container (Hidden by default) -->
+    <!-- Search Container -->
     <div class="search-container" id="searchContainer">
         <div class="search-box">
             <input type="text" class="search-input" id="searchInput" placeholder="Search apps...">
@@ -1047,7 +1117,7 @@
     <!-- Modal Container -->
     <div id="modalContainer"></div>
     
-    <!-- Bottom Navigation Bar - Updated for iOS 5 Style -->
+    <!-- Bottom Navigation Bar -->
     <div class="bottom-bar">
         <div class="tab active" data-tab="featured">
             <i class="fas fa-star"></i>
@@ -1057,7 +1127,7 @@
             <i class="fas fa-th-large"></i>
             <span>Categories</span>
         </div>
-        <div class="tab" data-tab="genius">
+        <div class="tab genius" data-tab="genius">
             <i class="fas fa-lightbulb"></i>
             <span>Genius</span>
         </div>
@@ -1127,28 +1197,6 @@
                 categories: ["Finance"]
             },
             {
-                id: "jelly-car-2",
-                title: "Jelly Car 2",
-                developer: "Disney",
-                featuredDescription: "New Levels Now Available, Download Now!",
-                description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
-                versions: {
-                    archived: [
-                        { version: "1.0.0", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.0.ipa" },
-                        { version: "1.0.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.1.ipa" },
-                        { version: "1.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.1.ipa" },
-                        { version: "1.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.ipa" },
-                        { version: "1.2.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.1.ipa" },
-                        { version: "1.2.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.2.ipa" }
-                    ],
-                    unarchived: []
-                },
-                compatibility: "iOS 4.0 and Later",
-                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg",
-                featured: true,
-                categories: ["Racing", "Action"]
-            },
-            {
                 id: "flappy-bird",
                 title: "Flappy Bird",
                 developer: "dotGears",
@@ -1189,20 +1237,25 @@
                 categories: ["Racing", "Action"]
             },
             {
-                id: "lightbike-2",
-                title: "LightBike 2",
-                developer: "ArtyPig Entertainment",
-                featuredDescription: "Enhanced sequel with new game modes",
-                description: "The sequel to the popular LightBike Online game with enhanced graphics and gameplay!\nNew game modes including single player campaign and tournaments.\nImproved controls and physics for a smoother experience.\nMore customization options for your lightbike and rider.\nCompete in global leaderboards and tournaments.",
+                id: "jelly-car-2",
+                title: "Jelly Car 2",
+                developer: "Disney",
+                featuredDescription: "New Levels Now Available, Download Now!",
+                description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
                 versions: {
                     archived: [
-                        { version: "2.2.2", url: "https://archive.org/download/light-bike-2-v-2.2.2-clutch-1.3-3/LightBike2-v2.2.2-%28Clutch-1.3%29-3.ipa" }
+                        { version: "1.0.0", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.0.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.1.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.1.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.ipa" },
+                        { version: "1.2.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.1.ipa" },
+                        { version: "1.2.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.2.ipa" }
                     ],
-                    unarchived: ["1.0", "1.1", "1.2", "2.0", "2.1", "2.2", "2.2.1"]
+                    unarchived: []
                 },
-                compatibility: "iOS 7.0 and Later",
-                icon: "https://archive.org/download/light-bike-2-v-2.2.2-clutch-1.3-3/IMG_5059%202.jpeg",
-                featured: true,
+                compatibility: "iOS 4.0 and Later",
+                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg",
+                featured: false,
                 categories: ["Racing", "Action"]
             }
         ];
@@ -1252,12 +1305,13 @@
                     <div class="app-card">
                         <div class="app-icon-container">
                             <div class="app-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                                 '<i class="fas fa-mobile-alt"></i>'}
                             </div>
                         </div>
                         <h3 class="app-title">${app.title}</h3>
                         <div class="app-description">${app.featuredDescription}</div>
+                        <button class="card-button" data-app-id="${app.id}">View Details</button>
                     </div>
                 `;
                 
@@ -1279,6 +1333,15 @@
             
             // Add swipe functionality
             setupSwipe();
+            
+            // Add event listener to carousel buttons
+            document.querySelectorAll('.app-card .card-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const appId = this.getAttribute('data-app-id');
+                    document.getElementById(`${appId}Modal`).classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
         }
         
         // Update carousel position
@@ -1375,7 +1438,7 @@
                 
                 appCard.innerHTML = `
                     <div class="card-icon">
-                        ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                         '<i class="fas fa-mobile-alt"></i>'}
                     </div>
                     <div class="card-name">${app.title}</div>
@@ -1449,7 +1512,7 @@
                         <button class="close-modal">&times;</button>
                         <div class="modal-header">
                             <div class="modal-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title} Icon" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                                 '<i class="fas fa-mobile-alt"></i>'}
                             </div>
                             <div>
