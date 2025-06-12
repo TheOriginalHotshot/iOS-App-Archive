@@ -181,6 +181,23 @@
                 icon: "app-icon/beer-ratings-guide.png",
                 featured: false,
                 categories: ["Lifestyle", "Food & Drink", "Beer"]
+            },
+            {
+                id: "beer-goggles-by-hive-mind",
+                title: "Beer Goggles by Hive Mind",
+                developer: "Hive Mind LLC",
+                featuredDescription: "Test your judgment with Beer Goggles!",
+                description: "Ever wondered what that great looking girl at the bar really looks like? Take our test to see if your eyes are giving your brain the right information! Life is too short for regrets, and 'Beer Goggles by Hive Mind' will help you dodge those uncomfortable mornings, awkward walks of shame, and trips to the emergency room!\n\nRate a set of three carefully selected 3D models and 'Beer Goggles by Hive Mind' will use a unique algorithm that will determine how closely you matched the ideal ratings and determine how badly your judgment is impaired.\n\nFor entertainment purposes only!\n\n\"I checked this app before I left the bar with a girl and lucky for me it told me to take a closer look... Thanks guys!\"\n\n\"'Beer Goggles by Hive Mind' saved me!!! I was about to make the biggest mistake of my life.\"\n\n\"GAAAAAAAH!! You should put a warning on some of your pictures!\"\n\nVersion History\n1.1 - Minor Bug Fix\n1.2 - Improved User Interface\n- Increased Model Display Time\n- Added New Models and Quotes\n1.3 - Code Optimization\n1.4 - New Models, Bug Fixes\n2.0 - iOS4 Ready",
+                versions: {
+                    archived: [
+                        { version: "1.3", url: "https://archive.org/download/beer-goggles-by-hive-mind-1.3/Beer%20Goggles%20by%20Hive%20Mind%201.3.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.2.1 and Later",
+                icon: "app-icon/beer-goggles-by-hive-mind.png",
+                featured: false,
+                categories: ["Games", "Entertainment", "Lifestyle", "Beer"]
             }
         ];
 
