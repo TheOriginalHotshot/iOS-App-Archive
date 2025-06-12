@@ -1,0 +1,573 @@
+        // App data with download URLs and categories
+        const apps = [
+            {
+                id: "escape-if-you-can",
+                title: "Escape If You Can",
+                developer: "mobigrow",
+                featuredDescription: "Try to find your way through many floors on this classic Available Now!",
+                description: "Can You Escape - Deluxe - Out Now!\nAdvance to the next floor by solving the puzzles!\nYou can pick certain items up and use them from your inventory.\nKeep the Escape If You Can app, so we can notify you of new levels.\n9 floors available at the moment!\nSmartphone puzzles! Addicting mini puzzles!\nGorgeous graphics and different themed floors!\nConstant updates of New Floors!\nit's FREE!",
+                versions: {
+                    archived: [
+                        { version: "1.3.3", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/com.dozengames.FloorsEscape-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "app-icon/escape-if-you-can.jpg",
+                featured: true,
+                categories: ["Puzzle", "Adventure"]
+            },
+            {
+                id: "jelly-car-3-lite",
+                title: "JellyCar 3 Lite",
+                developer: "Disney",
+                featuredDescription: "This Disney Classic Now on iOS App Archive",
+                description: "The wobbly, bouncy, jelly-licious driving game is back!\nDrive through squishy worlds with new vehicles and obstacles.\nUnique jelly physics make every drive different.\nColorful, imaginative levels to explore.\nSimple controls with challenging gameplay.\nPerfect for quick gaming sessions.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar%203%20Lite%201.0%20%283998555%29.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar%203%20Lite%201.0.1%20%284155986%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.1.3 and Later",
+                icon: "app-icon/jelly-car-3-lite.png",
+                featured: true,
+                categories: ["Racing", "Action"]
+            },
+            {
+                id: "disney-gift-card",
+                title: "Disney Gift Card",
+                developer: "Disney",
+                featuredDescription: "Enjoy the gift of Disney Gift Card",
+                description: "Check your Disney Gift Card balance anytime.\nSecure and easy to use.\nManage multiple gift cards in one place.\nView transaction history.\nRedeem new gift cards with your camera.\nOfficial Disney app with trusted security.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/com.disney.DisneyGiftCard-iOS3.1.2-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.1.2 and Later",
+                icon: "app-icon/disney-gift-card.png",
+                featured: true,
+                categories: ["Finance"]
+            },
+            {
+                id: "flappy-bird",
+                title: "Flappy Bird",
+                developer: "dotGears",
+                featuredDescription: "The Classic Bird Jumper is Back",
+                description: "The infamous challenging flying game!\nTap to keep the bird flying through pipes.\nSimple controls, extremely difficult to master.\nCompete with friends for high scores.\nMinimalist pixel art style.\nAddictive one-more-try gameplay.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.0.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.1.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.2.ipa" },
+                        { version: "1.3", url: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy%20Bird%20v1.3.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 6.0 and Later",
+                icon: "app-icon/flappy-bird.png",
+                featured: true,
+                categories: ["Action", "Entertainment"]
+            },
+            {
+                id: "lightbike-online",
+                title: "LightBike Online",
+                developer: "ArtyPig Entertainment",
+                featuredDescription: "Tron-inspired lightcycle battles",
+                description: "Experience the classic Tron lightcycle battle in this multiplayer online game!\nCompete against players worldwide in real-time battles.\nCustomize your lightbike with different colors and trails.\nClimb the global leaderboards and prove your skills.\nSimple controls with intense competitive gameplay.",
+                versions: {
+                    archived: [
+                        { version: "1.1.1", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike_v1.1.1_os22.ipa" },
+                        { version: "1.2.5", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike%201.2.5.ipa" },
+                        { version: "1.2.6", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike.v1.2.6.iPhone%20C4iD.ipa" },
+                        { version: "1.2.8", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBikeOnline%20v1.2.8%20artypig78.ipa" }
+                    ],
+                    unarchived: ["1.0", "1.1", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.7"]
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "app-icon/lightbike-online.jpeg",
+                featured: true,
+                categories: ["Racing", "Action"]
+            },
+            {
+                id: "jelly-car-2",
+                title: "Jelly Car 2",
+                developer: "Disney",
+                featuredDescription: "New Levels Now Available, Download Now!",
+                description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
+                versions: {
+                    archived: [
+                        { version: "1.0.0", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.0.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.0.1.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.1.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.ipa" },
+                        { version: "1.2.1", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.1.ipa" },
+                        { version: "1.2.2", url: "https://archive.org/download/jelly-car-2-1.2.2/JellyCar%202%201.2.2.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 4.0 and Later",
+                icon: "app-icon/jelly-car-2.jpeg",
+                featured: false,
+                categories: ["Racing", "Action"]
+            }
+        ];
+
+        // DOM Elements
+        const carouselContainer = document.getElementById('carouselContainer');
+        const carousel = document.getElementById('carousel');
+        const carouselNav = document.getElementById('carouselNav');
+        const searchResults = document.getElementById('searchResults');
+        const searchContainer = document.getElementById('searchContainer');
+        const searchInput = document.getElementById('searchInput');
+        const cancelSearch = document.getElementById('cancelSearch');
+        const tabs = document.querySelectorAll('.tab');
+        const modalContainer = document.getElementById('modalContainer');
+        
+        // Tab content areas
+        const tabContents = {
+            featured: document.getElementById('featuredContent'),
+            categories: document.getElementById('categoriesContent'),
+            genius: document.getElementById('geniusContent'),
+            search: document.getElementById('searchContent'),
+            updates: document.getElementById('updatesContent')
+        };
+        
+        // Carousel state
+        let currentIndex = 0;
+        let autoSlideInterval;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        // Initialize carousel
+        function initCarousel() {
+            // Clear existing items
+            carousel.innerHTML = '';
+            carouselNav.innerHTML = '';
+            
+            // Filter only featured apps for the carousel
+            const featuredApps = apps.filter(app => app.featured);
+            
+            // Create carousel items
+            featuredApps.forEach((app, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = 'carousel-item';
+                carouselItem.dataset.index = index;
+                
+                carouselItem.innerHTML = `
+                    <div class="app-card">
+                        <div class="app-icon-container">
+                            <div class="app-icon">
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                '<i class="fas fa-mobile-alt"></i>'}
+                            </div>
+                        </div>
+                        <h3 class="app-title">${app.title}</h3>
+                        <div class="app-description">${app.featuredDescription}</div>
+                        <button class="card-button" data-app-id="${app.id}">View Details</button>
+                    </div>
+                `;
+                
+                carousel.appendChild(carouselItem);
+                
+                // Create navigation dot
+                const navDot = document.createElement('div');
+                navDot.className = 'nav-dot';
+                navDot.dataset.index = index;
+                navDot.addEventListener('click', () => goToSlide(index));
+                carouselNav.appendChild(navDot);
+            });
+            
+            // Set initial slide
+            updateCarousel();
+            
+            // Start auto slide
+            startAutoSlide();
+            
+            // Add swipe functionality
+            setupSwipe();
+            
+            // Add event listener to carousel buttons
+            document.querySelectorAll('.app-card .card-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const appId = this.getAttribute('data-app-id');
+                    setUrlParam('app', appId);
+                    document.getElementById(`${appId}Modal`).classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+        }
+        
+        // Update carousel position
+        function updateCarousel() {
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.nav-dot');
+            const itemCount = items.length;
+            
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'prev', 'next');
+                
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index === (currentIndex - 1 + itemCount) % itemCount) {
+                    item.classList.add('prev');
+                } else if (index === (currentIndex + 1) % itemCount) {
+                    item.classList.add('next');
+                }
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        // Go to specific slide
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoSlide();
+        }
+        
+        // Next slide
+        function nextSlide() {
+            const items = document.querySelectorAll('.carousel-item');
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            const items = document.querySelectorAll('.carousel-item');
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        }
+        
+        // Start auto slide
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 8000);
+        }
+        
+        // Reset auto slide timer
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+        
+        // Setup swipe functionality
+        function setupSwipe() {
+            carouselContainer.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            carouselContainer.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    nextSlide();
+                }
+                
+                if (touchEndX > touchStartX + 50) {
+                    prevSlide();
+                }
+                
+                resetAutoSlide();
+            }
+        }
+        
+        // Render search results
+        function renderSearchResults(filteredApps = []) {
+            searchResults.innerHTML = '';
+            
+            if (filteredApps.length === 0) {
+                searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
+                return;
+            }
+            
+            filteredApps.forEach(app => {
+                const appCard = document.createElement('div');
+                appCard.className = 'app-card-grid';
+                
+                appCard.innerHTML = `
+                    <div class="card-icon">
+                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                        '<i class="fas fa-mobile-alt"></i>'}
+                    </div>
+                    <div class="card-name">${app.title}</div>
+                    <div class="card-developer">${app.developer}</div>
+                    <button class="card-button" data-app-id="${app.id}">View Details</button>
+                `;
+                
+                searchResults.appendChild(appCard);
+            });
+            
+            // Add event listeners to buttons
+            document.querySelectorAll('.card-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const appId = this.getAttribute('data-app-id');
+                    setUrlParam('app', appId);
+                    document.getElementById(`${appId}Modal`).classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+        }
+        
+        // Create modals
+        function createModals() {
+            modalContainer.innerHTML = '';
+            
+            apps.forEach(app => {
+                // Create version list items
+                let versionItems = '';
+                
+                // Add archived versions if they exist
+                if (app.versions.archived.length > 0) {
+                    versionItems += `
+                        <div class="version-group">
+                            <h4>Archived Versions</h4>
+                            <ul class="version-list">
+                                ${app.versions.archived.map(v => {
+                                    return `<li>
+                                        <span>${v.version}</span>
+                                        <a href="${v.url}" download class="download-button">
+                                            <i class="fas fa-download"></i> Download IPA
+                                        </a>
+                                    </li>`;
+                                }).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+                
+                // Add unarchived versions if they exist
+                if (app.versions.unarchived.length > 0) {
+                    versionItems += `
+                        <div class="version-group">
+                            <h4 class="unarchived-label">Unarchived Versions</h4>
+                            <ul class="version-list">
+                                ${app.versions.unarchived.map(v => `<li>${v}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+                
+                // Create category tags
+                const categoryTags = app.categories.map(cat => 
+                    `<span class="category-tag">${cat}</span>`
+                ).join('');
+                
+                const modal = document.createElement('div');
+                modal.className = 'modal-overlay';
+                modal.id = `${app.id}Modal`;
+                
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <button class="close-modal">&times;</button>
+                        <div class="modal-header">
+                            <div class="modal-icon">
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                '<i class="fas fa-mobile-alt"></i>'}
+                            </div>
+                            <div>
+                                <h2 class="modal-title">${app.title}</h2>
+                                <p class="modal-developer">${app.developer}</p>
+                                <div class="modal-categories">
+                                    ${categoryTags}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
+                            <p class="compatibility-text">${app.compatibility}</p>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fas fa-align-left"></i> App Store Description</h3>
+                            ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fas fa-code-branch"></i> Version History</h3>
+                            <div class="versions-scroll-container">
+                                <div class="versions-container">
+                                    ${versionItems}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                modalContainer.appendChild(modal);
+            });
+            
+            // Add modal close handlers
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.closest('.modal-overlay').classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    setUrlParam('app', '');
+                });
+            });
+            
+            // Close modal when clicking outside
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        setUrlParam('app', '');
+                    }
+                });
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        setUrlParam('app', '');
+                    });
+                }
+            });
+        }
+        
+        // Tab switching
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+                
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Hide all tab content
+                Object.values(tabContents).forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show/hide views based on tab
+                if (tabName === 'featured') {
+                    carouselContainer.style.display = 'block';
+                    searchContainer.style.display = 'none';
+                    searchResults.classList.remove('active');
+                    tabContents.featured.classList.add('active');
+                } else if (tabName === 'search') {
+                    carouselContainer.style.display = 'none';
+                    searchContainer.style.display = 'block';
+                    searchResults.classList.add('active');
+                    tabContents.search.classList.add('active');
+                    renderSearchResults(apps);
+                } else {
+                    // For categories, genius, updates
+                    carouselContainer.style.display = 'none';
+                    searchContainer.style.display = 'none';
+                    searchResults.classList.remove('active');
+                    tabContents[tabName].classList.add('active');
+                }
+            });
+        });
+        
+        // Search functionality
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            setUrlParam('query', searchTerm);
+            if (searchTerm.length === 0) {
+                renderSearchResults(apps);
+                return;
+            }
+            const filteredApps = apps.filter(app => 
+                app.title.toLowerCase().includes(searchTerm) || 
+                app.developer.toLowerCase().includes(searchTerm)
+            );
+            renderSearchResults(filteredApps);
+        });
+        
+        // Show cancel button when search input is focused
+        searchInput.addEventListener('focus', function() {
+            cancelSearch.style.display = 'block';
+        });
+        
+        // Hide cancel button when search input is blurred
+        searchInput.addEventListener('blur', function() {
+            if (this.value === '') {
+                cancelSearch.style.display = 'none';
+            }
+        });
+        
+        // Cancel search
+        cancelSearch.addEventListener('click', function() {
+            searchInput.value = '';
+            searchInput.blur();
+            this.style.display = 'none';
+            setUrlParam('query', '');
+            renderSearchResults(apps);
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initCarousel();
+            createModals();
+            
+            // Add keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+            
+            // Activate featured tab content
+            tabContents.featured.classList.add('active');
+            
+            const queryParam = getUrlParam('query');
+            if (queryParam) {
+                searchInput.value = queryParam;
+                tabs.forEach(tab => {
+                    if (tab.getAttribute('data-tab') === 'search') {
+                        tab.click();
+                    }
+                });
+                const filteredApps = apps.filter(app => 
+                    app.title.toLowerCase().includes(queryParam) || 
+                    app.developer.toLowerCase().includes(queryParam)
+                );
+                renderSearchResults(filteredApps);
+            }
+            const appParam = getUrlParam('app');
+            if (appParam) {
+                const modal = document.getElementById(`${appParam}Modal`);
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    setUrlParam('app', '');
+                    setTimeout(() => {
+                        alert('App ID not found, please try again later.');
+                    }, 100);
+                }
+            }
+        });
+
+        function setUrlParam(key, value) {
+            const params = new URLSearchParams(window.location.search);
+            if (value && value.length > 0) {
+                params.set(key, value);
+            } else {
+                params.delete(key);
+            }
+            const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        function getUrlParam(key) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(key);
+        }
