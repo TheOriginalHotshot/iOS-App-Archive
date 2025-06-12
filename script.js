@@ -129,7 +129,7 @@
                 compatibility: "iOS 5.0 and Later",
                 icon: "app-icon/godzilla-strike-zone.png",
                 featured: false,
-                categories: ["Action", "Adventure"]
+                categories: ["Games", "Entertainment"]
             },
             {
                 id: "buster-bash",
@@ -146,7 +146,7 @@
                 compatibility: "iOS 7.0 and Later",
                 icon: "app-icon/buster-bash.png",
                 featured: false,
-                categories: ["Sports", "Arcade"]
+                categories: ["Games", "Sports", "Casual"]
             },
             {
                 id: "beer-bounce",
@@ -164,6 +164,23 @@
                 icon: "app-icon/beer-bounce.png",
                 featured: false,
                 categories: ["Entertainment", "Beer"]
+            },
+            {
+                id: "beer-ratings-guide",
+                title: "Beer Ratings Guide",
+                developer: "Nirvino",
+                featuredDescription: "100,000+ bottles of beer at your fingertips.",
+                description: "Put 100,000+ bottles of beer at your fingertips.\nStuck in a restaurant staring blankly at the menu? ...or perhaps at the grocery store doing 'Eeny, meeny, miny, moe' – believe us, we've been there. Nirvino's Beer Ratings Guide iPhone application helps you choose that great glass of beer when you need it most! Search our 100,000 beer database by name, price, style, food pairing, flavor profile, region, producer, and designation.\n\nForgot last night's beer?\nKeep track of the great (and not so great) beer you discover with our Beer Ratings Guide. No login or lengthy forms to fill out. Rate a beer with just one simple tap and it automatically saves to your personal ratings list. It's like your little black book for beer!\n\nAccess the most important information you need to make a quick and easy purchasing decision:\n\n- Beer Name\n- Ratings\n- Bottle Shot\n- Pairing Recommendations\n- Flavor Profile\n- Price",
+                versions: {
+                    archived: [
+                        { version: "1.21", url: "https://archive.org/download/beer-ratings-com.nirvino.-beer-ratings-guide-v-1.21-i-os-3.1/Beer%20Ratings-%28com.nirvino.BeerRatingsGuide%29%20%28V1.21%29%20%28iOS_3.1%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.1 and Later",
+                icon: "app-icon/beer-ratings-guide.png",
+                featured: false,
+                categories: ["Lifestyle", "Food & Drink", "Beer"]
             }
         ];
 
