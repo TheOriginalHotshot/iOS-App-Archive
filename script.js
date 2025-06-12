@@ -147,6 +147,23 @@
                 icon: "app-icon/buster-bash.png",
                 featured: false,
                 categories: ["Sports", "Arcade"]
+            },
+            {
+                id: "beer-bounce",
+                title: "Beer Bounce",
+                developer: "Developer Unknown",
+                featuredDescription: "Unknown",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.0.0", url: "https://archive.org/download/beer-bounce-quarters-1.0/Beer%20Bounce%20%28Quarters%29%201.0.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/beer-bounce.png",
+                featured: false,
+                categories: ["Entertainment"]
             }
         ];
 
