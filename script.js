@@ -13,12 +13,12 @@
                     unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/th-3234825290_thumb.jpg",
+                icon: "app-icon/escape-if-you-can.jpg",
                 featured: true,
                 categories: ["Puzzle", "Adventure"]
             },
             {
-                id: "jelly-car-3",
+                id: "jelly-car-3-lite",
                 title: "JellyCar 3 Lite",
                 developer: "Disney",
                 featuredDescription: "This Disney Classic Now on iOS App Archive",
@@ -31,7 +31,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.3 and Later",
-                icon: "https://archive.org/download/com.disney.jellycar3lite-ios3.1.3-clutch-2.0.4/JellyCar3Lite.png",
+                icon: "app-icon/jelly-car-3-lite.png",
                 featured: true,
                 categories: ["Racing", "Action"]
             },
@@ -48,7 +48,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.2 and Later",
-                icon: "https://archive.org/download/com.disney.disneygiftcard-ios3.1.2-clutch-2.0.4/DisneyGift.png",
+                icon: "app-icon/disney-gift-card.png",
                 featured: true,
                 categories: ["Finance"]
             },
@@ -68,7 +68,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "https://archive.org/download/flappy-bird-v-1.3_202412/Flappy.png",
+                icon: "app-icon/flappy-bird.png",
                 featured: true,
                 categories: ["Action", "Entertainment"]
             },
@@ -88,7 +88,7 @@
                     unarchived: ["1.0", "1.1", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.7"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/IMG_5058.jpeg",
+                icon: "app-icon/lightbike-online.jpeg",
                 featured: true,
                 categories: ["Racing", "Action"]
             },
@@ -110,7 +110,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 4.0 and Later",
-                icon: "https://archive.org/download/jelly-car-2-1.2.2/IMG_4924.jpeg",
+                icon: "app-icon/jelly-car-2.jpeg",
                 featured: false,
                 categories: ["Racing", "Action"]
             }
