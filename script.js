@@ -163,7 +163,7 @@
                 compatibility: "iPhoneOS 2.0 and Later",
                 icon: "app-icon/beer-bounce.png",
                 featured: false,
-                categories: ["Entertainment"]
+                categories: ["Entertainment", "Beer"]
             }
         ];
 
