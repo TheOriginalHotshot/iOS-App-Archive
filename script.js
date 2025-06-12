@@ -161,7 +161,7 @@
                     <div class="app-card">
                         <div class="app-icon-container">
                             <div class="app-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                                 '<i class="fas fa-mobile-alt"></i>'}
                             </div>
                         </div>
@@ -294,7 +294,7 @@
                 
                 appCard.innerHTML = `
                     <div class="card-icon">
-                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                         '<i class="fas fa-mobile-alt"></i>'}
                     </div>
                     <div class="card-name">${app.title}</div>
@@ -368,7 +368,7 @@
                         <button class="close-modal">&times;</button>
                         <div class="modal-header">
                             <div class="modal-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                                 '<i class="fas fa-mobile-alt"></i>'}
                             </div>
                             <div>
