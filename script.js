@@ -113,6 +113,23 @@
                 icon: "app-icon/jelly-car-2.jpeg",
                 featured: false,
                 categories: ["Racing", "Action"]
+            },
+            {
+                id: "godzilla-strike-zone",
+                title: "Godzilla: Strike Zone",
+                developer: "Warner Bros",
+                featuredDescription: "Join the squadron and face GODZILLA! Now archived.",
+                description: "Join a squadron of military heroes on a dangerous mission to face the ultimate force of nature: GODZILLA.\nExperience the breathtaking high-altitude sky jump from the movie as you air-drop into a devastated San Francisco and embark on a series of first-person rescue missions to evacuate survivors before it's too late.\nYour courage has never been more needed than it is today.\nSee GODZILLA in theaters May 16.",
+                versions: {
+                    archived: [
+                        { version: "1.1.0", url: "https://archive.org/download/godzilla-strike-zone-com.wb.godzilla.strikezone-5433-v-1.1.0-i-os-5.0/Godzilla%20Strike%20Zone-%28com.wb.godzilla.strikezone%29-5433-%20%28V1.1.0%29%20%28iOS_5.0%29-.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.0 and Later",
+                icon: "app-icon/godzilla-strike-zone.png",
+                featured: false,
+                categories: ["Action", "Adventure"]
             }
         ];
 
