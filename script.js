@@ -194,6 +194,7 @@
             document.querySelectorAll('.app-card .card-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const appId = this.getAttribute('data-app-id');
+                    setUrlParam('app', appId);
                     document.getElementById(`${appId}Modal`).classList.add('active');
                     document.body.style.overflow = 'hidden';
                 });
@@ -309,6 +310,7 @@
             document.querySelectorAll('.card-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const appId = this.getAttribute('data-app-id');
+                    setUrlParam('app', appId);
                     document.getElementById(`${appId}Modal`).classList.add('active');
                     document.body.style.overflow = 'hidden';
                 });
@@ -409,6 +411,7 @@
                 btn.addEventListener('click', function() {
                     this.closest('.modal-overlay').classList.remove('active');
                     document.body.style.overflow = 'auto';
+                    setUrlParam('app', '');
                 });
             });
             
@@ -418,6 +421,7 @@
                     if (e.target === this) {
                         this.classList.remove('active');
                         document.body.style.overflow = 'auto';
+                        setUrlParam('app', '');
                     }
                 });
             });
@@ -428,6 +432,7 @@
                     document.querySelectorAll('.modal-overlay.active').forEach(modal => {
                         modal.classList.remove('active');
                         document.body.style.overflow = 'auto';
+                        setUrlParam('app', '');
                     });
                 }
             });
@@ -472,17 +477,15 @@
         // Search functionality
         searchInput.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
-            
+            setUrlParam('query', searchTerm);
             if (searchTerm.length === 0) {
                 renderSearchResults(apps);
                 return;
             }
-            
             const filteredApps = apps.filter(app => 
                 app.title.toLowerCase().includes(searchTerm) || 
                 app.developer.toLowerCase().includes(searchTerm)
             );
-            
             renderSearchResults(filteredApps);
         });
         
@@ -503,6 +506,7 @@
             searchInput.value = '';
             searchInput.blur();
             this.style.display = 'none';
+            setUrlParam('query', '');
             renderSearchResults(apps);
         });
         
@@ -522,4 +526,48 @@
             
             // Activate featured tab content
             tabContents.featured.classList.add('active');
+            
+            const queryParam = getUrlParam('query');
+            if (queryParam) {
+                searchInput.value = queryParam;
+                tabs.forEach(tab => {
+                    if (tab.getAttribute('data-tab') === 'search') {
+                        tab.click();
+                    }
+                });
+                const filteredApps = apps.filter(app => 
+                    app.title.toLowerCase().includes(queryParam) || 
+                    app.developer.toLowerCase().includes(queryParam)
+                );
+                renderSearchResults(filteredApps);
+            }
+            const appParam = getUrlParam('app');
+            if (appParam) {
+                const modal = document.getElementById(`${appParam}Modal`);
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    setUrlParam('app', '');
+                    setTimeout(() => {
+                        alert('App ID not found, please try again later.');
+                    }, 100);
+                }
+            }
         });
+
+        function setUrlParam(key, value) {
+            const params = new URLSearchParams(window.location.search);
+            if (value && value.length > 0) {
+                params.set(key, value);
+            } else {
+                params.delete(key);
+            }
+            const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        function getUrlParam(key) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(key);
+        }
