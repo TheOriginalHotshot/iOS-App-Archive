@@ -130,6 +130,23 @@
                 icon: "app-icon/godzilla-strike-zone.png",
                 featured: false,
                 categories: ["Action", "Adventure"]
+            },
+            {
+                id: "buster-bash",
+                title: "Buster Bash",
+                developer: "Ground Up Logic",
+                featuredDescription: "Official Mobile Game of All-Star catcher Buster Posey.",
+                description: "BUSTER BASH -- Official Mobile Game of All-Star catcher Buster Posey.\n\nFollow in Buster's footsteps as you begin in the backyard of Leesburg, Georgia and move up levels to eventually join the elite ranks of the Big Leagues.\nYou get 10 baseballs per round to hit as many homers as possible. Players earn sunflower seeds to buy equipment and power-ups to improve hitting by knocking them out of the sky or through in-app purchases.\n\nSwipe the screen to knock pitches over the barn or outfield fence. You'll hit tennis balls and wiffle balls as a kid, but as you move up, it's all hardballs, and the pitchers get tougher!\n\nFeatures include:\n\n+ original music from Battery Amp\n\n+ equipment upgrades through the UNDER ARMOUR store\n\n+ five levels: Backyard in Leesburg, the TOYOTA Youth Championship, the UNDER ARMOUR All-American Game, College Playoffs, and the Big Leagues\n\nFollow on Twitter @BusterBash or Like us on Facebook for official Buster Bash giveaways.",
+                versions: {
+                    archived: [
+                        { version: "2.12", url: "https://archive.org/download/com.grounduplogic.bb-ios7.0-clutch-2.0.4_202505/com.grounduplogic.bb-iOS7.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "app-icon/buster-bash.png",
+                featured: false,
+                categories: ["Sports", "Arcade"]
             }
         ];
 
