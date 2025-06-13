@@ -567,10 +567,22 @@
                 renderSearchResults(apps);
                 return;
             }
-            const filteredApps = apps.filter(app => 
-                app.title.toLowerCase().includes(searchTerm) || 
-                app.developer.toLowerCase().includes(searchTerm)
-            );
+            let filteredApps;
+            if (searchTerm.includes('developer:')) {
+                const parts = searchTerm.split('developer:');
+                const namePart = parts[0].trim();
+                const devPart = parts[1].trim();
+                filteredApps = apps.filter(app => {
+                    const matchesDev = app.developer.toLowerCase().includes(devPart);
+                    const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
+                    return matchesDev && matchesName;
+                });
+            } else {
+                filteredApps = apps.filter(app => 
+                    app.title.toLowerCase().includes(searchTerm) || 
+                    app.developer.toLowerCase().includes(searchTerm)
+                );
+            }
             renderSearchResults(filteredApps);
         });
         
@@ -620,10 +632,22 @@
                         tab.click();
                     }
                 });
-                const filteredApps = apps.filter(app => 
-                    app.title.toLowerCase().includes(queryParam) || 
-                    app.developer.toLowerCase().includes(queryParam)
-                );
+                let filteredApps;
+                if (queryParam.includes('developer:')) {
+                    const parts = queryParam.split('developer:');
+                    const namePart = parts[0].trim();
+                    const devPart = parts[1].trim();
+                    filteredApps = apps.filter(app => {
+                        const matchesDev = app.developer.toLowerCase().includes(devPart);
+                        const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
+                        return matchesDev && matchesName;
+                    });
+                } else {
+                    filteredApps = apps.filter(app => 
+                        app.title.toLowerCase().includes(queryParam) || 
+                        app.developer.toLowerCase().includes(queryParam)
+                    );
+                }
                 renderSearchResults(filteredApps);
             }
             const appParam = getUrlParam('app');

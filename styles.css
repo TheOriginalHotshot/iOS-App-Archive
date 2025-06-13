@@ -1034,3 +1034,12 @@
                 font-size: 14px;
             }
         }
+
+        .search-instructions {
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 13px;
+            text-align: left;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            letter-spacing: 0.01em;
+        }
