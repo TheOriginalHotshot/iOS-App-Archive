@@ -324,6 +324,24 @@
                 icon: "app-icon/ibeer-pro.png",
                 featured: false,
                 categories: ["Food & Drink", "Beer"]
+            },
+            {
+                id: "isoda",
+                title: "iSoda (iWater, iCola and more)",
+                developer: "Hottrix",
+                featuredDescription: "Drink Soda on your iPhone and iPod touch. 5 Drinks in One!",
+                description: "From legendary creators of iBeer, Hottrix, comes this iTunes Award Winner.\nDrink Soda on your iPhone and iPod touch. 5 Drinks in One!\n\nThis hilarious sight-gag is fully interactive and behaves like a real glass of Cola, Water, Energy Drink and more thanks to the iPhone sensors and our spare time.\n\nTilt to sip, shake for foam, even pour iSoda from device to device. Modeled after our award winning iBeer (but tons more realistic) this virtual Soda Machine takes full advantage of iPhone's high-res screen, accelerometer, and speakers. Even 'sell' Soda with our nifty Trick-Coin-Slot.\n\nYou've seen it on TV, YouTube, and read about it in your favorite paper. Now it can be yours!\nBonus burp included.\nGet it today and never be thirsty again!\n\nFEATURES\nDrink\nShake (foam)\nBurp (on/off)\n5 Drinks in One\nTrick-Coin-Slot\n\nBONUS\nFizzy and Still Water\nMouthwash Gag\nHot Vending Machine Interface\nAstonishing realism\nFully interactive\nMulti level foam\nMotion control bubbles\nCustomize sound and behavior\n\nSUPPORT\nVideo tutorials: www.hottrixdownload.com\nDetailed instructions\n24/7 support\n\nNewslflash:\nGet our new iBeerKeg™ for iPad. Brew, pour, and drink epic amounts of beer on your iPad. It's enormous, totally realistic, and even acts as a draught for your iPhone's iBeer\n\n*************\nMORE WACKY HOTTRIX APPS\nAppCat (Make your own app in 2 minutes: http://www.app.cat)\niBeer (Best app CNN, New York Times)\niBeerKeg (iBeer's big brother on steroids)\niMilk (Sober iBeer. Even shakes whipped cream)\niMunchies (Hilarious iPhone Popcorn machine)\niBug (Feed, tickle, tumble cute or ugly bugs. Make them fat!)\nHottrixPhone (Barack Obama calls your iPhone, or Elvis, or Mum)\n*************",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/i-soda-com.hottrix.i-soda-v-1.04-i-os-2.0/iSoda-%28com.hottrix.iSoda%29%28V1.0%29%20%28iOS_2.2%29.ipa" },
+                        { version: "1.04", url: "https://archive.org/download/i-soda-com.hottrix.i-soda-v-1.04-i-os-2.0/iSoda-%28com.hottrix.iSoda%29%28V1.04%29%20%28iOS_2.0%29.ipa" }
+                    ],
+                    unarchived: ["2.0.4"]
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/isoda.png",
+                featured: false,
+                categories: ["Entertainment", "Action", "Games", "Simulation"]
             }
         ];
 
