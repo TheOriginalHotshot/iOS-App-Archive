@@ -301,6 +301,29 @@
                 icon: "app-icon/ibeer-free.png",
                 featured: false,
                 categories: ["Business", "Food & Drink", "Beer"]
+            },
+            {
+                id: "ibeer-pro",
+                title: "iBeer Pro - Drink beer on your iPhone",
+                developer: "Hottrix",
+                featuredDescription: "Drink beer on your iPhone. Voted 'Best of iTunes'!",
+                description: "Drink beer on your iPhone. Voted 'Best of iTunes' and downloaded over 90 million times! This hilarious visual trick behaves like a real glass of beer. Connect with friends or strangers for drink sharing, live voice chat and photo sharing!\n\nTilt to drink, shake for foam, even pour iBeer into other iPhones.\n___________________________________\n\n'Best iPhone app' (CNN & NY Times)\n'Must-have iPhone app' (FORTUNE & TIME)\n'Top 10 iPod touch app' (Newsweek)\n'iTunes Bestseller Awards' (Apple Charts)\n___________________________________\n\nIncludes 4 different types of beer, steaming hot coffee, and mouthwash!\nMilk, Soda, Wine, Water, Champagne, Vodka etc. available separately.\n\nSelect your own photo backgrounds or use our included trick screens.\n\nYou've seen it on TV, YouTube, and read about it in your favorite paper. Now it can be yours!\nBonus burp included.\nGet it today and stop those hangovers forever!\n\nCHECK OUT OUR NEW APP:\nInstaPrompter. Secret LIVE Teleprompter hidden inside a fake Note App to win meetings and interviews: http://www.instaprompter.com",
+                versions: {
+                    archived: [
+                        { version: "1.22", url: "https://archive.org/download/com.hottrix.i-beer-v-4.41-i-os-3.0-clutch-2.0.4-2/iBeer-iDexRiky-%28V1.22%29%20iPhoneOS%202.0.ipa" },
+                        { version: "2.01", url: "https://archive.org/download/com.hottrix.i-beer-v-4.41-i-os-3.0-clutch-2.0.4-2/iBeer-%28com.hottrix.iBeer%29%28V2.01%29%28iOS_2.0%29.ipa" },
+                        { version: "2.03", url: "https://archive.org/download/com.hottrix.i-beer-v-4.41-i-os-3.0-clutch-2.0.4-2/iBeer_%28v2.0.3%29.ipa" },
+                        { version: "2.04", url: "https://archive.org/download/com.hottrix.i-beer-v-4.41-i-os-3.0-clutch-2.0.4-2/iBeer-%28com.hottrix.iBeer%29%28V2.04%29%28iOS_2.1%29.ipa" },
+                        { version: "3.01", url: "https://archive.org/download/com.hottrix.i-beer-v-4.41-i-os-3.0-clutch-2.0.4-2/iBeer-%28com.hottrix.iBeer%29%28V3.01%29%28iOS_2.0%29.ipa" },
+                        { version: "3.05", url: "https://archive.org/download/com.hottrix.i-beer-v-4.41-i-os-3.0-clutch-2.0.4-2/iBeer_v3.05_os20.ipa" },
+                        { version: "4.41", url: "https://archive.org/download/com.hottrix.i-beer-v-4.41-i-os-3.0-clutch-2.0.4-2/com.hottrix.iBeer%20%28V4.41%29%20-iOS3.0-%28Clutch-2.0.4%29-2.ipa" }
+                    ],
+                    unarchived: ["7.6"]
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "app-icon/ibeer-pro.png",
+                featured: false,
+                categories: ["Food & Drink", "Beer"]
             }
         ];
 
