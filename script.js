@@ -283,6 +283,24 @@
                 icon: "app-icon/ibeer-challenge.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Family", "Sports", "Beer"]
+            },
+            {
+                id: "ibeer-free",
+                title: "iBeer Free",
+                developer: "Hottrix",
+                featuredDescription: "Drink beer on your iPhone. Voted 'Best of iTunes'!",
+                description: "Drink beer on your iPhone. Voted 'Best of iTunes' and downloaded over 90 Million times! This hilarious visual trick behaves like a real glass of beer. Connect with friends or strangers for drink sharing, live voice chat and photo sharing! Tilt to drink, shake for foam, even pour iBeer into other iPhones.\n\n___________________________________\n\n'Best iPhone app' (CNN & NY Times)\n'Must-have iPhone app' (FORTUNE & TIME)\n'Top 10 iPod touch app' (Newsweek)\n'iTunes Bestseller Awards' (Apple Charts)\n___________________________________\n\nGet 4 different types of beer, steaming hot coffee, and mouthwash by switching off the ads. Milk, Soda, Wine, Water, Champagne, Vodka etc. available separately.\n\nSelect your own photo backgrounds or use our included trick screens.\n\nYou've seen it on TV, YouTube, and read about it in your favorite paper. Now it can be yours!\nBonus burp included.\nGet it today and stop those hangovers forever!\n\nCHECK OUT OUR NEW APP:\nInstaPrompter. Secret LIVE Teleprompter hidden inside a fake Note App to win meetings and interviews: http://www.instaprompter.com",
+                versions: {
+                    archived: [
+                        { version: "1.28", url: "https://archive.org/download/i-beer-free-com.hottrix.i-beer-free-9.1-i-os-7.0-6d-1d-897bd-92dbe-425ace-804969de-235b/com.hottrix.iBeerFree-%20%28V1.28%29%20-iOS3.2-%28Clutch-2.0.4%29.ipa" },
+                        { version: "9.1", url: "https://archive.org/download/i-beer-free-com.hottrix.i-beer-free-9.1-i-os-7.0-6d-1d-897bd-92dbe-425ace-804969de-235b/iBeer%20Free-%28com.hottrix.iBeerFree%29-9.1-%28iOS_7.0%29-6d1d897bd92dbe425ace804969de235b.ipa" }
+                    ],
+                    unarchived: ["1.01", "1.2", "7.3", "7.5", "7.6", "11.4"]
+                },
+                compatibility: "iOS 11.0 and Later",
+                icon: "app-icon/ibeer-free.png",
+                featured: false,
+                categories: ["Business", "Food & Drink", "Beer"]
             }
         ];
 
