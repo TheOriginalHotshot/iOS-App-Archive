@@ -215,6 +215,23 @@
                 icon: "app-icon/beer-pong-challenge.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Casual", "Sports", "Beer"]
+            },
+            {
+                id: "beerduel",
+                title: "BeerDuel",
+                developer: "iMouse",
+                featuredDescription: "A game of Cowboys and beer cups!",
+                description: "It's a game of Cowboys.\nYou can play with your friends.\nSlide three cups with draft beer on a table as far as you can.\nThe score you get depends on where the cups stop.\n1) Move the cup to appropriate starting position.\n2) Slide it!\nTips: you can also hit other cups to change the situation",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/beer-duel-i-mouse.-beer-duel-v-1.0-i-os-2.1/BeerDuel-%28iMouse.BeerDuel%29%28V1.0%29%20%28iOS_2.1%29.ipa" }
+                    ],
+                    unarchived: ["1.1"]
+                },
+                compatibility: "iPhoneOS 2.1 and Later",
+                icon: "app-icon/beerduel.png",
+                featured: false,
+                categories: ["Games", "Entertainment", "Action", "Simulation", "Beer"]
             }
         ];
 
