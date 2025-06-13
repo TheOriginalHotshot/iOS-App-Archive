@@ -265,7 +265,24 @@
                 compatibility: "iPhoneOS 3.2 and Later",
                 icon: "app-icon/ibeer-keg.png",
                 featured: false,
-                categories: [" Games", "Action", "Simulation", "Entertainment", "Beer"]
+                categories: ["Games", "Action", "Simulation", "Entertainment", "Beer"]
+            },
+            {
+                id: "ibeer-challenge",
+                title: "iBeer Challenge",
+                developer: "EzMoBo",
+                featuredDescription: "Take your drinking games to the next level!",
+                description: "Ditch traditional games such as quarters and start pushing beers!\n\nTake your drinking games to the next level with the extreme iPhone/iPod Touch game Beer Challenge!\n\nThe object of the game is to push your alcoholic beverage as close to the little white line as possible. Think it sounds easy? With 10 distances to slide your beer, topping out at more than 7040mm, this game will challenge your physical prowess and force your mental wit to devise the perfect plan in order to become THE KING OF PUSH!!!\n\nFrom Version 2.0, we offers new multiplayer support to battle your friends for the crown! Push against 3 of your best friends to determine who really is the top dog.\n\nTired of pushing beer? Choose other types of drinks such as whisky, wine, or stout beer which offer different physics that will force you to switch up your strategy to stay on top.\n\nWith a whimsical soundtrack, a sexy damsel cheering you on, and the option to choose your off hand for a different pushing experience, Beer Challenge is a simple game that offers countless possibilities!\n\nACHTUNG! The creators of this game are not liable for any damages caused to your device due to having too much fun. If your buddy accidentally breaks your brand new 3GS from over exertion, please seek them for damages.\n\nFollow us on Twitter! http://www.twitter.com/EzMoBoGames",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/i-beer-challenge-com.ezmobo.i-beer-challenge-v-1.0-i-os-2.2.1/iBeerChallenge-%28com.ezmobo.iBeerChallenge%29%28V1.0%29%20%28iOS_2.2.1%29.ipa" }
+                    ],
+                    unarchived: ["2.3"]
+                },
+                compatibility: "iPhoneOS 2.2.1 and Later",
+                icon: "app-icon/ibeer-challenge.png",
+                featured: false,
+                categories: ["Games", "Entertainment", "Family", "Sports", "Beer"]
             }
         ];
 
