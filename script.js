@@ -241,7 +241,7 @@
                 description: "no description found",
                 versions: {
                     archived: [
-                        { version: "1.4", url: "https://archive.org/download/ibeertender-v1.4/iBeerTender%20v1.4.ipa" }
+                        { version: "1.4", url: "https://archive.org/download/i-beer-tender-v-1.4/iBeerTender%20v1.4%20%20.ipa" }
                     ],
                     unarchived: []
                 },
