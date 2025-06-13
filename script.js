@@ -198,6 +198,23 @@
                 icon: "app-icon/beer-goggles-by-hive-mind.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Lifestyle", "Beer"]
+            },
+            {
+                id: "beer-pong-challenge",
+                title: "Beer Pong Challenge",
+                developer: "Jeremy Lazarus",
+                featuredDescription: "Play Beer Pong on your iPhone!",
+                description: "Play Beer Pong on the iPhone! Challenge a friend with a classic 6 or 10 cup table, or compete against your own high scores in the single-player arcade game mode. Decorate the game's garage each time you achieve a new high score by snapping a photo of yourself!\n\n• New Officially licensed update with BOMBED Beer Pong and www.GetBOMBED.com – the world's #1 brand in beer pong.\n\n• Game Graphics now feature the Official BOMBED Beer Pong tables, balls, posters and more",
+                versions: {
+                    archived: [
+                        { version: "1.0.7", url: "https://archive.org/download/com.superexperiment.beerpong-v-1.0.7-i-os-2.2-clutch-2.0.4/com.superexperiment.beerpong%20%28V1.0.7%29%20-iOS2.2-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.2 and Later",
+                icon: "app-icon/beer-pong-challenge.png",
+                featured: false,
+                categories: ["Games", "Entertainment", "Casual", "Sports", "Beer"]
             }
         ];
 
