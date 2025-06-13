@@ -342,6 +342,36 @@
                 icon: "app-icon/isoda.png",
                 featured: false,
                 categories: ["Entertainment", "Action", "Games", "Simulation"]
+            },
+            {
+                id: "youtube",
+                title: "YouTube",
+                developer: "Google",
+                featuredDescription: "Watch, upload, and share videos with the official YouTube app.",
+                description: "Get the official YouTube app on iPhones and iPads. See what the world is watching -- from the hottest music videos to what's popular in gaming, fashion, beauty, news, learning and more. Subscribe to channels you love, create content of your own, share with friends, and watch on any device.\n\nWatch and subscribe\n● Browse personal recommendations on Home\n● See the latest from your favorite channels in Subscriptions\n● Look up videos you've watched, liked, and saved for later in Library\n\nExplore different topics, what's popular, and on the rise (available in select countries)\n● Stay up to date on what's popular in music, gaming, beauty, news, learning and more\n● See what's trending on YouTube and around the world on Explore\n● Learn about the coolest Creators, Gamers, and Artists on the Rise (available in select countries)\n\nConnect with the YouTube community\n● Keep up with your favorites creators with Posts, Stories, Premieres, and Live streams\n● Join the conversation with comments and interact with creators and other community members\n\nCreate content from your mobile device\n● Create or upload your own videos directly in the app\n● Engage with your audience in real time with live streaming right from the app\n\nFind the experience that fits you and your family (available in select countries)\n● Every family has their own approach to online video. Learn about your options: the YouTube Kids app or a new parent supervised experience on YouTube at youtube.com/myfamily\n\nSupport creators you love with channel memberships (available in select countries)\n● Join channels that offer paid monthly memberships and support their work\n● Get access to exclusive perks from the channel & become part of their members community\n● Stand out in comments and live chats with a loyalty badge next to your username\n\nUpgrade to YouTube Premium (available in select countries)\n● Watch videos uninterrupted by ads, while using other apps, or when the screen is locked\n● Save videos for when you really need them – like when you're on a plane or commuting\n● Get access to YouTube Music Premium as part of your benefits\n\nNote: If you subscribe via Apple, payment will be charged to App Store Account at confirmation of purchase. Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Account will be charged for renewal within 24 hours prior to the end of the current period at the rate of the selected plan. Subscriptions and auto-renewal may be managed by going to Account Settings after purchase.\n\nYouTube paid service terms: https://www.youtube.com/t/terms_paidservice.\nPrivacy policy: https://www.google.com/policies/privacy",
+                versions: {
+                    archived: [
+                        { version: "1.0.0", url: "https://archive.org/download/you-tube-11.13.7/YouTube%201.0.0%20%281%29.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/you-tube-11.13.7/YouTube-v1.0.1--iOS4.3-%28Clutch-1.4.6%29.ipa" },
+                        { version: "1.1.0", url: "https://archive.org/download/you-tube-11.13.7/com.google.ios.youtube%20%28V1.1.0%29%20-iOS5.0-%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.2.1", url: "https://archive.org/download/you-tube-11.13.7/YouTube%20Watch%20Listen%20Stream%20%5BGoogle%5D%20%28v1.2.1%20v1.2.1.5201%203GS%20Univ%20LP%20os50%29.rc333_841.ipa" },
+                        { version: "1.3.0", url: "https://archive.org/download/you-tube-11.13.7/YouTube-v1.3.0--iOS5.0-%28Clutch-1.4.6%29.ipa" },
+                        { version: "1.4.0", url: "https://archive.org/download/you-tube-11.13.7/YouTube-%28com.google.ios.youtube%29-%28V1.4.0%29-%28iOS_6.0%29.ipa" },
+                        { version: "2.2.0", url: "https://archive.org/download/you-tube-11.13.7/YouTube%20Watch%20Listen%20Stream%20%5BGoogle%5D%20%28v2.2.0%20v2.2.0.10119%203GS%20Univ%20LP%20os60%29.rc333_841.ipa" },
+                        { version: "2.3.1", url: "https://archive.org/download/you-tube-11.13.7/com.google.ios.youtube%20%28V2.3.1%29%20%20-iOS6.0-%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.9.3", url: "https://archive.org/download/you-tube-11.13.7/YouTube-%28com.google.ios.youtube%29%28V2.9.3%29%28iOS_6.0%29.ipa" },
+                        { version: "2.10.2", url: "https://archive.org/download/you-tube-11.13.7/com.google.ios.youtube%20%28V2.10.2%29%20-iOS6.0-%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.10.3", url: "https://archive.org/download/you-tube-11.13.7/YouTube%20Watch%20Listen%20Stream%20%5BGoogle%5D%20%28v2.10.3%203GS%20Univ%20LP%20os60%29.rc333_841.ipa" },
+                        { version: "10.11.11546", url: "https://archive.org/download/you-tube-11.13.7/YouTube-v10.11.11546--iOS6.0-%28Clutch-1.4.6%29.ipa" },
+                        { version: "10.28.11649", url: "https://archive.org/download/you-tube-11.13.7/YouTube-%28com.google.ios.youtube%29%28V10.28.11649%29%20%28iOS_7.0%29.ipa" },
+                        { version: "11.3.7", url: "https://archive.org/download/you-tube-11.13.7/YouTube%2011.13.7.ipa" }
+                    ],
+                    unarchived: ["2.1.0", "2.7.1", "15.43.4", "19.46.3", "19.47.7", "19.49.3", "19.49.5", "19.49.7", "20.02.3", "20.03.02", "20.04.1", "20.05.4", "20.06.03", "20.07.6", "20.08.3", "20.09.3", "20.10.3", "20.10.4", "20.11.6", "20.12.4", "20.13.5", "20.14.2", "20.15.1", "20.16.7", "20.18.4", "20.18.5", "20.19.2", "20.19.3"]
+                },
+                compatibility: "iOS 15.0 and Later",
+                icon: "app-icon/youtube.png",
+                featured: true,
+                categories: ["Photo & Video", "Entertainment"]
             }
         ];
 
