@@ -249,6 +249,23 @@
                 icon: "app-icon/ibeertender.png",
                 featured: false,
                 categories: ["Games", "Beer"]
+            },
+            {
+                id: "ibeer-keg",
+                title: "iBeer Keg (iBeer's huge draught machine, Coffee Maker, Soda Dispenser, and Milk Barrel)",
+                developer: "Hottrix",
+                featuredDescription: "Brew, pour, and drink beer on your iPad!",
+                description: "Brew, pour, and drink beer on your iPad. It's enormous, totally realistic, and even acts as a draught for your iPhone's iBeer™.\n\nThis hilarious visual gag takes full advantage of iPad's omnidirectional nature. There's no wrong way to hold iBeerKeg™. It's a stunningly lifelike pool of beer and YOU decide where to 'open' the keg to drink or pour.\n\nTilt for aquarium action, shake for foam and waves, play with condensation, slime and bubbles, even pretend to pour iBeer from iPad to iPhone.\n\nThis isn't just iBeer's big brother on steroids, it's THE interactive liquid simulation for iPad programmed from the ground up by the inventors of iBeer. Gigantic, spectacular, hysterical.\n\nYou've seen it on TV, YouTube, and read about it in your favorite paper. Now it can be yours!\nBonus burp included.\nGet it today and stop those hangovers forever!\n\nJust updated:\n✔ FREE steaming coffee: Gallons of it!\n✔ MORE DRINKS: Champagne & Wines for the distinguished prankster.\n✔ Improved: Trippy Alien Disco Juice, Water, Cola, Milk etc.\n✔ Connects to iBeer for iPhone and iPod touch (pending Apple approval)\n✔ BlueTooth and WIFI drink sharing among all iOS devices (once iBeer-update for iPhone and iPod touch is approved by Apple). Sharing is caring!\n✔ Color mixing when pouring from device to device (mix coffee & beer for a steamy mess)\n\nMAKE YOUR OWN IPHONE APP\nin 2 minutes with AppCat. http://www.app.cat\n\nQuestions and comments? Talk to us!\nWe answer every email and return every call about the world's only keg with full warranty, detailed instructions, video tutorials, and 24/7 support!\n\nHOTTRIX®\n1-877-HOTTRIX\nP. 702-765-4692\nF. 702-643 0777\nhttp://www.hottrixdownload.com\nhelp@hottrix.com\n7500 W Lake Mead Blvd.\nSuite 9-478\nLas Vegas, NV 89128",
+                versions: {
+                    archived: [
+                        { version: "1.2", url: "https://archive.org/download/i-beer.-keg-v-1.2/iBeer.Keg%20v1.2.ipa" }
+                    ],
+                    unarchived: ["1.1"]
+                },
+                compatibility: "iPhoneOS 3.2 and Later",
+                icon: "app-icon/ibeer-keg.png",
+                featured: false,
+                categories: [" Games", "Action", "Simulation", "Entertainment", "Beer"]
             }
         ];
 
