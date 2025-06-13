@@ -128,7 +128,7 @@
                 },
                 compatibility: "iOS 5.0 and Later",
                 icon: "app-icon/godzilla-strike-zone.png",
-                featured: false,
+                featured: true,
                 categories: ["Games", "Entertainment"]
             },
             {
