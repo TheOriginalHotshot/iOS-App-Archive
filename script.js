@@ -232,6 +232,23 @@
                 icon: "app-icon/beerduel.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Action", "Simulation", "Beer"]
+            },
+            {
+                id: "ibeertender",
+                title: "iBeerTender",
+                developer: "Developer Unknown",
+                featuredDescription: "Unknown",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.4", url: "https://archive.org/download/ibeertender-v1.4/iBeerTender%20v1.4.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.0 and Later",
+                icon: "app-icon/ibeertender.png",
+                featured: false,
+                categories: ["Games", "Beer"]
             }
         ];
 
