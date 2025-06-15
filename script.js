@@ -723,6 +723,12 @@
                     searchResults.classList.add('active');
                     tabContents.search.classList.add('active');
                     renderSearchResults(apps);
+                } else if (tabName === 'categories') {
+                    carouselContainer.style.display = 'none';
+                    searchContainer.style.display = 'none';
+                    searchResults.classList.remove('active');
+                    tabContents.categories.classList.add('active');
+                    renderCategoryList();
                 } else {
                     // For categories, genius, updates
                     carouselContainer.style.display = 'none';
@@ -741,22 +747,31 @@
                 renderSearchResults(apps);
                 return;
             }
-            let filteredApps;
-            if (searchTerm.includes('developer:')) {
-                const parts = searchTerm.split('developer:');
-                const namePart = parts[0].trim();
-                const devPart = parts[1].trim();
-                filteredApps = apps.filter(app => {
-                    const matchesDev = app.developer.toLowerCase().includes(devPart);
-                    const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
-                    return matchesDev && matchesName;
-                });
-            } else {
-                filteredApps = apps.filter(app => 
-                    app.title.toLowerCase().includes(searchTerm) || 
-                    app.developer.toLowerCase().includes(searchTerm)
-                );
+            let filteredApps = apps;
+            let devPart = null, catPart = null, namePart = searchTerm;
+            const devMatch = searchTerm.match(/developer:([^ ]+)/);
+            const catMatch = searchTerm.match(/category:([^ ]+)/);
+            if (devMatch) {
+                devPart = devMatch[1].trim();
+                namePart = namePart.replace(devMatch[0], '').trim();
             }
+            if (catMatch) {
+                catPart = catMatch[1].trim();
+                namePart = namePart.replace(catMatch[0], '').trim();
+            }
+            filteredApps = filteredApps.filter(app => {
+                let matches = true;
+                if (devPart) {
+                    matches = matches && app.developer.toLowerCase().includes(devPart);
+                }
+                if (catPart) {
+                    matches = matches && Array.isArray(app.categories) && app.categories.some(cat => cat.toLowerCase().includes(catPart));
+                }
+                if (namePart) {
+                    matches = matches && app.title.toLowerCase().includes(namePart);
+                }
+                return matches;
+            });
             renderSearchResults(filteredApps);
         });
         
@@ -837,6 +852,15 @@
                     }, 100);
                 }
             }
+            const categoryParam = getUrlParam('category');
+            if (categoryParam) {
+                tabs.forEach(tab => {
+                    if (tab.getAttribute('data-tab') === 'categories') {
+                        tab.click();
+                    }
+                });
+                renderAppsForCategory(categoryParam);
+            }
         });
 
         function setUrlParam(key, value) {
@@ -853,4 +877,113 @@
         function getUrlParam(key) {
             const params = new URLSearchParams(window.location.search);
             return params.get(key);
+        }
+
+
+        function getAllCategories() {
+            const categorySet = new Set();
+            apps.forEach(app => {
+                if (Array.isArray(app.categories)) {
+                    app.categories.forEach(cat => categorySet.add(cat));
+                }
+            });
+            return Array.from(categorySet).sort();
+        }
+
+        function renderCategoryList() {
+            const categoriesContent = tabContents.categories;
+            categoriesContent.innerHTML = '';
+            const container = document.createElement('div');
+            container.className = 'categories-list-container category-fade-in';
+            
+            const title = document.createElement('h3');
+            title.textContent = 'Browse Apps by Category';
+            title.style.textAlign = 'center';
+            title.style.marginBottom = '20px';
+            container.appendChild(title);
+
+            const categories = getAllCategories();
+            const list = document.createElement('div');
+            list.className = 'categories-list';
+            list.style.display = 'flex';
+            list.style.flexWrap = 'wrap';
+            list.style.gap = '12px';
+            list.style.justifyContent = 'center';
+
+            categories.forEach(cat => {
+                const tag = document.createElement('button');
+                tag.className = 'category-tag category-select-btn';
+                tag.textContent = cat;
+                tag.style.cursor = 'pointer';
+                tag.addEventListener('click', () => {
+                    setUrlParam('category', cat);
+                    renderAppsForCategory(cat);
+                });
+                list.appendChild(tag);
+            });
+            container.appendChild(list);
+            categoriesContent.appendChild(container);
+        }
+
+        function renderAppsForCategory(category) {
+            const categoriesContent = tabContents.categories;
+            categoriesContent.innerHTML = '';
+            
+            const backBtn = document.createElement('button');
+            backBtn.textContent = 'Back to Categories';
+            backBtn.className = 'back-to-categories-btn';
+            backBtn.style.marginBottom = '20px';
+            backBtn.style.display = 'block';
+            backBtn.style.marginLeft = 'auto';
+            backBtn.style.marginRight = 'auto';
+            backBtn.addEventListener('click', () => {
+                setUrlParam('category', '');
+                renderCategoryList();
+            });
+            categoriesContent.appendChild(backBtn);
+
+            const title = document.createElement('h3');
+            title.textContent = `Apps in "${category}"`;
+            title.style.textAlign = 'center';
+            title.style.marginBottom = '20px';
+            categoriesContent.appendChild(title);
+
+            const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
+            if (filteredApps.length === 0) {
+                const noApps = document.createElement('p');
+                noApps.textContent = 'No apps found in this category.';
+                noApps.style.textAlign = 'center';
+                categoriesContent.appendChild(noApps);
+                return;
+            }
+            const grid = document.createElement('div');
+            grid.className = 'category-apps-grid';
+            grid.style.display = 'grid';
+            grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
+            grid.style.gap = '18px';
+            grid.style.justifyItems = 'center';
+            filteredApps.forEach(app => {
+                const appCard = document.createElement('div');
+                appCard.className = 'app-card-grid';
+                appCard.innerHTML = `
+                    <div class="card-icon">
+                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
+                        '<i class="fas fa-mobile-alt"></i>'}
+                    </div>
+                    <div class="card-name">${app.title}</div>
+                    <div class="card-developer">${app.developer}</div>
+                    <button class="card-button" data-app-id="${app.id}">View Details</button>
+                `;
+                grid.appendChild(appCard);
+            });
+            categoriesContent.appendChild(grid);
+
+            categoriesContent.querySelectorAll('.card-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const appId = this.getAttribute('data-app-id');
+                    setUrlParam('app', appId);
+                    document.getElementById(`${appId}Modal`).classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
         }
