@@ -756,7 +756,6 @@
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
                 const tabName = this.getAttribute('data-tab');
-                setUrlParam('tab', tabName);
                 // Update active tab
                 tabs.forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
@@ -921,15 +920,6 @@
                     }
                 });
                 renderAppsForCategory(categoryParam);
-            }
-            const tabParam = getUrlParam('tab');
-            const pageParam = parseInt(getUrlParam('page'));
-            if (tabParam === 'search') {
-                let page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
-                if (page === 1) {
-                    setUrlParam('page', '');
-                }
-                renderSearchResults(apps, page);
             }
         });
 
