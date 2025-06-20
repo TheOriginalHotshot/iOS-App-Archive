@@ -539,19 +539,54 @@
             }
         }
         
-        // Render search results
-        function renderSearchResults(filteredApps = []) {
+        const APPS_PER_PAGE = 12;
+
+        function renderPaginationControls(totalApps, currentPage, onPageChange) {
+            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
+            if (totalPages < 2) return '';
+            let html = '<div class="pagination-controls" style="grid-column: 1/-1; text-align: center; margin: 20px 0;">';
+            if (currentPage > 1) {
+                html += `<button class="pagination-btn" data-page="${currentPage - 1}">Previous</button> `;
+            }
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === currentPage) {
+                    html += `<span class="pagination-page current">${i}</span> `;
+                } else {
+                    html += `<button class="pagination-btn" data-page="${i}">${i}</button> `;
+                }
+            }
+            if (currentPage < totalPages) {
+                html += `<button class="pagination-btn" data-page="${currentPage + 1}">Next</button>`;
+            }
+            html += '</div>';
+            return html;
+        }
+
+        function renderSearchResults(filteredApps = [], page = 1) {
             searchResults.innerHTML = '';
+            const totalApps = filteredApps.length;
+            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
             
-            if (filteredApps.length === 0) {
+            if (page === 1) {
+                setUrlParam('page', '');
+                page = 1;
+            }
+            
+            if (page < 1) page = 1;
+            if (page > totalPages) page = totalPages;
+            
+            const startIdx = (page - 1) * APPS_PER_PAGE;
+            const endIdx = startIdx + APPS_PER_PAGE;
+            const appsToShow = filteredApps.slice(startIdx, endIdx);
+
+            if (appsToShow.length === 0) {
                 searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
                 return;
             }
-            
-            filteredApps.forEach(app => {
+
+            appsToShow.forEach(app => {
                 const appCard = document.createElement('div');
                 appCard.className = 'app-card-grid';
-                
                 appCard.innerHTML = `
                     <div class="card-icon">
                         ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
@@ -561,10 +596,30 @@
                     <div class="card-developer">${app.developer}</div>
                     <button class="card-button" data-app-id="${app.id}">View Details</button>
                 `;
-                
                 searchResults.appendChild(appCard);
             });
-            
+
+            searchResults.innerHTML += renderPaginationControls(totalApps, page, (newPage) => {
+                if (newPage === 1) {
+                    setUrlParam('page', '');
+                } else {
+                    setUrlParam('page', newPage);
+                }
+                renderSearchResults(filteredApps, newPage);
+            });
+
+            document.querySelectorAll('.pagination-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const newPage = parseInt(this.getAttribute('data-page'));
+                    if (newPage === 1) {
+                        setUrlParam('page', '');
+                    } else {
+                        setUrlParam('page', newPage);
+                    }
+                    renderSearchResults(filteredApps, newPage);
+                });
+            });
+
             // Add event listeners to buttons
             document.querySelectorAll('.card-button').forEach(button => {
                 button.addEventListener('click', function() {
@@ -701,16 +756,14 @@
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
                 const tabName = this.getAttribute('data-tab');
-                
+                setUrlParam('tab', tabName);
                 // Update active tab
                 tabs.forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
-                
                 // Hide all tab content
                 Object.values(tabContents).forEach(content => {
                     content.classList.remove('active');
                 });
-                
                 // Show/hide views based on tab
                 if (tabName === 'featured') {
                     carouselContainer.style.display = 'block';
@@ -722,7 +775,14 @@
                     searchContainer.style.display = 'block';
                     searchResults.classList.add('active');
                     tabContents.search.classList.add('active');
-                    renderSearchResults(apps);
+                    const pageParam = parseInt(getUrlParam('page'));
+                    const page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
+                    if (page === 1) {
+                        setUrlParam('page', '');
+                    } else {
+                        setUrlParam('page', page);
+                    }
+                    renderSearchResults(apps, page);
                 } else if (tabName === 'categories') {
                     carouselContainer.style.display = 'none';
                     searchContainer.style.display = 'none';
@@ -743,8 +803,9 @@
         searchInput.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
             setUrlParam('query', searchTerm);
+            setUrlParam('page', '');
             if (searchTerm.length === 0) {
-                renderSearchResults(apps);
+                renderSearchResults(apps, 1);
                 return;
             }
             let filteredApps = apps;
@@ -772,7 +833,7 @@
                 }
                 return matches;
             });
-            renderSearchResults(filteredApps);
+            renderSearchResults(filteredApps, 1);
         });
         
         // Show cancel button when search input is focused
@@ -860,6 +921,15 @@
                     }
                 });
                 renderAppsForCategory(categoryParam);
+            }
+            const tabParam = getUrlParam('tab');
+            const pageParam = parseInt(getUrlParam('page'));
+            if (tabParam === 'search') {
+                let page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
+                if (page === 1) {
+                    setUrlParam('page', '');
+                }
+                renderSearchResults(apps, page);
             }
         });
 
