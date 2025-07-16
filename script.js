@@ -372,6 +372,25 @@
                 icon: "app-icon/youtube.png",
                 featured: true,
                 categories: ["Photo & Video", "Entertainment"]
+            },
+            {
+                id: "jelly-car",
+                title: "JellyCar",
+                developer: "Walaber",
+                featuredDescription: "Put a New Car in your garage! JellyCar 3 is now available!",
+                description: "The hit driving platform puzzle game is all new! JellyCar 3 features all new levels, all new car customization, all new ghost racing, and so much more. So hop in, start your jelly engines, and find the stop sign!\n\nhttp://www.itunes.com/app/jellycar3\n\nJellyCar is a driving/platforming game for both iPhone and iPod touch. The game is about driving a squishy car through squishy worlds, trying to reach the exit. JellyCar features soft body physics for all of the objects in the world. Also your car can transform for a limited time to aid progression through the level.\n\n*** NOTE * touch the \"?\" squishy icon on the main menu for the \"how to play\" instructions!\n\nFeatures:\n* Soft-body physics!\n* Simple touch and tilt controls\n* 28 levels to play\n* global high score ranking system\n* original music by Matt McCarthy\n* full sound effects\n* option to listen to iPod music while playing the game.\n* Localized into:\n 日本語\n** 繁體中文\n** 简体中文\n** 한국\n** deutsch\n** русский\n** Nederlands\n** français\n** italiano\n** polski\n** suomi\n\nControls:\n* Touch (and hold) on either side of the screen to drive in that direction.\n* Tilt the device to rotate your car\n\n* Touch with 3 fingers on the screen to pause/quit the current level.\n* Use the standard Pinch gesture to zoom in/out at any time.",
+                versions: {
+                    archived: [
+                        { version: "1.4.1", url: "https://archive.org/download/jelly-car-v-1.5.4-os-313/com.walaber.jellycar-iOS2.1-%28V1.4.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.5.1", url: "https://archive.org/download/jelly-car-v-1.5.4-os-313/com.walaber.jellycar-iOS2.2.1-%28V1.5.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.5.4", url: "https://archive.org/download/jelly-car-v-1.5.4-os-313/JellyCar_v1.5.4_os313.ipa" }
+                    ],
+                    unarchived: ["1.0", "1.2"]
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/jelly-car.png",
+                featured: false,
+                categories: ["Entertainment", "Action", "Puzzle", "Games"]
             }
         ];
 
