@@ -391,8 +391,25 @@
                 icon: "app-icon/jelly-car.png",
                 featured: false,
                 categories: ["Entertainment", "Action", "Puzzle", "Games"]
+            },
+            {
+                id: "psecu-mobile-for-ipad",
+                title: "PSECU Mobile+ for iPad",
+                developer: "Pennsylvania State Employees Credit Union",
+                featuredDescription: "PSECU Mobile+ for iPad enables you to quickly and conveniently access your financial information while on the go.",
+                description: "***To get started, visit psecu.com, log into your Online Banking account, and visit the \"Mobile Solutions\" page under My Money.***\n\nPSECU Mobile+ for iPad enables you to quickly and conveniently access your financial information while on the go. You can take advantage of the following features:\n\n* View account balances and transactional history\n* Transfer funds\n* Schedule bill payments\n* Find the nearest surcharge-free ATM\n* Deposit checks\n* FICO® Score Service \n\nFICO and Fair Isaac® are registered trademarks of the Fair Isaac Corporation in the United States, and may be trademarks or registered trademarks of the Fair Isaac Corporation in other countries. PSECU is not a credit reporting agency. Fair Isaac is not an affiliate company of PSECU. Members must have PSECU checking or a PSECU loan to be eligible for this service. Joint Owners are not eligible.",
+                versions: {
+                    archived: [
+                        { version: "2.6", url: "https://archive.org/download/com.psecu.tablet-ios9.0-clutch-2.0.4/com.PSECU.Tablet-iOS9.0%20%28V2.6%29%20%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "app-icon/psecu-mobile-for-ipad.png",
+                featured: false,
+                categories: ["Finance"]
             }
-        ];
+         ];
 
         // DOM Elements
         const carouselContainer = document.getElementById('carouselContainer');
