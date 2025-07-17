@@ -1042,18 +1042,25 @@
             const categoriesContent = tabContents.categories;
             categoriesContent.innerHTML = '';
             
-            const backBtn = document.createElement('button');
-            backBtn.textContent = 'Back to Categories';
-            backBtn.className = 'back-to-categories-btn';
-            backBtn.style.marginBottom = '20px';
-            backBtn.style.display = 'block';
-            backBtn.style.marginLeft = 'auto';
-            backBtn.style.marginRight = 'auto';
-            backBtn.addEventListener('click', () => {
-                setUrlParam('category', '');
-                renderCategoryList();
-            });
-            categoriesContent.appendChild(backBtn);
+const backBtn = document.createElement('button');
+backBtn.className = 'back-to-categories-btn';
+backBtn.style.margin = '0 auto 20px';
+backBtn.style.display = 'block';
+
+const icon = document.createElement('img');
+icon.src = 'icon/arrow_left.png';
+icon.alt = 'Back';
+icon.className = 'back-btn-icon';
+backBtn.appendChild(icon);
+
+backBtn.appendChild(document.createTextNode('Back to Categories'));
+
+backBtn.addEventListener('click', () => {
+  setUrlParam('category', '');
+  renderCategoryList();
+});
+
+categoriesContent.appendChild(backBtn);
 
             const title = document.createElement('h3');
             title.textContent = `Apps in "${category}"`;

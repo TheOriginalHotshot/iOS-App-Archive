@@ -1153,3 +1153,11 @@
             font-weight: 700;
             margin: 0 2px;
         }
+        .back-btn-icon 
+        {
+  width: 16px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
