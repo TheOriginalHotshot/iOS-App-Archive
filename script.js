@@ -505,6 +505,32 @@
                 icon: "app-icon/dropbox.png",
                 featured: false,
                 categories: ["Utilities", "Productivity"]
+            },
+            {
+                id: "toy-story-read-along",
+                title: "Toy Story Read-Along",
+                developer: "Disney",
+                featuredDescription: "TO INFINITY AND BEYOND! Toy Story takes you on the adventure of a lifetime",
+                description: "TO INFINITY AND BEYOND! Toy Story takes you on the adventure of a lifetime:\nA fully interactive reading experience packed with Games, Movie Clips, Coloring Pages, Sing-along Tunes, and Surprises on every page. Hear the story read aloud, record your own narration, or explore at your own pace.\n\nMeet Woody, a cowboy doll that comes to life when humans aren’t around. When his owner Andy receives a Buzz Lightyear space ranger for his birthday, Woody and the other toys fear they’ll be replaced. Woody’s plan to get rid of Buzz backfires and he ends up lost outside the world of Andy’s room, with Buzz as his only companion! The toys work together to find their way back to Andy and discover the meaning of true friendship along the way.\n\nFeatures\n* Cinematic, Interactive Read-Along app featuring your favorite characters from the award-winning Toy Story movie.\n* Choose Read to Me mode to hear the story read aloud, or follow the story at your own pace. You can even record your own voice narrating and hear it read back to you!\n* Explore delightful Animations and Surprise features within each page.\n* Get creative with Finger Painting, sing along to Songs from the movie, and play fun interactive Games!\n* Tap to play Sound Effects and character voices from the film.\n* Relive magical moments from the film with Movie Clips throughout!\n* Jump to your favorite part of the story with the Visual Page Index, or resume where you left off.\n* Turn pages manually and move back and forth through the story as you wish!\n\nBefore you download this experience, please consider that this app contains advertising for The Walt Disney Family of Companies.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.0%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.0.1%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.0.2", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.0.2%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.0.3", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.0.3%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.0.4", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.0.4%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.0.5", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.0.5%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.1%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.2%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.3", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.3%29%20%28iOS3.2%29.ipa" },
+                        { version: "1.4", url: "https://archive.org/download/toy-story-read-along-v-1.0-i-os-3.2/Toy%20Story%20Read%20Along%20%28V1.4%29%20%28iOS5.1%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.1 and Later",
+                icon: "app-icon/toy-story-read-along.png",
+                featured: false,
+                categories: ["Entertainment", "Books"]
             }
         ];
 
