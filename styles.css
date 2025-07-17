@@ -1119,3 +1119,37 @@
             transform: translateY(-2px) scale(1.06);
             box-shadow: 0 4px 12px rgba(10,132,255,0.10);
         }
+
+        .pagination-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .pagination-btn {
+            background: var(--button-bg, #222);
+            color: var(--text-light, #fff);
+            border: none;
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0 2px;
+            transition: background 0.2s, color 0.2s, transform 0.18s;
+        }
+        .pagination-btn:hover, .pagination-btn:focus {
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+        }
+        .pagination-page.current {
+            background: var(--accent, #0a84ff);
+            color: #fff;
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-weight: 700;
+            margin: 0 2px;
+        }

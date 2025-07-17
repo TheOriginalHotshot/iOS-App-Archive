@@ -372,8 +372,61 @@
                 icon: "app-icon/youtube.png",
                 featured: true,
                 categories: ["Photo & Video", "Entertainment"]
+            },
+            {
+                id: "jelly-car",
+                title: "JellyCar",
+                developer: "Walaber",
+                featuredDescription: "Put a New Car in your garage! JellyCar 3 is now available!",
+                description: "The hit driving platform puzzle game is all new! JellyCar 3 features all new levels, all new car customization, all new ghost racing, and so much more. So hop in, start your jelly engines, and find the stop sign!\n\nhttp://www.itunes.com/app/jellycar3\n\nJellyCar is a driving/platforming game for both iPhone and iPod touch. The game is about driving a squishy car through squishy worlds, trying to reach the exit. JellyCar features soft body physics for all of the objects in the world. Also your car can transform for a limited time to aid progression through the level.\n\n*** NOTE * touch the \"?\" squishy icon on the main menu for the \"how to play\" instructions!\n\nFeatures:\n* Soft-body physics!\n* Simple touch and tilt controls\n* 28 levels to play\n* global high score ranking system\n* original music by Matt McCarthy\n* full sound effects\n* option to listen to iPod music while playing the game.\n* Localized into:\n 日本語\n** 繁體中文\n** 简体中文\n** 한국\n** deutsch\n** русский\n** Nederlands\n** français\n** italiano\n** polski\n** suomi\n\nControls:\n* Touch (and hold) on either side of the screen to drive in that direction.\n* Tilt the device to rotate your car\n\n* Touch with 3 fingers on the screen to pause/quit the current level.\n* Use the standard Pinch gesture to zoom in/out at any time.",
+                versions: {
+                    archived: [
+                        { version: "1.4.1", url: "https://archive.org/download/jelly-car-v-1.5.4-os-313/com.walaber.jellycar-iOS2.1-%28V1.4.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.5.1", url: "https://archive.org/download/jelly-car-v-1.5.4-os-313/com.walaber.jellycar-iOS2.2.1-%28V1.5.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.5.4", url: "https://archive.org/download/jelly-car-v-1.5.4-os-313/JellyCar_v1.5.4_os313.ipa" }
+                    ],
+                    unarchived: ["1.0", "1.2"]
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/jelly-car.png",
+                featured: false,
+                categories: ["Entertainment", "Action", "Puzzle", "Games"]
+            },
+            {
+                id: "psecu-mobile-for-ipad",
+                title: "PSECU Mobile+ for iPad",
+                developer: "Pennsylvania State Employees Credit Union",
+                featuredDescription: "PSECU Mobile+ for iPad enables you to quickly and conveniently access your financial information while on the go.",
+                description: "***To get started, visit psecu.com, log into your Online Banking account, and visit the \"Mobile Solutions\" page under My Money.***\n\nPSECU Mobile+ for iPad enables you to quickly and conveniently access your financial information while on the go. You can take advantage of the following features:\n\n* View account balances and transactional history\n* Transfer funds\n* Schedule bill payments\n* Find the nearest surcharge-free ATM\n* Deposit checks\n* FICO® Score Service \n\nFICO and Fair Isaac® are registered trademarks of the Fair Isaac Corporation in the United States, and may be trademarks or registered trademarks of the Fair Isaac Corporation in other countries. PSECU is not a credit reporting agency. Fair Isaac is not an affiliate company of PSECU. Members must have PSECU checking or a PSECU loan to be eligible for this service. Joint Owners are not eligible.",
+                versions: {
+                    archived: [
+                        { version: "2.6", url: "https://archive.org/download/com.psecu.tablet-ios9.0-clutch-2.0.4/com.PSECU.Tablet-iOS9.0%20%28V2.6%29%20%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "app-icon/psecu-mobile-for-ipad.png",
+                featured: false,
+                categories: ["Finance"]
+            },
+            {
+                id: "abc-for-kids",
+                title: "ABC For Kids",
+                developer: "Australian Broadcasting Corporation",
+                featuredDescription: "Have hours of fun with the ABC For Kids application.",
+                description: "Have hours of fun with the ABC For Kids application. Watch and listen to some of the best children’s content available from Australia's leading and most trusted children's brand.\n\nWith easy access to the ABC For Kids iTunes catalogue, your kids will never be bored again!\n\nFeatured Artists\nThe latest version of the app features clips and songs from Bananas in Pyjamas and Jay Laga’aia.\n\nMusic\nYour kids will love listening to the featured music tracks.\n\nVideo\nCheck out Bananas in Pyjamas, Jay Laga’aia and the much-loved Giggle and Hoot!",
+                versions: {
+                    archived: [
+                        { version: "1.7.2.2", url: "https://archive.org/download/com.abc-abc-for-kids-i-os-6.0-v-1.7.2.2-clutch-2.0.4/com.abc%20Abc%20For%20Kids-iOS%206.0%20%28V1.7.2.2%29%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/abc-for-kids.png",
+                featured: false,
+                categories: ["Education"]
             }
-        ];
+         ];
 
         // DOM Elements
         const carouselContainer = document.getElementById('carouselContainer');
@@ -539,19 +592,54 @@
             }
         }
         
-        // Render search results
-        function renderSearchResults(filteredApps = []) {
+        const APPS_PER_PAGE = 12;
+
+        function renderPaginationControls(totalApps, currentPage, onPageChange) {
+            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
+            if (totalPages < 2) return '';
+            let html = '<div class="pagination-controls" style="grid-column: 1/-1; text-align: center; margin: 20px 0;">';
+            if (currentPage > 1) {
+                html += `<button class="pagination-btn" data-page="${currentPage - 1}">Previous</button> `;
+            }
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === currentPage) {
+                    html += `<span class="pagination-page current">${i}</span> `;
+                } else {
+                    html += `<button class="pagination-btn" data-page="${i}">${i}</button> `;
+                }
+            }
+            if (currentPage < totalPages) {
+                html += `<button class="pagination-btn" data-page="${currentPage + 1}">Next</button>`;
+            }
+            html += '</div>';
+            return html;
+        }
+
+        function renderSearchResults(filteredApps = [], page = 1) {
             searchResults.innerHTML = '';
+            const totalApps = filteredApps.length;
+            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
             
-            if (filteredApps.length === 0) {
+            if (page === 1) {
+                setUrlParam('page', '');
+                page = 1;
+            }
+            
+            if (page < 1) page = 1;
+            if (page > totalPages) page = totalPages;
+            
+            const startIdx = (page - 1) * APPS_PER_PAGE;
+            const endIdx = startIdx + APPS_PER_PAGE;
+            const appsToShow = filteredApps.slice(startIdx, endIdx);
+
+            if (appsToShow.length === 0) {
                 searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
                 return;
             }
-            
-            filteredApps.forEach(app => {
+
+            appsToShow.forEach(app => {
                 const appCard = document.createElement('div');
                 appCard.className = 'app-card-grid';
-                
                 appCard.innerHTML = `
                     <div class="card-icon">
                         ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
@@ -561,10 +649,30 @@
                     <div class="card-developer">${app.developer}</div>
                     <button class="card-button" data-app-id="${app.id}">View Details</button>
                 `;
-                
                 searchResults.appendChild(appCard);
             });
-            
+
+            searchResults.innerHTML += renderPaginationControls(totalApps, page, (newPage) => {
+                if (newPage === 1) {
+                    setUrlParam('page', '');
+                } else {
+                    setUrlParam('page', newPage);
+                }
+                renderSearchResults(filteredApps, newPage);
+            });
+
+            document.querySelectorAll('.pagination-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const newPage = parseInt(this.getAttribute('data-page'));
+                    if (newPage === 1) {
+                        setUrlParam('page', '');
+                    } else {
+                        setUrlParam('page', newPage);
+                    }
+                    renderSearchResults(filteredApps, newPage);
+                });
+            });
+
             // Add event listeners to buttons
             document.querySelectorAll('.card-button').forEach(button => {
                 button.addEventListener('click', function() {
@@ -701,16 +809,13 @@
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
                 const tabName = this.getAttribute('data-tab');
-                
                 // Update active tab
                 tabs.forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
-                
                 // Hide all tab content
                 Object.values(tabContents).forEach(content => {
                     content.classList.remove('active');
                 });
-                
                 // Show/hide views based on tab
                 if (tabName === 'featured') {
                     carouselContainer.style.display = 'block';
@@ -722,7 +827,14 @@
                     searchContainer.style.display = 'block';
                     searchResults.classList.add('active');
                     tabContents.search.classList.add('active');
-                    renderSearchResults(apps);
+                    const pageParam = parseInt(getUrlParam('page'));
+                    const page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
+                    if (page === 1) {
+                        setUrlParam('page', '');
+                    } else {
+                        setUrlParam('page', page);
+                    }
+                    renderSearchResults(apps, page);
                 } else if (tabName === 'categories') {
                     carouselContainer.style.display = 'none';
                     searchContainer.style.display = 'none';
@@ -743,8 +855,9 @@
         searchInput.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
             setUrlParam('query', searchTerm);
+            setUrlParam('page', '');
             if (searchTerm.length === 0) {
-                renderSearchResults(apps);
+                renderSearchResults(apps, 1);
                 return;
             }
             let filteredApps = apps;
@@ -772,7 +885,7 @@
                 }
                 return matches;
             });
-            renderSearchResults(filteredApps);
+            renderSearchResults(filteredApps, 1);
         });
         
         // Show cancel button when search input is focused
