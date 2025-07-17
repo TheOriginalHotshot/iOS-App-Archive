@@ -479,6 +479,8 @@
             }
         ];
 
+   apps.sort((a, b) => a.title.localeCompare(b.title));
+  
         // DOM Elements
         const carouselContainer = document.getElementById('carouselContainer');
         const carousel = document.getElementById('carousel');
