@@ -616,8 +616,11 @@
         }
 
         function renderSearchResults(filteredApps = [], page = 1) {
+            const sortedApps = filteredApps.slice().sort((a, b) =>
+                a.title.localeCompare(b.title)
+            );
             searchResults.innerHTML = '';
-            const totalApps = filteredApps.length;
+            const totalApps = sortedApps.length;
             const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
             
             if (page === 1) {
@@ -630,7 +633,7 @@
             
             const startIdx = (page - 1) * APPS_PER_PAGE;
             const endIdx = startIdx + APPS_PER_PAGE;
-            const appsToShow = filteredApps.slice(startIdx, endIdx);
+            const appsToShow = sortedApps.slice(startIdx, endIdx);
 
             if (appsToShow.length === 0) {
                 searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
