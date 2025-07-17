@@ -459,6 +459,23 @@
                 icon: "app-icon/my-singing-monsters.png",
                 featured: false,
                 categories: ["Simulation", "Music", "Games"]
+            },
+            {
+                id: "dropoly",
+                title: "Dropoly",
+                developer: "Inovaworks",
+                featuredDescription: "Dropoly is an exciting remake of BlockOut! (tm), the most popular 3D version of the all-too-famous brick-dropping game Tetris (tm).",
+                description: "Dropoly is an exciting remake of BlockOut! (tm), the most popular 3D version of the all-too-famous brick-dropping game Tetris (tm).\n\nDropoly allows you to play on a variable depth pit where polycubes drop at increasing speeds. The game has three predefined game modes for quick occasional gamers (Flat Fun, 3D Mania, and Out-of-Control) as well as a full customizable mode for professional puzzlers. You can save your game state and continue later, listen to you iPod music while playing, and Dropoly saves and restores your options automatically.\n\nUsing an innovative control interface and faithfully designed to replicate the original scoring rules of the 80's game, Dropoly will please both hard-core gamers that already know how to play as well as newcomers that never saw a 3D polycube game before.\n\nCan you drop that poly?\n\n--\n\nBlockout, originally licensed to California Dreams, is a registered U.S. trademark of Kadon Enterprises, Inc., a maker of physical polycubes. Tetris is a trademark of The Tetris Company. Inovaworks is not in any way affiliated with any of these two companies.",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/dropoly-v-1.1/Dropoly%20%28V1.1%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.2.1 and Later",
+                icon: "app-icon/dropoly.png",
+                featured: false,
+                categories: ["Entertainment", "Puzzle", "Casual", "Games"]
             }
         ];
 
