@@ -442,8 +442,25 @@
                 icon: "app-icon/godzilla-monster-mayhem.png",
                 featured: false,
                 categories: ["Games", "Action", "Fighting"]
+            },
+            {
+                id: "my-singing-monsters",
+                title: "My Singing Monsters",
+                developer: "Big Blue Bubble",
+                featuredDescription: "Welcome to My Singing Monsters! Breed them, feed them, listen to them sing!",
+                description: "Welcome to My Singing Monsters! Breed them, feed them, listen to them sing!\n\nRaise a monster pet, then feed your musical monster to help them grow. Take care of a collection of fun monster characters in this free musical game for the whole family!\n\nCreate an island full of Singing Monsters, then watch your song evolve as you breed and upgrade happy monster pets. Design and build unique decorations to make your world look just the way you want, then share your creation with friends! You’ll love exploring the wonderful fantasy land of the Monster World!\n\nDownload My Singing Monsters today — Happy Monstering!\n\nFEATURES:\n• Collect and level up over 250 cute and funny monsters — dragons are so last year…\n• Customize your islands with cool decorations and catchy music\n• Enjoy awesome graphics and character animation\n• Play with friends around the world\n• Discover new updates and events year-round\n________\n\nSTAY TUNED:\nFacebook: https://www.facebook.com/MySingingMonsters\nTwitter: https://www.twitter.com/SingingMonsters\nInstagram: https://www.instagram.com/mysingingmonsters\nYouTube: https://www.youtube.com/mysingingmonsters\n\nPLEASE NOTE! My Singing Monsters is completely free to play, however some game items can also be purchased for real money. If you don't want to use this feature, please disable in-app purchases in your device's settings. My Singing Monsters requires an internet connection to play (3G or WiFi).\n\nHELP & SUPPORT: Get in touch with the Monster-Handlers by visiting www.bigbluebubble.com/support or contacting us in game by going to Options > Support.",
+                versions: {
+                    archived: [
+                        { version: "3.0.5", url: "https://archive.org/download/com.bigbluebubble.-my-singing-monsters-v-3.0.5-i-os-9.0-clutch-2.0.4/com.bigbluebubble.My-Singing-Monsters-%20%28V3.0.5%29%20-iOS9.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 13.0 and Later",
+                icon: "app-icon/my-singing-monsters.png",
+                featured: false,
+                categories: ["Simulation", "Music", "Games"]
             }
-         ];
+        ];
 
         // DOM Elements
         const carouselContainer = document.getElementById('carouselContainer');
