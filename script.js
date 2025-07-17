@@ -476,6 +476,35 @@
                 icon: "app-icon/dropoly.png",
                 featured: false,
                 categories: ["Entertainment", "Puzzle", "Casual", "Games"]
+            },
+            {
+                id: "dropbox",
+                title: "Dropbox",
+                developer: "Dropbox Inc",
+                featuredDescription: "Dropbox lets you upload, save, and transfer photos and files to the cloud.",
+                description: "Dropbox lets you upload, save, and transfer photos and files to the cloud. Backup and sync your pictures, videos, documents, and other files to cloud storage and access them from any device, anywhere. With advanced sharing features, it’s easy to share and send photos or files to family, friends, and co-workers.\n\nFeatures:\n• Automatically upload videos and photos from your camera roll to cloud photo storage - all in the background - for easy video sharing and photo sharing.\n• Access any file in your account - even offline - and preview over 175 different file types with no special software required.\n• Easily send large files by copying and pasting a link you can give to anyone, even if they don’t have a Dropbox account.\n• Scan documents, receipts, IDs, photos, and more using your mobile device and transform them into high-quality PDFs, so you can view and send anywhere.\n• Sync folders on your PC or Mac to Dropbox with computer backup, and recover older versions or restore deleted files with version history and file recovery.\n\nSign up now for your free Dropbox Plus trial. You’ll get 2 TB (2,000 GB) of storage space - that’s enough room to save files from all your linked devices. And with Dropbox Rewind, you can roll back any file, folder, or your entire account, up to 30 days.\n\nExisting Plus customers can upgrade to Dropbox Professional. With 3 TB (3,000 GB), you can store all your stuff - from work projects to personal photos - and have space to spare. You and your clients can comment on most file types without leaving Dropbox. And you can protect your work with a watermark, add shared link controls, or rewind your account up to 180 days.\n\nBefore starting a trial or completing payment, you’ll see the plan price. This amount will be charged to your iTunes account at confirmation of purchase and on renewal and will vary by plan and country. Dropbox subscriptions renew monthly or yearly, depending on your plan. Your account will be charged for renewal 24 hours before the end of your current billing period. To avoid auto-renewal, turn it off within at least 24 hours before the end of the current period.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox-%20%28V1.0%29%20%28iOS3.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/Dropbox%20%28V1.1%29%20%28iOS3.1%29.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V1.2%29%20%28iOS3.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.4", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V1.4%29%20%28iOS3.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.4.1", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V1.4.1%29%20%28iOS3.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.4.2", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/Dropbox-%28V1.4.2%29%20%28iOS3.1%29.ipa" },
+                        { version: "1.4.7", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V1.4.7%29%20%28iOS3.1%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.5.3", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V1.5.3%29%20%28iOS4.0%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.5.7", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V1.5.7%29%20%28iOS4.3%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.0.2", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V2.0.2%29%20%28iOS5.0%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.1.4", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/com.getdropbox.Dropbox%20%28V2.1.4%29%20%28iOS5.0%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.2.2", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/Dropbox-%28com.getdropbox.Dropbox-%20%28V2.2.2%29%20%28iOS5.0%29.ipa" },
+                        { version: "2.3.2", url: "https://archive.org/download/com.getdropbox.-dropbox-v-2.0.2-i-os-5.0-clutch-2.0.4/Dropbox-%28com.getdropbox.Dropbox-%20%28V2.3.2%29%20%28iOS5.0%29.ipa" }
+                    ],
+                    unarchived: ["1.3.1", "1.4.6", "1.5.2", "3.5.1", "3.9.1", "3.9.5"]
+                },
+                compatibility: "iOS 16.7.10 and Later",
+                icon: "app-icon/dropbox.png",
+                featured: false,
+                categories: ["Utilities", "Productivity"]
             }
         ];
 
