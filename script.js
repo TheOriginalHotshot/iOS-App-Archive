@@ -425,6 +425,23 @@
                 icon: "app-icon/abc-for-kids.png",
                 featured: false,
                 categories: ["Education"]
+            },
+            {
+                id: "godzilla-monster-mayhem",
+                title: "Godzilla - Monster Mayhem",
+                developer: "Indiagames",
+                featuredDescription: "Godzilla - Monster mayhem is a monstrous one-on-one fighting game where you get to fight as King Ghidorah or as mighty Godzilla himself.",
+                description: "Godzilla - Monster mayhem is a monstrous one-on-one fighting game where you get to fight as King Ghidorah or as mighty Godzilla himself. Fight using innovative gesture controls in a 3 round showdown against you arch nemesis using various attacks and counter moves. Challenge your friends to showdowns via email or through Facebook. Brag about your destructive fighting capabilities by posting directly to your Wall on Facebook.\n\nFeatures of the Game:\n- Gesture based fighting controls\n- Range of attacking and Counter moves\n- 3 Round matches\n- Upload you scores\n- Challenge your friends to see who's the better fighter\n- Post directly to Facebook and let everyone know about your skills\n\nGodzilla, Gigan, Angurius, King Ghidorah, Hedorah, Mechagodzilla, Fire Rodan, Megalon. All Related Characters and Character Designs are Trademarks of Toho Co., Ltd. 2009 Toho Co., Ltd. All Rights Reserved. Licensed and Distributed by Indiagames Ltd. 2009 Indiagames Ltd.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/godzilla-monster-mayhem-1.0-hexhammer/Godzilla%20%20%20Monster%20Mayhem%201.0%20Hexhammer.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/godzilla-monster-mayhem.png",
+                featured: false,
+                categories: ["Games", "Action", "Fighting"]
             }
          ];
 
