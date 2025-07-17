@@ -1153,11 +1153,15 @@
             font-weight: 700;
             margin: 0 2px;
         }
-        .back-btn-icon 
-        {
-  width: 16px;
-  height: auto;
-  margin-right: 8px;
-  vertical-align: middle;
-  display: inline-block;
+.back-to-categories-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding-left: 24px;
+  background: url('icon/arrow_left.png') 
+              no-repeat left center;
+  background-size: 16px auto;
+  text-decoration: none;
+  font: inherit;
+  border: none;
+  cursor: pointer;
 }
