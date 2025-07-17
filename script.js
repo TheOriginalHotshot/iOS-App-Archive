@@ -408,6 +408,23 @@
                 icon: "app-icon/psecu-mobile-for-ipad.png",
                 featured: false,
                 categories: ["Finance"]
+            },
+            {
+                id: "abc-for-kids",
+                title: "ABC For Kids",
+                developer: "Australian Broadcasting Corporation",
+                featuredDescription: "Have hours of fun with the ABC For Kids application.",
+                description: "Have hours of fun with the ABC For Kids application. Watch and listen to some of the best children’s content available from Australia's leading and most trusted children's brand.\n\nWith easy access to the ABC For Kids iTunes catalogue, your kids will never be bored again!\n\nFeatured Artists\nThe latest version of the app features clips and songs from Bananas in Pyjamas and Jay Laga’aia.\n\nMusic\nYour kids will love listening to the featured music tracks.\n\nVideo\nCheck out Bananas in Pyjamas, Jay Laga’aia and the much-loved Giggle and Hoot!",
+                versions: {
+                    archived: [
+                        { version: "1.7.2.2", url: "https://archive.org/download/com.abc-abc-for-kids-i-os-6.0-v-1.7.2.2-clutch-2.0.4/com.abc%20Abc%20For%20Kids-iOS%206.0%20%28V1.7.2.2%29%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/abc-for-kids.png",
+                featured: false,
+                categories: ["Education"]
             }
          ];
 
