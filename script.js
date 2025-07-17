@@ -531,6 +531,40 @@
                 icon: "app-icon/toy-story-read-along.png",
                 featured: false,
                 categories: ["Entertainment", "Books"]
+            },
+            {
+                id: "facebook",
+                title: "Facebook",
+                developer: "Meta Platforms Inc",
+                featuredDescription: "Where real people propel your curiosity.",
+                description: "Where real people propel your curiosity. Whether you’re thrifting gear, showing a reel to that group who gets it, or sharing laughs over fun images reimagined by AI, Facebook helps you make things happen like no other social network.\n\nExplore and expand your interests:\n* Ask Meta AI to search topics that matter to you, and get instant results more interactive than just text\n* Shop Marketplace for deals and hidden gems to nurture your hobbies\n* Personalize your Feed to see more of what you like, less of what you don’t\n* Dive into reels and videos for how-to’s or quick entertainment\n\nConnect with people and communities:\n* Join groups to learn tips from real people who’ve been there, done that\n* Turn on sharing to Instagram to save time\n* Privately message relatable posts that only your BFF will get or that Reels trend everyone’s talking about\n\nShare your world:\n* Use generative AI to delight friends with custom images, or just get help writing posts\n* Customize your profile to choose how you show up and who sees your posts\n* Effortlessly create reels from trending templates, or showcase your creativity with a full suite of editing tools\n* Capture moments on the fly with stories\n\nSome features may not be available in your country or region.\n\nTerms & Policies: https://www.facebook.com/policies_center\nPrivacy Policy: https://www.facebook.com/privacy\n\nLearn how we're working to help keep our communities safe across Meta technologies at the Meta Safety Center: https://about.meta.com/actions/safety",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V1.0%29%20%28iOS_2.0%29.ipa" },
+                        { version: "2.1", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-v2.1-iDexRiky-iOS2.2-%28Clutch-1.4.6%29.ipa" },
+                        { version: "2.2", url: "https://theoriginalhotshot.github.io/iOS-App-Archive/linknotfound.txt" },
+                        { version: "3.02", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V3.0.2%29%28iOS_3.0%29.ipa" },
+                        { version: "3.0.3", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V3.0.3%29%28iOS_3.0%29.ipa" },
+                        { version: "3.11", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V3.11%29%28iOS_3.0%29.ipa" },
+                        { version: "3.12", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-v3.12-eromeu52-iOS3.0-%28Clutch-1.4.6%29.ipa" },
+                        { version: "4.1.1", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook%20v4.1.1%20%281%29.ipa" },
+                        { version: "5.0", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook%205.0.ipa" },
+                        { version: "5.0.1", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook%205.0.1.ipa" },
+                        { version: "5.2.2", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook_5.2.2_ios_4.3.ipa" },
+                        { version: "5.3", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28V5.3%29%28Clutch-1.3%29.ipa" },
+                        { version: "6.4", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28V6.4%29%28Clutch-1.3%29.ipa" },
+                        { version: "6.5", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook%206.5.ipa''" },
+                        { version: "6.5.1", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-v6.5.1--iOS5.0-%28Clutch-1.4.6%29.ipa" },
+                        { version: "6.8", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V6.8%29%28iOS_6.0%29.ipa" },
+                        { version: "11.0", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-v11.0--iOS6.0-%28Clutch-1.4.6%29.ipa" },
+                        { version: "17.0", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/com.facebook.Facebook-%28V17.0%29-iOS7.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 15.1 and Later",
+                icon: "app-icon/facebook.png",
+                featured: false,
+                categories: ["Social Networking"]
             }
         ];
 
