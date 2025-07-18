@@ -676,6 +676,23 @@
                 icon: "app-icon/guess-my-age-math-magic.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Education"]
+            },
+            {
+                id: "ihourglass",
+                title: "iHourglass",
+                developer: "Headlight Software Inc",
+                featuredDescription: "Why trust your important game timing to gravity and falling grains of sand?",
+                description: "Why trust your important game timing to gravity and falling grains of sand?\n\nSand and glass hourglasses are so 14th century. Bring your games into the 21st century and be the envy of everyone at your next game night.\n\nIt all animates beautifully. Sand piles up, turning on the side will pause and all the sand pours to the side.\n\nFlipping instantly resets, so you're ready for the next round in your game without waiting.\n\nAdvantages:\n+ Adjustable; pick the length of your timer to suit the game.\n+ Quick Reset; just flip it over to reset the timer. No more waiting while the sand trickles from one bulb to another.\n+ Sound and Vibration; a buzzer and vibrating means you'll never miss when time is up. With an old sand timer, if nobody was watching closely, one team could get more time unfairly.*\n+ Change the look of your hourglass, from elegant to classic to silly.\n+ Silica, which could be used to build more iPhones, is not wasted!\n\n* Note that vibration features require iPhone and don't work on the iPod touch",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/i-hourglass-v-1.1/iHourglass%20%20v1.1%20.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/ihourglass.png",
+                featured: false,
+                categories: ["Entertainment", "Utilities"]
             }
         ];
 
