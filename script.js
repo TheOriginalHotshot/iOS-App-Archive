@@ -901,6 +901,23 @@
                 icon: "app-icon/neverputt-me.png",
                 featured: false,
                 categories: ["Puzzle", "Sports", "Games"]
+            },
+            {
+                id: "pterm-ssh-telnet-client",
+                title: "pTerm - SSH, Telnet Client and Terminal Emulator",
+                developer: "Instant Cocoa",
+                featuredDescription: "pTerm provides an SSH, Telnet, and raw TCP client for your iPhone or iPod Touch!",
+                description: "pTerm provides an SSH, Telnet, and raw TCP client for your iPhone or iPod Touch! It is based on the popular desktop client 'PuTTY'.\n\nFeatures include:\n* xterm terminal emulation\n* Customizable terminal size (80x24 default)\n* SSH, Telnet, or \"raw\" TCP connections\n* Ctrl, Esc, Tab, PgUp, PgDn, and arrow key support\n* RSA/DSA Key generation and authentication\n* Integrated browser - no more popping out to Safari to check something. Browser keeps state, so you can pop back and forth between the terminal and browser.\n* Tunneling support - useful from the browser\n* Logging options; view logs, email logs\n* SOCKS4, SOCKS5, HTTP, and Telnet proxy support\n* Landscape and Portrait modes\n* Works over Edge, 3G, or WiFi\n* Stores your list of host/port/protocol for convenient access\n* Terminal supports pinch and zoom\n* Based on PuTTY, a stable and feature-rich code base\n\nNOTE TO iPad USERS: Bluetooth keyboards are supported, but the full key set is not available via the Apple-provided SDK (yet). Ctrl, Alt, Esc, etc. are not available via the Bluetooth keyboard but are still available on-screen. Full keyboard support will come as soon as Apple makes it available.",
+                versions: {
+                    archived: [
+                        { version: "1.2", url: "https://archive.org/download/pterm-53uyfwvb4s.pterm-1.2-ios_2.0-cb5486049effd4202f659a5777a6c84b/pTerm-%2853UYFWVB4S.pTerm%29-1.2-%28iOS_2.0%29-cb5486049effd4202f659a5777a6c84b.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.1.3 and Later",
+                icon: "app-icon/pterm-ssh-telnet-client.png",
+                featured: false,
+                categories: ["Business", "Utilities"]
             }
         ];
 
