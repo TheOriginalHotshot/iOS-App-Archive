@@ -780,6 +780,24 @@
                 icon: "app-icon/itrailer-lite.png",
                 featured: false,
                 categories: ["Photo & Video", "Entertainment"]
+            },
+            {
+                id: "travel-channel",
+                title: "Travel Channel",
+                developer: "The Travel Channel L.L.C",
+                featuredDescription: "Catch up with your favorite Travel Channel shows anytime, anywhere with the all-new Travel Channel GO app.",
+                description: "Catch up with your favorite Travel Channel shows anytime, anywhere with the all-new Travel Channel GO app - and now get access to up to 14 additional networks including TLC, ID, Discovery, Science Channel and more - all in one app. It’s FREE with your pay TV subscription.\n\nLink your pay TV provider (cable, satellite, telco, live TV streaming service) to access Travel Channel favorites like Ghost Adventures, The Dead Files, Paranormal Caught on Camera, Mountain Monsters, Kindred Spirits, Portals to Hell and many more - plus top shows from other networks including Strange Evidence (Science Channel), Expedition Unknown (Discovery), Diners, Drive-Ins and Dives (Food Network), Home Town (HGTV), Evil Lives Here (ID) and more. New episodes are available the same day as they premiere on TV.\n\nWith Travel Channel GO You Can:\n• Stream Travel Channel and more networks LIVE anytime, anywhere on all your favorite devices\n• Find shows to watch with the live schedule guide\n• Access thousands of episodes on demand - from current hits to classic favorites\n• See new episodes of shows on the app the same day and time they premiere on TV\n• Binge your favorite Travel Channel series and specials including Ghost Adventures, The Dead Files, Paranormal Caught on Camera, Mountain Monsters, Kindred Spirits, Portals to Hell - and many more!\n• Get unlimited access to everything the Discovery family of networks has to offer - free with your pay TV subscription.\n\nFeatures:\n• Stream live TV when you link your pay TV provider\n• Watch select episodes and entire seasons of your favorite shows from up to 15 networks!\n• Browse by genre - from Natural History, Science and Tech to Food, Home and more - to find your favorite shows and discover new ones\n• Continue watching episodes where you left off across all of your devices\n• Save shows and episodes to watch later with My List\n• Compatible with tvOS and Chromecast\n• Closed-captioning support\n\nRequirements:\n• Available in the U.S. only\n• Wi-Fi connection recommended\n• iOS 12 or higher\n\nNeed help? Visit gohelp.discovery.com.\n\nVisitor Agreement: https://corporate.discovery.com/visitor-agreement/\nPrivacy Notice: https://corporate.discovery.com/privacy-policy\nCalifornia Privacy Notice: https://corporate.discovery.com/privacy-policy/#cappi\nCalifornia Do Not Sell My Personal Info: https://corporate.discovery.com/california_dns\n\nWe may work with third-party advertising companies and other partners that help us deliver tailored advertisements to you. To opt out of behavioral tracking on mobile devices, you may use the DAA AppChoices Tool, available at http://www.aboutads.info/appchoices.",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/com.travelchannel.tveverywhere-v-1.1-i-os-6.0-clutch-2.0.4/com.travelchannel.tveverywhere%20%28V1.1%29%20-iOS6.0-%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.0", url: "https://archive.org/download/com.travelchannel.tveverywhere-v-1.1-i-os-6.0-clutch-2.0.4/com.travelchannel.travelchannelgo%20%28V2.0%29%20-iOS3.1-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: ["9.2.0"]
+                },
+                compatibility: "iOS 13.0 and Later",
+                icon: "app-icon/travel-channel.png",
+                featured: false,
+                categories: ["Entertainment", "Travel"]
             }
         ];
 
