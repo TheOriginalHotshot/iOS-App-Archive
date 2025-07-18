@@ -936,6 +936,23 @@
                 icon: "app-icon/arvale-journey-of-illusion.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "motes",
+                title: "m.o.t.e.s.",
+                developer: "Developer Unknown",
+                featuredDescription: "no description found",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/m.o.t.e.s.-3ktf9b4ah2.com.gandreas.motes.touch-1.0b6-ios_2.0-150ba638b75b71052a4168b495261a21/m.o.t.e.s.-%283KTF9B4AH2.com.gandreas.motes.touch%29-1.0b6-%28iOS_2.0%29-150ba638b75b71052a4168b495261a21.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/motes.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
