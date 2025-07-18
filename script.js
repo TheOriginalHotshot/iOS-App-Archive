@@ -918,6 +918,24 @@
                 icon: "app-icon/pterm-ssh-telnet-client.png",
                 featured: false,
                 categories: ["Business", "Utilities"]
+            },
+            {
+                id: "arvale-journey-of-illusion",
+                title: "Arvale: Journey of Illusion",
+                developer: "PDAmill Game Studios",
+                featuredDescription: "Arvale: Journey of Illusion is our award-winning, epic RPG (Role Playing Game) for iPhone!",
+                description: "Arvale: Journey of Illusion is our award-winning, epic RPG (Role Playing Game) for iPhone!\n\nThe game contains over 20 hours of gameplay, 6 immense continents, several hyperboles, 280 maps, 200 monsters, hundreds of items (including wheelbarrows!), and thousands of laughs!\n\nIf you enjoy games such as Zelda, Pokemon, Dragon Quest or the Final Fantasy games, you will love this game! Featuring humor and story-telling similar to the classic Lucasarts adventure games such as Monkey Island, Day of the Tentacle, and Sam & Max.\n\nFeatures:\n- Engage in an Epic Story involving Dragons, Magic and the Fate of the World\n- Explore the vast World of Arvale by traveling to six different continents, packed with villages, castles, forests, deserts, swamps, snowfields, and many more locales\n- Talk with any of the Hundreds of colorful Non-player Characters you meet to learn about the world\n- Interact with tons of objects from treasure-filled chests and mysterious doors, to antique books and creepy coffins.\n- Fight against 200 different Monsters and Enemies\n- Rescue Fair Maidens, recover Lost Artifacts and Battle with Evil Villains\n- View intriguing Cutscenes that unveil the alluring story\n- Enjoy over 100 sound effects that accentuate battle hits and give ambiance to the environments.\n- Venture on a multitude of Side-Quests (for the Overachieving Heroes)\n- Vivid, Colorful Graphics, consisting of over 2000 Beautiful Graphical Elements\n- Listen to an Amazing original Musical Score with over 45 minutes in a total of 17 Soundtracks\n- Multiple Endings determined by your decisions in the game\n\nZelda and Pokemon are trademarks of Nintendo. Dragon Quest and Final Fantasy are trademarks of Square-Enix. Monkey Island, Day of the Tentacle, and Sam & Max are trademarks of Lucasarts. These trademark owners are not associated with PDAmill Game Studios or Nav N Go Kft.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/arvale-4rv-4l-3j-0ur-1.0-i-os-2.1-2a-2ee-35cf-00a-9aa-6a-367b-61124f-7c-41f/Arvale-%284rv4l3j0ur%29-1.0-%28iOS_2.1%29-2a2ee35cf00a9aa6a367b61124f7c41f.ipa" },
+                        { version: "1.6", url: "https://archive.org/download/arvale-4rv-4l-3j-0ur-1.0-i-os-2.1-2a-2ee-35cf-00a-9aa-6a-367b-61124f-7c-41f/Arvale_v1.6_os30.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.1 and Later",
+                icon: "app-icon/arvale-journey-of-illusion.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
