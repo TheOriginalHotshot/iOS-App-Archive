@@ -625,6 +625,23 @@
                 icon: "app-icon/meet-bubble.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "finger-sprint-free",
+                title: "Finger Sprint Free",
+                developer: "Rbz Apps",
+                featuredDescription: "Finger Sprint is the game you've been waiting for!",
+                description: "<-- Free Version of the original running app! -->\n**The Full Version Now Has Online Scores!**\nFinger Sprint is the game you've been waiting for! Run with your fingers as fast as you can to try and get to the top of the leader board.\n\nThis game gets even better with friends, Once people see you playing they will want to have a go and try to beat your fastest time.\n\n<-- Get the full version of Finger Sprint for Online leader board, longer distance races and no ads! -->\n\nTip: Take long strides on the screen to get maximum distance per step.\n\n** Become a fan of finger sprint on facebook! www.facebook.com/pages/Finger-Sprint/62517123899 Or follow us on twitter at www.twitter.com/fingersprint**",
+                versions: {
+                    archived: [
+                        { version: "1.3", url: "https://archive.org/download/finger-sprint-free-rbz-apps-v-1.3-lp-os-20.rc-333-616/Finger%20Sprint%20Free%20%5BRbz%20Apps%5D%20%28v1.3%20LP%20os20%29.rc333_616.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/finger-sprint-free.png",
+                featured: false,
+                categories: ["Games", "Sports", "Racing"]
             }
         ];
 
