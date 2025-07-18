@@ -1034,9 +1034,7 @@
             document.querySelectorAll('.app-card .card-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const appId = this.getAttribute('data-app-id');
-                    setUrlParam('app', appId);
-                    document.getElementById(`${appId}Modal`).classList.add('active');
-                    document.body.style.overflow = 'hidden';
+                    openModal(appId);
                 });
             });
         }
@@ -1208,20 +1206,15 @@
             document.querySelectorAll('.card-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const appId = this.getAttribute('data-app-id');
-                    setUrlParam('app', appId);
-                    document.getElementById(`${appId}Modal`).classList.add('active');
-                    document.body.style.overflow = 'hidden';
+                    openModal(appId);
                 });
             });
         }
         
-        // Create modals
-        function createModals() {
-            modalContainer.innerHTML = '';
-            
-            apps.forEach(app => {
-                // Create version list items
-                let versionItems = '';
+        // Create a modal for a single app when needed
+        function createModal(app) {
+            // Create version list items
+            let versionItems = '';
                 
                 // Add archived versions if they exist
                 if (app.versions.archived.length > 0) {
@@ -1301,39 +1294,49 @@
                     </div>
                 `;
                 
-                modalContainer.appendChild(modal);
+            modalContainer.appendChild(modal);
+
+            modal.querySelector('.close-modal').addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                setUrlParam('app', '');
             });
-            
-            // Add modal close handlers
-            document.querySelectorAll('.close-modal').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.closest('.modal-overlay').classList.remove('active');
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    setUrlParam('app', '');
+                }
+            });
+
+            return modal;
+        }
+
+        // Handle Escape key to close any active modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                    modal.classList.remove('active');
                     document.body.style.overflow = 'auto';
                     setUrlParam('app', '');
                 });
-            });
-            
-            // Close modal when clicking outside
-            document.querySelectorAll('.modal-overlay').forEach(modal => {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        this.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                        setUrlParam('app', '');
-                    }
-                });
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-                        modal.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                        setUrlParam('app', '');
-                    });
+            }
+        });
+
+        function openModal(appId) {
+            let modal = document.getElementById(`${appId}Modal`);
+            if (!modal) {
+                const app = apps.find(a => a.id === appId);
+                if (!app) {
+                    alert('App ID not found, please try again later.');
+                    return;
                 }
-            });
+                modal = createModal(app);
+            }
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            setUrlParam('app', appId);
         }
         
         // Tab switching
@@ -1443,7 +1446,6 @@
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             initCarousel();
-            createModals();
             
             // Add keyboard navigation
             document.addEventListener('keydown', function(e) {
@@ -1485,16 +1487,7 @@
             }
             const appParam = getUrlParam('app');
             if (appParam) {
-                const modal = document.getElementById(`${appParam}Modal`);
-                if (modal) {
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    setUrlParam('app', '');
-                    setTimeout(() => {
-                        alert('App ID not found, please try again later.');
-                    }, 100);
-                }
+                openModal(appParam);
             }
             const categoryParam = getUrlParam('category');
             if (categoryParam) {
@@ -1625,9 +1618,7 @@
             categoriesContent.querySelectorAll('.card-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const appId = this.getAttribute('data-app-id');
-                    setUrlParam('app', appId);
-                    document.getElementById(`${appId}Modal`).classList.add('active');
-                    document.body.style.overflow = 'hidden';
+                    openModal(appId);
                 });
             });
         }
