@@ -798,6 +798,23 @@
                 icon: "app-icon/travel-channel.png",
                 featured: false,
                 categories: ["Entertainment", "Travel"]
+            },
+            {
+                id: "my-live",
+                title: "my live!",
+                developer: "Vodafone Omnitel N.V.",
+                featuredDescription: "Vodafone my live! is the innovative software created by Vodafone to best personalize your iPhone.",
+                description: "Vodafone my live! is the innovative software created by Vodafone to best personalize your iPhone.\n\nWith Vodafone my live! you can group and make available, immediately, all your favorite information, such as the latest news, information on your Vodafone account, RSS feeds from your favorite sites and the WebApps you visit most frequently.\n\nYou choose the content you want to view and organize it according to your preferences, directly within the application or by connecting to the my live! website at http://mylive.vodafone.it with your MAC or PC browser.\n\nWithin your personal web page, you can:\n\n- Add new widgets as you like, using the Personal RSS, Personal WebApp and Personal Webcam widgets;\n- Add new widgets from those suggested by Vodafone;\n- Move existing widgets according to the order you prefer;\n- Delete existing widgets.\n\nWidgets are always automatically synchronized, on your iPhone and on your personal web page.\n\nThe first time you access my live! on your iPhone, you must use your Vodafone data connection to enable the service to be activated. After activation, you can freely use my live! with any Wi-Fi connection.\n\nFor more information, visit the my live! website.\n\nYour whole world is always with you, with Vodafone my live!",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/my-live-66-s-83-xspsm.com.vodafone.mylive.-102-1.0-i-os-2.0-424b-9eec-68c-634ca-9a-0f-605e-21dedc-80/my%20live%21-%2866S83XSPSM.com.vodafone.mylive.102%29-1.0-%28iOS_2.0%29-424b9eec68c634ca9a0f605e21dedc80.ipa" }
+                    ],
+                    unarchived: ["2.1"]
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/my-live.png",
+                featured: false,
+                categories: ["Utilities"]
             }
         ];
 
