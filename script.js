@@ -832,6 +832,23 @@
                 icon: "app-icon/contacts3d.png",
                 featured: false,
                 categories: ["Utilities"]
+            },
+            {
+                id: "alley-gator",
+                title: "Alley Gator",
+                developer: "Glu Mobile",
+                featuredDescription: "Help Alley the Alligator glide his way through the dark tunnels of the New York City sewage system to recover his lost peppers and find a way out!",
+                description: "Help Alley the Alligator glide his way through the dark tunnels of the New York City sewage system to recover his lost peppers and find a way out!\n\nLife in the sewers below New York City can be hard, especially if you’re an alligator and you are lost!\n\nDodge your way past old pipes, collect peppers, avoid debris and keep on moving to beat the clock on 35 twisting levels. Can you help Alley find his way back to the sea?\n\nLIFE BELOW THE STREET\nPlay in 7 different environments from graffiti-filled passageways to frigid icy tubes; the sewers are full of eye-popping smelly fun! Watch out for other eerie dark critters down there...\n\nBE IN CHARGE\nSimple tilt and touch controls let you control Alley Gator with ease.\n\nDON’T FORGET THE PEPPERS\nGet pickups along the way to help you on your journey to the sea. Collect stopwatches to freeze time and drink the green potions for a fun surprise. Oh and don’t forget to collect peppers as Alley wants all of them!\n\nGIVE IT YOUR OWN TOUCH\nPut yourself in the game with the new iPhone 3.0 OS features. Record your own special effects and Alley will use them. Select one of the different audio effects, press record, and speak or sing into the mic to create your own wild and crazy special effects!\n\nCheck out other Glu games:\n\n?World Series of Poker Hold'em Legend\n?*NEW* Jump O'Clock\n?Deer Hunter 3D\n?Family Guy: Uncensored\n?TRANSFORMERS G1: AWAKENING\n?Super KO Boxing 2\n?How to Train Your Dragon\n?TRANSFORMERS CyberToy\n?Bonsai Blast\n?Glyder 2\n?Build-a-lot\n?Brain Genius Deluxe\n?Cops & Robbers\n?Mini Golf Wacky Worlds\n?Taxi Fight!\n?Cooking Star\n?Stranded: Mysteries of Time\n?Beat It!\n\nFOLLOW US at\ntwitter.com/glumobile\nfacebook.com/glumobile\n\nGIFT THIS APP: Click the \"Buy App\" arrow in the iTunes® App Store.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/alley-gator-1.0-hexhammer_202504/Alley%20Gator%201.0-Hexhammer.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/alley-gator.png",
+                featured: false,
+                categories: ["Action", "Games", "General"]
             }
         ];
 
