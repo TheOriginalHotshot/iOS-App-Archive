@@ -746,6 +746,23 @@
                 icon: "app-icon/strelka.png",
                 featured: false,
                 categories: ["Navigation", "Travel"]
+            },
+            {
+                id: "a-global-landforms-map",
+                title: "A+ Global Landforms Map",
+                developer: "Super Art Software",
+                featuredDescription: "View an incredible 11520x6560 large global landforms map picture on your device - no internet connection needed!",
+                description: "View an incredible 11520x6560 large global landforms map picture on your device - no internet connection needed!\n\nYou can check the global landforms, including mountains and ocean.\n\nWith this app, you can explore the very detail of the global landforms map. Use a single finger tap to zoom in and double finger tap to zoom out, or you can also use the traditional pitch in / out gesture to zoom in / out. Have a good view!",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/org.superarts.miniapp.-global-landforms-v-1.0-i-os-3.1-clutch-2.0.4/org.superarts.miniapp.GlobalLandforms-%20%28V1.0%29%20iOS3.1-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.1 and Later",
+                icon: "app-icon/a-global-landforms-map.png",
+                featured: false,
+                categories: ["Utilities", "Reference"]
             }
         ];
 
