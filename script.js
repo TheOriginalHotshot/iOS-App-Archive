@@ -867,6 +867,23 @@
                 icon: "app-icon/astraware-board-games.png",
                 featured: false,
                 categories: ["Games", "Family", "Board"]
+            },
+            {
+                id: "rrootage",
+                title: "rRootage",
+                developer: "Lazrhog Games",
+                featuredDescription: "no description found",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "2.0", url: "https://archive.org/download/rrootage-5dc47esn6q.rrootage-2.0-ios_2.0-ba78da99a13a599bc0987941b5700944/rRootage-%285DC47ESN6Q.rRootage%29-2.0-%28iOS_2.0%29-ba78da99a13a599bc0987941b5700944.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/rrootage.png",
+                featured: false,
+                categories: ["Action", "Casual", "Games"]
             }
         ];
 
