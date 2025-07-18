@@ -659,6 +659,23 @@
                 icon: "app-icon/bowman.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "guess-my-age-math-magic",
+                title: "Guess My Age Math Magic",
+                developer: "Palawin Yosintra",
+                featuredDescription: "Amaze yourself. Then amaze your friends.",
+                description: "Amaze yourself. Then amaze your friends.\n\nThe \"Guess My Age - Math Magic\" app presents you with a sequence of 7 tables of numbers.\n\nYou just simply answer yes/no to the question \"Is there any number that matches your age?\" for each table.\n\nThen, the application surprisingly tells your age accurately.\n\nIt is a good math trick to play among your friends or family.\n\nTry to figure it out. It's not too hard, but challenging.\n\nHINT: This is not a simple process of elimination. It's much simpler!\n\nIt's amazing and it will give you hours of fun with your friends.\n\nDon't worry. This is not a kind of dark art. Try it... \"Avada Kedavra!\"\n\nNote: \"Guess My Age - Math Magic\" can also guess any number from 1-99",
+                versions: {
+                    archived: [
+                        { version: "1.61", url: "https://archive.org/download/guess-my-age-math-magic-mugamma.com-v-1.61-lp-os-20.rc-333-616/Guess%20My%20Age%20Math%20Magic%20%5Bmugamma.com%5D%20%28v1.61%20LP%20os20%29.rc333_616.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/guess-my-age-math-magic.png",
+                featured: false,
+                categories: ["Games", "Entertainment", "Education"]
             }
         ];
 
