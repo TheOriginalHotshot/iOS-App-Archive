@@ -729,6 +729,23 @@
                 icon: "app-icon/nba-jam-by-ea-sports.png",
                 featured: false,
                 categories: ["Entertainment", "Casual", "Sports", "Games"]
+            },
+            {
+                id: "strelka",
+                title: "Strelka",
+                developer: "Vitaly Shmuradko",
+                featuredDescription: "The program is designed to display the main database of objects of the popular Strelka program on the map.",
+                description: "The program is designed to display the main database of objects of the popular Strelka program on the map. You can view objects and their characteristics.\nAlso, using StrelkaMap, you can conveniently add objects to the database.\nThe program only works when connected to the Internet and uses the Yandex Maps map base.\nThe database is formed on the basis of: www.rd-forum.ru (new cameras are discussed here) and speedcamonline.ru\n\nMain features:\n1. Displaying stationary objects on the map with an indication of the direction from which they are caught and characteristics (only up to a certain scale).\n2. When moving, you can also see objects ahead.\n3. Selecting night and day modes.\n4. The ability to add objects on the go in two clicks.\nWhen adding an object, it is immediately assigned the selected type, the current coordinates and azimuth are set, your current speed is used as the speed, rounded to 10, the comment is signed \"Automatically added object\"",
+                versions: {
+                    archived: [
+                        { version: "2.17", url: "https://archive.org/download/strelka-com.ivolk.strelka-v2.17-ios_5.1.1-/strelka-%28com.ivolk.strelka%29-%28V2.17%29-%28iOS_5.1.1%29-.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 6.0 and Later",
+                icon: "app-icon/strelka.png",
+                featured: false,
+                categories: ["Navigation", "Travel"]
             }
         ];
 
