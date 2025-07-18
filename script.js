@@ -693,6 +693,23 @@
                 icon: "app-icon/ihourglass.png",
                 featured: false,
                 categories: ["Entertainment", "Utilities"]
+            },
+            {
+                id: "iguerilla-2",
+                title: "iGuerilla 2",
+                developer: "Alexandre Minard",
+                featuredDescription: "iGuerilla Mission 2.",
+                description: "********************************\n\niGuerilla Mission 2.\n12 totally new missions.\n4 levels of difficulties.\nMore weapons: sniper rifle, m60...\nMore achievements to complete.\nWeb ranking.\n********************************\n\nHello soldier,\n\nYour service record is impressive, especially in Africa.\nNow, you're gonna move to another continent - Asia.\n\nYour mission will be to find General LEEYAN, chief of rebels who are terrifying the region, making violence the law of the land. You are granted freedom from the rules of engagement to achieve your mission objectives quickly. It won't be easy. You will face various kinds of combat situations:\n\n- combat in temple ruins\n- sniper missions\n- minefield sweeping\n- survive in snake-infested jungle\n- night missions with aid from infrared goggles\n- helicopter attacks\n- airborne support and attacks\n\nFor that, several kinds of weapons will be at your disposal: sniper rifle, gun, m60...\n\nYour mission is top secret. There will be no assistance should things turn bad. Don't forget to remain in contact with our network and send regular reports.\n\nSoldier, your helicopter is waiting for you—good luck!\n\niGuerilla 2 is OpenFeint Enabled.",
+                versions: {
+                    archived: [
+                        { version: "1.4", url: "https://archive.org/download/iGuerilla2_v1.4_os30/iGuerilla2_v1.4_os30.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.0 and Later",
+                icon: "app-icon/iguerilla-2.png",
+                featured: false,
+                categories: ["Games", "Action"]
             }
         ];
 
