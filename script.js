@@ -849,6 +849,24 @@
                 icon: "app-icon/alley-gator.png",
                 featured: false,
                 categories: ["Action", "Games", "General"]
+            },
+            {
+                id: "astraware-board-games",
+                title: "Astraware Board Games",
+                developer: "Astraware Unlimited",
+                featuredDescription: "Astraware Board Games is a collection of 8 classic, family-friendly board games that everyone can enjoy!",
+                description: "Astraware Board Games is a collection of 8 classic, family-friendly board games that everyone can enjoy! This award-winning games pack includes Chess, Backgammon, Ludo, Checkers, Reversi, Nine Men’s Morris, Snakes and Ladders, and Tic Tac Toe together in one easy to use pack – to begin just open the pack from the Board Games icon and choose one of the 8 games to play!\n\nAstraware Board Games is perfect for families to enjoy together. Many of the games include customizable rules and a range of difficulty levels, but designed with casual players and non-experts in mind.\n\nTo move your playing piece, just touch and slide it, and you can shake the dice, literally, with your iPhone!\n\nPlay against the computerized players, against friends using 'hotseat' multiplayer on your iPhone, or against a friend on two separate devices using a local Wi-Fi connection.",
+                versions: {
+                    archived: [
+                        { version: "1.00", url: "https://archive.org/download/board-games-5-n-9-z-6-t-4-vh-7.com.astraware.boardgames-1.00-i-os-2.0-599655e-80/Board%20Games-%285N9Z6T4VH7.com.astraware.boardgames%29-1.00-%28iOS_2.0%29-599655e80ee3a4c055ee790fd586ec48.ipa" },
+                        { version: "1.10", url: "https://archive.org/download/board-games-5-n-9-z-6-t-4-vh-7.com.astraware.boardgames-1.00-i-os-2.0-599655e-80/5N9Z6T4VH7.com.astraware.boardgames%20%28V1.10%29%20-iOS3.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/astraware-board-games.png",
+                featured: false,
+                categories: ["Games", "Family", "Board"]
             }
         ];
 
