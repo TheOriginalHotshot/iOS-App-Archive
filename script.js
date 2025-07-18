@@ -608,6 +608,23 @@
                 icon: "app-icon/rolling-sky.png",
                 featured: false,
                 categories: ["Games", "Music", "Board"]
+            },
+            {
+                id: "meet-bubble",
+                title: "Meet Bubble",
+                developer: "Developer unknown",
+                featuredDescription: "no description found",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/meet-bubble-alexandre-despallieres-becker-v-1.1-os-000.rc-333-613/Meet%20Bubble%20%5BAlexandre%20Despallieres%20Becker%5D%20%28v1.1%20os000%29.rc333_613.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/meet-bubble.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
