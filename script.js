@@ -565,6 +565,49 @@
                 icon: "app-icon/facebook.png",
                 featured: false,
                 categories: ["Social Networking"]
+            },
+            {
+                id: "rolling-sky",
+                title: "Rolling Sky",
+                developer: "Turbo Chilli Pty Ltd",
+                featuredDescription: "Challenge your speed and showcase your reaction time!",
+                description: "Challenge your speed and showcase your reaction time! Stunning 3D effects, easy to operate, simply steer the ball to dodge the obstacles and conquer the world!",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.turbochilli.rollingsky_813252146/com.turbochilli.rollingsky_%28V1.0%29.ipa" }
+                    ],
+                    unarchived: [
+                        "3.7.41",
+                        "3.7.42",
+                        "3.7.43",
+                        "3.7.44",
+                        "3.7.45",
+                        "3.7.46",
+                        "3.7.47",
+                        "3.7.48",
+                        "4.9.0",
+                        "4.9.1",
+                        "4.9.2",
+                        "4.9.3",
+                        "4.9.4",
+                        "4.9.5",
+                        "4.9.6",
+                        "4.9.7",
+                        "4.9.8",
+                        "4.9.9",
+                        "5.0.0",
+                        "5.0.1",
+                        "5.1.0",
+                        "5.1.1",
+                        "5.1.2",
+                        "5.1.3",
+                        "5.1.4"
+                    ]
+                },
+                compatibility: "iOS 12.0 and Later",
+                icon: "app-icon/rolling-sky.png",
+                featured: false,
+                categories: ["Games", "Music", "Board"]
             }
         ];
 
