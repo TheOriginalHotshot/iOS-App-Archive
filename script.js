@@ -612,7 +612,7 @@
             {
                 id: "meet-bubble",
                 title: "Meet Bubble",
-                developer: "Developer unknown",
+                developer: "Developer Unknown",
                 featuredDescription: "no description found",
                 description: "no description found",
                 versions: {
@@ -763,6 +763,23 @@
                 icon: "app-icon/a-global-landforms-map.png",
                 featured: false,
                 categories: ["Utilities", "Reference"]
+            },
+            {
+                id: "itrailer-lite",
+                title: "iTrailer Lite",
+                developer: "Developer Unknown",
+                featuredDescription: "no description found",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/org.esb.trailer.designer.lite-v-1.1-i-os-6.0-clutch-2.0.4/org.esb.trailer.designer.lite%20%28V1.1%29%20-iOS6.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 6.0 and Later",
+                icon: "app-icon/itrailer-lite.png",
+                featured: false,
+                categories: ["Photo & Video", "Entertainment"]
             }
         ];
 
