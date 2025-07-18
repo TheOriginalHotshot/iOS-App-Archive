@@ -815,6 +815,23 @@
                 icon: "app-icon/my-live.png",
                 featured: false,
                 categories: ["Utilities"]
+            },
+            {
+                id: "contacts3d",
+                title: "Contacts3D",
+                developer: "Developer Unknown",
+                featuredDescription: "no description found",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/contacts-3-d-5-rb-37-nf-595.com.abide-development-1.1-i-os-2.0-0dbb-070a-2e-17af/Contacts3D-%285RB37NF595.com.abide-development%29-1.1-%28iOS_2.0%29-0dbb070a2e17af1a82617b1652461025.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/contacts3d.png",
+                featured: false,
+                categories: ["Utilities"]
             }
         ];
 
