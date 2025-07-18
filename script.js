@@ -642,6 +642,23 @@
                 icon: "app-icon/finger-sprint-free.png",
                 featured: false,
                 categories: ["Games", "Sports", "Racing"]
+            },
+            {
+                id: "bowman",
+                title: "Bowman",
+                developer: "Lentrica Software",
+                featuredDescription: "This version of Bowman is better than all previous versions.",
+                description: "This version of Bowman is better than all previous versions.\n\nIf you wish to play the original game, simply turn off the Wind, Wall and Fatigue features within the game settings.\n\nThis latest version has it all. It has many options which you can turn on or off depending on how challenging you want it to be.\n\nBowman is a highly addictive classical game. Even if you've never heard of it before, play it just once and you'll be hooked.\n\nThe object of the game is to shoot arrows at your opponent and kill them before they kill you. It's a battle against your opponent to see who can accurately judge the angle and strength of the shot to make the arrow land on your opponents body.\n\nA head shot inflicts the most damage while a shot in the chest takes second place. Everywhere else on the opponents body inflicts less damage.\n\nTo shoot your bow, simply drag your finger across the screen and you'll be presented with a trajectory plus angle and strength (power) information. Release your finger to release the bow.\n\nYou can play Bowman against the iPhone or against a friend.\n\nTo make it even more entertaining, we have also included a bird shooting game. You'll have to shoot as many birds as you can within 3 minutes and then let your friend try the same. Hopefully, you will have shot more birds than your friend.\n\nThousands and thousands of people play Bowman online every day and now you can enjoy a better version of it on the iPhone. It really is highly addictive.\n\n**Lentrica Software has also released another simple yet highly addictive game - Escapa**",
+                versions: {
+                    archived: [
+                        { version: "1.4", url: "https://archive.org/download/bowman-lentrica-software-v-1.4-os-22.rc-333-616/Bowman%20%5BLentrica%20Software%5D%20%28v1.4%20os22%29.rc333_616.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 13.0 and Later",
+                icon: "app-icon/bowman.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
