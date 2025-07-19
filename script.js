@@ -1109,6 +1109,23 @@
                 icon: "app-icon/toy-story-2-read-along.jpeg",
                 featured: false,
                 categories: ["Entertainment", "Books"]
+            },
+            {
+                id: "virtuwicks-candle-maker-mini",
+                title: "VirtuWicks: Candle Maker Mini!",
+                developer: "appsNminded",
+                featuredDescription: "Create. Burn. Share! Send creative custom Virtuwicks candles for every cause and occasion.",
+                description: "Create. Burn. Share! Send creative custom Virtuwicks candles for every cause and occasion.\n\nCandles really light and really burn!\n\nCreate Candles for:\n\n-- Birthdays\n\n-- Anniversaries\n\n-- Holidays\n\n-- Tribute\n\n-- Condolences\n\n-- Special Occasions\n\n-- Celebrations\n\n-- Causes\n\nThe opportunities are endless!\n\nFull version contain a ton more images and the ability to use you own photos!\n\nWith the full version of Virtuwicks you can:\n\nPost a Virtuwicks on a friends facebook wall for a birthday, holiday or special occasion. Surprise your boyfriend or husband with a special anniversary candle. Or privately email a burning candle to a friend.\n\nTons of crafting possibilities!",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.appsnminded.candlesmini-v-1.0-i-os-3.2-clutch-2.0.4/com.appsnminded.candlesmini-%20%28V1.0%29%20iOS3.2-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: ["1.3"]
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "app-icon/virtuwicks-candle-maker-mini.jpg",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
