@@ -1074,6 +1074,23 @@
                 icon: "app-icon/shrek-kart-free.png",
                 featured: false,
                 categories: ["Casual", "Racing", "Games"]
+            },
+            {
+                id: "idoodle2-lite",
+                title: "iDoodle2 lite",
+                developer: "Josiah Larson",
+                featuredDescription: "iDoodle2 is a powerful and fun drawing app for the iPhone and iPod touch and now you can enjoy many of its features for free!",
+                description: "iDoodle2 is a powerful and fun drawing app for the iPhone and iPod touch and now you can enjoy many of its features for free! Draw in an array of colors with full alpha support, sketch basic geometric shapes along with the pen and \"blob\" tool, replay your drawings, undo/redo with a quick half-flip, save images to your library, and more!\n\nThe latest update includes a paint bucket tool along with an eyedropper for quickly selecting colors. You can also e-mail drawings to your friends and family straight from the app.\n\nHave fun, make some great art, and check out the full iDoodle2 app with even more features!",
+                versions: {
+                    archived: [
+                        { version: "1.2", url: "https://archive.org/download/idoodle2lite-com.sidetracksoftware.idoodle2lite-1.2-ios_3.0-b760f352e65844ed024c015490b1e797/iDoodle2lite-%28com.sidetracksoftware.iDoodle2lite%29-1.2-%28iOS_3.0%29-b760f352e65844ed024c015490b1e797.ipa" }
+                    ],
+                    unarchived: ["1.6"]
+                },
+                compatibility: "iOS 4.2 and Later",
+                icon: "app-icon/idoodle2-lite.png",
+                featured: false,
+                categories: ["Games", "Productivity"]
             }
         ];
 
