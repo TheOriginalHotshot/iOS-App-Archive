@@ -1091,6 +1091,24 @@
                 icon: "app-icon/idoodle2-lite.png",
                 featured: false,
                 categories: ["Games", "Productivity"]
+            },
+            {
+                id: "toy-story-2-read-along",
+                title: "Toy Story 2 Read-Along",
+                developer: "Disney",
+                featuredDescription: "This FULLY INTERACTIVE App includes GAMES, MOVIE CLIPS, COLORING PAGES and MUSIC to sing along! You can even RECORD YOUR OWN VOICE reading the story.",
+                description: "This FULLY INTERACTIVE App includes GAMES, MOVIE CLIPS, COLORING PAGES and MUSIC to sing along! You can even RECORD YOUR OWN VOICE reading the story.\n\nTHE STORY: When Andy goes to Cowboy Camp, Woody gets toy-napped! Buzz Lightyear and the other toys set out to rescue their friend before he is shipped off to a museum in Japan. In this action-packed adventure, Woody learns all about his past and makes new friends that are sure to last a lifetime.\n\nRAVE REVIEWS!\n*“I bought this app and my 2 yr old grandson absolutely loves it. It works great, no problems. The read along has sound from the movie. A great buy.”\n\n*“Disney has done it again! From regular mode to “kid” mode that limits the touch screen options…for little, active fingers. You can also record your own voice, so your child hears your voice.”\n\nPlease SHARE YOUR OWN REVIEW below.\n\nHear the story read aloud, record your own narration, or read at your own pace.\nIn this action-packed adventure, Woody learns all about his past and makes new friends that are sure to last a lifetime.\n\nFeatures:\n* Cinematic, Interactive Read-Along app featuring your favorite characters from the award-winning Toy Story 2 movie.\n* Choose Read to Me mode to hear the story read aloud, or follow the story at your own pace. You can even Record your own voice narrating and hear it read back to you!\n* Explore delightful Animations and Surprise features within each page.\n* Get creative with Finger Painting, sing along to Songs from the movie, and play fun interactive Games!\n* Tap to play Sound Effects and character voices from the film, including Tom Hanks as Woody and Tim Allen as Buzz Lightyear.\n* Relive magical moments from the film with Movie Clips throughout!\n* Jump to your favorite part of the story with the Visual Page Index, or resume where you left off.\n* Turn pages manually and move back and forth through the story as you wish!\n* Puzzle games for all ages!\n\n>>>>>>>>>>>>>>>>>>>>>\nSTAY UPDATED! Be the first to know when we launch new Apps.\n* Like us on FACEBOOK: http://www.facebook.com/DisneyDigitalBooks\n* Subscribe to videos on YOUTUBE: http://www.youtube.com/disneydigitalbooks\n* Follow us on TWITTER: http://twitter.com/disneydigibooks\n\nBefore you download this experience, please consider that this app contains advertising for The Walt Disney Family of Companies",
+                versions: {
+                    archived: [
+                        { version: "1.0.2", url: "https://archive.org/download/toy-story-2-read-along-v-1.0.2-i-os-3.2-cyberkurajber/Toy%20Story%202%20Read%20Along%20%28V1.0.2%29%20%28iOS3.2%29%20cyberkurajber.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/toy-story-2-read-along-v-1.0.2-i-os-3.2-cyberkurajber/Toy%20Story%202%20Read%20Along%20%28V1.2%29%20%28iOS5.1%29.ipa" }
+                    ],
+                    unarchived: ["1.0.3", "1.4"]
+                },
+                compatibility: "iOS 5.1 and Later",
+                icon: "app-icon/toy-story-2-read-along.jpeg",
+                featured: false,
+                categories: ["Entertainment", "Books"]
             }
         ];
 
