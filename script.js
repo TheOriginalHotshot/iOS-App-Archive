@@ -1038,6 +1038,24 @@
                 icon: "app-icon/apocalypse.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "shrek-kart-hd",
+                title: "Shrek Kart HD",
+                developer: "Gameloft",
+                featuredDescription: "OPTIMIZED FOR iPHONE 4! High-definition graphics that fully utilize the iPhone 4 Retina display & gyroscope support for innovative controlling and driving precision.",
+                description: "OPTIMIZED FOR iPHONE 4! High-definition graphics that fully utilize the iPhone 4 Retina display & gyroscope support for innovative controlling and driving precision.\nFor the first time on the App Store, you can play as SHREK! Challenge your friends in Multiplayer and Arena modes! Explore the world of DreamWorks Animation’s Shrek!\n---------------------------------------\nOnce Upon a Time… Shrek and his friends are on a quest: To become the Kingdom’s Fastest Kart Racer! Race to your own Fairy Tale ending and try to win Ye Grand Tournament.\nBut remember: Only 1st Place lives Happily Ever After!\nAll is fair(y) in this twisted tournament tale:\n- 4 SINGLEPLAYER MODES: Single Race, Tournament, Challenges and Arena modes\n- LOCAL MULTIPLAYER MODE: Challenge your friends to eat your dust via Wi-Fi (with up to 6 players) and Bluetooth (2 players)!\n- MILES OF RACING FUN with 19 cups in the Tournament mode and 72 challenges to face!\n- 10 UNIQUE KARTS: Each character has custom built his or her own vehicle, each with a special ability and different characteristics.\n- 11 DEFENSIVE & OFFENSIVE POWER-UPS: Drop the Cow That Jumped Over the Moon on an opponent or shoo away those Angry Bees by wiping off the screen with your finger!\n- 15 TRACKS (12 Speedways & 3 Arenas): Beautiful 3D environments from throughout the Kingdom, from Shrek’s home in The Swamp to the palm-lined streets of Far Far Away.\n- MORE THAN 10 PLAYABLE CHARACTERS: Shrek, Donkey, Fiona, Ogre Triplets, Puss In Boots, Gingy, 3 Little Pigs, Pinocchio, Big Bad Wolf and the Ghost of Lord Farquaad!\n- iPod LIBRARY ACCESS: Rock out to your own personal soundtrack while you speed towards the Finish Line! (Works with the OS 3.0 software update.)\n\nRace Happily Ever After!\n---------------------------------------\nFollow the official Twitter account to get more info about the game: http://twitter.com/Shrek_Games\n---------------------------------------\nShrek Kart ™ & © 2009 DreamWorks Animation L.L.C. Shrek is a registered trademark of DreamWorks Animation L.L.C. Shrek Kart Game Software © 2009 Gameloft. All Rights Reserved.",
+                versions: {
+                    archived: [
+                        { version: "1.0.0", url: "https://archive.org/download/shrek-karting-v-1.0.9-os-32/ShrekKarting_v1.0.0_os32.ipa" },
+                        { version: "1.0.9", url: "https://archive.org/download/shrek-karting-v-1.0.9-os-32/ShrekKarting_v1.0.9_os32.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.2 and Later",
+                icon: "app-icon/shrek-kart-hd.png",
+                featured: false,
+                categories: ["Causal", "Racing", "Games"]
             }
         ];
 
