@@ -970,6 +970,23 @@
                 icon: "app-icon/nba-jam-by-ea-sports-lite.png",
                 featured: false,
                 categories: ["Games", "Causal", "Entertainment"]
+            },
+            {
+                id: "dashbuster",
+                title: "Dashbuster",
+                developer: "Seventy Nine Lines",
+                featuredDescription: "Managing your online movie rental service has never been so simple!",
+                description: "Note: Some users experiencing trouble due to blockbuster site changes. Update Pending.\n\nManaging your online movie rental service has never been so simple!\n\nDashbuster lets you manage your Netflix™ or Blockbuster™ queue with speed and simplicity unmatched by any other means, and in a format that's right at home on the iPhone.\n\n- View and your shipped, queued, and saved movies at a glance, including cover art\n- Drag and Drop Queue Reordering\n- Swipe to Delete Movie removal\n- View movie details quickly and easily: Stars, Director, Description and Cover Art\n- Add movies from popular RSS feeds\n- Quickly search for movies on the go\n- Safe and Secure.\n- Fastest way to interact with Blockbuster or Netflix from an iPhone\n\n\"My preferred method of using Blockbuster Online, Period.\" - Court Levy\n\nDashbuster is not sponsored by or affiliated with Blockbuster or Netflix\n\nCurrent Issues:\n- Netflix Login: Some users are seeing Dashbuster hang at \"Logging In...\" due to special characters in passwords. A fix is pending; change your password to exclude special characters in the meantime.\n- Netflix Zero Queue Items: At least one Netflix server presents odd markup causing a 0‑item queue. A fix is pending; reloading the queue may help.\n\nNOTICE: Please, if Dashbuster is crashing, or doesn't work for any reason at all, visit our support site and send us a message. We WILL make sure we get any bugs fixed ASAP. It is very important that Dashbuster works like our users expect it to.\n\nApples Review system makes releasing updates rapidly a very difficult thing. We are working on a faster system for addressing future changes with the Blockbuster and Netflix sites.",
+                versions: {
+                    archived: [
+                        { version: "1.1.5", url: "https://archive.org/download/dashbuster-com.-seventy-nine-lines-dashbuster-v-1.1.5-i-os-2.0/Dashbuster-%28com.SeventyNineLinesDashbuster%29%20%28V1.1.5%29%20%28iOS2.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "app-icon/dashbuster.png",
+                featured: false,
+                categories: [" Entertainment", "Lifestyle"]
             }
         ];
 
