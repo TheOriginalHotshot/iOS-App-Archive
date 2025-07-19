@@ -1126,6 +1126,23 @@
                 icon: "app-icon/virtuwicks-candle-maker-mini.jpg",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "mini-golf-3d",
+                title: "Mini Golf 3D",
+                developer: "Reliance Big Entertainment UK Private Ltd",
+                featuredDescription: "Top 10 game in 5 countries in Game/Sports and Game/Simulation.",
+                description: "3D Mini Golf game on the Appstore! 54 insanely fun holes, spread across 3 environments with 5 exciting, loveable characters to choose from.\n\nMini Golf 3D is an extensive, feature-rich game with progressive play with 54 holes spread across 3 increasingly challenging levels of 18 holes each.\n\nFeatures:\n- The most fun and addictive Mini-Golf game with 54 exciting pars & 4 unique game modes, spread across 3 beautiful environments.\n- Play 18 holes free & with 36 additional holes for purchase within the game.\n- Compete against yourself and other players on the global leaderboards.\n- Collect tons of achievements.\n- Show off your high scores and kick up a challenge on Facebook or Twitter.\n\nVisit us: http://www.reliancegames.com\nLike us: http://www.facebook.com/reliancegames\nFollow us: http://www.twitter.com/reliancegames\nWatch us: http://www.youtube.com/reliancegames",
+                versions: {
+                    archived: [
+                        { version: "1.0.26", url: "https://archive.org/download/com.jumpgames.-mini-golf-3-d-v-1.0.26-i-os-6.0-clutch-2.0.4/com.jumpgames.MiniGolf3D%20%28V1.0.26%29%20-iOS6.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 6.0 and Later",
+                icon: "app-icon/mini-golf-3d.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
