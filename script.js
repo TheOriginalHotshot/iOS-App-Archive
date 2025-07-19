@@ -1056,6 +1056,24 @@
                 icon: "app-icon/shrek-kart-hd.png",
                 featured: false,
                 categories: ["Causal", "Racing", "Games"]
+            },
+            {
+                id: "shrek-kart-free",
+                title: "Shrek Kart FREE",
+                developer: "Gameloft",
+                featuredDescription: "For the first time on the App Store, you can play as SHREK!",
+                description: "For the first time on the App Store, you can play as SHREK!\nChallenge your friends in Multiplayer and Arena modes!\nExplore the world of DreamWorks Animation’s Shrek!\n---------------------------------------\n\nOnce Upon a Time…\n\nShrek and his friends are on a quest: To become the Kingdom’s Fastest Kart Racer! Race to your own Fairy Tale ending and try to win Ye Grand Tournament.\nBut remember: Only 1st Place lives Happily Ever After!\n\nFULL VERSION KEY FEATURES:\n\n4 SINGLEPLAYER MODES: Single Race, Tournament, Challenges and Arena modes\n\nLOCAL MULTIPLAYER MODE: Challenge your friends to eat your dust via Wifi and Bluetooth!\n\nMILES OF RACING FUN with 19 cups in the Tournament mode and 72 challenges to face!\n\n10 UNIQUE KARTS: Each character has custom built his or her own vehicle, each with a special ability and different characteristics.\n\n11 DEFENSIVE & OFFENSIVE POWER-UPS: Drop the Cow That Jumped Over the Moon on an opponent or shoo away those Angry Bees by wiping off the screen with your finger!\n\n15 TRACKS (12 Speedways & 3 Arenas): Beautiful 3D environments from throughout the Kingdom, from Shrek’s home in The Swamp to the palm-lined streets of Far Far Away.\n\nMORE THAN 10 PLAYABLE CHARACTERS: Shrek, Donkey, Fiona, Ogre Triplets, Puss In Boots, Gingy, 3 Little Pigs, Pinocchio, Big Bad Wolf and the Ghost of Lord Farquaad!\n\niPod LIBRARY ACCESS: Rock out to your own personal soundtrack while you speed towards the Finish Line! (Works with the OS 3.0 software update.)\n\nRace Happily Ever After!\n\n---------------------------------------\nFollow the official Twitter account to get more info about the game: http://twitter.com/Shrek_Games\n\n---------------------------------------\nShrek Kart ™ & © 2009 DreamWorks Animation L.L.C. Shrek is a registered trademark of DreamWorks Animation L.L.C. Shrek Kart Game Software © 2009 Gameloft. All Rights Reserved.",
+                versions: {
+                    archived: [
+                        { version: "1.1.6", url: "https://archive.org/download/shrekkartfree-com.gameloft.-shrekkartfree-1.1.7-i-os-3.1.3-5eec-3ff-5370fd-6e-5ff-1f-3348470f-4ea-9/Shrekkartfree-v1.1.6-%28Clutch-1.3%29.ipa" },
+                        { version: "1.1.7", url: "https://archive.org/download/shrekkartfree-com.gameloft.-shrekkartfree-1.1.7-i-os-3.1.3-5eec-3ff-5370fd-6e-5ff-1f-3348470f-4ea-9/Shrekkartfree-%28com.gameloft.Shrekkartfree%29-1.1.7-%28iOS_3.1.3%29-5eec3ff5370fd6e5ff1f3348470f4ea9.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.1.2 and Later",
+                icon: "app-icon/shrek-kart-free.png",
+                featured: false,
+                categories: ["Casual", "Racing", "Games"]
             }
         ];
 
