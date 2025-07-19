@@ -1021,6 +1021,23 @@
                 icon: "app-icon/iron-horse.png",
                 featured: false,
                 categories: ["Entertainment", "Action", "Casual", "Games"]
+            },
+            {
+                id: "apocalypse",
+                title: "Apocalypse",
+                developer: "Developer Unknown",
+                featuredDescription: "no description found",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/apocalypse-2121212121-1.0-i-os-2.1-78b-476c-3709fb-5568412e-6d-65930e-1e-1/Apocalypse-%282121212121%29-1.0-%28iOS_2.1%29-78b476c3709fb5568412e6d65930e1e1.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.1 and Later",
+                icon: "app-icon/apocalypse.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
