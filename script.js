@@ -953,6 +953,23 @@
                 icon: "app-icon/motes.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "nba-jam-by-ea-sports-lite",
+                title: "NBA JAM by EA SPORTS LITE",
+                developer: "Electronic Arts",
+                featuredDescription: "PLAY WITH FIRE – FOR FREE! Hit the court with the Lakers and Celtics and heat up in a one-quarter exhibition.",
+                description: "PLAY WITH FIRE – FOR FREE! Hit the court with the Lakers and Celtics and heat up in a one-quarter exhibition. Then, UPGRADE to the FULL VERSION and jam with a friend in LOCAL MULTIPLAYER! BOOMSHAKALAKA! Rock your iPhone or iPod touch with all the over-the-top, high-flying, 2-on-2 arcade basketball action just like you remember it – and like you’ve never seen before!\n\nSEE WHY FANS AND CRITICS ARE ALL ON FIRE!\n\n“NBA JAM brings arcade hoops directly to your pocket — no quarters required.” (App Store “iPhone GAME OF THE WEEK”)\n“…overwhelmingly satisfies in every way if you were ever a fan of the original NBA Jam series.” (Jared Nelson, Touch Arcade)\n“4/4 MUST HAVE…a sports game that action or arcade gamers will love…” (Andrew Podolsky, Slide to Play)\n\nGET THE FULL VERSION AND KABOOM!\nJam with all 30 NBA teams and your favorite NBA stars! Unlock legends from the classic arcade era plus some secret players you can only get on iPhone/iPod touch. Open up outrageous cheats, too. And if you can’t wait to go big, all the unlocks are available for instant purchase and download in the JAM store!\n\nPLAY HEAD-TO-HEAD AGAINST A FRIEND WITH LOCAL MULTIPLAYER\nSelect a team and jump right into the ballgame. Win the championship in Classic Campaign mode, and unlock legends, hidden players and cheats. Even go big head 2 big head against a friend on iPhone/iPod touch or iPad via local WiFi and Bluetooth!\n\nYOU’RE ON FIRE!\nIf you’re from the Old School, you’ll feel the ‘90s nostalgia while you play the hottest new arcade sports game on the App Store. Featuring the voice of Tim Kitzrow (the original NBA JAM play-by-play announcer), this JAM is all about “boomshakalaka”¬– and beyond!\n_______________________________________\n** DON'T MISS OUR OTHER EXCITING GAMES! ** SCRABBLE, The Sims™ 3, TETRIS®, MONOPOLY, Madden NFL 11 by EA Sports™, Pogo Games FREE, Liqua Pop, ROCK BAND® Reloaded, Need for Speed™ Hot Pursuit & Surviving High School FREE\n\nGIFT THIS APP: Click the “Buy App” arrow on the iTunes® App Store\n\nBe the first to know! Get inside EA info on great deals, plus the latest game updates, tips & more…\nVISIT US: ea.com/iphone\nFOLLOW US: twitter.com/eamobile\nLIKE US: facebook.com/eamobile\nWATCH US: youtube.com/eamobilegames\n\nTerms of Service : http://www.ea.com/terms-of-service\nPrivacy and Cookie Policy: http://www.ea.com/privacy-policy\nGame EULA: http://tos.ea.com/legalapp/mobileeula/US/en/GM/\nVisit https://help.ea.com/ for assistance or inquiries.\nEA may retire online features and services after 30 days’ notice posted on www.ea.com/1/service-updates. Important Consumer Information. This app: Contains direct links to the Internet; Collects data through third party analytics technology (see Privacy & Cookie Policy for details).",
+                versions: {
+                    archived: [
+                        { version: "1.0.2", url: "https://archive.org/download/nba-jam-by-ea-sportstm-lite-v-1.0.2-i-os-3.0/NBA%20JAM%20by%20EA%20SPORTS%E2%84%A2%20LITE%20%28V1.0.2%29%20%28iOS3.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/nba-jam-by-ea-sports-lite.png",
+                featured: false,
+                categories: ["Games", "Causal", "Entertainment"]
             }
         ];
 
