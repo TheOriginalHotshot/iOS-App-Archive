@@ -1004,6 +1004,23 @@
                 icon: "app-icon/the-iron-horse.png",
                 featured: false,
                 categories: ["Games", "Action", "Casual"]
+            },
+            {
+                id: "iron-horse",
+                title: "Iron Horse",
+                developer: "AppStar Games Inc",
+                featuredDescription: "AppStar Games is proud to introduce \"The Iron Horse\", the best railroad-themed game on the Apple iPhone.",
+                description: "AppStar Games is proud to introduce \"The Iron Horse\", the best railroad-themed game on the Apple iPhone. Use your lightning-fast reflexes as you build classic trains in a beautiful cinematic gameplay experience.\n\nREVIEWS:\n\n\"the perfect game for a quick pick-up-and-play session… the Iron Horse is one of those games you'll keep playing for many months to come… a great game from a great new company.\"\nFinal Score: 5/5\nChris Jensen - Infoaddict.com\nhttp://www.infoaddict.com/the-iron-horse-ipad-review\n\n\"Addicting game… there are studs, and of course the duds. This game is definitely a stud.\"\niPadPig.com\n\n----\n\nIt's easy at first but as each car gets added your train goes a little faster, further testing your skills and building the suspense. The longer the train gets, the more points you'll earn. Can you keep up with the power and speed of the Iron Horse?\n\nFor any lover of trains and model railroading, The Iron Horse captures the beauty and nostalgia of the great American railroad.\n\nThe games features include:\n\n- high speed railroad action\n- beautiful cinematic graphics of the Americana landscape\n- gorgeous classic train designs, including the General, the Zephyr and the Chief\n- a fast and furious bonus level where you can play it safe or risk everything!\n- part of the OpenFeint network for global high scores and social gaming\n\nAppStar Games is the new publishing company from the creative team of David Crane and Garry Kitchen, former Activision designers and video game legends. The Iron Horse is designed by Garry Kitchen, a former Video Game Designer of the year and well known for his previous work including the Atari home version of \"Donkey Kong\", \"Garry Kitchen's GameMaker\" and \"Keystone Kapers\". David Crane is the co-founder of Activision and author of some of the most beloved video games of all time, including \"Pitfall\", \"Pitfall 2: Lost Caverns\", \"Freeway\", \"The Activision Decathlon\", and \"A Boy and His Blob\".",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/iron-horse-v-1.0-i-os-3.0/Iron%20Horse-%20%28V1.0%29%20%28iOS3.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 3.0 and Later",
+                icon: "app-icon/iron-horse.png",
+                featured: false,
+                categories: ["Entertainment", "Action", "Casual", "Games"]
             }
         ];
 
