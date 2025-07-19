@@ -987,6 +987,23 @@
                 icon: "app-icon/dashbuster.png",
                 featured: false,
                 categories: [" Entertainment", "Lifestyle"]
+            },
+            {
+                id: "the-iron-horse",
+                title: "The Iron Horse",
+                developer: "AppStar Games Inc",
+                featuredDescription: "Use your lightning-fast reflexes as you build classic trains in a beautiful widescreen gameplay experience.",
+                description: "**************************************************************\nAS REQUESTED BY PLAYERS, V1.4 NOW INCLUDES THE ABILITY\nTO START THE GAME FROM DIFFERENT ROUNDS. NOW YOU\nCAN CHOOSE YOUR FAVORITE TRAIN TO PLAY WITH.\n**************************************************************\n\nFEATURED BY APPLE IN \"WHAT'S HOT\" IN GAMES.\n\n“I tested this app out for a couple of weeks and it is excellent. The graphics are visually awesome... (The Iron Horse) is a huge value.”\nRating: 4 out of 5\nCrazy Mike's Apps\n\n\"the perfect game for a quick pick-up-and-play session…the Iron Horse is one of those games you'll keep playing for many months to come.. a great game from a great new company.\"\nFinal Score: 5/5\nChris Jensen - Infoaddict.com\n\n\"Addicting game... there are studs, and of course the duds. This game is definitely a stud.\"\niPadPig.com\n\n-----\n\nAppStar Games is proud to introduce \"The Iron Horse\", the first railroad-themed game on the Apple iPad. Use your lightning-fast reflexes as you build classic trains in a beautiful widescreen gameplay experience. It's easy at first but as each car gets added your train goes a little faster, further testing your skills and building the suspense. The longer the train gets, the more points you'll earn. Can you keep up with the power and speed of the Iron Horse?\n\nFor any lover of trains and model railroading, The Iron Horse captures the beauty and nostalgia of the great American railroad.\n\nThe games features include:\n\n- high speed railroad action\n- beautiful cinematic, widescreen graphics of the Americana landscape\n- gorgeous classic train designs, including the General, the Zephyr and the Chief\n- a fast and furious bonus level where you can play it safe or risk everything!\n- sound and music volume controls\n- local high score board to save your best game scores\n\nAppStar Games is the new publishing company from the creative team of David Crane and Garry Kitchen, former Activision designers and video game legends. The Iron Horse is designed by Garry Kitchen, a former Video Game Designer of the year and well known for his previous work including the Atari home version of \"Donkey Kong\", \"Garry Kitchen's GameMaker\" and \"Keystone Kapers\". David Crane is the co-founder of Activision and author of some of the most beloved video games of all time, including \"Pitfall\", \"Pitfall 2: Lost Caverns\", \"Freeway\", \"The Activision Decathlon\" and \"A Boy and His Blob\".\n\nWatch for more great iPhone and iPad games from AppStar Games!",
+                versions: {
+                    archived: [
+                        { version: "1.3", url: "https://archive.org/download/the-iron-horse-v-1.3-i-os-3.2/The%20Iron%20Horse-%28V1.3%29%20%28iOS3.2%29.ipa" }
+                    ],
+                    unarchived: ["1.4"]
+                },
+                compatibility: "iPhoneOS 3.2 and Later",
+                icon: "app-icon/the-iron-horse.png",
+                featured: false,
+                categories: ["Games", "Action", "Casual"]
             }
         ];
 
