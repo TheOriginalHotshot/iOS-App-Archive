@@ -1143,6 +1143,23 @@
                 icon: "app-icon/mini-golf-3d.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "word-wonderland-primary-full",
+                title: "Word Wonderland (Primary) Full",
+                developer: "McGraw-Hill School Education Group",
+                featuredDescription: "Sort out the right path to guide this friendly frog through the pond.",
+                description: "Sort out the right path to guide this friendly frog through the pond.\nHop, eat, and shake your way to word sorting mastery. Who knew word sorting could be so much fun?\n\nLead the friendly frog through an adventure as you practice many types of word sorts.\nThe content in this App is designed to be developmentally appropriate for students in Grades K-2.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.mhsegsolutions.-word-wond-prim-full-v-1.0-i-os-4.3-clutch-2.0.4/com.mhsegsolutions.WordWondPrimFull%20%28V1.0%29%20-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "app-icon/word-wonderland-primary-full.png",
+                featured: false,
+                categories: ["Games", "Education"]
             }
         ];
 
