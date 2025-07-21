@@ -1199,6 +1199,24 @@
                 icon: "app-icon/wheres-my-water.png",
                 featured: false,
                 categories: ["Entertainment", "Family", "Puzzle", "Games"]
+            },
+            {
+                id: "nemos-reef",
+                title: "Nemo’s Reef",
+                developer: "Disney",
+                featuredDescription: "DIVE IN AND JOIN NEMO ON HIS LATEST ADVENTURE. BUILD A BEAUTIFUL REEF, AND MAKE A HOME FOR YOUR FAVORITE FINDING NEMO CHARACTERS!",
+                description: "DIVE IN AND JOIN NEMO ON HIS LATEST ADVENTURE. BUILD A BEAUTIFUL REEF, AND MAKE A HOME FOR YOUR FAVORITE FINDING NEMO CHARACTERS! **More languages coming soon! Play Nemo's Reef in the following languages starting early 2013: French, German, Dutch, Italian and Spanish! Nemo and his dad, Marlin, set out to build the coolest reef in his class. Help Nemo create a best-in-class underwater retreat, and discover the secrets to building a permanent home for his friends! • Continue Nemo's story and adventures beneath the sea! • Create and personalize your very own underwater paradise. • Make a home for your favorite characters from Finding Nemo including Dory, Gill, Bloat, Bubbles, and more! • Find the different combinations of plants and decorations to delight Nemo's friends and other exotic fish. • Discover and plant rare seeds to attract extremely rare and mysterious fish. • Collect over 50 kinds of fish to enhance your world! • Visit your friends' reefs, and compare their collection of fish to your own!",
+                versions: {
+                    archived: [
+                        { version: "1.4.1", url: "https://archive.org/download/com.disney.nemo-v-1.9.0-i-os-7.0-clutch-2.0.4/Nemo%E2%80%99s%20Reef%20v1.4.1%20%28IOS%204.3%2B%29%20%5BDead%20Servers%5D.ipa" },
+                        { version: "1.9.0", url: "https://archive.org/download/com.disney.nemo-v-1.9.0-i-os-7.0-clutch-2.0.4/com.disney.nemo%20%28V1.9.0%29%20-iOS7.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "app-icon/nemos-reef.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
