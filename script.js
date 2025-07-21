@@ -1160,6 +1160,45 @@
                 icon: "app-icon/word-wonderland-primary-full.png",
                 featured: false,
                 categories: ["Games", "Education"]
+            },
+            {
+                id: "wheres-my-water",
+                title: "Where’s My Water?",
+                developer: "Disney",
+                featuredDescription: "Get the GAME OF THE YEAR award-winning puzzler!",
+                description: "Get the GAME OF THE YEAR award-winning puzzler!\n\nHelp Swampy by guiding water to his broken shower. Each level is a challenging physics-based puzzle with amazing life-like mechanics. Cut through dirt to guide fresh water, dirty water, toxic water, steam, and ooze through increasingly challenging scenarios! Every drop counts!\n• Original Stories & Characters – Play through 4 unique stories featuring Swampy, Allie, Cranky and Mystery Duck. That’s over 500 amazing puzzles!\n• Innovative Mechanic – See water in various forms and use your creativity to solve the puzzles – totally stimulating!\n• Collectibles, Challenges, and Bonus Levels – Collect special items uniquely designed for each character and complete cool challenges to unlock bonus levels! “Tri-Duck” each level for ultimate bragging rights!\n• Synchronization – Share your hard earned progress across multiple iOS 5 devices!\n\nSWAMPY’S STORY\nSwampy the Alligator lives in the sewers under the city. He’s a little different from the other alligators – he’s curious, friendly, and loves taking a nice long shower after a hard day at work. But there’s trouble with the pipes and Swampy needs your help getting water to his shower!\n\nALLIE’S STORY\nAllie is the sewer's most creative alligator. Her quirky spirit and artistic talents made her a star. Now, the gators have crafted a one-of-a-kind steam-powered musical instrument, and can't wait to hear her play it! Help Allie get the steam she needs and enjoy her take on classic Disney tunes.\n\nCRANKY’S STORY\nCranky, a real gator’s gator, has a big appetite and will eat anything, from tires to old fish bones. But he refuses to eat his greens! Use the dirty purple water to clear the algae on Cranky’s plate so he can gobble up his “food”.\n\nMYSTERY DUCK\nCatch this fancy teleporting Mystery Duck in this special chapter and hint hint - timing is everything! Find all kinds of surprises including the biggest duck ever, MegaDuck and cute little Ducklings!\n\nSome stories may require a small additional price but try the FREE levels today!\n\nBefore you download this app, please consider that this app includes advertising, some of which may be targeted to your interests. You may choose to control targeted advertising within our applications by using your mobile device settings (for example, by re-setting your device’s advertising identifier and/or opting out of interest based ads).\n\n• In-app purchases that cost real money\n• The option to accept push notifications to let you know when we have exciting updates like new content\n• Location-based services\n• Advertising for some third parties, including the option to watch ads for rewards\n• As well as advertising for The Walt Disney Family of Companies\n\nPrivacy Policy - https://privacy.thewaltdisneycompany.com/\nTerms of Use - https://disneytermsofuse.com/\nYour California Privacy Rights - https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-california-privacy-rights/\nDo Not Sell My Info - https://privacy.thewaltdisneycompany.com/en/dnsmi/\nChildren’s Online Privacy Policy - https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/",
+                versions: {
+                    archived: [
+                        { version: "1.0.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater%20%28V1.0.0%29%20%28iOS4.0%29os40.ipa" },
+                        { version: "1.0.2", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater%20%28V1.0.2%29%20%28iOS4.0%29os40.ipa" },
+                        { version: "1.1.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater%20%28V1.1.0%29%20%28iOS4.0%29os40.ipa" },
+                        { version: "1.2.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%20%28V1.2.0%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.3.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%27s%20My%20Water%20%5BDisney%5D%20%28V1.3.0%29%20%28iOS4.0%29%20Univ%20os40%29.rc333_613.ipa" },
+                        { version: "1.3.5", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater-%28com.disney.SwampyGame%29%20%28V1.3.5%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.3.6", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater-%28com.disney.SwampyGame%29%20%28V1.3.6%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.4.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%20%28V1.4.0%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.4.1", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%20%28V1.4.1%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.5.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater%20%28V1.5.0%29%20%28iOS4.0%29os40.ipa" },
+                        { version: "1.6.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater%20%28V1.6.0%29%20%28iOS4.0%29os40.ipa" },
+                        { version: "1.7.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater%20%28V1.7.0%29%20%28iOS4.0%29os40.ipa" },
+                        { version: "1.7.1", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%20%28V1.7.1%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.8.1", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater%20%28V1.8.1%29%20%28iOS4.0%29os40.ipa" },
+                        { version: "1.9.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%20%28V1.9.0%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.10.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%20My%20Water%20%28V1.10.0%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.10.1", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%20%28V1.10.1%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.11.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%27s%20My%20Water%20%28V1.11.0%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.11.1", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%27s%20My%20Water%20%28V1.11.1%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.12.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%20%28V1.12.0%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.13.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/WheresMyWater-%28com.disney.SwampyGame%29%20%28V1.13.0%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.13.1", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/Where%27s%20My%20Water%3F%20%28V1.13.1%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.14.0", url: "https://archive.org/download/com.disney.-swampy-game-v-1.14.1-i-os-6.0-clutch-2.0.4/com.disney.SwampyGame%20%28V1.14.1%29%20%28iOS6.0%29%20%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: ["1.14.1.58", "1.15.0"]
+                },
+                compatibility: "iOS 11.0 and Later",
+                icon: "app-icon/wheres-my-water.png",
+                featured: false,
+                categories: ["Entertainment", "Family", "Puzzle", "Games"]
             }
         ];
 
