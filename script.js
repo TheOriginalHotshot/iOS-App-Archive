@@ -1217,6 +1217,24 @@
                 icon: "app-icon/nemos-reef.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "elf-dance",
+                title: "Elf Dance",
+                developer: "JibJab Catapult CA Inc",
+                featuredDescription: "no description found",
+                description: "no description found",
+                versions: {
+                    archived: [
+                        { version: "1.0.2", url: "https://archive.org/download/com.jibjab.elfdance-v-2.1.0-i-os-9.0-clutch-2.0.4/com.jibjab.elfdance%20%28V1.0.2%29%20-iOS4.3-%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.1.0", url: "https://archive.org/download/com.jibjab.elfdance-v-2.1.0-i-os-9.0-clutch-2.0.4/com.jibjab.elfdance%20%28V2.1.0%29%20-iOS9.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 9.0 and Later",
+                icon: "app-icon/elf-dance.png",
+                featured: false,
+                categories: ["Lifestyle"]
             }
         ];
 
