@@ -1245,6 +1245,28 @@
         let autoSlideInterval;
         let touchStartX = 0;
         let touchEndX = 0;
+
+        // Get a deterministic set of random apps for the current day
+        function getDailyRandomApps(appList, count) {
+            const dateStr = new Date().toISOString().slice(0, 10);
+            let seed = 0;
+            for (let i = 0; i < dateStr.length; i++) {
+                seed = (seed << 5) - seed + dateStr.charCodeAt(i);
+                seed |= 0;
+            }
+            function rand() {
+                seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+                let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+                t ^= t + Math.imul(t ^ t >>> 7, 61 | t);
+                return ((t ^ t >>> 14) >>> 0) / 4294967296;
+            }
+            const list = [...appList];
+            for (let i = list.length - 1; i > 0; i--) {
+                const j = Math.floor(rand() * (i + 1));
+                [list[i], list[j]] = [list[j], list[i]];
+            }
+            return list.slice(0, count);
+        }
         
         // Initialize carousel
         function initCarousel() {
@@ -1252,8 +1274,8 @@
             carousel.innerHTML = '';
             carouselNav.innerHTML = '';
             
-            // Filter only featured apps for the carousel
-            const featuredApps = apps.filter(app => app.featured);
+            // Choose 7 random apps for the carousel each day
+            const featuredApps = getDailyRandomApps(apps, 7);
             
             // Create carousel items
             featuredApps.forEach((app, index) => {
