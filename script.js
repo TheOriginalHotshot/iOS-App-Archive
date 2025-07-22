@@ -1235,6 +1235,23 @@
                 icon: "app-icon/elf-dance.png",
                 featured: false,
                 categories: ["Lifestyle"]
+            },
+            {
+                id: "toy-story-3-read-along",
+                title: "Toy Story 3 Read-Along",
+                developer: "Disney",
+                featuredDescription: "Have three times the fun in this fully interactive reading experience!",
+                description: "Have three times the fun in this fully interactive reading experience! Zoom in to explore eye-popping 3D images; tap the blinking stars to reveal animated surprises throughout the book; tilt your iPad to steer Woody’s kite through the air in the awesome flying game; paint your own Toy Story 3 masterpiece; solve puzzles and sing along to favorite Toy Story tunes!\n\nThe gang is back! But things have changed...Andy is 17 and on his way to college. With their owner gone, Woody, the cowboy doll and Buzz Lightyear the space ranger, lead our favorite toys on their latest adventure. Find out what happens as the toys leave Andy’s bedroom and embark on an all-new exciting journey. Rest assured no toy gets left behind!\n\nFeatures:\n* Interactive read-along storybook app features your favorite characters from Toy Story 3.\n* Two reading modes allow you to follow along as the story is read aloud, or explore at your own pace. Select Young Reader Mode to simplify page turns.\n* Record your voice reading the story and hear it played back as narration. Record your child’s voice too!\n* View select pages in a whole new way with fantastic 3D effects that have dynamic touch-to-play exploration. The 3D glasses used to view the 3D section of this App are FREE at your local Disney Store, while supplies last, exclusively in the United States and Canada.\n* Play exciting games based on scenes from Toy Story 3. Watch Woody soar above the town and help him to safety in “Hang Glider,” and have a blast with Buzz as you overcome thrilling obstacles in “Falling with Style” – also in 3D!\n* Tap the “blinking stars” whenever you see them to reveal animated surprises throughout the app.\n* Get creative with the finger painting tool and share your masterpieces with friends and family!\n* Sing along to songs from the movie.\n* Jump to your favorite page with the Visual Page Index.\n* Turn pages manually and move back and forth through the story as you wish!\n\nBefore you download this experience, please consider that this app contains advertising for The Walt Disney Family of Companies.",
+                versions: {
+                    archived: [
+                        { version: "1.4", url: "https://archive.org/download/toy-story-3-read-along-v-1.4-i-os-5.1/Toy%20Story%203%20Read-Along%20%28V1.4%29%20%28iOS5.1%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.1 and Later",
+                icon: "app-icon/toy-story-3-read-along.png",
+                featured: false,
+                categories: ["Entertainment", "Books"]
             }
         ];
 
