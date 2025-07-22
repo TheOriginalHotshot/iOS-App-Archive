@@ -19,7 +19,7 @@
     --red-text: #ff453a;
     --modal-height: 85vh;
     --card-gradient: linear-gradient(145deg, #4a4a4c, #3a3a3c);
-    --card-gradient-light: linear-gradient(145deg, #5a5a5c, #4a4a4c);
+    --card-gradient-light: linear-gradient(145deg, #6a6a6c, #5a5a5c); /* Updated to lighter shade */
     --category-bg: rgba(90, 90, 92, 0.3);
     --carousel-height: 600px;
     --card-width: 340px;
@@ -119,8 +119,8 @@ header:after {
 .carousel-item {
     position: absolute;
     width: var(--card-width);
-    height: calc(100vh - 200px); /* Reduced height */
-    min-height: 420px; /* Reduced min-height */
+    height: calc(100vh - 180px); /* Increased height for longer cards */
+    min-height: 450px; /* Increased min-height */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0.9);
@@ -130,7 +130,7 @@ header:after {
     border-radius: 24px;
     overflow: hidden;
     background: var(--card-gradient-light);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 10px 20px rgba(0, 0, 0, 0.5); /* Enhanced depth with more shading */
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -144,7 +144,7 @@ header:after {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     z-index: 3;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 10px 20px rgba(0, 0, 0, 0.5); /* Enhanced depth */
 }
 
 .carousel-item.next {
@@ -242,6 +242,7 @@ header:after {
     font-weight: 600;
     font-size: 16px;
     box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.5), /* Added inset shadow for ingrained effect */
         0 4px 15px rgba(0, 0, 0, 0.4),
         inset 0 1px 2px rgba(255, 255, 255, 0.2);
     transition: all 0.2s ease;
@@ -267,6 +268,7 @@ header:after {
     background: linear-gradient(145deg, #6a6a6c, #5a5a5c);
     transform: translateY(-2px);
     box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.5),
         0 6px 20px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -274,6 +276,7 @@ header:after {
 .app-card .card-button:active {
     transform: translateY(1px);
     box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.5),
         0 2px 4px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -564,10 +567,9 @@ header:after {
     color: white;
     background: linear-gradient(to top, var(--tab-color), #2a2a2c);
     box-shadow: 
-        inset 0 15px 20px rgba(0, 0, 0, 0.5),
-        0 -5px 20px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.1);
-    transform: translateY(-10px) scale(1.05);
+        inset 0 4px 8px rgba(0, 0, 0, 0.6), /* Enhanced depth with inset shadow */
+        0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px) scale(0.98); /* Adjusted for ingrained effect */
     z-index: 2;
 }
 
@@ -586,15 +588,6 @@ header:after {
 .tab.active i {
     transform: scale(1.15);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-}
-
-.tab.genius i {
-    color: var(--genius-color);
-}
-
-.tab.active.genius i {
-    color: #ffd60a;
-    text-shadow: 0 0 12px rgba(255, 214, 10, 0.6);
 }
 
 /* Tab Content Areas */
@@ -688,7 +681,7 @@ header:after {
     height: 36px;
     border-radius: 50%;
     font-size: 22px;
-    cursor: button;
+    cursor: pointer;
     color: #ddd;
     z-index: 10;
     display: flex;
@@ -955,6 +948,41 @@ header:after {
     animation: tabActive 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
+/* Categories List Container */
+.categories-list-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.category-select-btn {
+    background: var(--list-bg-1);
+    padding: 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--text-light);
+    transition: background 0.2s, transform 0.2s;
+    position: relative;
+}
+
+.category-select-btn:hover {
+    background: var(--list-bg-2);
+    transform: translateY(-2px);
+}
+
+.category-select-btn::after {
+    content: '\203A';
+    font-size: 20px;
+    color: #aaa;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-content {
@@ -1104,7 +1132,6 @@ header:after {
     font-family: 'Segoe UI', Arial, sans-serif;
     letter-spacing: 0.01em;
 }
-
 
 .back-to-categories-btn {
     background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
