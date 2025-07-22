@@ -1274,6 +1274,23 @@
                 icon: "app-icon/wheres-my-water-lite.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "monsters-university",
+                title: "Monsters University",
+                developer: "Disney",
+                featuredDescription: "WELCOME TO MONSTERS UNIVERSITY! SCHOOL IS NOW IN SESSION WITH THIS OFFICIAL MONSTERS UNIVERSITY MOBILE GAME!",
+                description: "WELCOME TO MONSTERS UNIVERSITY! SCHOOL IS NOW IN SESSION WITH THIS OFFICIAL MONSTERS UNIVERSITY MOBILE GAME! Let the scary out in 2 exciting mini games based on the Disney•Pixar film “Monsters University,” and prove you’re the ultimate scarer! Prep for more Scare Games to come in future updates!\n\nCatch Archie:\n• Get a hold of Archie the Scare Pig, the squealing mascot of Monsters University’s rival school, Fear Tech, in this thrilling mini game!\n• Chase Archie in 30 exciting stages, and tire him out to win each stage!\n• Swipe to jump, slide, and dodge tricky obstacles throughout campus!\n\nToxicity Challenge:\n• Compete in the first scare game event of the year, and put your agility skills to the test!\n• Race against the clock, and run through the sewers before time runs out.\n• Watch out for the stinging glow urchins that will sting and slow you down throughout all 30 stages!\n\nOther Monstrous Features:\n• Play as 3 of your favorite monsters: Mike, Sulley, and Squishy.\n• Level up to unlock special power-ups!\n• Find and collect Scare Cards featuring famous monsters.\n• The Scare Games continue soon with FREE updates that will include more characters and new mini games based on the other events!\n\nUsers on iPod 4 may experience some speed bumps in Toxicity Challenge, but a fix is on its way shortly!\n\nGet ready to scare circles around everyone in this official Monsters University app!",
+                versions: {
+                    archived: [
+                        { version: "1.1.1", url: "https://archive.org/download/com.disney.-monsters-university-v-1.1.1-i-os-5.0-clutch-2.0.4/com.disney.MonstersUniversity%20%28V1.1.1%29%20-iOS5.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.0 and Later",
+                icon: "app-icon/monsters-university.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
