@@ -1252,6 +1252,28 @@
                 icon: "app-icon/toy-story-3-read-along.png",
                 featured: false,
                 categories: ["Entertainment", "Books"]
+            },
+            {
+                id: "wheres-my-water-lite",
+                title: "Where’s My Water? Lite",
+                developer: "Disney",
+                featuredDescription: "Get the GAME OF THE YEAR award-winning puzzler!",
+                description: "Get the GAME OF THE YEAR award-winning puzzler!\n\nHelp Swampy by guiding water to his broken shower. Each level is a challenging physics-based puzzle with amazing life-like mechanics. Cut through dirt and guide fresh water, dirty water, toxic water, steam, and ooze through increasingly challenging scenarios! Every drop counts!\n\nIn this FREE version, play 15+ challenging puzzles featuring Swampy! Want more levels? Get the full version and play up to 500 amazing puzzles featuring Allie, Cranky, Mystery Duck and MORE!\n\nFull Version Features:\n• Original Stories & Characters – Play through 4 unique stories featuring Swampy, Allie, Cranky and Mystery Duck. That’s over 500 amazing puzzles!\n• Innovative Mechanic – See water in various forms and use your creativity to solve the puzzles – totally stimulating!\n• Collectibles, Challenges, and Bonus Levels – Collect special items uniquely designed for each character and complete cool challenges to unlock bonus levels! “Tri-Duck” each level for ultimate bragging rights!\n• Brand New Levels Every Week – Hurry and play before they expire, and be sure to use ‘Photo Finish’ to share how you beat the new levels!\n\nSWAMPY’S STORY\nSwampy the Alligator lives in the sewers under the city. He’s a little different from the other alligators – he’s curious, friendly, and loves taking a nice long shower after a hard day at work. But there’s trouble with the pipes and Swampy needs your help getting water to his shower!\n\nVisit Facebook.com/DisneyMobileGames for cool game tips, news and more!\n\nBefore you download this app, please consider that this app includes advertising, some of which may be targeted to your interests. You may choose to control targeted advertising within our applications by using your mobile device settings (for example, by re-setting your device’s advertising identifier and/or opting out of interest based ads).\n\n• In-app purchases that cost real money\n• The option to accept push notifications to let you know when we have exciting updates like new content\n• Location-based services\n• Advertising for some third parties, including the option to watch ads for rewards\n• As well as advertising for The Walt Disney Family of Companies\n\nPrivacy Policy - https://disneyprivacycenter.com\nChildren’s Privacy Policy - https://disneyprivacycenter.com/kids-privacy-policy/english/\nTerms of Use - https://disneytermsofuse.com\n\nFor additional information about our practices in the United States and Latin America regarding children’s personal information, please read our Children’s Privacy Policy at https://disneyprivacycenter.com/kids-privacy-policy/english/",
+                versions: {
+                    archived: [
+                        { version: "1.0.2", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%27s%20My%20Water%20Free%20%5BDisney%5D%20%28v1.0.2%20Univ%20LP%20os40%29.rc333_613.ipa" },
+                        { version: "1.1.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite-iOS4.0-%28V1.1.0%29%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.3.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/WheresMyWaterLite-%28com.disney.SwampyGameLite%29-%28V1.3.1%29%20%28iOS%204.0%29.ipa" },
+                        { version: "1.4.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite%20iOS4.0%20%28V1.4.0%29%20%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.9.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite-iOS4.3%20%28V1.9.0%29%20%28Clutch-2.0.4%29.ipa" },
+                        { version: "1.11.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite%20%28V1.11.1%29%20-iOS9.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 9.0 and Later",
+                icon: "app-icon/wheres-my-water-lite.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
