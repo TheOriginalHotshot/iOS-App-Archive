@@ -1,6 +1,5 @@
 // App data with download URLs and categories
-const apps = [
-                        {
+const apps = [                        {
                 id: "escape-if-you-can",
                 title: "Escape If You Can",
                 developer: "mobigrow",
@@ -1369,6 +1368,7 @@ const apps = [
             }
         ];
 
+    
 
 // DOM Elements
 const carouselContainer = document.getElementById('carouselContainer');
@@ -1387,7 +1387,7 @@ const tabContents = {
     categories: document.getElementById('categoriesContent'),
     genius: document.getElementById('geniusContent'),
     search: document.getElementById('searchContent'),
-    updates: document.getElementById('updatesContent') // Renamed to More
+    updates: document.getElementById('updatesContent')
 };
 
 // Carousel state
@@ -1437,11 +1437,8 @@ function initCarousel() {
         
         carouselItem.innerHTML = `
             <div class="app-card">
-                <div class="app-icon-container">
-                    <div class="app-icon">
-                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                        '<i class="fas fa-mobile-alt"></i>'}
-                    </div>
+                <div class="app-icon icon-wrapper">
+                    ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" class="icon-img" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'icon-fallback\\'><i class=\\'fas fa-mobile-alt\\'></i></div>'">` : '<div class="icon-fallback"><i class="fas fa-mobile-alt"></i></div>'}
                 </div>
                 <h3 class="app-title">${app.title}</h3>
                 <div class="app-description">${app.featuredDescription}</div>
@@ -1451,12 +1448,7 @@ function initCarousel() {
         
         carousel.appendChild(carouselItem);
         
-        // Create navigation dot
-        const navDot = document.createElement('div');
-        navDot.className = 'nav-dot';
-        navDot.dataset.index = index;
-        navDot.addEventListener('click', () => goToSlide(index));
-        carouselNav.appendChild(navDot);
+        // Navigation dots removed as requested
     });
     
     // Set initial slide
@@ -1622,9 +1614,8 @@ function renderSearchResults(filteredApps = [], page = 1) {
         const appCard = document.createElement('div');
         appCard.className = 'app-card-grid';
         appCard.innerHTML = `
-            <div class="card-icon">
-                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                '<i class="fas fa-mobile-alt"></i>'}
+            <div class="card-icon icon-wrapper">
+                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" class="icon-img" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'icon-fallback\\'><i class=\\'fas fa-mobile-alt\\'></i></div>'">` : '<div class="icon-fallback"><i class="fas fa-mobile-alt"></i></div>'}
             </div>
             <div class="card-name">${app.title}</div>
             <div class="card-developer">${app.developer}</div>
@@ -1681,12 +1672,8 @@ function openAppDetailsPage(appId) {
         </div>
         
         <div class="app-info">
-            <div class="app-icon-reflection">
-                <div class="app-icon-large">
-                    ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                    '<i class="fas fa-mobile-alt"></i>'}
-                </div>
-                <div class="reflection"></div>
+            <div class="app-icon-large icon-wrapper">
+                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" class="icon-img" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'icon-fallback\\'><i class=\\'fas fa-mobile-alt\\'></i></div>'">` : '<div class="icon-fallback"><i class="fas fa-mobile-alt"></i></div>'}
             </div>
             <div class="app-meta">
                 <h1>${app.title}</h1>
@@ -1714,14 +1701,7 @@ function openAppDetailsPage(appId) {
                         <div class="version-group">
                             <h4>Archived Versions</h4>
                             <ul class="version-list">
-                                ${app.versions.archived.map(v => `
-                                    <li>
-                                        <span>${v.version}</span>
-                                        <a href="${v.url}" download class="download-button">
-                                            <i class="fas fa-download"></i> Download IPA
-                                        </a>
-                                    </li>
-                                `).join('')}
+                                ${app.versions.archived.map(v => `<li>${v.version}</li>`).join('')}
                             </ul>
                         </div>
                     ` : ''}
@@ -1833,7 +1813,7 @@ tabs.forEach(tab => {
             tabContents.categories.classList.add('active');
             renderCategoryList();
         } else {
-            // For categories, genius, updates
+            // For genius, updates
             carouselContainer.style.display = 'none';
             searchContainer.style.display = 'none';
             searchResults.classList.remove('active');
@@ -1963,21 +1943,12 @@ function renderCategoryList() {
     container.style.display = 'flex';
     container.style.flexDirection = 'column';
     container.style.alignItems = 'center';
-    container.style.padding = '20px';
     
-    const title = document.createElement('h3');
-    title.textContent = 'Browse Apps by Category';
-    title.style.textAlign = 'center';
-    title.style.marginBottom = '20px';
-    title.style.color = '#fff';
-    container.appendChild(title);
-
-    const categories = getAllCategories();
     const list = document.createElement('div');
     list.className = 'categories-list';
     list.style.width = '100%';
-    list.style.maxWidth = '600px';
 
+    const categories = getAllCategories();
     categories.forEach(cat => {
         const row = document.createElement('div');
         row.className = 'category-row';
@@ -1990,67 +1961,59 @@ function renderCategoryList() {
                 <i class="fas fa-chevron-right"></i>
             </div>
         `;
-        row.addEventListener('click', () => {
-            setUrlParam('category', cat);
-            renderAppsForCategory(cat);
-        });
+        row.addEventListener('click', () => openCategoryPage(cat));
         list.appendChild(row);
     });
     container.appendChild(list);
     categoriesContent.appendChild(container);
 }
 
-function renderAppsForCategory(category) {
-    const categoriesContent = tabContents.categories;
-    categoriesContent.innerHTML = '';
+function openCategoryPage(category) {
+    const categoryPage = document.createElement('div');
+    categoryPage.className = 'category-page';
     
-    const navBar = document.createElement('div');
-    navBar.className = 'nav-bar';
-    navBar.innerHTML = `
-        <button class="back-button"><i class="fas fa-chevron-left"></i></button>
-        <h2>${category}</h2>
-    `;
-    categoriesContent.appendChild(navBar);
-
     const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
-    if (filteredApps.length === 0) {
-        const noApps = document.createElement('p');
-        noApps.textContent = 'No apps found in this category.';
-        noApps.style.textAlign = 'center';
-        noApps.style.color = '#aaa';
-        categoriesContent.appendChild(noApps);
-        return;
-    }
     
-    const appList = document.createElement('div');
-    appList.className = 'app-list';
-    appList.style.display = 'flex';
-    appList.style.flexDirection = 'column';
-    appList.style.gap = '15px';
-    
+    let appListHTML = '';
     filteredApps.forEach(app => {
-        const appRow = document.createElement('div');
-        appRow.className = 'app-row';
-        appRow.innerHTML = `
-            <div class="app-icon-small">
-                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                '<i class="fas fa-mobile-alt"></i>'}
+        appListHTML += `
+            <div class="app-row">
+                <div class="app-icon-small icon-wrapper">
+                    ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" class="icon-img" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'icon-fallback\\'><i class=\\'fas fa-mobile-alt\\'></i></div>'">` : '<div class="icon-fallback"><i class="fas fa-mobile-alt"></i></div>'}
+                </div>
+                <span class="app-name">${app.title}</span>
+                <button class="view-details-btn" data-app-id="${app.id}">View Details</button>
             </div>
-            <span class="app-name">${app.title}</span>
-            <button class="view-details-btn" data-app-id="${app.id}">View Details</button>
         `;
-        appList.appendChild(appRow);
     });
-    categoriesContent.appendChild(appList);
-
-    navBar.querySelector('.back-button').addEventListener('click', function() {
-        setUrlParam('category', '');
-        renderCategoryList();
+    
+    categoryPage.innerHTML = `
+        <div class="category-header">
+            <button class="back-button"><i class="fas fa-chevron-left"></i> Back</button>
+            <h2>${category}</h2>
+        </div>
+        <div class="app-list">
+            ${appListHTML}
+        </div>
+    `;
+    
+    document.body.appendChild(categoryPage);
+    
+    setTimeout(() => {
+        categoryPage.classList.add('slide-in');
+    }, 10);
+    
+    // Add event listeners
+    categoryPage.querySelector('.back-button').addEventListener('click', () => {
+        categoryPage.classList.remove('slide-in');
+        setTimeout(() => {
+            categoryPage.remove();
+        }, 300);
     });
-
-    categoriesContent.querySelectorAll('.view-details-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const appId = this.getAttribute('data-app-id');
+    
+    categoryPage.querySelectorAll('.view-details-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const appId = btn.getAttribute('data-app-id');
             openAppDetailsPage(appId);
         });
     });
@@ -2109,7 +2072,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tab.click();
             }
         });
-        renderAppsForCategory(categoryParam);
+        openCategoryPage(categoryParam);
     }
     
     // Set active tab gradients
