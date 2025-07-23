@@ -1,6 +1,6 @@
 // App data with download URLs and categories
 const apps = [
-            {
+                        {
                 id: "escape-if-you-can",
                 title: "Escape If You Can",
                 developer: "mobigrow",
@@ -1294,6 +1294,7 @@ const apps = [
             }
         ];
 
+
 // DOM Elements
 const carouselContainer = document.getElementById('carouselContainer');
 const carousel = document.getElementById('carousel');
@@ -1311,7 +1312,7 @@ const tabContents = {
     categories: document.getElementById('categoriesContent'),
     genius: document.getElementById('geniusContent'),
     search: document.getElementById('searchContent'),
-    updates: document.getElementById('updatesContent')
+    updates: document.getElementById('updatesContent') // Renamed to More
 };
 
 // Carousel state
@@ -1319,6 +1320,8 @@ let currentIndex = 0;
 let autoSlideInterval;
 let touchStartX = 0;
 let touchEndX = 0;
+
+const APPS_PER_PAGE = 12;
 
 // Get a deterministic set of random apps for the current day
 function getDailyRandomApps(appList, count) {
@@ -1478,8 +1481,6 @@ function setupSwipe() {
     }
 }
 
-const APPS_PER_PAGE = 12;
-
 function renderPaginationControls(totalApps, currentPage, onPageChange) {
     const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
     if (totalPages < 2) return '';
@@ -1606,7 +1607,10 @@ function openAppDetailsPage(appId) {
         
         <div class="app-info">
             <div class="app-icon-reflection">
-                <img src="${app.icon}" alt="${app.title}" class="app-icon-large">
+                <div class="app-icon-large">
+                    ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                    '<i class="fas fa-mobile-alt"></i>'}
+                </div>
                 <div class="reflection"></div>
             </div>
             <div class="app-meta">
@@ -1615,7 +1619,7 @@ function openAppDetailsPage(appId) {
                 <div class="categories">
                     ${app.categories.slice(0, 4).map(cat => `<span class="category-tag">${cat}</span>`).join('')}
                 </div>
-                <button class="download-btn">Download</button>
+                <button class="download-btn">Get</button>
             </div>
         </div>
         
@@ -1686,15 +1690,25 @@ function openAppDetailsPage(appId) {
     detailsContent.appendChild(versionPopup);
     document.body.appendChild(detailsContent);
     
-    // Add event listeners
+    // Slide in animation
+    setTimeout(() => {
+        detailsContent.classList.add('slide-in');
+    }, 10);
+    
+    // Back button with slide-out animation
     detailsContent.querySelector('.back-button').addEventListener('click', function() {
-        detailsContent.remove();
+        detailsContent.classList.add('slide-out');
+        setTimeout(() => {
+            detailsContent.remove();
+        }, 500);
     });
     
+    // Download button (now "Get")
     detailsContent.querySelector('.download-btn').addEventListener('click', function() {
         versionPopup.style.display = 'block';
     });
     
+    // Cancel button in version popup
     detailsContent.querySelector('.cancel-btn').addEventListener('click', function() {
         versionPopup.style.display = 'none';
     });
@@ -1811,63 +1825,6 @@ cancelSearch.addEventListener('click', function() {
     renderSearchResults(apps);
 });
 
-// Initialize
-document.addEventListener('DOMContentLoaded', function() {
-    initCarousel();
-    
-    // Add keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowRight') {
-            nextSlide();
-        } else if (e.key === 'ArrowLeft') {
-            prevSlide();
-        }
-    });
-    
-    // Activate featured tab content
-    tabContents.featured.classList.add('active');
-    
-    const queryParam = getUrlParam('query');
-    if (queryParam) {
-        searchInput.value = queryParam;
-        tabs.forEach(tab => {
-            if (tab.getAttribute('data-tab') === 'search') {
-                tab.click();
-            }
-        });
-        let filteredApps;
-        if (queryParam.includes('developer:')) {
-            const parts = queryParam.split('developer:');
-            const namePart = parts[0].trim();
-            const devPart = parts[1].trim();
-            filteredApps = apps.filter(app => {
-                const matchesDev = app.developer.toLowerCase().includes(devPart);
-                const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
-                return matchesDev && matchesName;
-            });
-        } else {
-            filteredApps = apps.filter(app => 
-                app.title.toLowerCase().includes(queryParam) || 
-                app.developer.toLowerCase().includes(queryParam)
-            );
-        }
-        renderSearchResults(filteredApps);
-    }
-    const appParam = getUrlParam('app');
-    if (appParam) {
-        openAppDetailsPage(appParam);
-    }
-    const categoryParam = getUrlParam('category');
-    if (categoryParam) {
-        tabs.forEach(tab => {
-            if (tab.getAttribute('data-tab') === 'categories') {
-                tab.click();
-            }
-        });
-        renderAppsForCategory(categoryParam);
-    }
-});
-
 function setUrlParam(key, value) {
     const params = new URLSearchParams(window.location.search);
     if (value && value.length > 0) {
@@ -1925,21 +1882,26 @@ function getCategoryIcon(category) {
 function renderCategoryList() {
     const categoriesContent = tabContents.categories;
     categoriesContent.innerHTML = '';
+    
     const container = document.createElement('div');
-    container.className = 'categories-list-container';
+    container.className = 'categories-container';
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.alignItems = 'center';
+    container.style.padding = '20px';
     
     const title = document.createElement('h3');
     title.textContent = 'Browse Apps by Category';
     title.style.textAlign = 'center';
     title.style.marginBottom = '20px';
+    title.style.color = '#fff';
     container.appendChild(title);
 
     const categories = getAllCategories();
     const list = document.createElement('div');
     list.className = 'categories-list';
-    list.style.display = 'flex';
-    list.style.flexDirection = 'column';
-    list.style.gap = '10px';
+    list.style.width = '100%';
+    list.style.maxWidth = '600px';
 
     categories.forEach(cat => {
         const row = document.createElement('div');
@@ -1980,6 +1942,7 @@ function renderAppsForCategory(category) {
         const noApps = document.createElement('p');
         noApps.textContent = 'No apps found in this category.';
         noApps.style.textAlign = 'center';
+        noApps.style.color = '#aaa';
         categoriesContent.appendChild(noApps);
         return;
     }
@@ -1994,7 +1957,10 @@ function renderAppsForCategory(category) {
         const appRow = document.createElement('div');
         appRow.className = 'app-row';
         appRow.innerHTML = `
-            <img src="${app.icon}" alt="${app.title}" class="app-icon-small" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22100%25%22 height%3D%22100%25%22 viewBox%3D%220 0 100 100%22%3E%3Crect fill%3D%22%23ddd%22 width%3D%22100%22 height%3D%22100%22%2F%3E%3Ctext fill%3D%22%23777%22 font-family%3D%22Arial%22 font-size%3D%2210%22 x%3D%2250%25%22 y%3D%2250%25%22 dominant-baseline%3D%22middle%22 text-anchor%3D%22middle%22%3EIcon%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <div class="app-icon-small">
+                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                '<i class="fas fa-mobile-alt"></i>'}
+            </div>
             <span class="app-name">${app.title}</span>
             <button class="view-details-btn" data-app-id="${app.id}">View Details</button>
         `;
@@ -2014,3 +1980,73 @@ function renderAppsForCategory(category) {
         });
     });
 }
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    initCarousel();
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
+    
+    // Activate featured tab content
+    tabContents.featured.classList.add('active');
+    
+    const queryParam = getUrlParam('query');
+    if (queryParam) {
+        searchInput.value = queryParam;
+        tabs.forEach(tab => {
+            if (tab.getAttribute('data-tab') === 'search') {
+                tab.click();
+            }
+        });
+        let filteredApps;
+        if (queryParam.includes('developer:')) {
+            const parts = queryParam.split('developer:');
+            const namePart = parts[0].trim();
+            const devPart = parts[1].trim();
+            filteredApps = apps.filter(app => {
+                const matchesDev = app.developer.toLowerCase().includes(devPart);
+                const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
+                return matchesDev && matchesName;
+            });
+        } else {
+            filteredApps = apps.filter(app => 
+                app.title.toLowerCase().includes(queryParam) || 
+                app.developer.toLowerCase().includes(queryParam)
+            );
+        }
+        renderSearchResults(filteredApps);
+    }
+    const appParam = getUrlParam('app');
+    if (appParam) {
+        openAppDetailsPage(appParam);
+    }
+    const categoryParam = getUrlParam('category');
+    if (categoryParam) {
+        tabs.forEach(tab => {
+            if (tab.getAttribute('data-tab') === 'categories') {
+                tab.click();
+            }
+        });
+        renderAppsForCategory(categoryParam);
+    }
+    
+    // Set active tab gradients
+    document.querySelectorAll('.tab').forEach((tab, index) => {
+        tab.addEventListener('click', function() {
+            document.documentElement.style.setProperty('--tab-color', [
+                'var(--tab-home)',
+                'var(--tab-search)',
+                'var(--tab-categories)',
+                'var(--tab-more)', // Updates renamed to More
+                'var(--tab-account)'
+            ][index]);
+        });
+    });
+});
