@@ -1291,6 +1291,81 @@ const apps = [
                 icon: "app-icon/monsters-university.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "cloudy-with-a-chance-of-meatballs-2",
+                title: "Cloudy with a Chance of Meatballs 2: Foodimal Frenzy",
+                developer: "PlayFirst Inc",
+                featuredDescription: "**THE OFFICIAL GAME OF THE CLOUDY WITH A CHANCE OF MEATBALLS 2 MOVIE! Get the movie now on Digital or Blu-ray Combo Pack!**",
+                description: "**THE OFFICIAL GAME OF THE CLOUDY WITH A CHANCE OF MEATBALLS 2 MOVIE! Get the movie now on Digital or Blu-ray Combo Pack!**\n\nFREE fun puzzle game. Connect matching foodimals to rescue them across 90+ levels!\n\n==Story==\nInventor Flint Lockwood has discovered that his beloved home of Swallow Falls has been overrun by extraordinary (and kind of adorable) foodimals: food-animal hybrids! Join Flint, Sam, Steve and other favorites on a deliciously dangerous journey back to Swallow Falls!\n\n==Features==\n● Easy to play, but hard to master gameplay.\n● Fun trace-to-match puzzle game using cute foodimals from the movie!\n● Play as inventor Flint Lockwood and encounter dozens of characters from the movie\n● Over 90+ fun and challenging levels with more coming soon!\n● Use game boosts, like Flint's Organizerator, to help with difficult levels\n● Every level has fun and challenging objectives to complete\n● Earn collectibles of Flint, Sam, Barry, and your favorite characters!\n\n*Cloudy with a Chance of Meatballs 2: Foodimal Frenzy is FREE, but contains content that can be purchased for real money. You can disable In-App Purchases in your device settings.",
+                versions: {
+                    archived: [
+                        { version: "1.9", url: "https://archive.org/download/com.playfirst.cloudy-v-1.9-i-os-5.0-clutch-2.0.4/com.playfirst.cloudy%20%28V1.9%29%20-iOS5.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.0 and Later",
+                icon: "app-icon/cloudy-with-a-chance-of-meatballs-2.png",
+                featured: false,
+                categories: ["Games"]
+            },
+            {
+                id: "offerup",
+                title: "OfferUp",
+                developer: "OfferUp Inc",
+                featuredDescription: "Buy. Sell. Letgo. - OfferUp and Letgo are now one big marketplace.",
+                description: "Buy. Sell. Letgo. - OfferUp and Letgo are now one big marketplace.\n\nWhy you’ll love using OfferUp:\n\n• The biggest mobile marketplace for local buyers and sellers.\n• List an item using your phone or tablet in as little as 30 seconds.\n• Know who you’re dealing with through reputation and safety features.\n• Browse local items with thousands of new postings daily.\n• Message buyers and sellers securely from within the app.\n• Build a reputation with your unique seller profile page.\n• Browse items by image and sort by category or location.\n• Join millions of people using OfferUp across the country.\n\nOfferUp is the easiest way to buy and sell locally.\n\n\"I have found several items at a great price on OfferUp, saving me tons of money\" - Elaine\n\"We offered up 3 items in minutes and sold them within 48 hours. Doesn't get much easier than that!” - Summer\n\n\"I made $1,000 by offering up my daughter's unused items on OfferUp\" - Claudia\n\nDownload OfferUp today to sell your used items and discover heaps of hidden treasures.\nIf you subscribe to Promote Plus (1 month) via iTunes:\n\nPayment will be charged to iTunes Account at confirmation of purchase. Subscription automatically renews for $19.99 unless auto-renew is turned off 24 hours before the end of the current period. Account will be charged for renewal within 24 hours prior to the end of the current period at the rate of Promote Plus. Subscription and auto-renewal may be managed by going to Account Settings after purchase. Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription, where applicable.\n\nTerms: https://offerup.com/terms/\n\nPrivacy Policy: https://offerup.com/privacy/",
+                versions: {
+                    archived: [
+                        { version: "2.6.20", url: "https://archive.org/download/offer-up-v-2.7.86-no-name-cracker-clutch-1.4.1/OfferUp%20%28V2.6.20%29%20%28iOS5.1%29.ipa" },
+                        { version: "2.7.86", url: "https://archive.org/download/offer-up-v-2.7.86-no-name-cracker-clutch-1.4.1/OfferUp%20%28V2.7.86%29%20%28iOS8.4%29.ipa" },
+                        { version: "4.16.1", url: "https://archive.org/download/offer-up-v-2.7.86-no-name-cracker-clutch-1.4.1/OfferUp%20%28V4.16.1%29%20%28iOS11.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 15.0 and Later",
+                icon: "app-icon/offerup.png",
+                featured: false,
+                categories: ["Shopping", "Lifestyle"]
+            },
+            {
+                id: "talking-santa-2-free-for-ipad",
+                title: "Talking Santa 2 Free for iPad",
+                developer: "Nurogames",
+                featuredDescription: "★★★★★ \"Talking Santa 2\" is a free to play app which brings the spirit of Christmas to your iPad ★★★★★",
+                description: "★★★★★ \"Talking Santa 2\" is a free to play app which brings the spirit of Christmas to your iPad ★★★★★\n\nThe most festive time of the year begins and Santa Clause is ready to spread peace and joy. Delight yourself with funny animations and jolly atmospheric effects!\n\nEarn experience points by interacting with Santa which allows you to reach higher level and purchase additional animations or sounds.\nPoke or tickle him, talk to him or admire the wide range of great animations.\nThis app is free to play, but you can purchase credits to unlock more features instantly.\n\nFEATURES\n• Talk to Santa Clause, he repeats whatever you say\n• Poke or tickle Father Christmas and see how he reacts\n• Easy-to-use & child-friendly\n• Unique animations\n• Lots of festive sounds\n• Three different colour-styles\n• Poke or tickle Father Christmas and see how he reacts\n• Experience-based level system\n\nVISIT US: http://www.nurogames.com\nWATCH US: http://www.youtube.com/nurogames\nLIKE US: http://www.facebook.com/nurogames\nFOLLOW US: http://www.twitter.com/nurogames",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.nurogames.-talking-santa-2-lite-for-ipad-v-1.0-i-os-5.1-clutch-2.0.4/com.nurogames.TalkingSanta2LiteForIpad%20%28V1.0%29%20-iOS5.1-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.1 and Later",
+                icon: "app-icon/talking-santa-2-free-for-ipad.png",
+                featured: false,
+                categories: ["Games"]
+            },
+            {
+                id: "angry-birds-star-wars-hd-free",
+                title: "Angry Birds Star Wars HD Free",
+                developer: "Rovio Entertainment Ltd",
+                featuredDescription: "JOIN THE ANGRY BIRDS IN THEIR BIGGEST ADVENTURE YET!",
+                description: "JOIN THE ANGRY BIRDS IN THEIR BIGGEST ADVENTURE YET!\n\nA long time ago in a galaxy far, far away... a group of desperate rebel birds faced off against a galactic menace: the Empire’s evil Pigtroopers!\n\nRebel birds, striking from a hidden base, have won their first victory against the evil Imperial Pigs. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the PIG STAR, and are racing to deliver the plans to the Rebel Birds. Now they need your help!\n\nJoin an epic adventure with the Angry Birds in the legendary Star Wars™ universe! Use the Force, wield your lightsaber, and blast away Pigtroopers on an intergalactic journey from the deserts of Tatooine to the depths of the Pig Star!\n\nTime to grab your lightsaber and join the adventure! May the birds be with you!\n\nENGAGING GAMEPLAY - Get a taste of Angry Birds Star Wars with 12 levels in iconic locations like Tatooine, the Pig Star, and Hoth!\n\nNEW GAMEPLAY MECHANICS - Use lightsabers, Blasters and Jedi powers to wreak havoc on the Imperial Pigs!\n\nFREE UPDATES - This is only the beginning of the epic saga!\n\nTHE MIGHTY FALCON\nStuck on a tricky level? Earn stars and call the Mighty Falcon to rain down the destruction. New goals and gameplay!\n\nUpgrade to the full version of Angry Birds Star Wars for the complete, ad-free adventure, featuring more than 200 levels!\n\nThis free version of Angry Birds Star Wars contains third party advertisements. Please see our privacy policy for additional information\n\nFollow @angrybirds on Twitter\n\nWatch the videos, read the comics and submit fan art at angrybirds.com/starwars\n\nLike us at facebook.com/angrybirds and say hello!\n\nTerms of Use: http://www.rovio.com/eula\nPrivacy Policy: http://www.rovio.com/privacy\n\nThis application may require internet connectivity and subsequent data transfer charges may apply.\n\nImportant Message for Parents\n\nThis game may include:\n- Direct links to social networking websites that are intended for an audience over the age of 13.\n- Direct links to the internet that can take players away from the game with the potential to browse any web page.\n- Advertising of Rovio products and also products from select partners.\n- The option to make in-app purchases. The bill payer should always be consulted beforehand.",
+                versions: {
+                    archived: [
+                        { version: "1.1.0", url: "https://archive.org/download/com.rovio.angrybirdsstarwarshdfree-v-1.5.3-i-os-4.3-clutch-2.0.4/Angry%20Birds%20Star%20Wars%20HD%20Free%201.1.0.ipa" },
+                        { version: "1.1.1", url: "https://archive.org/download/com.rovio.angrybirdsstarwarshdfree-v-1.5.3-i-os-4.3-clutch-2.0.4/Angry%20Birds%20Star%20Wars%20HD%20Free%201.1.1.ipa" },
+                        { version: "1.1.3", url: "https://archive.org/download/com.rovio.angrybirdsstarwarshdfree-v-1.5.3-i-os-4.3-clutch-2.0.4/Angry%20Birds%20Star%20Wars%20HD%20Free%201.1.3.ipa" },
+                        { version: "1.5.0", url: "https://archive.org/download/com.rovio.angrybirdsstarwarshdfree-v-1.5.3-i-os-4.3-clutch-2.0.4/Angry%20Birds%20Star%20Wars%20HD%20Free%201.5.0.ipa" },
+                        { version: "1.5.2", url: "https://archive.org/download/com.rovio.angrybirdsstarwarshdfree-v-1.5.3-i-os-4.3-clutch-2.0.4/Angry%20Birds%20Star%20Wars%20HD%20Free%201.5.2.ipa" },
+                        { version: "1.5.3", url: "https://archive.org/download/com.rovio.angrybirdsstarwarshdfree-v-1.5.3-i-os-4.3-clutch-2.0.4/com.rovio.angrybirdsstarwarshdfree%20%28V1.5.3%29%20-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: ["1.0.0"]
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "app-icon/angry-birds-star-wars-hd-free.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
