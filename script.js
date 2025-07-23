@@ -1,5 +1,5 @@
-        // App data with download URLs and categories
-        const apps = [
+// App data with download URLs and categories
+const apps = [
             {
                 id: "escape-if-you-can",
                 title: "Escape If You Can",
@@ -1294,691 +1294,723 @@
             }
         ];
 
-        // DOM Elements
-        const carouselContainer = document.getElementById('carouselContainer');
-        const carousel = document.getElementById('carousel');
-        const carouselNav = document.getElementById('carouselNav');
-        const searchResults = document.getElementById('searchResults');
-        const searchContainer = document.getElementById('searchContainer');
-        const searchInput = document.getElementById('searchInput');
-        const cancelSearch = document.getElementById('cancelSearch');
-        const tabs = document.querySelectorAll('.tab');
-        const modalContainer = document.getElementById('modalContainer');
-        
-        // Tab content areas
-        const tabContents = {
-            featured: document.getElementById('featuredContent'),
-            categories: document.getElementById('categoriesContent'),
-            genius: document.getElementById('geniusContent'),
-            search: document.getElementById('searchContent'),
-            updates: document.getElementById('updatesContent')
-        };
-        
-        // Carousel state
-        let currentIndex = 0;
-        let autoSlideInterval;
-        let touchStartX = 0;
-        let touchEndX = 0;
+// DOM Elements
+const carouselContainer = document.getElementById('carouselContainer');
+const carousel = document.getElementById('carousel');
+const carouselNav = document.getElementById('carouselNav');
+const searchResults = document.getElementById('searchResults');
+const searchContainer = document.getElementById('searchContainer');
+const searchInput = document.getElementById('searchInput');
+const cancelSearch = document.getElementById('cancelSearch');
+const tabs = document.querySelectorAll('.tab');
+const modalContainer = document.getElementById('modalContainer');
 
-        // Get a deterministic set of random apps for the current day
-        function getDailyRandomApps(appList, count) {
-            const dateStr = new Date().toISOString().slice(0, 10);
-            let seed = 0;
-            for (let i = 0; i < dateStr.length; i++) {
-                seed = (seed << 5) - seed + dateStr.charCodeAt(i);
-                seed |= 0;
-            }
-            function rand() {
-                seed |= 0; seed = seed + 0x6D2B79F5 | 0;
-                let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
-                t ^= t + Math.imul(t ^ t >>> 7, 61 | t);
-                return ((t ^ t >>> 14) >>> 0) / 4294967296;
-            }
-            const list = [...appList];
-            for (let i = list.length - 1; i > 0; i--) {
-                const j = Math.floor(rand() * (i + 1));
-                [list[i], list[j]] = [list[j], list[i]];
-            }
-            return list.slice(0, count);
-        }
-        
-        // Initialize carousel
-        function initCarousel() {
-            // Clear existing items
-            carousel.innerHTML = '';
-            carouselNav.innerHTML = '';
-            
-            // Choose 7 random apps for the carousel each day
-            const featuredApps = getDailyRandomApps(apps, 7);
-            
-            // Create carousel items
-            featuredApps.forEach((app, index) => {
-                const carouselItem = document.createElement('div');
-                carouselItem.className = 'carousel-item';
-                carouselItem.dataset.index = index;
-                
-                carouselItem.innerHTML = `
-                    <div class="app-card">
-                        <div class="app-icon-container">
-                            <div class="app-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                                '<i class="fas fa-mobile-alt"></i>'}
-                            </div>
-                        </div>
-                        <h3 class="app-title">${app.title}</h3>
-                        <div class="app-description">${app.featuredDescription}</div>
-                        <button class="card-button" data-app-id="${app.id}">View Details</button>
-                    </div>
-                `;
-                
-                carousel.appendChild(carouselItem);
-                
-                // Create navigation dot
-                const navDot = document.createElement('div');
-                navDot.className = 'nav-dot';
-                navDot.dataset.index = index;
-                navDot.addEventListener('click', () => goToSlide(index));
-                carouselNav.appendChild(navDot);
-            });
-            
-            // Set initial slide
-            updateCarousel();
-            
-            // Start auto slide
-            startAutoSlide();
-            
-            // Add swipe functionality
-            setupSwipe();
-            
-            // Add event listener to carousel buttons
-            document.querySelectorAll('.app-card .card-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    openModal(appId);
-                });
-            });
-        }
-        
-        // Update carousel position
-        function updateCarousel() {
-            const items = document.querySelectorAll('.carousel-item');
-            const dots = document.querySelectorAll('.nav-dot');
-            const itemCount = items.length;
-            
-            items.forEach((item, index) => {
-                item.classList.remove('active', 'prev', 'next');
-                
-                if (index === currentIndex) {
-                    item.classList.add('active');
-                } else if (index === (currentIndex - 1 + itemCount) % itemCount) {
-                    item.classList.add('prev');
-                } else if (index === (currentIndex + 1) % itemCount) {
-                    item.classList.add('next');
-                }
-            });
-            
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-        }
-        
-        // Go to specific slide
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
-            resetAutoSlide();
-        }
-        
-        // Next slide
-        function nextSlide() {
-            const items = document.querySelectorAll('.carousel-item');
-            currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
-        }
-        
-        // Previous slide
-        function prevSlide() {
-            const items = document.querySelectorAll('.carousel-item');
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            updateCarousel();
-        }
-        
-        // Start auto slide
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(nextSlide, 8000);
-        }
-        
-        // Reset auto slide timer
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-        
-        // Setup swipe functionality
-        function setupSwipe() {
-            carouselContainer.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, false);
-            
-            carouselContainer.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, false);
-            
-            function handleSwipe() {
-                if (touchEndX < touchStartX - 50) {
-                    nextSlide();
-                }
-                
-                if (touchEndX > touchStartX + 50) {
-                    prevSlide();
-                }
-                
-                resetAutoSlide();
-            }
-        }
-        
-        const APPS_PER_PAGE = 12;
+// Tab content areas
+const tabContents = {
+    featured: document.getElementById('featuredContent'),
+    categories: document.getElementById('categoriesContent'),
+    genius: document.getElementById('geniusContent'),
+    search: document.getElementById('searchContent'),
+    updates: document.getElementById('updatesContent')
+};
 
-        function renderPaginationControls(totalApps, currentPage, onPageChange) {
-            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
-            if (totalPages < 2) return '';
-            let html = '<div class="pagination-controls" style="grid-column: 1/-1; text-align: center; margin: 20px 0;">';
-            if (currentPage > 1) {
-                html += `<button class="pagination-btn" data-page="${currentPage - 1}">Previous</button> `;
-            }
-            for (let i = 1; i <= totalPages; i++) {
-                if (i === currentPage) {
-                    html += `<span class="pagination-page current">${i}</span> `;
-                } else {
-                    html += `<button class="pagination-btn" data-page="${i}">${i}</button> `;
-                }
-            }
-            if (currentPage < totalPages) {
-                html += `<button class="pagination-btn" data-page="${currentPage + 1}">Next</button>`;
-            }
-            html += '</div>';
-            return html;
-        }
+// Carousel state
+let currentIndex = 0;
+let autoSlideInterval;
+let touchStartX = 0;
+let touchEndX = 0;
 
-        function renderSearchResults(filteredApps = [], page = 1) {
-            const sortedApps = filteredApps.slice().sort((a, b) =>
-                a.title.localeCompare(b.title)
-            );
-            searchResults.innerHTML = '';
-            const totalApps = sortedApps.length;
-            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
-            
-            if (page === 1) {
-                setUrlParam('page', '');
-                page = 1;
-            }
-            
-            if (page < 1) page = 1;
-            if (page > totalPages) page = totalPages;
-            
-            const startIdx = (page - 1) * APPS_PER_PAGE;
-            const endIdx = startIdx + APPS_PER_PAGE;
-            const appsToShow = sortedApps.slice(startIdx, endIdx);
+// Get a deterministic set of random apps for the current day
+function getDailyRandomApps(appList, count) {
+    const dateStr = new Date().toISOString().slice(0, 10);
+    let seed = 0;
+    for (let i = 0; i < dateStr.length; i++) {
+        seed = (seed << 5) - seed + dateStr.charCodeAt(i);
+        seed |= 0;
+    }
+    function rand() {
+        seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+        let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+        t ^= t + Math.imul(t ^ t >>> 7, 61 | t);
+        return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    }
+    const list = [...appList];
+    for (let i = list.length - 1; i > 0; i--) {
+        const j = Math.floor(rand() * (i + 1));
+        [list[i], list[j]] = [list[j], list[i]];
+    }
+    return list.slice(0, count);
+}
 
-            if (appsToShow.length === 0) {
-                searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
-                return;
-            }
-
-            appsToShow.forEach(app => {
-                const appCard = document.createElement('div');
-                appCard.className = 'app-card-grid';
-                appCard.innerHTML = `
-                    <div class="card-icon">
+// Initialize carousel
+function initCarousel() {
+    // Clear existing items
+    carousel.innerHTML = '';
+    carouselNav.innerHTML = '';
+    
+    // Choose 7 random apps for the carousel each day
+    const featuredApps = getDailyRandomApps(apps, 7);
+    
+    // Create carousel items
+    featuredApps.forEach((app, index) => {
+        const carouselItem = document.createElement('div');
+        carouselItem.className = 'carousel-item';
+        carouselItem.dataset.index = index;
+        
+        carouselItem.innerHTML = `
+            <div class="app-card">
+                <div class="app-icon-container">
+                    <div class="app-icon">
                         ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                         '<i class="fas fa-mobile-alt"></i>'}
                     </div>
-                    <div class="card-name">${app.title}</div>
-                    <div class="card-developer">${app.developer}</div>
-                    <button class="card-button" data-app-id="${app.id}">View Details</button>
-                `;
-                searchResults.appendChild(appCard);
-            });
+                </div>
+                <h3 class="app-title">${app.title}</h3>
+                <div class="app-description">${app.featuredDescription}</div>
+                <button class="card-button" data-app-id="${app.id}">View Details</button>
+            </div>
+        `;
+        
+        carousel.appendChild(carouselItem);
+        
+        // Create navigation dot
+        const navDot = document.createElement('div');
+        navDot.className = 'nav-dot';
+        navDot.dataset.index = index;
+        navDot.addEventListener('click', () => goToSlide(index));
+        carouselNav.appendChild(navDot);
+    });
+    
+    // Set initial slide
+    updateCarousel();
+    
+    // Start auto slide
+    startAutoSlide();
+    
+    // Add swipe functionality
+    setupSwipe();
+    
+    // Add event listener to carousel buttons
+    document.querySelectorAll('.app-card .card-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const appId = this.getAttribute('data-app-id');
+            openAppDetailsPage(appId);
+        });
+    });
+}
 
-            searchResults.innerHTML += renderPaginationControls(totalApps, page, (newPage) => {
-                if (newPage === 1) {
-                    setUrlParam('page', '');
-                } else {
-                    setUrlParam('page', newPage);
-                }
-                renderSearchResults(filteredApps, newPage);
-            });
+// Update carousel position
+function updateCarousel() {
+    const items = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.nav-dot');
+    const itemCount = items.length;
+    
+    items.forEach((item, index) => {
+        item.classList.remove('active', 'prev', 'next');
+        
+        if (index === currentIndex) {
+            item.classList.add('active');
+        } else if (index === (currentIndex - 1 + itemCount) % itemCount) {
+            item.classList.add('prev');
+        } else if (index === (currentIndex + 1) % itemCount) {
+            item.classList.add('next');
+        }
+    });
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+    });
+}
 
-            document.querySelectorAll('.pagination-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const newPage = parseInt(this.getAttribute('data-page'));
-                    if (newPage === 1) {
-                        setUrlParam('page', '');
-                    } else {
-                        setUrlParam('page', newPage);
-                    }
-                    renderSearchResults(filteredApps, newPage);
-                });
-            });
+// Go to specific slide
+function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+    resetAutoSlide();
+}
 
-            // Add event listeners to buttons
-            document.querySelectorAll('.card-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    openModal(appId);
-                });
-            });
+// Next slide
+function nextSlide() {
+    const items = document.querySelectorAll('.carousel-item');
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+}
+
+// Previous slide
+function prevSlide() {
+    const items = document.querySelectorAll('.carousel-item');
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+}
+
+// Start auto slide
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 8000);
+}
+
+// Reset auto slide timer
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Setup swipe functionality
+function setupSwipe() {
+    carouselContainer.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+    
+    carouselContainer.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            nextSlide();
         }
         
-        // Create a modal for a single app when needed
-        function createModal(app) {
-            // Create version list items
-            let versionItems = '';
-                
-                // Add archived versions if they exist
-                if (app.versions.archived.length > 0) {
-                    versionItems += `
+        if (touchEndX > touchStartX + 50) {
+            prevSlide();
+        }
+        
+        resetAutoSlide();
+    }
+}
+
+const APPS_PER_PAGE = 12;
+
+function renderPaginationControls(totalApps, currentPage, onPageChange) {
+    const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
+    if (totalPages < 2) return '';
+    
+    let html = '<div class="pagination-controls" style="grid-column: 1/-1; text-align: center; margin: 20px 0;">';
+    
+    // Previous button
+    if (currentPage > 1) {
+        html += `<button class="pagination-btn" data-page="${currentPage - 1}"><i class="fas fa-chevron-left"></i></button> `;
+    }
+    
+    // Page numbers (show up to 5 pages)
+    const maxVisible = 5;
+    let start = Math.max(1, currentPage - 2);
+    let end = Math.min(totalPages, start + maxVisible - 1);
+    
+    if (end - start < maxVisible - 1) {
+        start = Math.max(1, end - maxVisible + 1);
+    }
+    
+    for (let i = start; i <= end; i++) {
+        if (i === currentPage) {
+            html += `<span class="pagination-page current">${i}</span> `;
+        } else {
+            html += `<button class="pagination-btn" data-page="${i}">${i}</button> `;
+        }
+    }
+    
+    // Next button
+    if (currentPage < totalPages) {
+        html += `<button class="pagination-btn" data-page="${currentPage + 1}"><i class="fas fa-chevron-right"></i></button>`;
+    }
+    
+    html += '</div>';
+    return html;
+}
+
+function renderSearchResults(filteredApps = [], page = 1) {
+    const sortedApps = filteredApps.slice().sort((a, b) =>
+        a.title.localeCompare(b.title)
+    );
+    searchResults.innerHTML = '';
+    const totalApps = sortedApps.length;
+    const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
+    
+    if (page === 1) {
+        setUrlParam('page', '');
+        page = 1;
+    }
+    
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    
+    const startIdx = (page - 1) * APPS_PER_PAGE;
+    const endIdx = startIdx + APPS_PER_PAGE;
+    const appsToShow = sortedApps.slice(startIdx, endIdx);
+
+    if (appsToShow.length === 0) {
+        searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
+        return;
+    }
+
+    appsToShow.forEach(app => {
+        const appCard = document.createElement('div');
+        appCard.className = 'app-card-grid';
+        appCard.innerHTML = `
+            <div class="card-icon">
+                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
+                '<i class="fas fa-mobile-alt"></i>'}
+            </div>
+            <div class="card-name">${app.title}</div>
+            <div class="card-developer">${app.developer}</div>
+            <button class="card-button" data-app-id="${app.id}">View Details</button>
+        `;
+        searchResults.appendChild(appCard);
+    });
+
+    searchResults.innerHTML += renderPaginationControls(totalApps, page, (newPage) => {
+        if (newPage === 1) {
+            setUrlParam('page', '');
+        } else {
+            setUrlParam('page', newPage);
+        }
+        renderSearchResults(filteredApps, newPage);
+    });
+
+    document.querySelectorAll('.pagination-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const newPage = parseInt(this.getAttribute('data-page'));
+            if (newPage === 1) {
+                setUrlParam('page', '');
+            } else {
+                setUrlParam('page', newPage);
+            }
+            renderSearchResults(filteredApps, newPage);
+        });
+    });
+
+    // Add event listeners to buttons
+    document.querySelectorAll('.card-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const appId = this.getAttribute('data-app-id');
+            openAppDetailsPage(appId);
+        });
+    });
+}
+
+// App Details Page
+function openAppDetailsPage(appId) {
+    const app = apps.find(a => a.id === appId);
+    if (!app) {
+        alert('App ID not found, please try again later.');
+        return;
+    }
+    
+    // Create the app details page
+    const detailsContent = document.createElement('div');
+    detailsContent.className = 'app-details-page';
+    detailsContent.innerHTML = `
+        <div class="nav-bar">
+            <button class="back-button"><i class="fas fa-chevron-left"></i> Back</button>
+            <h2>App Details</h2>
+        </div>
+        
+        <div class="app-info">
+            <div class="app-icon-reflection">
+                <img src="${app.icon}" alt="${app.title}" class="app-icon-large">
+                <div class="reflection"></div>
+            </div>
+            <div class="app-meta">
+                <h1>${app.title}</h1>
+                <p class="developer">${app.developer}</p>
+                <div class="categories">
+                    ${app.categories.slice(0, 4).map(cat => `<span class="category-tag">${cat}</span>`).join('')}
+                </div>
+                <button class="download-btn">Download</button>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="app-details">
+            <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
+            <p class="compatibility-text">${app.compatibility}</p>
+            
+            <h3><i class="fas fa-align-left"></i> App Store Description</h3>
+            ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
+            
+            <h3><i class="fas fa-code-branch"></i> Version History</h3>
+            <div class="versions-scroll-container">
+                <div class="versions-container">
+                    ${app.versions.archived.length > 0 ? `
                         <div class="version-group">
                             <h4>Archived Versions</h4>
                             <ul class="version-list">
-                                ${app.versions.archived.map(v => {
-                                    return `<li>
+                                ${app.versions.archived.map(v => `
+                                    <li>
                                         <span>${v.version}</span>
                                         <a href="${v.url}" download class="download-button">
                                             <i class="fas fa-download"></i> Download IPA
                                         </a>
-                                    </li>`;
-                                }).join('')}
+                                    </li>
+                                `).join('')}
                             </ul>
                         </div>
-                    `;
-                }
-                
-                // Add unarchived versions if they exist
-                if (app.versions.unarchived.length > 0) {
-                    versionItems += `
+                    ` : ''}
+                    
+                    ${app.versions.unarchived.length > 0 ? `
                         <div class="version-group">
                             <h4 class="unarchived-label">Unarchived Versions</h4>
                             <ul class="version-list">
                                 ${app.versions.unarchived.map(v => `<li>${v}</li>`).join('')}
                             </ul>
                         </div>
-                    `;
-                }
-                
-                // Create category tags
-                const categoryTags = app.categories.map(cat => 
-                    `<span class="category-tag">${cat}</span>`
-                ).join('');
-                
-                const modal = document.createElement('div');
-                modal.className = 'modal-overlay';
-                modal.id = `${app.id}Modal`;
-                
-                modal.innerHTML = `
-                    <div class="modal-content">
-                        <button class="close-modal">&times;</button>
-                        <div class="modal-header">
-                            <div class="modal-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                                '<i class="fas fa-mobile-alt"></i>'}
-                            </div>
-                            <div>
-                                <h2 class="modal-title">${app.title}</h2>
-                                <p class="modal-developer">${app.developer}</p>
-                                <div class="modal-categories">
-                                    ${categoryTags}
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
-                            <p class="compatibility-text">${app.compatibility}</p>
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-align-left"></i> App Store Description</h3>
-                            ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-code-branch"></i> Version History</h3>
-                            <div class="versions-scroll-container">
-                                <div class="versions-container">
-                                    ${versionItems}
-                                </div>
-                            </div>
-                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Create version popup
+    const versionPopup = document.createElement('div');
+    versionPopup.className = 'version-popup';
+    versionPopup.innerHTML = `
+        <div class="popup-content">
+            <h3>Version History</h3>
+            <div class="versions-scroll-container">
+                ${app.versions.archived.map(v => `
+                    <div class="version-item">
+                        <span>${v.version}</span>
+                        <a href="${v.url}" class="download-link">Download</a>
                     </div>
-                `;
-                
-            modalContainer.appendChild(modal);
-
-            modal.querySelector('.close-modal').addEventListener('click', function() {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                setUrlParam('app', '');
-            });
-
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                    setUrlParam('app', '');
-                }
-            });
-
-            return modal;
+                `).join('')}
+                ${app.versions.unarchived.map(v => `
+                    <div class="version-item">
+                        <span>${v}</span>
+                    </div>
+                `).join('')}
+            </div>
+            <button class="cancel-btn">Cancel</button>
+        </div>
+    `;
+    
+    detailsContent.appendChild(versionPopup);
+    document.body.appendChild(detailsContent);
+    
+    // Add event listeners
+    detailsContent.querySelector('.back-button').addEventListener('click', function() {
+        detailsContent.remove();
+    });
+    
+    detailsContent.querySelector('.download-btn').addEventListener('click', function() {
+        versionPopup.style.display = 'block';
+    });
+    
+    detailsContent.querySelector('.cancel-btn').addEventListener('click', function() {
+        versionPopup.style.display = 'none';
+    });
+    
+    // Close popup when clicking outside
+    versionPopup.addEventListener('click', function(e) {
+        if (e.target === versionPopup) {
+            versionPopup.style.display = 'none';
         }
+    });
+}
 
-        // Handle Escape key to close any active modal
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                    setUrlParam('app', '');
-                });
-            }
+// Tab switching
+tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+        const tabName = this.getAttribute('data-tab');
+        // Update active tab
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        // Hide all tab content
+        Object.values(tabContents).forEach(content => {
+            content.classList.remove('active');
         });
-
-        function openModal(appId) {
-            let modal = document.getElementById(`${appId}Modal`);
-            if (!modal) {
-                const app = apps.find(a => a.id === appId);
-                if (!app) {
-                    alert('App ID not found, please try again later.');
-                    return;
-                }
-                modal = createModal(app);
-            }
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            setUrlParam('app', appId);
-        }
-        
-        // Tab switching
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const tabName = this.getAttribute('data-tab');
-                // Update active tab
-                tabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                // Hide all tab content
-                Object.values(tabContents).forEach(content => {
-                    content.classList.remove('active');
-                });
-                // Show/hide views based on tab
-                if (tabName === 'featured') {
-                    carouselContainer.style.display = 'block';
-                    searchContainer.style.display = 'none';
-                    searchResults.classList.remove('active');
-                    tabContents.featured.classList.add('active');
-                } else if (tabName === 'search') {
-                    carouselContainer.style.display = 'none';
-                    searchContainer.style.display = 'block';
-                    searchResults.classList.add('active');
-                    tabContents.search.classList.add('active');
-                    const pageParam = parseInt(getUrlParam('page'));
-                    const page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
-                    if (page === 1) {
-                        setUrlParam('page', '');
-                    } else {
-                        setUrlParam('page', page);
-                    }
-                    renderSearchResults(apps, page);
-                } else if (tabName === 'categories') {
-                    carouselContainer.style.display = 'none';
-                    searchContainer.style.display = 'none';
-                    searchResults.classList.remove('active');
-                    tabContents.categories.classList.add('active');
-                    renderCategoryList();
-                } else {
-                    // For categories, genius, updates
-                    carouselContainer.style.display = 'none';
-                    searchContainer.style.display = 'none';
-                    searchResults.classList.remove('active');
-                    tabContents[tabName].classList.add('active');
-                }
-            });
-        });
-        
-        // Search functionality
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            setUrlParam('query', searchTerm);
-            setUrlParam('page', '');
-            if (searchTerm.length === 0) {
-                renderSearchResults(apps, 1);
-                return;
-            }
-            let filteredApps = apps;
-            let devPart = null, catPart = null, namePart = searchTerm;
-            const devMatch = searchTerm.match(/developer:([^ ]+)/);
-            const catMatch = searchTerm.match(/category:([^ ]+)/);
-            if (devMatch) {
-                devPart = devMatch[1].trim();
-                namePart = namePart.replace(devMatch[0], '').trim();
-            }
-            if (catMatch) {
-                catPart = catMatch[1].trim();
-                namePart = namePart.replace(catMatch[0], '').trim();
-            }
-            filteredApps = filteredApps.filter(app => {
-                let matches = true;
-                if (devPart) {
-                    matches = matches && app.developer.toLowerCase().includes(devPart);
-                }
-                if (catPart) {
-                    matches = matches && Array.isArray(app.categories) && app.categories.some(cat => cat.toLowerCase().includes(catPart));
-                }
-                if (namePart) {
-                    matches = matches && app.title.toLowerCase().includes(namePart);
-                }
-                return matches;
-            });
-            renderSearchResults(filteredApps, 1);
-        });
-        
-        // Show cancel button when search input is focused
-        searchInput.addEventListener('focus', function() {
-            cancelSearch.style.display = 'block';
-        });
-        
-        // Hide cancel button when search input is blurred
-        searchInput.addEventListener('blur', function() {
-            if (this.value === '') {
-                cancelSearch.style.display = 'none';
-            }
-        });
-        
-        // Cancel search
-        cancelSearch.addEventListener('click', function() {
-            searchInput.value = '';
-            searchInput.blur();
-            this.style.display = 'none';
-            setUrlParam('query', '');
-            renderSearchResults(apps);
-        });
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            initCarousel();
-            
-            // Add keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowRight') {
-                    nextSlide();
-                } else if (e.key === 'ArrowLeft') {
-                    prevSlide();
-                }
-            });
-            
-            // Activate featured tab content
+        // Show/hide views based on tab
+        if (tabName === 'featured') {
+            carouselContainer.style.display = 'block';
+            searchContainer.style.display = 'none';
+            searchResults.classList.remove('active');
             tabContents.featured.classList.add('active');
-            
-            const queryParam = getUrlParam('query');
-            if (queryParam) {
-                searchInput.value = queryParam;
-                tabs.forEach(tab => {
-                    if (tab.getAttribute('data-tab') === 'search') {
-                        tab.click();
-                    }
-                });
-                let filteredApps;
-                if (queryParam.includes('developer:')) {
-                    const parts = queryParam.split('developer:');
-                    const namePart = parts[0].trim();
-                    const devPart = parts[1].trim();
-                    filteredApps = apps.filter(app => {
-                        const matchesDev = app.developer.toLowerCase().includes(devPart);
-                        const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
-                        return matchesDev && matchesName;
-                    });
-                } else {
-                    filteredApps = apps.filter(app => 
-                        app.title.toLowerCase().includes(queryParam) || 
-                        app.developer.toLowerCase().includes(queryParam)
-                    );
-                }
-                renderSearchResults(filteredApps);
+        } else if (tabName === 'search') {
+            carouselContainer.style.display = 'none';
+            searchContainer.style.display = 'block';
+            searchResults.classList.add('active');
+            tabContents.search.classList.add('active');
+            const pageParam = parseInt(getUrlParam('page'));
+            const page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
+            if (page === 1) {
+                setUrlParam('page', '');
+            } else {
+                setUrlParam('page', page);
             }
-            const appParam = getUrlParam('app');
-            if (appParam) {
-                openModal(appParam);
-            }
-            const categoryParam = getUrlParam('category');
-            if (categoryParam) {
-                tabs.forEach(tab => {
-                    if (tab.getAttribute('data-tab') === 'categories') {
-                        tab.click();
-                    }
-                });
-                renderAppsForCategory(categoryParam);
+            renderSearchResults(apps, page);
+        } else if (tabName === 'categories') {
+            carouselContainer.style.display = 'none';
+            searchContainer.style.display = 'none';
+            searchResults.classList.remove('active');
+            tabContents.categories.classList.add('active');
+            renderCategoryList();
+        } else {
+            // For categories, genius, updates
+            carouselContainer.style.display = 'none';
+            searchContainer.style.display = 'none';
+            searchResults.classList.remove('active');
+            tabContents[tabName].classList.add('active');
+        }
+    });
+});
+
+// Search functionality
+searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    setUrlParam('query', searchTerm);
+    setUrlParam('page', '');
+    if (searchTerm.length === 0) {
+        renderSearchResults(apps, 1);
+        return;
+    }
+    let filteredApps = apps;
+    let devPart = null, catPart = null, namePart = searchTerm;
+    const devMatch = searchTerm.match(/developer:([^ ]+)/);
+    const catMatch = searchTerm.match(/category:([^ ]+)/);
+    if (devMatch) {
+        devPart = devMatch[1].trim();
+        namePart = namePart.replace(devMatch[0], '').trim();
+    }
+    if (catMatch) {
+        catPart = catMatch[1].trim();
+        namePart = namePart.replace(catMatch[0], '').trim();
+    }
+    filteredApps = filteredApps.filter(app => {
+        let matches = true;
+        if (devPart) {
+            matches = matches && app.developer.toLowerCase().includes(devPart);
+        }
+        if (catPart) {
+            matches = matches && Array.isArray(app.categories) && app.categories.some(cat => cat.toLowerCase().includes(catPart));
+        }
+        if (namePart) {
+            matches = matches && app.title.toLowerCase().includes(namePart);
+        }
+        return matches;
+    });
+    renderSearchResults(filteredApps, 1);
+});
+
+// Show cancel button when search input is focused
+searchInput.addEventListener('focus', function() {
+    cancelSearch.style.display = 'block';
+});
+
+// Hide cancel button when search input is blurred
+searchInput.addEventListener('blur', function() {
+    if (this.value === '') {
+        cancelSearch.style.display = 'none';
+    }
+});
+
+// Cancel search
+cancelSearch.addEventListener('click', function() {
+    searchInput.value = '';
+    searchInput.blur();
+    this.style.display = 'none';
+    setUrlParam('query', '');
+    renderSearchResults(apps);
+});
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    initCarousel();
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
+    
+    // Activate featured tab content
+    tabContents.featured.classList.add('active');
+    
+    const queryParam = getUrlParam('query');
+    if (queryParam) {
+        searchInput.value = queryParam;
+        tabs.forEach(tab => {
+            if (tab.getAttribute('data-tab') === 'search') {
+                tab.click();
             }
         });
-
-        function setUrlParam(key, value) {
-            const params = new URLSearchParams(window.location.search);
-            if (value && value.length > 0) {
-                params.set(key, value);
-            } else {
-                params.delete(key);
+        let filteredApps;
+        if (queryParam.includes('developer:')) {
+            const parts = queryParam.split('developer:');
+            const namePart = parts[0].trim();
+            const devPart = parts[1].trim();
+            filteredApps = apps.filter(app => {
+                const matchesDev = app.developer.toLowerCase().includes(devPart);
+                const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
+                return matchesDev && matchesName;
+            });
+        } else {
+            filteredApps = apps.filter(app => 
+                app.title.toLowerCase().includes(queryParam) || 
+                app.developer.toLowerCase().includes(queryParam)
+            );
+        }
+        renderSearchResults(filteredApps);
+    }
+    const appParam = getUrlParam('app');
+    if (appParam) {
+        openAppDetailsPage(appParam);
+    }
+    const categoryParam = getUrlParam('category');
+    if (categoryParam) {
+        tabs.forEach(tab => {
+            if (tab.getAttribute('data-tab') === 'categories') {
+                tab.click();
             }
-            const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
-            window.history.replaceState({}, '', newUrl);
+        });
+        renderAppsForCategory(categoryParam);
+    }
+});
+
+function setUrlParam(key, value) {
+    const params = new URLSearchParams(window.location.search);
+    if (value && value.length > 0) {
+        params.set(key, value);
+    } else {
+        params.delete(key);
+    }
+    const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+    window.history.replaceState({}, '', newUrl);
+}
+
+function getUrlParam(key) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(key);
+}
+
+function getAllCategories() {
+    const categorySet = new Set();
+    apps.forEach(app => {
+        if (Array.isArray(app.categories)) {
+            app.categories.forEach(cat => categorySet.add(cat));
         }
+    });
+    return Array.from(categorySet).sort();
+}
 
-        function getUrlParam(key) {
-            const params = new URLSearchParams(window.location.search);
-            return params.get(key);
-        }
+function getCategoryIcon(category) {
+    const iconMap = {
+        'Games': 'gamepad',
+        'Entertainment': 'film',
+        'Utilities': 'wrench',
+        'Productivity': 'briefcase',
+        'Photo & Video': 'camera',
+        'Social Networking': 'users',
+        'Music': 'music',
+        'Education': 'graduation-cap',
+        'Finance': 'dollar-sign',
+        'Travel': 'plane',
+        'Food & Drink': 'utensils',
+        'Health & Fitness': 'heartbeat',
+        'Sports': 'running',
+        'Lifestyle': 'shopping-bag',
+        'News': 'newspaper',
+        'Weather': 'cloud-sun',
+        'Puzzle': 'puzzle-piece',
+        'Action': 'fist-raised',
+        'Adventure': 'hiking',
+        'Racing': 'flag-checkered',
+        'Simulation': 'cogs',
+        'Board': 'chess-board'
+    };
+    return iconMap[category] || 'folder';
+}
 
+function renderCategoryList() {
+    const categoriesContent = tabContents.categories;
+    categoriesContent.innerHTML = '';
+    const container = document.createElement('div');
+    container.className = 'categories-list-container';
+    
+    const title = document.createElement('h3');
+    title.textContent = 'Browse Apps by Category';
+    title.style.textAlign = 'center';
+    title.style.marginBottom = '20px';
+    container.appendChild(title);
 
-        function getAllCategories() {
-            const categorySet = new Set();
-            apps.forEach(app => {
-                if (Array.isArray(app.categories)) {
-                    app.categories.forEach(cat => categorySet.add(cat));
-                }
-            });
-            return Array.from(categorySet).sort();
-        }
+    const categories = getAllCategories();
+    const list = document.createElement('div');
+    list.className = 'categories-list';
+    list.style.display = 'flex';
+    list.style.flexDirection = 'column';
+    list.style.gap = '10px';
 
-        function renderCategoryList() {
-            const categoriesContent = tabContents.categories;
-            categoriesContent.innerHTML = '';
-            const container = document.createElement('div');
-            container.className = 'categories-list-container category-fade-in';
-            
-            const title = document.createElement('h3');
-            title.textContent = 'Browse Apps by Category';
-            title.style.textAlign = 'center';
-            title.style.marginBottom = '20px';
-            container.appendChild(title);
+    categories.forEach(cat => {
+        const row = document.createElement('div');
+        row.className = 'category-row';
+        row.innerHTML = `
+            <div class="category-icon">
+                <i class="fas fa-${getCategoryIcon(cat)}"></i>
+            </div>
+            <div class="category-name">${cat}</div>
+            <div class="category-chevron">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        `;
+        row.addEventListener('click', () => {
+            setUrlParam('category', cat);
+            renderAppsForCategory(cat);
+        });
+        list.appendChild(row);
+    });
+    container.appendChild(list);
+    categoriesContent.appendChild(container);
+}
 
-            const categories = getAllCategories();
-            const list = document.createElement('div');
-            list.className = 'categories-list';
-            list.style.display = 'flex';
-            list.style.flexWrap = 'wrap';
-            list.style.gap = '12px';
-            list.style.justifyContent = 'center';
+function renderAppsForCategory(category) {
+    const categoriesContent = tabContents.categories;
+    categoriesContent.innerHTML = '';
+    
+    const navBar = document.createElement('div');
+    navBar.className = 'nav-bar';
+    navBar.innerHTML = `
+        <button class="back-button"><i class="fas fa-chevron-left"></i></button>
+        <h2>${category}</h2>
+    `;
+    categoriesContent.appendChild(navBar);
 
-            categories.forEach(cat => {
-                const tag = document.createElement('button');
-                tag.className = 'category-tag category-select-btn';
-                tag.textContent = cat;
-                tag.style.cursor = 'pointer';
-                tag.addEventListener('click', () => {
-                    setUrlParam('category', cat);
-                    renderAppsForCategory(cat);
-                });
-                list.appendChild(tag);
-            });
-            container.appendChild(list);
-            categoriesContent.appendChild(container);
-        }
+    const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
+    if (filteredApps.length === 0) {
+        const noApps = document.createElement('p');
+        noApps.textContent = 'No apps found in this category.';
+        noApps.style.textAlign = 'center';
+        categoriesContent.appendChild(noApps);
+        return;
+    }
+    
+    const appList = document.createElement('div');
+    appList.className = 'app-list';
+    appList.style.display = 'flex';
+    appList.style.flexDirection = 'column';
+    appList.style.gap = '15px';
+    
+    filteredApps.forEach(app => {
+        const appRow = document.createElement('div');
+        appRow.className = 'app-row';
+        appRow.innerHTML = `
+            <img src="${app.icon}" alt="${app.title}" class="app-icon-small" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22100%25%22 height%3D%22100%25%22 viewBox%3D%220 0 100 100%22%3E%3Crect fill%3D%22%23ddd%22 width%3D%22100%22 height%3D%22100%22%2F%3E%3Ctext fill%3D%22%23777%22 font-family%3D%22Arial%22 font-size%3D%2210%22 x%3D%2250%25%22 y%3D%2250%25%22 dominant-baseline%3D%22middle%22 text-anchor%3D%22middle%22%3EIcon%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <span class="app-name">${app.title}</span>
+            <button class="view-details-btn" data-app-id="${app.id}">View Details</button>
+        `;
+        appList.appendChild(appRow);
+    });
+    categoriesContent.appendChild(appList);
 
-        function renderAppsForCategory(category) {
-            const categoriesContent = tabContents.categories;
-            categoriesContent.innerHTML = '';
-            
-            const backBtn = document.createElement('button');
-            backBtn.textContent = 'Back to Categories';
-            backBtn.className = 'back-to-categories-btn';
-            backBtn.style.marginBottom = '20px';
-            backBtn.style.display = 'block';
-            backBtn.style.marginLeft = 'auto';
-            backBtn.style.marginRight = 'auto';
-            backBtn.addEventListener('click', () => {
-                setUrlParam('category', '');
-                renderCategoryList();
-            });
-            categoriesContent.appendChild(backBtn);
+    navBar.querySelector('.back-button').addEventListener('click', function() {
+        setUrlParam('category', '');
+        renderCategoryList();
+    });
 
-            const title = document.createElement('h3');
-            title.textContent = `Apps in "${category}"`;
-            title.style.textAlign = 'center';
-            title.style.marginBottom = '20px';
-            categoriesContent.appendChild(title);
-
-            const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
-            if (filteredApps.length === 0) {
-                const noApps = document.createElement('p');
-                noApps.textContent = 'No apps found in this category.';
-                noApps.style.textAlign = 'center';
-                categoriesContent.appendChild(noApps);
-                return;
-            }
-            const grid = document.createElement('div');
-            grid.className = 'category-apps-grid';
-            grid.style.display = 'grid';
-            grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
-            grid.style.gap = '18px';
-            grid.style.justifyItems = 'center';
-            filteredApps.forEach(app => {
-                const appCard = document.createElement('div');
-                appCard.className = 'app-card-grid';
-                appCard.innerHTML = `
-                    <div class="card-icon">
-                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
-                        '<i class="fas fa-mobile-alt"></i>'}
-                    </div>
-                    <div class="card-name">${app.title}</div>
-                    <div class="card-developer">${app.developer}</div>
-                    <button class="card-button" data-app-id="${app.id}">View Details</button>
-                `;
-                grid.appendChild(appCard);
-            });
-            categoriesContent.appendChild(grid);
-
-            categoriesContent.querySelectorAll('.card-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    openModal(appId);
-                });
-            });
-        }
+    categoriesContent.querySelectorAll('.view-details-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const appId = this.getAttribute('data-app-id');
+            openAppDetailsPage(appId);
+        });
+    });
+}
