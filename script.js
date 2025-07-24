@@ -1366,6 +1366,80 @@
                 icon: "app-icon/angry-birds-star-wars-hd-free.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "jelly-car-3",
+                title: "JellyCar 3",
+                developer: "Disney",
+                featuredDescription: "IT’S A WHOLE NEW JELLY WORLD! NEW UPDATE!",
+                description: "IT’S A WHOLE NEW JELLY WORLD! NEW UPDATE!\n\nThe great reviews keep rolling in!\n\n\"JellyCar 3 is easily the best one yet and is highly recommended\" -TouchArcade\n\n\"4/4 - Must Have: Whether or not you’ve played the other installments in the series, you'll find JellyCar 3 to be a total blast.\" -SlideToPlay\n\n“…easily the best JellyCar so far” -TheAppEra\n\n\"...awesome physics and really addicting gameplay.\" -Appolicious\n\n\"JellyCar 3 offers amazing value...a must buy for only $1 that will bounce right into your heart.\" -AppAdvice\n\n\"Perfection...FIVE OUT OF FIVE!\" -Nine Over Ten\n\nThe hit driving platform puzzle game is all new! JellyCar 3 features all new levels, all new car customization, all new ghost racing, and so much more. So hop in, start your Jelly engines, and find the stop sign!\n\nNEW LEVELS WITH SECRET EXITS\nJellyCar 3 includes 50 themed levels designed to maximize your squishy gameplay. With platforms and objects that move, rotate, and trigger special effects, each level is a new adventure! Race to the stop sign, and keep an eye out for secret exits!\n\nNEW CAR CUSTOMIZATION\nChoose your car then create a customized color-styled JellyCar. Add detail down to the hubcaps! You can even customize the sound of your JellyCar!\n\nNEW GHOST RACING\nChase the Ghost Car and race against friends and the best times from the global leaderboards.\n\nNEW RECORD FEATURE\nSave replays, make flipbooks, and relive your best times.\n\nNEW REWIND TIME\nGo back in time and Rewind a level to correct mistakes and optimize your time. Includes 10 Rewinds. Buy additional Rewind Packs via in-app purchase.\n\nSQUISHY GOODNESS\nSoar over obstacles and reach goals with the Balloon ability, climb walls with Sticky Tires, tap your car to make it grow, and play along with great music and sound effects. Everything that makes JellyCar awesome is here and more, so test-drive JellyCar 3 today!\n\nCheck out JellyCar 3's newest Two for Tuesday feature! Download two new levels every other Tuesday. Click the \"News\" button for more details!\n\nLike Us on Facebook: http://www.facebook.com/DisneyMobile\nFollow Us on Twitter: http://twitter.com/disneymobile\n\n****************** DISNEY MAKES MORE GREAT APPS ******************\n\nToy Story Mania, Phineas and Ferb Arcade, Disney Fairies Fly, Split/Second, Alice In Wonderland, and many more.\n\nSee all the Disney Apps at http://www.itunes.com/waltdisney",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/jelly-car-3-v-1.1-i-os-3.1.3/JellyCar%203%20%28V1.0%29%20%28iOS3.1.3%29.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/jelly-car-3-v-1.1-i-os-3.1.3/JellyCar%203%20%28V1.1%29%20%28iOS3.1.3%29.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/jelly-car-3-v-1.1-i-os-3.1.3/JellyCar%203%20%28V1.2%29%20%28iOS3.1.3%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "Unknown",
+                icon: "app-icon/jelly-car-3.png",
+                featured: false,
+                categories: ["Entertainment", "Casual", "Puzzle", "Games"]
+            },
+            {
+                id: "jelly-car-2-on-ipad",
+                title: "JellyCar 2 on iPad",
+                developer: "Disney",
+                featuredDescription: "JELLYCAR 2! NOW EVEN SQUISHIER ON IPAD!",
+                description: "JELLYCAR 2! NOW EVEN SQUISHIER ON IPAD!\n\nOne of the best puzzle games just got better! JellyCar 2 for iPad now comes fully loaded with all new Two Player Modes, redesigned Custom Level Editor and optimized graphics. JellyCar is the hit driving platform game developed by Walaber. The game is about driving a squishy car through squishy worlds to reach the exit. JellyCar 2 on iPad features original music by Matt McCarthy, high score leaderboards and simple touch and tilt controls.\n\n****New TWO PLAYER Modes Exclusively on iPad****\n• Tether Mode: JellyCars are tethered by a rope, creating the ultimate co-op adventure in all new levels! Work together to finish the race safely.\n• Race Mode: Race head-to-head on a split screen. First to finish wins!\n\n***Improved Custom Mode***\n• Create your own puzzles with a larger workspace in the Custom Level Editor! Redesigned for easier Jelly fun, choose ramps, wheels, levers and more from over 40 items.\n• Customize your Jelly Car! Choose from multiple body styles and color combinations.\nUpdated Graphics\n• Customizable control layout, all new icon-based control schemes, full screen menus and larger views with classic JellyCar jiggle!\n\n***Jelly Factory***\n• Where does all this squishy goodness come from? The Jelly Factory, of course! In this puzzle game your goal is to guide the falling parts into matching chutes. Tap the levers to open different pathways to guide each part down the conveyor belts.\n\n***Long Jump***\n• You’re going for distance, so go for speed! Watch out for objects that can slow you down, and look for objects that can help give you a boost!\n\n***All New Jelly Abilities!***\n• Sticky Wheels – Activate Sticky Wheels and drive up walls!\n• Balloon Ability—Activate Balloon Ability and float out of trouble!\n\nWith so much squishy goodness, you’ll want to drive JellyCar 2 all around town!",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/jelly-car-2-on-i-pad-v-1.1-i-os-3.2/JellyCar%202%20on%20iPad%20%28V1.1%29%20%28iOS3.2%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 3.2 and Later",
+                icon: "app-icon/jelly-car-2-on-ipad.png",
+                featured: false,
+                categories: ["Entertainment", "Casual", "Puzzle", "Games"]
+            },
+            {
+                id: "monsters-university-catch-archie",
+                title: "Monsters University: Catch Archie",
+                developer: "Disney",
+                featuredDescription: "WELCOME TO MONSTERS UNIVERSITY!",
+                description: "WELCOME TO MONSTERS UNIVERSITY!\n\nCelebrate the launch of Disney•Pixar’s film “Monsters University” with this monstrous app! Join Monsters University freshman Mike Wazowski on his first day of college, and catch Archie the Scare Pig! Get a hold of the squealing mascot of Monsters University’s rival school, Fear Tech, in this FREE, thrilling mini game based on the film.\n\n• Run as Mike, and find a way to grab Archie the Scare Pig and tire him out!\n\n• Chase after Archie in 10 exciting stages!\n\n• Swipe to jump, slide, and dodge obstacles; the campus is full of surprises!\n\nUpgrade to the AD-FREE, FULL VERSION of Monsters University for more features and prove you’re the ultimate scarer!\n\n• Get 2 games in 1 app with more Scare Games to come in future updates!\n\n• Can’t get enough of Archie? Chase Archie the Scare Pig in 30 exciting stages!\n\n• Compete in the first scare game event of the year in the other mini game, Toxicity Challenge!\n\n• Play as 3 of your favorite Monsters: Mike, Sulley, and Squishy.\n\n• Enjoy the game ad-free!\n\nRemember to check out “Monsters University” in a theater near you; check your local listings for showtimes!",
+                versions: {
+                    archived: [
+                        { version: "1.0.0", url: "https://archive.org/download/com.disney.-monsters-university-free-v-1.0.3-i-os-5.0-clutch-2.0.4/Monsters%20University%20-%20Catch%20Archie%20%28V1.0.0%29%28iOS5.0%29.ipa" },
+                        { version: "1.0.1", url: "https://archive.org/download/com.disney.-monsters-university-free-v-1.0.3-i-os-5.0-clutch-2.0.4/Monsters%20University%20-%20Catch%20Archie%20%28V1.0.1%29%28iOS5.0%29.ipa" },
+                        { version: "1.0.2", url: "https://archive.org/download/com.disney.-monsters-university-free-v-1.0.3-i-os-5.0-clutch-2.0.4/Monsters%20University%20-%20Catch%20Archie%20%28V1.0.2%29%28iOS5.0%29.ipa" },
+                        { version: "1.0.3", url: "https://archive.org/download/com.disney.-monsters-university-free-v-1.0.3-i-os-5.0-clutch-2.0.4/com.disney.MonstersUniversityFree%20%28V1.0.3%29%20-iOS5.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.0 and Later",
+                icon: "app-icon/monsters-university-catch-archie.png",
+                featured: false,
+                categories: ["Games"]
+            },
+            {
+                id: "spongebob-diner-dash-lite",
+                title: "SpongeBob Diner Dash Lite",
+                developer: "Nickelodeon",
+                featuredDescription: "PlayFirst and Nickelodeon team up to bring you the dish-flipping fun of Diner Dash with a super awesome SpongeBob twist! Soak up 5-star feeding fun with SpongeBob!",
+                description: "PlayFirst and Nickelodeon team up to bring you the dish-flipping fun of Diner Dash with a super awesome SpongeBob twist! Soak up 5-star feeding fun with SpongeBob!\n\nMr. Krabs is expanding his Krabby Patty empire, one restaurant at a time. Help SpongeBob seat, serve and satisfy all kinds of fishy customers in five colorful Bikini Bottom restaurants. Slide and tap to send SpongeBob to customers’ tables. Take orders, seat customers, and collect big tips to upgrade your restaurants!\n--------------------\nPLEASE NOTE: SpongeBob Diner Dash charges real money for additional in-app content. You may lock out the ability to purchase in-app content by adjusting your device’s settings.\n\n--------------------\n\nDive into culinary chaos under the sea with SpongeBob Diner Dash!\n\nWith Sponge-tastic game features, you can:\n• Explore restaurants like the Krusty Krab, Dutchman’s Inn, and more\n• Meet special guest stars like Patrick Star and other characters from the show\n• Get tons of fast-paced levels for hours of fun\n• Shop for awesome power-ups at the store\n• Connect with GameCenter to show off your scores\n• Unlock additional restaurants through in-App purchase\n• Play on iPhone and iPad\n\nADDITIONAL NOTES:\niOS will keep you logged on for 15 minutes after an initial in-app purchase. Additional purchases won’t require a re-entry of your password during this 15-minute interval. This is a function of the iOS software and not within our control.\nSpongeBob Diner Dash collects personal user data as well as non-personal user data (including aggregated data), connects with 3rd party social media applications, and offers in-app purchases. User data collection is in accordance with applicable law, such as COPPA. User data may be used, for example, to respond to user requests; enable users to take advantage of certain features and services; personalize content and advertising; and manage and improve Nickelodeon's services. For more information regarding Nickelodeon’s use of personal user data, please visit the Nickelodeon Group Privacy Policy. Our Privacy Policy is in addition to any terms, conditions or policies agreed to between you and Apple, Inc., and Nickelodeon and its affiliated entities are not responsible for Apple's collection or use of your personal user data and information. Use of this app is subject to the Nickelodeon End User License Agreement. For Users residing in the EU, this app may include the use of persistent identifiers for game management purposes and installation of this app constitutes your permission to such usage of persistent identifiers for all users on your device.\n\nPrivacy Policy: http://www.nick.com/info/privacy-policy.html\nEnd User License Agreement: http://www.nick.com/info/eula.html\n\n© 2013 Viacom International Inc. All Rights Reserved. Nickelodeon, SpongeBob SquarePants, and all related titles, logos and characters are trademarks of Viacom International Inc. Created by Stephen Hillenburg.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/com.mtvn.-sponge-bob-diner-dash-lite-v-3.1-i-os-4.3-clutch-2.0.4_202504/Sponge%20Bob%20Diner%20Dash%20Lite-%28com.mtvn.SpongeBobDinerDashLite%29-%28V1.0%29%20-%28iOS_2.0%29.ipa" },
+                        { version: "3.1", url: "https://archive.org/download/com.mtvn.-sponge-bob-diner-dash-lite-v-3.1-i-os-4.3-clutch-2.0.4_202504/com.mtvn.SpongeBobDinerDashLite%20%28V3.1%29%20-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "app-icon/spongebob-diner-dash-lite.png",
+                featured: false,
+                categories: ["Games"]
             }
         ];
 
