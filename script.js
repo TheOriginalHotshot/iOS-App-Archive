@@ -13,7 +13,7 @@
                     unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "app-icon/escape-if-you-can.jpg",
+                icon: "cdn/app-icon/escape-if-you-can.jpg",
                 featured: true,
                 categories: ["Puzzle", "Adventure"]
             },
@@ -31,7 +31,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.3 and Later",
-                icon: "app-icon/jelly-car-3-lite.png",
+                icon: "cdn/app-icon/jelly-car-3-lite.png",
                 featured: true,
                 categories: ["Racing", "Action"]
             },
@@ -48,7 +48,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.2 and Later",
-                icon: "app-icon/disney-gift-card.png",
+                icon: "cdn/app-icon/disney-gift-card.png",
                 featured: true,
                 categories: ["Finance"]
             },
@@ -68,7 +68,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "app-icon/flappy-bird.png",
+                icon: "cdn/app-icon/flappy-bird.png",
                 featured: true,
                 categories: ["Action", "Entertainment"]
             },
@@ -88,7 +88,7 @@
                     unarchived: ["1.0", "1.1", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.7"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "app-icon/lightbike-online.jpeg",
+                icon: "cdn/app-icon/lightbike-online.jpeg",
                 featured: true,
                 categories: ["Racing", "Action"]
             },
@@ -110,7 +110,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 4.0 and Later",
-                icon: "app-icon/jelly-car-2.jpeg",
+                icon: "cdn/app-icon/jelly-car-2.jpeg",
                 featured: false,
                 categories: ["Racing", "Action"]
             },
@@ -127,7 +127,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 5.0 and Later",
-                icon: "app-icon/godzilla-strike-zone.png",
+                icon: "cdn/app-icon/godzilla-strike-zone.png",
                 featured: true,
                 categories: ["Games", "Entertainment"]
             },
@@ -144,7 +144,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 7.0 and Later",
-                icon: "app-icon/buster-bash.png",
+                icon: "cdn/app-icon/buster-bash.png",
                 featured: false,
                 categories: ["Games", "Sports", "Casual"]
             },
@@ -161,7 +161,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/beer-bounce.png",
+                icon: "cdn/app-icon/beer-bounce.png",
                 featured: false,
                 categories: ["Entertainment", "Beer"]
             },
@@ -178,7 +178,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1 and Later",
-                icon: "app-icon/beer-ratings-guide.png",
+                icon: "cdn/app-icon/beer-ratings-guide.png",
                 featured: false,
                 categories: ["Lifestyle", "Food & Drink", "Beer"]
             },
@@ -195,7 +195,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.2.1 and Later",
-                icon: "app-icon/beer-goggles-by-hive-mind.png",
+                icon: "cdn/app-icon/beer-goggles-by-hive-mind.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Lifestyle", "Beer"]
             },
@@ -212,7 +212,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.2 and Later",
-                icon: "app-icon/beer-pong-challenge.png",
+                icon: "cdn/app-icon/beer-pong-challenge.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Casual", "Sports", "Beer"]
             },
@@ -229,7 +229,7 @@
                     unarchived: ["1.1"]
                 },
                 compatibility: "iPhoneOS 2.1 and Later",
-                icon: "app-icon/beerduel.png",
+                icon: "cdn/app-icon/beerduel.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Action", "Simulation", "Beer"]
             },
@@ -246,7 +246,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.0 and Later",
-                icon: "app-icon/ibeertender.png",
+                icon: "cdn/app-icon/ibeertender.png",
                 featured: false,
                 categories: ["Games", "Beer"]
             },
@@ -263,7 +263,7 @@
                     unarchived: ["1.1"]
                 },
                 compatibility: "iPhoneOS 3.2 and Later",
-                icon: "app-icon/ibeer-keg.png",
+                icon: "cdn/app-icon/ibeer-keg.png",
                 featured: false,
                 categories: ["Games", "Action", "Simulation", "Entertainment", "Beer"]
             },
@@ -280,7 +280,7 @@
                     unarchived: ["2.3"]
                 },
                 compatibility: "iPhoneOS 2.2.1 and Later",
-                icon: "app-icon/ibeer-challenge.png",
+                icon: "cdn/app-icon/ibeer-challenge.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Family", "Sports", "Beer"]
             },
@@ -298,7 +298,7 @@
                     unarchived: ["1.01", "1.2", "7.3", "7.5", "7.6", "11.4"]
                 },
                 compatibility: "iOS 11.0 and Later",
-                icon: "app-icon/ibeer-free.png",
+                icon: "cdn/app-icon/ibeer-free.png",
                 featured: false,
                 categories: ["Business", "Food & Drink", "Beer"]
             },
@@ -321,7 +321,7 @@
                     unarchived: ["7.6"]
                 },
                 compatibility: "iOS 7.0 and Later",
-                icon: "app-icon/ibeer-pro.png",
+                icon: "cdn/app-icon/ibeer-pro.png",
                 featured: false,
                 categories: ["Food & Drink", "Beer"]
             },
@@ -339,7 +339,7 @@
                     unarchived: ["2.0.4"]
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/isoda.png",
+                icon: "cdn/app-icon/isoda.png",
                 featured: false,
                 categories: ["Entertainment", "Action", "Games", "Simulation"]
             },
@@ -369,7 +369,7 @@
                     unarchived: ["2.1.0", "2.7.1", "15.43.4", "19.46.3", "19.47.7", "19.49.3", "19.49.5", "19.49.7", "20.02.3", "20.03.02", "20.04.1", "20.05.4", "20.06.03", "20.07.6", "20.08.3", "20.09.3", "20.10.3", "20.10.4", "20.11.6", "20.12.4", "20.13.5", "20.14.2", "20.15.1", "20.16.7", "20.18.4", "20.18.5", "20.19.2", "20.19.3"]
                 },
                 compatibility: "iOS 15.0 and Later",
-                icon: "app-icon/youtube.png",
+                icon: "cdn/app-icon/youtube.png",
                 featured: true,
                 categories: ["Photo & Video", "Entertainment"]
             },
@@ -388,7 +388,7 @@
                     unarchived: ["1.0", "1.2"]
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/jelly-car.png",
+                icon: "cdn/app-icon/jelly-car.png",
                 featured: false,
                 categories: ["Entertainment", "Action", "Puzzle", "Games"]
             },
@@ -405,7 +405,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 8.0 and Later",
-                icon: "app-icon/psecu-mobile-for-ipad.png",
+                icon: "cdn/app-icon/psecu-mobile-for-ipad.png",
                 featured: false,
                 categories: ["Finance"]
             },
@@ -422,7 +422,7 @@
                     unarchived: []
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/abc-for-kids.png",
+                icon: "cdn/app-icon/abc-for-kids.png",
                 featured: false,
                 categories: ["Education"]
             },
@@ -439,7 +439,7 @@
                     unarchived: []
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/godzilla-monster-mayhem.png",
+                icon: "cdn/app-icon/godzilla-monster-mayhem.png",
                 featured: false,
                 categories: ["Games", "Action", "Fighting"]
             },
@@ -456,7 +456,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 13.0 and Later",
-                icon: "app-icon/my-singing-monsters.png",
+                icon: "cdn/app-icon/my-singing-monsters.png",
                 featured: false,
                 categories: ["Simulation", "Music", "Games"]
             },
@@ -473,7 +473,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.2.1 and Later",
-                icon: "app-icon/dropoly.png",
+                icon: "cdn/app-icon/dropoly.png",
                 featured: false,
                 categories: ["Entertainment", "Puzzle", "Casual", "Games"]
             },
@@ -502,7 +502,7 @@
                     unarchived: ["1.3.1", "1.4.6", "1.5.2", "3.5.1", "3.9.1", "3.9.5"]
                 },
                 compatibility: "iOS 16.7.10 and Later",
-                icon: "app-icon/dropbox.png",
+                icon: "cdn/app-icon/dropbox.png",
                 featured: false,
                 categories: ["Utilities", "Productivity"]
             },
@@ -528,7 +528,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 5.1 and Later",
-                icon: "app-icon/toy-story-read-along.png",
+                icon: "cdn/app-icon/toy-story-read-along.png",
                 featured: false,
                 categories: ["Entertainment", "Books"]
             },
@@ -562,7 +562,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 15.1 and Later",
-                icon: "app-icon/facebook.png",
+                icon: "cdn/app-icon/facebook.png",
                 featured: false,
                 categories: ["Social Networking"]
             },
@@ -605,7 +605,7 @@
                     ]
                 },
                 compatibility: "iOS 12.0 and Later",
-                icon: "app-icon/rolling-sky.png",
+                icon: "cdn/app-icon/rolling-sky.png",
                 featured: false,
                 categories: ["Games", "Music", "Board"]
             },
@@ -622,7 +622,7 @@
                     unarchived: []
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/meet-bubble.png",
+                icon: "cdn/app-icon/meet-bubble.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -639,7 +639,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/finger-sprint-free.png",
+                icon: "cdn/app-icon/finger-sprint-free.png",
                 featured: false,
                 categories: ["Games", "Sports", "Racing"]
             },
@@ -656,7 +656,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 13.0 and Later",
-                icon: "app-icon/bowman.png",
+                icon: "cdn/app-icon/bowman.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -673,7 +673,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/guess-my-age-math-magic.png",
+                icon: "cdn/app-icon/guess-my-age-math-magic.png",
                 featured: false,
                 categories: ["Games", "Entertainment", "Education"]
             },
@@ -690,7 +690,7 @@
                     unarchived: []
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/ihourglass.png",
+                icon: "cdn/app-icon/ihourglass.png",
                 featured: false,
                 categories: ["Entertainment", "Utilities"]
             },
@@ -707,7 +707,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.0 and Later",
-                icon: "app-icon/iguerilla-2.png",
+                icon: "cdn/app-icon/iguerilla-2.png",
                 featured: false,
                 categories: ["Games", "Action"]
             },
@@ -726,7 +726,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 8.0 and Later",
-                icon: "app-icon/nba-jam-by-ea-sports.png",
+                icon: "cdn/app-icon/nba-jam-by-ea-sports.png",
                 featured: false,
                 categories: ["Entertainment", "Casual", "Sports", "Games"]
             },
@@ -743,7 +743,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "app-icon/strelka.png",
+                icon: "cdn/app-icon/strelka.png",
                 featured: false,
                 categories: ["Navigation", "Travel"]
             },
@@ -760,7 +760,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1 and Later",
-                icon: "app-icon/a-global-landforms-map.png",
+                icon: "cdn/app-icon/a-global-landforms-map.png",
                 featured: false,
                 categories: ["Utilities", "Reference"]
             },
@@ -777,7 +777,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "app-icon/itrailer-lite.png",
+                icon: "cdn/app-icon/itrailer-lite.png",
                 featured: false,
                 categories: ["Photo & Video", "Entertainment"]
             },
@@ -795,7 +795,7 @@
                     unarchived: ["9.2.0"]
                 },
                 compatibility: "iOS 13.0 and Later",
-                icon: "app-icon/travel-channel.png",
+                icon: "cdn/app-icon/travel-channel.png",
                 featured: false,
                 categories: ["Entertainment", "Travel"]
             },
@@ -812,7 +812,7 @@
                     unarchived: ["2.1"]
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/my-live.png",
+                icon: "cdn/app-icon/my-live.png",
                 featured: false,
                 categories: ["Utilities"]
             },
@@ -829,7 +829,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/contacts3d.png",
+                icon: "cdn/app-icon/contacts3d.png",
                 featured: false,
                 categories: ["Utilities"]
             },
@@ -846,7 +846,7 @@
                     unarchived: []
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/alley-gator.png",
+                icon: "cdn/app-icon/alley-gator.png",
                 featured: false,
                 categories: ["Action", "Games", "General"]
             },
@@ -864,7 +864,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/astraware-board-games.png",
+                icon: "cdn/app-icon/astraware-board-games.png",
                 featured: false,
                 categories: ["Games", "Family", "Board"]
             },
@@ -881,7 +881,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/rrootage.png",
+                icon: "cdn/app-icon/rrootage.png",
                 featured: false,
                 categories: ["Action", "Casual", "Games"]
             },
@@ -898,7 +898,7 @@
                     unarchived: ["1.4.0.2"]
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/neverputt-me.png",
+                icon: "cdn/app-icon/neverputt-me.png",
                 featured: false,
                 categories: ["Puzzle", "Sports", "Games"]
             },
@@ -915,7 +915,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.3 and Later",
-                icon: "app-icon/pterm-ssh-telnet-client.png",
+                icon: "cdn/app-icon/pterm-ssh-telnet-client.png",
                 featured: false,
                 categories: ["Business", "Utilities"]
             },
@@ -933,7 +933,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.1 and Later",
-                icon: "app-icon/arvale-journey-of-illusion.png",
+                icon: "cdn/app-icon/arvale-journey-of-illusion.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -950,7 +950,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/motes.png",
+                icon: "cdn/app-icon/motes.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -967,7 +967,7 @@
                     unarchived: []
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/nba-jam-by-ea-sports-lite.png",
+                icon: "cdn/app-icon/nba-jam-by-ea-sports-lite.png",
                 featured: false,
                 categories: ["Games", "Causal", "Entertainment"]
             },
@@ -984,7 +984,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.0 and Later",
-                icon: "app-icon/dashbuster.png",
+                icon: "cdn/app-icon/dashbuster.png",
                 featured: false,
                 categories: [" Entertainment", "Lifestyle"]
             },
@@ -1001,7 +1001,7 @@
                     unarchived: ["1.4"]
                 },
                 compatibility: "iPhoneOS 3.2 and Later",
-                icon: "app-icon/the-iron-horse.png",
+                icon: "cdn/app-icon/the-iron-horse.png",
                 featured: false,
                 categories: ["Games", "Action", "Casual"]
             },
@@ -1018,7 +1018,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.0 and Later",
-                icon: "app-icon/iron-horse.png",
+                icon: "cdn/app-icon/iron-horse.png",
                 featured: false,
                 categories: ["Entertainment", "Action", "Casual", "Games"]
             },
@@ -1035,7 +1035,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 2.1 and Later",
-                icon: "app-icon/apocalypse.png",
+                icon: "cdn/app-icon/apocalypse.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1053,7 +1053,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.2 and Later",
-                icon: "app-icon/shrek-kart-hd.png",
+                icon: "cdn/app-icon/shrek-kart-hd.png",
                 featured: false,
                 categories: ["Causal", "Racing", "Games"]
             },
@@ -1071,7 +1071,7 @@
                     unarchived: []
                 },
                 compatibility: "iPhoneOS 3.1.2 and Later",
-                icon: "app-icon/shrek-kart-free.png",
+                icon: "cdn/app-icon/shrek-kart-free.png",
                 featured: false,
                 categories: ["Casual", "Racing", "Games"]
             },
@@ -1088,7 +1088,7 @@
                     unarchived: ["1.6"]
                 },
                 compatibility: "iOS 4.2 and Later",
-                icon: "app-icon/idoodle2-lite.png",
+                icon: "cdn/app-icon/idoodle2-lite.png",
                 featured: false,
                 categories: ["Games", "Productivity"]
             },
@@ -1106,7 +1106,7 @@
                     unarchived: ["1.0.3", "1.4"]
                 },
                 compatibility: "iOS 5.1 and Later",
-                icon: "app-icon/toy-story-2-read-along.jpeg",
+                icon: "cdn/app-icon/toy-story-2-read-along.jpeg",
                 featured: false,
                 categories: ["Entertainment", "Books"]
             },
@@ -1123,7 +1123,7 @@
                     unarchived: ["1.3"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "app-icon/virtuwicks-candle-maker-mini.jpg",
+                icon: "cdn/app-icon/virtuwicks-candle-maker-mini.jpg",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1140,7 +1140,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "app-icon/mini-golf-3d.png",
+                icon: "cdn/app-icon/mini-golf-3d.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1157,7 +1157,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "app-icon/word-wonderland-primary-full.png",
+                icon: "cdn/app-icon/word-wonderland-primary-full.png",
                 featured: false,
                 categories: ["Games", "Education"]
             },
@@ -1196,7 +1196,7 @@
                     unarchived: ["1.14.1.58", "1.15.0"]
                 },
                 compatibility: "iOS 11.0 and Later",
-                icon: "app-icon/wheres-my-water.png",
+                icon: "cdn/app-icon/wheres-my-water.png",
                 featured: false,
                 categories: ["Entertainment", "Family", "Puzzle", "Games"]
             },
@@ -1214,7 +1214,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 7.0 and Later",
-                icon: "app-icon/nemos-reef.png",
+                icon: "cdn/app-icon/nemos-reef.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1232,7 +1232,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 9.0 and Later",
-                icon: "app-icon/elf-dance.png",
+                icon: "cdn/app-icon/elf-dance.png",
                 featured: false,
                 categories: ["Lifestyle"]
             },
@@ -1249,7 +1249,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 5.1 and Later",
-                icon: "app-icon/toy-story-3-read-along.png",
+                icon: "cdn/app-icon/toy-story-3-read-along.png",
                 featured: false,
                 categories: ["Entertainment", "Books"]
             },
@@ -1271,7 +1271,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 9.0 and Later",
-                icon: "app-icon/wheres-my-water-lite.png",
+                icon: "cdn/app-icon/wheres-my-water-lite.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1288,7 +1288,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 5.0 and Later",
-                icon: "app-icon/monsters-university.png",
+                icon: "cdn/app-icon/monsters-university.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1305,7 +1305,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 5.0 and Later",
-                icon: "app-icon/cloudy-with-a-chance-of-meatballs-2.png",
+                icon: "cdn/app-icon/cloudy-with-a-chance-of-meatballs-2.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1324,7 +1324,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 15.0 and Later",
-                icon: "app-icon/offerup.png",
+                icon: "cdn/app-icon/offerup.png",
                 featured: false,
                 categories: ["Shopping", "Lifestyle"]
             },
@@ -1341,7 +1341,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 5.1 and Later",
-                icon: "app-icon/talking-santa-2-free-for-ipad.png",
+                icon: "cdn/app-icon/talking-santa-2-free-for-ipad.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1363,7 +1363,7 @@
                     unarchived: ["1.0.0"]
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "app-icon/angry-birds-star-wars-hd-free.png",
+                icon: "cdn/app-icon/angry-birds-star-wars-hd-free.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1382,7 +1382,7 @@
                     unarchived: []
                 },
                 compatibility: "Unknown",
-                icon: "app-icon/jelly-car-3.png",
+                icon: "cdn/app-icon/jelly-car-3.png",
                 featured: false,
                 categories: ["Entertainment", "Casual", "Puzzle", "Games"]
             },
@@ -1399,7 +1399,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 3.2 and Later",
-                icon: "app-icon/jelly-car-2-on-ipad.png",
+                icon: "cdn/app-icon/jelly-car-2-on-ipad.png",
                 featured: false,
                 categories: ["Entertainment", "Casual", "Puzzle", "Games"]
             },
@@ -1419,7 +1419,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 5.0 and Later",
-                icon: "app-icon/monsters-university-catch-archie.png",
+                icon: "cdn/app-icon/monsters-university-catch-archie.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1437,7 +1437,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 4.3 and Later",
-                icon: "app-icon/spongebob-diner-dash-lite.png",
+                icon: "cdn/app-icon/spongebob-diner-dash-lite.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1454,7 +1454,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 7.0 and Later",
-                icon: "app-icon/koco-5-news-hd.png",
+                icon: "cdn/app-icon/koco-5-news-hd.png",
                 featured: false,
                 categories: ["News"]
             },
@@ -1471,7 +1471,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 8.0 and Later",
-                icon: "app-icon/12-days-of-disney.png",
+                icon: "cdn/app-icon/12-days-of-disney.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1490,7 +1490,7 @@
                     unarchived: []
                 },
                 compatibility: "iOS 7.0 and Later",
-                icon: "app-icon/teenage-mutant-ninja-turtles-rooftop-run.png",
+                icon: "cdn/app-icon/teenage-mutant-ninja-turtles-rooftop-run.png",
                 featured: false,
                 categories: ["Games"]
             },
@@ -1508,7 +1508,7 @@
                     unarchived: ["4.4.1"]
                 },
                 compatibility: "iOS 8.0 and Later",
-                icon: "app-icon/the-weather-channel-app-for-ipad.png",
+                icon: "cdn/app-icon/the-weather-channel-app-for-ipad.png",
                 featured: false,
                 categories: ["Lifestyle"]
             }
