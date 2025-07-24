@@ -1440,6 +1440,77 @@
                 icon: "app-icon/spongebob-diner-dash-lite.png",
                 featured: false,
                 categories: ["Games"]
+            },
+            {
+                id: "koco-5-news-hd",
+                title: "KOCO 5 News HD - Breaking news and weather for Oklahoma",
+                developer: "Hearst Television",
+                featuredDescription: "This local newscast app provides you with real-time access to breaking news, weather, sports, politics and more straight from your local KOCO 5 News team.",
+                description: "This local newscast app provides you with real-time access to breaking news, weather, sports, politics and more straight from your local KOCO 5 News team. Watch local Oklahoma City news when it happens, where it happens with live updates from our reporters right from the scene, and our breaking news notifications allow you to be the first to know. Plus, you can submit news tips or email your news photos and videos right to our newsroom, and it could be featured on air.\n\nStay up to date with local Oklahoma City weather using our interactive radar map. Watch the radar futurecast to see tornadoes, snow, storm warnings, thunderstorms and more. You can zoom in to street level and watch storms as they approach your home and zoom out to view the whole US. Check out our current local weather conditions, hourly forecast and map room from our First Alert Weather meteorologists.\n\nWhether you're in downtown Oklahoma City, or in the surrounding area, you'll be connected to what's happening locally with this KOCO 5 News app.",
+                versions: {
+                    archived: [
+                        { version: "4.9.4", url: "https://archive.org/download/com.hearst.kocoipad-v-4.9.4-i-os-7.0-clutch-2.0.4/com.hearst.kocoipad%20%28V4.9.4%29%20-iOS7.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "app-icon/koco-5-news-hd.png",
+                featured: false,
+                categories: ["News"]
+            },
+            {
+                id: "12-days-of-disney",
+                title: "12 Days Of Disney",
+                developer: "appChocolate",
+                featuredDescription: "Experience the magic of Disney this holiday season with a free app and free in app purchases every day for 12 days!",
+                description: "Experience the magic of Disney this holiday season with a free app and free in app purchases every day for 12 days!\n\nFrom the 14th December until 25th December, we’ll recommend one of our favourite Disney apps every 24 hours as well as offering you a special deal in each game - helping to bring a bit of magic to your touchscreen at the most wonderful time of the year.\n\nFeatures include:\n\n> 12 FREE DISNEY APPS - A free Disney app every day (including exclusive, yet to be released titles!)\n\n> 12 SPECIAL DEALS - Free in game currency with every app featured in the 12 Days of Disney!\n\n> DAILY MINI GAMES - A fun, festive mini game to play every day!\n\n> A DELIGHTFUL DISNEY THEME - A magical Disney package with a memorable theme tune and charming graphics featuring all of your favourite characters!\n\nSo download 12 Days of Disney now and join in with our special celebration of all things Disney!\n\n----------------------------------------------------------------------------------------------------------------\n\nThe 12 Days of Disney is brought to you by MagicSolver on behalf of Disney.\n\nIf you have any problems with the app or want to leave any feedback, please send a message to feedback@magicsolver.com and we’ll get back to you!\n\n*********\n\nFind us on Facebook: http://on.fb.me/MagicSolverFacebookFans\nFollow us on Twitter: @MagicSolver",
+                versions: {
+                    archived: [
+                        { version: "1.2", url: "https://archive.org/download/com.magicsolver.twelvedaysofdisney-2013-v-1.2-i-os-9.0-clutch-2.0.4/com.magicsolver.twelvedaysofdisney2013%20%28V1.2%29%20-iOS9.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "app-icon/12-days-of-disney.png",
+                featured: false,
+                categories: ["Games"]
+            },
+            {
+                id: "teenage-mutant-ninja-turtles-rooftop-run",
+                title: "Teenage Mutant Ninja Turtles: Rooftop Run",
+                developer: "Nickelodeon",
+                featuredDescription: "#1 App in 80 countries! Play as Leo, Donnie, Raph, Mikey, or unlock April and Casey Jones in this action-packed combat runner with vehicle mode!",
+                description: "#1 App in 80 countries! You can play as Leo, Donnie, Raph, Mikey, or unlockable characters April and Casey Jones in this action packed combat runner with vehicle mode! Run, jump, fight and drive through New York’s endless cityscape as you rid it from the Foot Clan, Kraang, Dimension X and Baxter Stockman.\n\nCollect energy orbs to unlock exclusive weapons, gear, and boosts that will keep you one step ahead of the Kraang ship. One-touch controls combine with ninja moves and shell shocking battles for an epic gaming experience. BOOYAKASHA!\n\nFEATURES\n* NEW! Stomp the Foot with the all new hockey mask wearing, butt-kicking vigilante, Casey Jones\n* NEW! Shake off enemies while driving Casey’s motorcycle, the Chopper\n* Drive the Shellraiser through the streets of New York during vehicle mode\n* Jump ramps, crush obstacles and tap to shoot the garbage cannon at oncoming enemies\n* Battle hordes of baddies including the Foot Clan, Kraang, Dimension X and Baxter Stockman\n* Activate Turtle Time to fight up close in a slow-motion combat sequence\n* Outfit the Turtles in exclusive Cyber and Stealth gear\n* Upgrade with weapons, gadgets, and boosts like the Laserbot and Turtle Saver\n* Unlock and play as the Turtles’ formidable canine foe Dogpound\n* Earn rewards from the pizza time mini-game\n* Test your skills with new in-game challenges\n\nTEENAGE MUTANT NINJA TURTLES: Rooftop Run collects personal user data as well as non-personal user data (including aggregated data). User data collection is in accordance with applicable law, such as COPPA. User data may be used, for example, to respond to user requests; enable users to take advantage of certain features and services; personalize content and advertising; and manage and improve Nickelodeon's services. For more information regarding Nickelodeon’s use of personal user data, please visit the Nickelodeon Group Privacy Policy below. Use of this app is subject to the Nickelodeon End User License Agreement.\n\nTEENAGE MUTANT NINJA TURTLES: Rooftop Run offers in-app purchases and charges real money for additional in-app content. You may lock out the ability to purchase in-app content by adjusting your device’s settings.\n\nYou may have set up your Apple ID password to keep you logged on for 15 minutes after an initial in-app purchase. If so, additional purchases won’t require a re-entry of the password during this 15 minute interval. This is a function of how you set up your account and not within our control.\n\nFor users residing in the EU, this app may include the use of persistent identifiers for game management purposes and installation of this app constitutes your permission to such usage of persistent identifiers for all users on your device.\n\nEnd User License Agreement: http://www.nick.com/nick-eula/\nPrivacy Policy: http://www.nick.com/privacy-policy/\nThe End User License Agreement for this app includes arbitration for disputes – see FAQs: http://www.nick.com/faqs/\n\n© 2017 Viacom International Inc. All Rights Reserved.",
+                versions: {
+                    archived: [
+                        { version: "1.9", url: "https://archive.org/download/com.mtvn.tmnt-rooftop-runner-v-3.0.4-i-os-9.0-clutch-2.0.4/com.mtvn.tmntRooftopRunner-%20%28V1.9%29%20iOS4.3-%28Clutch-2.0.4%29.ipa" },
+                        { version: "2.0.26", url: "https://archive.org/download/com.mtvn.tmnt-rooftop-runner-v-3.0.4-i-os-9.0-clutch-2.0.4/Teenage%20Mutant%20Ninja%20Turtles%20Rooftop%20Run%202.0.26.ipa" },
+                        { version: "3.0.4", url: "https://archive.org/download/com.mtvn.tmnt-rooftop-runner-v-3.0.4-i-os-9.0-clutch-2.0.4/com.mtvn.tmntRooftopRunner%20%28V3.0.4%29%20-iOS9.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "app-icon/teenage-mutant-ninja-turtles-rooftop-run.png",
+                featured: false,
+                categories: ["Games"]
+            },
+            {
+                id: "the-weather-channel-app-for-ipad",
+                title: "The Weather Channel App for iPad - best local forecast, radar map, and storm tracking",
+                developer: "The Weather Channel Interactive",
+                featuredDescription: "Make confident decisions based on the most accurate, precise forecast available.",
+                description: "Make confident decisions based on the most accurate, precise forecast available. Favorite app features:\n\nKNOW THE WEATHER ANYWHERE, RIGHT NOW\n• Forecasts: Hourly and 10-day forecasts.\n• Detailed Current Conditions: Get “feels like” weather, humidity, wind speed, and more. (Access them by tapping the circle on your main screen).\n• Weather Maps: Fast-loading radar maps show past and future radar.\n• Push alerts & badges: Know about severe weather in your area. To set your alerts, tap the magnifying glass to open your favorite locations. Then, tap the information icon next to your location of choice. From there, you can activate your severe and pollen alerts.\n\nDEEP DIVE INTO YOUR WEATHER\n• Weather News: From severe storms to straight-up bizarre weather occurrences, we’ll keep you up to date.\n• Severe weather mode: During a severe event, we’ll activate a severe ticker at the top of your App.\n• Seasonal Tools: Use our pollen counts to help plan your outdoor activities.\n• Travel destination weather (airplane icon): Get everything you need to plan your next trip, such as average temperatures and precipitation, forecasts, the best time to visit, maps, and details to understand how the weather feels compared to your hometown.\n• Stunning Imagery: Amazing background photos match your current weather conditions.\n\nTHE WEATHER CHANNEL ON THE WEB AND SOCIAL MEDIA\nAll the weather, wherever you go: find us at weather.com, like us on facebook.com/theweatherchannel, and follow us on Twitter @weatherchannel.\n\nFEEDBACK\nWe love when you provide us with feedback. If you love our weather app, please rate and review us in the App Store. If you have questions or suggestions, please submit them to feedback@weather.com.\n\nPRIVACY\nYou may be interested in our Privacy Policy, which can be found here: https://weather.com/en-US/twc/privacy-policy and our Terms of Use, which can be found here: http://www.weather.com/common/home/legal.html",
+                versions: {
+                    archived: [
+                        { version: "3.0.1", url: "https://archive.org/download/com.weather.-twci-pad-max-v-4.5.1-i-os-8.0-clutch-2.0.4/TWC-%28com.weather.TWCiPadMax%20%28V3.0.1%29%20173434-%28iOS_4.2%29-f725d7de6642d7db71bd34c4af5586ea.ipa" },
+                        { version: "4.5.1", url: "https://archive.org/download/com.weather.-twci-pad-max-v-4.5.1-i-os-8.0-clutch-2.0.4/com.weather.TWCiPadMax%28V4.5.1%29%20-iOS8.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: ["4.4.1"]
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "app-icon/the-weather-channel-app-for-ipad.png",
+                featured: false,
+                categories: ["Lifestyle"]
             }
         ];
 
