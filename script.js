@@ -1604,6 +1604,103 @@
                 icon: "cdn/app-icon/exploration-lite.png",
                 featured: false,
                 categories: ["Adventure"]
+            },
+            {
+                id: "lightbike-free",
+                title: "LightBike Free",
+                developer: "Pankaku Inc",
+                featuredDescription: "LightBike is a 3D game application for iPhone. You drive the LightBike, which builds walls of light on your track, and beat enemies in cyberspace. Being easy and simple, LightBike excites you all!",
+                description: "LightBike is a 3D game application for iPhone. You drive the LightBike, which builds walls of light on your track, and beat enemies in cyberspace. Being easy and simple, LightBike excites you all!\n\nThe demonstration movie is available on our website.\nhttp://iphone.pankaku.com/\n\nHow to play\n- Tap left side of the screen to turn left\n- Tap right side of the screen to turn right\n- Tap the center of the screen to speed up\n\nFeature of LightBike Free\n- 1 player mode (Easy mode only)\n- Multi-player mode over the Internet. (Note: you can play 3 times a day)\n(Note: our handles and points will automatically pass to the FullVersion in your upgrade)\n\nFeature of LightBike Full\n- Varied difficulties\n- 2 players mode w/ split screen\n- Multi players (2-4) mode w/ Wifi over the Internet\n- Battle point system\n- Ranking",
+                versions: {
+                    archived: [
+                        { version: "1.3.2", url: "https://archive.org/download/light-bike-free-v-1.3.2-i-os-4.3/LightBike%20Free%20%28V1.3.2%29%20%28iOS4.3%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "cdn/app-icon/lightbike-free.png",
+                featured: false,
+                categories: ["Entertainment", "Action", "Racing", "Games"]
+            },
+            {
+                id: "mouse-maze-free-game",
+                title: "Mouse Maze Free Game",
+                developer: "Top Free Games",
+                featuredDescription: "Get it while it's FREE",
+                description: "Get it while it's FREE\n\nMouse Maze is the new puzzle game by the creators of the #1 top downloaded game Racing Penguin\n\nHelp the cute mouse eat all the cheese in the maze before those evil cats get him!\n\n+ Tons of levels with EXCITING MAZES and PUZZLES\n+ EASY CONTROLS: touch the screen and the mouse will follow your finger\n+ Collect all those CUTE CHARACTERS\n+ Drink the magic potion to knock-out the evil cats\n+ PLAY WITH FRIENDS and compare your scores in the leaderboard\n\n~*~ Checkout what our users are saying about this free puzzle game ~*~\n\n\"Mouse Maze is a highly addictive puzzle game. Recommended!\"\n\n\"I love puzzle games and Mouse Maze is the best of all!\"\n\n\"Been playing Mouse Maze for months now. Addicting puzzles and cute pets. Get it now!\"\n\nPrivacy Policy: https://www.topfreegames.com/games/mousemaze/legal/privacy",
+                versions: {
+                    archived: [
+                        { version: "3.4", url: "https://archive.org/download/mouse-maze-free-game-v-3.6.1-i-os-5.0/Mouse%20Maze%20Free%20Game%20%28V3.4%29%20%28iOS4.0%29.ipa" },
+                        { version: "3.6.1", url: "https://archive.org/download/mouse-maze-free-game-v-3.6.1-i-os-5.0/Mouse%20Maze%20Free%20Game%20%28V3.6.1%29%20%28iOS5.0%29.ipa" }
+                    ],
+                    unarchived: [
+                        "1.0",
+                        "2.0",
+                        "2.1",
+                        "3.0",
+                        "3.1",
+                        "3.2",
+                        "3.3",
+                        "3.5",
+                        "3.6",
+                        "3.7",
+                        "3.8",
+                        "3.9",
+                        "4.0",
+                        "4.1",
+                        "4.2",
+                        "4.3",
+                        "4.3.4",
+                        "4.3.5",
+                        "4.6.3",
+                        "4.6.4",
+                        "4.6.5",
+                        "4.6.6",
+                        "4.6.7",
+                        "4.6.8",
+                        "4.6.9",
+                        "5.1.0",
+                        "5.1.1"
+                    ]
+                },
+                compatibility: "iOS 9.0 and Later",
+                icon: "cdn/app-icon/mouse-maze-free-game.png",
+                featured: false,
+                categories: ["Entertainment", "Action", "Puzzle", "Games"]
+            },
+            {
+                id: "travelocity-for-ipad",
+                title: "Travelocity for iPad - Book Hotels, Flights & Cars",
+                developer: "Travelocity",
+                featuredDescription: "Go and smell the roses, with the Travelocity for iPad app!",
+                description: "Go and smell the roses, with the Travelocity for iPad app! Book flights, hotels, and rental cars on the go, plus get daily mobile-exclusive deals that you won't find anywhere else.\n\nMake travel plans while you're traveling.\n· The Travelocity iPad app is the only iPad app you can search and book round-trip and one-way flights, hotels, and car rentals\n· Access your Travelocity account to automatically complete your information during checkout\n· Search hotels and airports nearby\n· Sort and filter search results\n\nTake advantage of mobile-exclusive deals.\n· Travelocity iPad app users get exclusive access to hotel deals you can't find anywhere else\n· App-exclusive deals change everyday, so take advantage before they disappear\n\nBrowsing is easier than ever.\n· View hotel reviews, descriptions, information, and ratings\n· Swipe to browse hotel photos\n· View maps\n· Flight prices include taxes and fees\n· Simple, easy-to-use checkout\n· Remember credit card information (requires login to Travelocity MyAccount)\n\nAll of your travel information, at your fingertips.\n· Access past and future trip itineraries with MyTrips, including details like flight numbers, departure times, hotel addresses, and more",
+                versions: {
+                    archived: [
+                        { version: "1.3.5", url: "https://archive.org/download/com.travelocity.ipad-v-1.3.5-i-os-5.0-clutch-2.0.4/com.travelocity.ipad%20%28V1.3.5%29%20-iOS5.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.0 and Later",
+                icon: "cdn/app-icon/travelocity-for-ipad.png",
+                featured: false,
+                categories: ["iOS", "Travel"]
+            },
+            {
+                id: "cardstar",
+                title: "CardStar",
+                developer: "Express Checkout LLC",
+                featuredDescription: "Go Cardless with CardStar™ from Constant Contact. Fast, secure and easy!",
+                description: "CardStar eliminates wallet and keychain clutter by conveniently storing your loyalty, rewards, and membership cards in one easy to use app.\n\nFAST & EASY SETUP\nInstantly load your loyalty, rewards and membership cards using the camera on your device.\n\nCONVENIENT CARD ACCESS\nAccess your cards in a flash with our geo-targeted card locator and have the cashier scan your cards directly from your phone. Plus, sharing cards is simple so it’s easy for you to share joint memberships.\n\nSAVE ON SPENDING\nReceive thousands of free offers and coupons from your favorite grocery stores, drugstores and more, right on your mobile device.\n\nSHOPPING LISTS\nStay organized and easily manage your shopping list so you’ll never forget the milk again.\n\nSAFE & SECURE\nYou never have to worry about lost cards or unauthorized use with advanced features like cloud backup and passcode lock.",
+                versions: {
+                    archived: [
+                        { version: "5.0.4", url: "https://archive.org/download/com.mesadynamics.cardstar-ios2.0-clutch-2.0.4/com.mesadynamics.CardStar-iOS2.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iPhoneOS 2.0 and Later",
+                icon: "cdn/app-icon/cardstar.png",
+                featured: false,
+                categories: ["iOS"]
             }
         ];
 
