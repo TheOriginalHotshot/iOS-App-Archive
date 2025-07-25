@@ -1511,6 +1511,99 @@
                 icon: "cdn/app-icon/the-weather-channel-app-for-ipad.png",
                 featured: false,
                 categories: ["Lifestyle"]
+            },
+            {
+                id: "rising-star-abc",
+                title: "Rising Star ABC",
+                developer: "Screenz Cross Media LTD",
+                featuredDescription: "Will you raise the wall? Join the new era of singing competitions!",
+                description: "Will you raise the wall? Join the new era of singing competitions! For the first time ever - see yourself and your vote count in real time on your TV. Only a wall of Rising Star app user faces separates each artist from their dream, and your vote can raise it. This app serves as your judging tool, and puts the power directly in your hands. Every Sunday night on ABC, you can decide the fate of each singer before their performance is over. You hold their dreams in your hands as you decide who will be the next Rising Star. Download the application to become a Home Judge, and raise the Rising Star wall, Sundays 9|8c on ABC.",
+                versions: {
+                    archived: [
+                        { version: "2.3", url: "https://archive.org/download/com.screenz.rising-star-us-v-2.3-i-os-6.0-clutch-2.0.4/com.screenz.rising-star-us%20%28V2.3%29%20-iOS6.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 6.0 and Later",
+                icon: "cdn/app-icon/rising-star-abc.png",
+                featured: false,
+                categories: ["Entertainment"]
+            },
+            {
+                id: "kohls-for-ipad",
+                title: "Kohls for iPad",
+                developer: "Kohl’s",
+                featuredDescription: "Tap into the new Kohl’s App",
+                description: "Tap into the new Kohl’s App\nCheck out our exciting enhancements! Find product availability at your local Kohl’s store, enjoy faster checkout, create shopping lists and more!\n\nProduct Availability at your local Kohl’s\nSelect a product (in your size & favorite color!) and check its availability at your local Kohl’s.\n\nGift Shop & Lists\nChoose gifts at the top of their lists. And create your own list, too.\n\nEnhanced Brand Experiences\nIt’s easier than ever to shop your favorite brands!\n\nContinued use of GPS running in the background can dramatically decrease battery life.",
+                versions: {
+                    archived: [
+                        { version: "11.5", url: "https://archive.org/download/com.kohls.mcommerce.ipad-v-11.5-i-os-9.0-clutch-2.0.4/com.kohls.mcommerce.ipad%20%28V11.5%29%20-iOS9.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 9.0 and Later",
+                icon: "cdn/app-icon/kohls-for-ipad.png",
+                featured: false,
+                categories: ["Lifestyle"]
+            },
+            {
+                id: "flixster-video",
+                title: "Flixster Video",
+                developer: "Warner Bros",
+                featuredDescription: "Flixster Video is a standalone app that is optimized for managing, downloading and streaming your movies and TV shows.",
+                description: "Flixster Video is a standalone app that is optimized for managing, downloading and streaming your movies and TV shows. It gives you access to your UltraViolet™ collection at home or on the go.\n\n* Stream and download movies or TV shows in your UltraViolet collection. HD playback supported for select titles.\n* Watch your UltraViolet collection on Chromecast. HD playback supported for select titles.\n* More new and improved features coming soon.",
+                versions: {
+                    archived: [
+                        { version: "2.6.11", url: "https://archive.org/download/com.flixster.video-v-2.6.11-i-os-8.0-clutch-2.0.4/com.flixster.video%20%28V2.6.11%29%20-iOS8.0-%28Clutch-2.0.4%29.ipa" }
+                    ],
+                    unarchived: [
+                        "2.5.0",
+                        "2.5.2",
+                        "2.5.3",
+                        "2.5.4",
+                        "2.5.5",
+                        "2.6.0",
+                        "2.6.1",
+                        "2.6.2",
+                        "2.6.4",
+                        "2.6.5",
+                        "2.6.6",
+                        "2.6.7",
+                        "2.6.8",
+                        "2.6.9",
+                        "2.6.10"
+                    ]
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "cdn/app-icon/flixster-video.png",
+                featured: false,
+                categories: ["Entertainment"]
+            },
+            {
+                id: "exploration-lite",
+                title: "Exploration Lite",
+                developer: "Andrzej Chomiak",
+                featuredDescription: "Build your own base, mine, castle or whatever you imagine!",
+                description: "Kiloblocks is a game - editor which allows you moving, building and transforming the terrain in the 3D environment.\n\n*** NOTE ***\n\n1. Kiloblocks Lite is a free version of Kiloblocks game.\n\n2. The full version of the game allows save and load game state.",
+                versions: {
+                    archived: [
+                        { version: "1.3.3", url: "https://archive.org/download/com.explorationbase.-exploration-lite-v-2.0.0-i-os-8.0-clutch-2.0.4/Exploration%20Lite%20%28V1.3.3%29%20%28iOS4.3%29.ipa" },
+                        { version: "2.0.0", url: "https://archive.org/download/com.explorationbase.-exploration-lite-v-2.0.0-i-os-8.0-clutch-2.0.4/Exploration%20Lite%20%28Kiloblocks%20Lite%29%20%28V2.0.0%29%20%28iOS8.0%29.ipa" }
+                    ],
+                    unarchived: [
+                        "1.1.0",
+                        "1.1.1",
+                        "1.1.2",
+                        "1.2.0",
+                        "1.3.0",
+                        "1.3.1",
+                        "1.3.2"
+                    ]
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "cdn/app-icon/exploration-lite.png",
+                featured: false,
+                categories: ["Adventure"]
             }
         ];
 
