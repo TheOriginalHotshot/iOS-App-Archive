@@ -1786,6 +1786,111 @@
                 icon: "cdn/app-icon/ibanjo-music-guitar.png",
                 featured: false,
                 categories: ["Entertainment", "Music"]
+            },
+            {
+                id: "funkbox-drum-machine",
+                title: "FunkBox Drum Machine",
+                developer: "Synthetic Bits LLC",
+                featuredDescription: "Funkbox contains all your favorite vintage drum machine sounds in one funky quirky little app!",
+                description: "FunkBox is a full featured drum machine that you can use to compose, record and play your songs live. It has been used in the studio by electronic artists such as Gorillaz (on their album “The Fall”), Tom Middleton (Global Communications, Jedi Knights), and Steve Cobby (Fila Brazillia), as well as by alternative/indie musicians such as tUnE-yArDs, Mark Lanegan (Screaming Trees, QOTSA), Anton Newcombe (Brian Jonestown Massacre), and Reggie Pace (Bon Iver, No BS Brass). It's also been used on stage by rock/pop musicians such as Joan Osborne and Glenn Tilbrook (Squeeze) live in concert. Its quirky vintage sounds, ease of use and advanced features have made it popular with musicians worldwide.\n\nFunkBox was featured in Computer Music Magazine's \"Amazing Music Apps\" and Electronic Musician magazine's \"Attack of the Killer Apps\" best music tools for the iPad.\n\nFunkBox 4.0 features:\n- The look, feel, sound and quirks of a classic vintage drum machine.\n- iOS 10 compatible, Retina graphics for iPhone and iPad.\n- Universal app: buy once, use on all your iOS devices.\n- Fourteen classic boxes to choose from, including favorites like the 808, 909, CR-78, LM-2, MRK-2, DX, TOM, and more.\n- Create custom boxes by mix-and-match preset samples or import your own.\n- Includes 36 preset rhythm patterns plus bonus banks; edit and create your own beats.\n- Export drum loops as audio or MIDI via email, audio pasteboard, or iTunes.\n- Share custom boxes and patterns via email or between devices.\n- Supports Audiobus 3 and Inter-App Audio for live audio exchange.\n- Sync via Ableton Link or CoreMIDI with other apps or hardware.\n- Includes a bonus MIDI bass sequencer to complement your beats.\n…and lots more. Need some old school beats? Grab yourself some funk in a box.",
+                versions: {
+                    archived: [
+                        { version: "2.1", url: "https://archive.org/download/funk-box-drum-machine-v-2.1-i-os-4.3/FunkBox%20Drum%20Machine%20%28V2.1%29%20%28iOS4.3%29.ipa" }
+                    ],
+                    unarchived: [
+                        "1.0",
+                        "1.1",
+                        "1.2",
+                        "1.3",
+                        "1.4",
+                        "2.0",
+                        "2.2",
+                        "3.0",
+                        "3.1",
+                        "3.2",
+                        "3.3",
+                        "3.4",
+                        "3.5",
+                        "3.6",
+                        "4.0",
+                        "4.0.1"
+                    ]
+                },
+                compatibility: "iOS 9.3 and Later",
+                icon: "cdn/app-icon/funkbox-drum-machine.png",
+                featured: false,
+                categories: ["Music"]
+            },
+            {
+                id: "vocabularyspellingcity",
+                title: "VocabularySpellingCity",
+                developer: "SpellingCity",
+                featuredDescription: "VocabularySpellingCity App\nImprove Reading Comprehension and Vocabulary",
+                description: "VocabularySpellingCity App\nImprove Reading Comprehension and Vocabulary\n\nThis app is designed for students of our Premium Members. Visit our website to sign up today.\n\nMore About VocabularySpellingCity\nVocabularySpellingCity is a research-proven tool that helps teachers and parents meet the challenge of providing meaningful, intentional, and extended vocabulary practice for students while improving fluency and retention.\n\nParents, schools and districts across the country and the world continue to use VocabularySpellingCity to improve vocabulary retention and reading comprehension.\n\nWith 35+ interactive word games and thousands of pre-made word lists, our app helps build literacy skills in a fun and engaging way!\n\nWith each game, students can see, hear, speak, write, break down, and play with words including high frequency words, developmental spelling words, and vocabulary. This helps students strengthen their literacy skills in an effective and long-lasting way.\n\n*Access to the full features of this app is limited to VocabularySpellingCity Premium Members. To go Premium, visit our website: www.spellingcity.com\n\nKeeping up, catching up, or getting ahead in vocabulary retention and comprehension can be fun and easy! Rather than memorizing flashcards or reading textbooks, our specially designed games offer a wide variety of interactive ways to improve literacy skills.\n\nSTUDENTS catch up, keep up, and stay ahead on your literacy skills at school, at home, or on-the-go.\n\nPARENTS help kids develop effective reading skills, which are key for success in school (and in life)!\n\nTEACHERS help students continue their learning and review material in or out of the classroom.\n\nRESEARCH-BASED METHODS\nThe 35+ interactive games and activities let students learn and retain words more effectively through:\n\nMultiple Encounters\n• The games provide diverse and repeated opportunities to encounter new words, greatly aiding in retention.\n\nMultiple Modalities\n• With voice recordings, interactive sound boxes, animations, syllable activities and contextual sentences, these games create a rich learning experience for students.\n\nSpacing\n• Students can create and save review lists and pair them with different games for continued repeated practice for greater retention.\n\nWord Selection\n• Our ready-made word lists support literature, academic vocabulary, content area vocabulary, and informational texts from the CCSS. Studying with these targeted lists can improve student performance across all aspects of their academic career.\n\nSelf-Testing\n• Our self-testing activities give students this opportunity, while also helping them identify gaps in their knowledge, so that they can prepare for school evaluations and be sure to master the material.\n\nFEATURES\n• 9 free spelling, vocabulary, reading and phonics games\n• Pre-made and customized word lists\n• 35+ games with a Premium Membership\n• Automatic tracking and progress reports with a Premium Membership\n\nUPGRADE\nWhen you go Premium, you gain access to all 35+ vocabulary, spelling, phonics and writing activities, as well as student records and assignments. Visit our website, at www.spellingcity.com, to learn more.\n\nSince our founding in 2008, we have received numerous awards for our website and app, including the 2017 and 2016 SIIA CODiE award in the “Best Game-Based Curriculum Solution” category. We have also ranked among Homeschool.com’s Top 100 Educational Websites every year since 2009.",
+                versions: {
+                    archived: [
+                        { version: "1.9.12", url: "https://archive.org/download/vocabulary-spelling-city-v-2.0.5-i-os-8.0/Vocabulary%20Spelling%20City%20%28V1.9.12%29%20%28iOS6.1%29.ipa" },
+                        { version: "2.0.5", url: "https://archive.org/download/vocabulary-spelling-city-v-2.0.5-i-os-8.0/Vocabulary%20Spelling%20City%20%28V2.0.5%29%20%28iOS8.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "cdn/app-icon/vocabularyspellingcity.jpg",
+                featured: false,
+                categories: ["Education", "Games"]
+            },
+            {
+                id: "iheartradio-for-ipad",
+                title: "iHeartRadio for iPad - Stream Free Music & Live Radio",
+                developer: "iHeartMedia Management Services Inc",
+                featuredDescription: "Hailed by CNET as \"the best streaming radio app.\" Millions of Songs. Thousands of Stations. One Free App.",
+                description: "iHeartRadio is the only music app that features thousands of live radio stations from across the country AND makes creating custom stations as simple as telling us your favorite hits or artists. iHeartRadio does all the work to create a playlist for you from our library of 20 million songs from 450,000 artists.\n\nLive and custom stations covering Pop, Country, Hip-Hop, R&B, Alternative, Rock, Talk, News, Sports, Comedy and more. With iHeartRadio, you have the only app you need to stream live AM/FM radio and listen to commercial-free custom music! And now you can stream at home on your TV with Google Chromecast.\n\n“iHeartRadio works flawlessly…listening to actual radio stations couldn't be much simpler” (About.com)\n\nFollow a show or host you can't get enough of? With our Shows & Personalities, you can listen to on-demand episodes from the best in news, sports, finance, comedy and entertainment.\n\niHeartRadio is easy to use, and best of all, free. Try it today, and see for yourself why we're in the All Time Top 20 for iTunes Free Apps. We aim to stay there, so please let us know how we can improve by sharing your thoughts, wishes and wants at http://help.iheartradio.com!\n\nTo stay completely up to date, be sure to join our community on Twitter and Instagram @iHeartRadio, where you'll always get the latest music news, contests and access to your favorite artists.",
+                versions: {
+                    archived: [
+                        { version: "4.9.2", url: "https://archive.org/download/i-heart-radio-for-i-pad-4.11.2-i-os-7.0/iHeartRadio%20for%20iPad%20%28V4.9.2%29%20%28iOS6.0%29.ipa" },
+                        { version: "4.11.0", url: "https://archive.org/download/i-heart-radio-for-i-pad-4.11.2-i-os-7.0/iHeartRadio%20for%20iPad%20%28V4.11.0%29%20%28iOS7.0%29.ipa" },
+                        { version: "4.11.2", url: "https://archive.org/download/i-heart-radio-for-i-pad-4.11.2-i-os-7.0/iHeartRadio%20for%20iPad%20%28V4.11.2%29%20%28iOS7.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "cdn/app-icon/iheartradio-for-ipad.png",
+                featured: false,
+                categories: ["Entertainment", "Music"]
+            },
+            {
+                id: "the-oklahoman",
+                title: "The Oklahoman",
+                developer: "Oklahoma Publishing Company",
+                featuredDescription: "A single app provides you customized iPad and iPhone versions of The Oklahoman, the largest daily newspaper and the most trusted news source in the state of Oklahoma.",
+                description: "The Oklahoman for iPad combines everything that's great about The Oklahoman with everything that's great about mobile technology. The Oklahoman for iPhone offers the same content, reformatted for optimal presentation on your iPhone.\n\nYou'll get articles from all sections of the daily paper plus loads of extra photos and videos. You can download daily editions and read them offline at your convenience. Limited advertising is included.\n\nIf you are a subscriber to The Oklahoman, you can receive The Oklahoman iPad and iPhone editions FREE each day. If you are not a print subscriber, you can receive the daily editions for $9.99 per month.\n\nFeatures:\n• Read articles from all sections that appear daily in The Oklahoman with limited advertising.\n• Get Breaking News alerts and updates on developing stories.\n• Subscribe to favorite topics or writers and get updates automatically in the app InBox.\n• Watch news video and interviews with Oklahoma's movers, shakers and news-makers.\n• Share articles and photos with friends on your social network or via email.\n• Access editions for the past 7 days.\n• See each page and article in a horizontal or vertical display on the iPad.\n• Follow developing stories from Oklahoma City, Tulsa and across Oklahoma, as well as national and international news.\n• All the Oklahoma business, industry and government news you need to stay competitive.\n• View the most comprehensive weather and severe weather reporting in Oklahoma, including video forecasts, 7-day forecast, hour by hour, and radar maps.\n• Browse photos by the largest team of photographers and photo-journalists in Oklahoma.\n• Read daily and Sunday Comics, available as an easy-to-browse gallery.\n• Receive seamless updates to our technology and display without having to re-download the application.\n\nMore about subscriptions:\n• Subscriptions are 1 month for $9.99, automatically renewed until canceled\n• Payment will be charged to your iTunes Account at confirmation of purchase\n• Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period\n• Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal\n• Subscriptions may be managed and auto-renewal may be turned off by going to your Account Settings after purchase\n• No cancellation of the current subscription is allowed during active subscription period\n• Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription\n• Link to Terms of Use: https://secure.oklahoman.com/terms-of-use",
+                versions: {
+                    archived: [
+                        { version: "5.2", url: "https://archive.org/download/the-oklahoman-v-5.2-i-os-9.0/The%20Oklahoman%20%28V5.2%29%20%28iOS9.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 9.0 and Later",
+                icon: "cdn/app-icon/the-oklahoman.jpg",
+                featured: false,
+                categories: ["Entertainment", "News"]
+            },
+            {
+                id: "news-ok-varsity-stats-football",
+                title: "News OK Varsity Stats - Football",
+                developer: "Oklahoma Publishing Company",
+                featuredDescription: "Varsity Stats: Your guide to the present, past and future of Oklahoma high school football.",
+                description: "Keep tabs on your team and favorite player’s statistics to see how they compare to the competition. Take a trip back in time to revisit previous seasons, games and performances. Follow Varsity Stats to where you’re from -- and where your favorite high school team is going.",
+                versions: {
+                    archived: [
+                        { version: "1.1", url: "https://archive.org/download/news-ok-varsity-stats-football-v-1.1-i-os-7.0/NewsOK%20Varsity%20Stats%20-%20Football%20%28V1.1%29%20%28iOS7.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "cdn/app-icon/news-ok-varsity-stats-football.jpg",
+                featured: false,
+                categories: ["News", "Sports"]
             }
         ];
 
