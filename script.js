@@ -1891,6 +1891,116 @@
                 icon: "cdn/app-icon/news-ok-varsity-stats-football.jpg",
                 featured: false,
                 categories: ["News", "Sports"]
+            },
+            {
+                id: "detective-dogs-free",
+                title: "Detective Dogs Free: The Case Of The Missing Jewel",
+                developer: "Kandarp Patel",
+                featuredDescription: "You love swapping jewels. But what do you do when all the jewels have been stolen???",
+                description: "You love swapping jewels. But what do you do when all the jewels have been stolen???\n\nCall the Detective Dogs and get those stolen jewels back!\n\nHave fun with crime-fighting canines Hardy and MacDougal as they help Princess recover her stolen diamond, ruby, and baranium gems! Search for clues, collect evidence, and catch the crooks playing seven game modes that keep you in middle of the action.\n\nBut, watch out! The dastardly C.L.A.W. knows what you’re up to... and they’ll stop at nothing to keep their ill-gotten goods!\n\nFeatures:\n- A cast of cute, funny dogs on an awesome adventure\n- 7 match-3 variations: Dig, Search, Collect, Investigate, Fight, Chase, and Reveal\n- Beautifully drawn backdrops, characters, and delightful music\n- Dynamic difficulty system delivers a challenge to players of all skill levels\n- Fun for adults and children as young as 5 years old\n- Start the adventure now, for free!\n\nPraise for “Detective Dogs: The Case of the Missing Jewels”:\n\"This isn't just any other match-3 game ... the storyline is deep and interesting ... it's a well balanced game ... [you] can't wait to finish and find out what happens next.\" - iGame Radio\n\n\"5/5 - Detective Dogs will give its players a fun roller coaster ride as they find clues, dig up items, and complete the adventure by imprisoning the sneaky evil mastermind...\" - Applatter.com\n\nReview the app and tell us what you love about Detective Dogs!",
+                versions: {
+                    archived: [
+                        { version: "2.0.5", url: "https://archive.org/download/detective-dogs-free-the-case-of-the-missing-jewel-v-2.0.5-i-os-4.3/Detective%20Dogs%20Free%20-%20The%20Case%20of%20the%20Missing%20Jewel%20%28V2.0.5%29%20%28iOS4.3%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "cdn/app-icon/detective-dogs-free.png",
+                featured: false,
+                categories: ["Entertainment", "Casual", "Puzzle", "Games"]
+            },
+            {
+                id: "ghostbusters",
+                title: "Ghostbusters",
+                developer: "Beeline Interactive Inc",
+                featuredDescription: "“If you ain’t afraid of no ghost, give Ghostbusters a try.” – Gamezebo",
+                description: "“If you ain’t afraid of no ghost, give Ghostbusters a try.” – Gamezebo\n\n“Offers a ton of play value.” – Rick Broida at CNET\n\n“Busting makes us feel good” – Modojo\n\nIt’s Slime Time!\n\nThere’s something strange in the neighborhood, and New York City has called YOU to get the ghosts out of The Big Apple. Build your own team of Ghostbusters from the ground up as you bust troublemaking spooks throughout the city. Form your own franchise in a local firehouse and answer ghostbusting calls, research and upgrade your equipment and conduct experiments to unlock better gear and tactics. Lead your elite squad of Ghostbusters through floor after floor of a haunted tower, where a malevolent evil deity has taken over, threatening to release negative psycho-kinetic energy into the streets of New York. Conquer each floor by battling the floor boss and capturing any resident ghosts. Then take down Stay Puft, The Destructor to earn special rewards, including Power Cores and rare equipment. Spooks ‘n’ spirits best beware…it’s time to bust some ghostly behind!\n\n- Earn money and slime by capturing and collecting ghosts throughout New York City\n- Climb the tower, floor by floor, by breaching slime barriers and battling floor bosses\n- Conduct research to upgrade your equipment so you can bust even bigger, badder, ghosts\n- Hire new Ghostbusters, and run experiments to improve and expand your franchise\n- Experiment on ghosts in your containment unit to discover the secrets to beating them and to unlock new upgrades\n- Explore even more of the city by purchasing permits, completing ghost busting missions, or by spending Power Cores\n- It’s time to send these spooks back where they came from…or to their nearest convenient parallel dimension!\n\n------------------------\n\nPLEASE NOTE: Ghostbusters(TM) is free to play, but charges real money for additional in-app content. You may lock out the ability to purchase in-app content by adjusting your device’s settings.\n------------------------\n\nFollow us on Twitter: www.twitter.com/BeelineGames\nFollow us on Facebook: www.facebook.com/BeelineGames\nFollow us on Youtube: www.youtube.com/BeelineGames",
+                versions: {
+                    archived: [
+                        { version: "1.5.0", url: "https://archive.org/download/ghostbusters-v-1.5-i-os-4.3/Ghostbusters%20%28V1.5%29%20%28iOS4.3%29.ipa" }
+                    ],
+                    unarchived: [
+                        "1.0.0",
+                        "1.1.0",
+                        "1.2.0",
+                        "1.3.0",
+                        "1.4.0",
+                    ]
+                },
+                compatibility: "iOS 4.3 and Later",
+                icon: "cdn/app-icon/ghostbusters.png",
+                featured: false,
+                categories: ["Entertainment", "Action", "Casual", "Games"]
+            },
+            {
+                id: "add-ons-for-minecraft-pe",
+                title: "Add Ons For Minecraft PE (Minecraft Addons)",
+                developer: "Simplecto",
+                featuredDescription: "Experience Minecraft PE in a brand new way with add ons!",
+                description: "Addons revolutionize the way you play Minecraft PE. Ever want fireball guns? HUGE creepers? Become the Enderman? You can do all that and more! No computer is required to install your new add-ons.\n\nNOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG.\nSupplemental content is available within the app that requires a purchase.\nCompatibility notice: The one-click install only works with iPad 3 and newer, iPad Mini 2 and newer, iPhone 5 and newer, and iPod 6 and newer.",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/add-ons-for-minecraft-pe-minecraft-addons-v-1.0-i-os-9.0/Add%20Ons%20for%20Minecraft%20PE%20%28Minecraft%20Addons%29%20%28V1.0%20%28iOS9.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 9.0 and Later",
+                icon: "cdn/app-icon/add-ons-for-minecraft-pe.jpg",
+                featured: false,
+                categories: ["Utilities", "Reference"]
+            },
+            {
+                id: "baldis-education-in-school-3d",
+                title: "Baldi’s Education in School 3D",
+                developer: "MARINA VALEKHOVA",
+                featuredDescription: "Learn the Baldi's basics and enjoy them in education and learning!",
+                description: "Learn the Baldi's basics and enjoy them in education and learning!\n\nYou have to find all the notebook and solve on each of them 3 tasks of different complexity. Can you do it? After all, on the way you are waiting for more and horror characters who live in the school. Perhaps they will be even slightly more frightening than freddy. Learn Baldi's basics in the field of education and learning in our game, in which you have to run around the rooms. How long can you live, a day, two or five nights.\nDo you think that education and learning can be given easily? Then try to solve the problems in notebook, scattered in the offices of the school. You will have a limited amount of time, because Baldi is chasing you, and for the wrong tasks you will know the horror and five nights with freddy seem to you not so scary.\n\nFeatures:\n- Learn Baldi's basics and go through all his tests.\n- You are waiting for several levels of difficulty for education and learning.\n- You have to go through a real horror, but without freddy.\n- Solve problems in the notebook.\n- Find a way out of school.\n- Live longer than five nights.\n\nYou need to collect all the notebook, solve the problems correctly and run away from school. For every wrong answer, an angry Baldi can arrange a horror for you and if he finds you, then there will be no turning back. To survive more than five nights without freddy, you need to know all Baldi's basics.",
+                versions: {
+                    archived: [
+                        { version: "2.0", url: "https://archive.org/download/baldis-education-in-school-3-d-v-2.0-i-os-8.0/Baldi%E2%80%99s%20Education%20in%20School%203D%20%28V2.0%29%20%28iOS8.0%29.ipa" }
+                    ],
+                    unarchived: [
+                        "1.1"
+                    ]
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "cdn/app-icon/baldis-education-in-school-3d.jpeg",
+                featured: false,
+                categories: ["Games", "Puzzle", "Simulation"]
+            },
+            {
+                id: "math-blaster-hyperblast-2-lite",
+                title: "Math Blaster HyperBlast 2 Lite",
+                developer: "Knowledge Adventure",
+                featuredDescription: "From the makers of the award winning Math Blaster series! Over 20 years making math fun!",
+                description: "Hop on your HyperCycle and discover math facts like you’ve never seen them before! Race through levels shooting and dodging fast-flying obstacles to reach the Alien Boss! Use your math skills and smarts to battle and defeat the Alien Boss and unlock new weapons, ammo and more levels!\n\nReviews:\n\n★ \"Most importantly, this \"edutainment\" offering makes math fun by combining fast-action shooting sequences with elementary-level math problems.\" - USA Today\n\n★ \"The fast pace of the tunnels and obstacles adds excitement to the game and breaks up the Math practice.\" - The iPhone Mom\n\n★ \"I was instantly struck by how the math equations are programmed in to be a natural part of the game and not school like at all. If you know you’ll be spending time in the car this summer, Math Blaster HyperBlast is worth picking up.\" - Play That Now\n\nAddictive Features:\n\n★ 5 levels of mind-bending math!\n★ 6 subjects available: Addition is free! Subtraction, Multiplication, Division, Fractions, and Standard Form are in-app purchases.\n★ Space theme and boss battle is free. Other levels like the Lava level and Jungle level are in-app purchases.\n★ Available in English and Spanish!\n★ Amazing 3D graphics!\n★ Fast-paced arcade action!\n★ Kid-friendly controls and instructions!\n★ Brand New Achievements to master!\n★ Find and challenge your friends with the ALL-NEW BFF locator!\n\nIf you like the game please take the time to rate it!\n\nEmail us at AppComments@jumpstart.com with your suggestions and comments as we cannot respond to reviews. We love to hear your ideas and feedback!\n\nLike us on Facebook for exclusive updates, discount offers and news about our virtual world.\nhttp://www.facebook.com/MathBlaster\n\nRegistration information is optional (children under 13 require parent registration). Will be used to notify of game fixes, updates, etc. along with allowing for future integration online.\n- Does include in-app purchases including additional math/learning content\n- Does NOT link to Social networks\n- Does include links/information relative to other Knowledge Adventure games and apps\n- Does use analytics/data collection tools",
+                versions: {
+                    archived: [
+                        { version: "1.60", url: "https://archive.org/download/math-blaster-hyper-blast-2-lite-v-1.60-i-os-8.0/Math%20Blaster%20HyperBlast%202%20Lite%20%28V1.60%29%20%28iOS8.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 8.0 and Later",
+                icon: "cdn/app-icon/math-blaster-hyperblast-2-lite.jpeg",
+                featured: false,
+                categories: ["Education", "Games"]
+            },
+            {
+                id: "video-tube-stream-play-watch",
+                title: "Video Tube™: Stream Play Watch",
+                developer: "Yau You Music Video Professionals - Tube Studio",
+                featuredDescription: "Get all the benefits of YouTube and DailyMotion with Video Tube™.",
+                description: "Get all the benefits of YouTube and DailyMotion with Video Tube™. Browse through popular, featured, and trending videos. Log in to your YouTube account and watch videos from your channels, post comments, and watch your playlists. Everything is possible!\n\nWHY YOU’LL LOVE VIDEO TUBE\n• Search easy and fast through all YouTube & DailyMotion videos\n• Dark Mode\n• Unique video widget\n• Login to your YouTube account\n• Browse YouTube channels\n• Subscribe to YouTube channels\n• Browse and manage YouTube Playlists\n• Post comments to videos\n• Watch your history and favorites videos\n• Manage and view videos in the 'watch later' list\n• Watch your uploaded / purchased videos\n\nDARK MODE\nSwitch to Dark mode and enjoy the benefits!\nThe Dark mode allows you to tone down the colors of your screen and let you experience Video Tube™ in a dark environment. The dark mode protects your eyes from bright colors, saves battery power and helps you better focusing.\n\nGET VIDEO TUBE™ PREMIUM\nUpgrade to a Premium Membership and receive the following ongoing value:\n• Ad-Free • Subscribe to YouTube Channels • Premium Customer Support\n\nThe subscription is charged to your iTunes account at confirmation of purchase. Subscription is for a period of one month, six month, or a year and automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period. Your account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal. Subscriptions may be managed by you and auto-renewal may be turned off by going to your Account Settings after purchase. The cancellation will take effect the day after the last day of the current subscription period, and you will be downgraded to the free service.\n\nTerms & Conditions: https://impalastudios.com/terms\nPrivacy Policy: https://impalastudios.com/privacy\n\n-- WE LOVE FEEDBACK --\nAs always, we appreciate your feedback.\nPlease keep sharing your experience with feedback@impalastudios.com.\n\nVideo Tube™ is powered by YouTube and DailyMotion. YouTube trademark and logo are registered trademarks of Google, Inc. All Rights Reserved.\n\n-- ALL WHILE WATCHING --",
+                versions: {
+                    archived: [
+                        { version: "4.7.6", url: "https://archive.org/download/video-tube-stream-play-watch-v-4.7.6-i-os-10.0/Video%20Tube%20-%20Stream%20Play%20Watch%20%28V4.7.6%29%20%28iOS10.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 9.0 and Later",
+                icon: "cdn/app-icon/video-tube-stream-play-watch.jpg",
+                featured: false,
+                categories: ["Entertainment", "Music"]
             }
         ];
 
