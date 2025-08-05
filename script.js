@@ -542,7 +542,7 @@
                     archived: [
                         { version: "1.0", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V1.0%29%20%28iOS_2.0%29.ipa" },
                         { version: "2.1", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-v2.1-iDexRiky-iOS2.2-%28Clutch-1.4.6%29.ipa" },
-                        { version: "2.2", url: "https://theoriginalhotshot.github.io/iOS-App-Archive/linknotfound.txt" },
+                        { version: "2.2", url: "https://theoriginalhotshot.github.io/iOS-App-Archive/cdn/linknotfound.txt" },
                         { version: "3.02", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V3.0.2%29%28iOS_3.0%29.ipa" },
                         { version: "3.0.3", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V3.0.3%29%28iOS_3.0%29.ipa" },
                         { version: "3.11", url: "https://archive.org/download/com.facebook.facebook-v17.0-ios7.0-clutch-2.0.4/Facebook-%28com.facebook.Facebook%29%28V3.11%29%28iOS_3.0%29.ipa" },
