@@ -1701,6 +1701,91 @@
                 icon: "cdn/app-icon/cardstar.png",
                 featured: false,
                 categories: ["iOS"]
+            },
+            {
+                id: "can-you-escape-deluxe",
+                title: "Can You Escape - Deluxe",
+                developer: "Kaarel Kirsipuu",
+                featuredDescription: "Can You Escape - Deluxe a long-awaited sequel for legendary Can You Escape game has been released!",
+                description: "Can You Escape - Deluxe a long-awaited sequel for legendary Can You Escape game has been released!\n\nAre you ready to take your room escape experience to a whole new level?\n\nThis brand new escape game is all about cracking codes, discovering secret hints and items, finding answers to riddles and puzzles and most important - escaping from all the rooms.\n\nIf you are looking for a real adventure and you are ready to put yourself to a test then download this free and popular puzzle game now!\n\nFeatures:\nAddicting gameplay!\nClever puzzles!\nStunning graphics\nUpdates of new rooms!\nDeluxe room escape game\nMore than 10 levels 100% FREE!",
+                versions: {
+                    archived: [
+                        { version: "1.2", url: "https://archive.org/download/can-you-escape-deluxe-v-1.2-i-os-7.0/Can%20You%20Escape%20Deluxe%20%28V1.2%29%20%28iOS7.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "cdn/app-icon/can-you-escape-deluxe.png",
+                featured: false,
+                categories: ["Adventure", "Puzzle", "Games"]
+            },
+            {
+                id: "can-you-escape-island",
+                title: "Can You Escape - Island",
+                developer: "Kaarel Kirsipuu",
+                featuredDescription: "If you think that this island is deserted, then you are mistaken.",
+                description: "Can You Escape - Deluxe - Out Now!\n\nIf you think that this island is deserted, then you are mistaken.\nYou were thrown on the island shore after surviving a terrible shipwreck. Now you need to find a way to get out from this island. In this Escape game you’ll have to wade through the wild jungle inhabited by predators, ancient temples full of deadly traps, abandoned pirate fort and many more. Solve puzzles, find secret items and then you'll have a chance to get out from this island alive. Each level is a unique location - so don't think it'll be an easy journey for you",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/can-you-escape-island-v-1.0-i-os-9.0/Can%20You%20Escape%20Island%20%28V1.0%29%20%28iOS9.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 6.0 and Later",
+                icon: "cdn/app-icon/can-you-escape-island.png",
+                featured: false,
+                categories: ["Adventure", "Puzzle", "Games"]
+            },
+            {
+                id: "can-you-escape-100-doors",
+                title: "Can You Escape 100 Doors",
+                developer: "Ken WK Inc",
+                featuredDescription: "Can You Escape 100 Doors is a free puzzle game where you must figure out how to open each door to escape the building!",
+                description: "Can You Escape 100 Doors is a free puzzle game where you must figure out how to open each door to escape the building!\n\n- Figure out door codes.\n- Find hidden objects to help open the door.\n- Use logic and outside the box thinking.\n- Take actions to escape each room\n- 100 levels!\n- Always free and fun!\n\nCan you escape?\n\nSimilar game to top best games like 100 Doors 2013, 100 Doors 3, Escape Action, 100 Floors, 100 Exits, 100 Locked Doors, The Floor Escape Reloaded, Dooors, and 100 Doors Aliens Space.\n\nFree guide can be found here:\nhttp://www.appgameguides.com/can-you-escape-100-doors-walkthrough.html",
+                versions: {
+                    archived: [
+                        { version: "1.2.2", url: "https://archive.org/download/can-you-escape-100-doors-v-1.2.2-i-os-6.1/Can%20You%20Escape%20100%20Doors%20%28V1.2.2%29%20%28iOS6.1%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 6.1 and Later",
+                icon: "cdn/app-icon/can-you-escape-100-doors.png",
+                featured: false,
+                categories: ["Family", "Puzzle", "Games"]
+            },
+            {
+                id: "grovers-number-special",
+                title: "Grover’s Number Special",
+                developer: "Sesame Street",
+                featuredDescription: "This is an object recognition app, which will help teach your child about numbers, math and counting.",
+                description: "This is an object recognition app, which will help teach your child about numbers, math and counting.\n\nHello Everybodeeeeeee! It is I, Grover! Join me in the kitchen to catch and count ingredients to make nutritious meals. All you have to do is tip your device back and forth to move the tray. I will tell you how many things to catch, and we will count them together. It will be so much fun!\n\nLEARN ABOUT\n• Counting\n• Number recognition\n• Visual discrimination\n\nFEATURES\n• Easy to play – just tilt your device to catch the ingredients!\n• Original Sesame Street video\n\nABOUT US\n• Sesame Workshop is the nonprofit educational organization that revolutionized children’s media with the landmark Sesame Street. Learn more at www.sesameworkshop.org.\n\n• IDEO is a human-centered design and innovation firm ranked independently among the ten most innovative companies in the world. Learn how our team of child-development experts, veteran toy designers and interaction designers approach the creation of award-winning kid apps at www.ideotoylab.com.\n\n• PRIVACY POLICY can be found here: http://www.sesameworkshop.org/privacypolicy\n\n• Your input is very important to us. If you have any questions, comments or need help, please contact us at: sesameworkshopapps@sesame.org or ToyLabApps@ideo.com",
+                versions: {
+                    archived: [
+                        { version: "1.0", url: "https://archive.org/download/grovers-number-special-v-1.0-i-os-3.0/Grover%E2%80%99s%20Number%20Special%20%28V1.0%29%20%28iOS3.0%29.ipa" }
+                    ],
+                    unarchived: ["6.0"]
+                },
+                compatibility: "Unknown",
+                icon: "cdn/app-icon/grovers-number-special.png",
+                featured: false,
+                categories: ["Education", "Family", "Games"]
+            },
+            {
+                id: "ibanjo-music-guitar",
+                title: "iBanjo - music guitar",
+                developer: "Neil Harris",
+                featuredDescription: "Absolutely Hilarious",
+                description: "Have a ho-down wherever you go with iBanjo.\n\niBanjo is fully interactive allowing you to play a banjo by hitting chords. Choose between 3 different songs and banjos to get your fill of old fashioned bluegrass music.\n\nLet's make 'em laugh...\n\nProgramming by Neil Harris\nDesign by Tony Baldascino",
+                versions: {
+                    archived: [
+                        { version: "1.2", url: "https://archive.org/download/i-banjo-music-guitar-v-1.2-i-os-2.2/iBanjo%20-%20music%20guitar%20%28V1.2%29%20%28iOS2.2%29.ipa" }
+                    ],
+                    unarchived: ["1.0"]
+                },
+                compatibility: "iOS 2.2 and Later",
+                icon: "cdn/app-icon/ibanjo-music-guitar.png",
+                featured: false,
+                categories: ["Entertainment", "Music"]
             }
         ];
 
