@@ -2437,8 +2437,8 @@
                 }
                 
                 // Create category tags
-                const categoryTags = app.categories.map(cat => 
-                    `<span class="category-tag">${cat}</span>`
+                const categoryTags = app.categories.map(cat =>
+                    `<button class="category-tag category-select-btn" data-category="${cat}">${cat}</button>`
                 ).join('');
                 
                 const modal = document.createElement('div');
@@ -2497,6 +2497,22 @@
                     document.body.style.overflow = 'auto';
                     setUrlParam('app', '');
                 }
+            });
+
+            // Enable category tag navigation from within the modal
+            modal.querySelectorAll('.modal-categories .category-tag').forEach(tag => {
+                tag.addEventListener('click', () => {
+                    const category = tag.textContent;
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    setUrlParam('app', '');
+                    const categoryTab = document.querySelector('.tab[data-tab="categories"]');
+                    if (categoryTab) {
+                        categoryTab.click();
+                    }
+                    setUrlParam('category', category);
+                    renderAppsForCategory(category);
+                });
             });
 
             return modal;
