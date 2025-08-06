@@ -2001,6 +2001,74 @@
                 icon: "cdn/app-icon/video-tube-stream-play-watch.jpg",
                 featured: false,
                 categories: ["Entertainment", "Music"]
+            },
+            {
+                id: "color-book-for-minion-rush",
+                title: "Color Book for Minion Rush",
+                developer: "Karina Denis",
+                featuredDescription: "**********100% FREE ADS*****************",
+                description: "This application has a variety of pictures to color for Minion.\n\nYou can save painted images and use them as wallpapers.\n\nYou can also print them!\n\nChoose from a huge variety of colors to paint with your brush.\n\nFeatures:\n- Two Coloring Books\n- 36 hand drawn pictures to color\n- Works on iPad and iPhone\n- Help children develop hand-eye coordination\n- Save pictures to Photos library for easy sharing or to use as wallpaper!",
+                versions: {
+                    archived: [
+                        { version: "1.5", url: "https://archive.org/download/color-book-for-minion-rush-v-1.5-i-os-5.0/Color%20Book%20for%20Minion%20Rush%20%28V1.5%29%20%28iOS5.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.0 and Later",
+                icon: "cdn/app-icon/color-book-for-minion-rush.jpg",
+                featured: false,
+                categories: ["Entertainment", "Reference"]
+            },
+            {
+                id: "tornadoes-koco-5-oklahoma-city",
+                title: "Tornadoes KOCO 5 Oklahoma City",
+                developer: "Hearst Television",
+                featuredDescription: "This is your real-time feed of tornado activity straight from the KOCO 5 Live, Local, Latebreaking newsroom in Oklahoma City.",
+                description: "This is your real-time feed of tornado activity straight from the KOCO 5 Live, Local, Latebreaking newsroom in Oklahoma City. Carry powerful storm tracking tools like live updates, watches and warnings, maps, videos, and checklists with you on the go. You’ll be prepared and connected to what’s going on around Oklahoma when tornadoes threaten the area.\n\nFeatures-\n• Maps showing real-time watches and warnings, radar, satellite, rainfall\n• Tornado alerts by county\n• Live updates from Live Wire, Facebook, and Twitter\n• Tornado Videos and coverage from KOCO\n• Checklists, Info, and Videos to help you be prepared and stay safe\n• Share your storm photos, videos with us – they may be shown on TV",
+                versions: {
+                    archived: [
+                        { version: "3.0.2", url: "https://archive.org/download/tornadoes-koco-5-oklahoma-city-v-3.0.2-i-os-7.0/Tornadoes%20KOCO%205%20Oklahoma%20City%20%28V3.0.2%29%20%28iOS7.0%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.0 and Later",
+                icon: "cdn/app-icon/tornadoes-koco-5-oklahoma-city.jpg",
+                featured: false,
+                categories: ["Weather", "News"]
+            },
+            {
+                id: "abc-phonics-word-family-free",
+                title: "ABC Phonics Word Family Free",
+                developer: "AbiTalk Incorporated",
+                featuredDescription: "The Phonics Word Family Free provides the word phonics spelling, beginning sound, word family phonics, short vowel sound, and images with a lot of animations and interactions for each word.",
+                description: "The Phonics Word Family Free provides the word phonics spelling, beginning sound, word family phonics, short vowel sound, and images with a lot of animations and interactions for each word. The app includes in-app-purchase. The full version includes 56 word family groups which focus on the short vowel, long vowel, two vowel, and combination vowel word family phonics learning. After children complete the phonics spelling in each group, the matching game follows and children can review what they learned.\n\nWord Family Phonics Basics includes 56 different phonics word family groups:\n\n- Short Vowels:\n  \"_ab\", \"_ad\", \"_ag\", \"_an\", \"_am\", \"_ap\", \"_at\", \"_en\", \"_et\", \"_ig\", \"_it\", \"_ip\", \"_in\", \"_og\", \"_ot\", \"_op\", \"_ow\", \"_ug\", \"_un\", \"_um\", \"_ut\"\n\n- Long Vowels:\n  \"_ake\", \"_ate\", \"_eep\", \"_eel\", \"_ice\", \"_ide\", \"_ike\", \"_ife\", \"_ine\", \"_ive\", \"_ool\", \"_ose\", \"_oke\"\n\n- Two Vowels:\n  \"_ail\", \"_ay\", \"_eat\", \"_eam\", \"_oat\", \"_oy\"\n\n- Three-Letter Vowels:\n  \"_art\", \"_and\", \"_ell\", \"_est\", \"_ear\", \"_ink\", \"_ick\", \"_ing\", \"_ill\", \"_ight\", \"_ore\", \"_orn\", \"_ock\", \"_old\", \"_own\", \"_ump\"\n\nThe game uses the Montessori Method for children to learn phonics and spelling. It will help develop skills in listening, learning, spelling, and pronunciation of words.\n\nThe game helps children recognize common word patterns, and understand how the initial consonant, middle vowels, and ending consonant affect pronunciation. These are all important stepping stones to becoming a proficient reader.\n\nFeatures:\n- Phonics Spelling\n- Beginning Sound\n- Ending Sound\n- Word Family Phonics\n- Short Vowel Sound\n- Word Pronunciation\n- Matching the word with the image\n- Touch and Hear\n- Progress Report\n- Multiple User Account\n\nPhonics Word Family Basic is a Universal App, so it works with both iPhone and iPad.\n\nWe also have a free version, Phonics Word Family Free, for you to try before you buy.\n\nPLEASE CONTACT US\nIf you have questions, problems, suggestions or complaints, please contact us: support@abitalk.com.\n\nAbitalk is a member of Moms with Apps, a collaborative group of family-friendly developers seeking to promote quality apps for kids and families.\nRecommended Ages: 4-7\nCategories: Reading, Phonics",
+                versions: {
+                    archived: [
+                        { version: "3.04", url: "https://archive.org/download/abc-phonics-word-family-free-v-3.04-i-os-5.1.1/ABC%20Phonics%20Word%20Family%20Free%20%28V3.04%29%20%28iOS5.1.1%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 5.1.1 and Later",
+                icon: "cdn/app-icon/abc-phonics-word-family-free.jpg",
+                featured: false,
+                categories: ["Education", "Games"]
+            },
+            {
+                id: "live-butterflies",
+                title: "Live Butterflies",
+                developer: "Sea Lion Games Inc",
+                featuredDescription: "In this magical Augmented Reality experience, surround yourself with friendly butterflies indoors or out!",
+                description: "In this magical Augmented Reality experience, surround yourself with friendly butterflies indoors or out! Turn the screen and see all the butterflies flying around you. Touch the screen and watch them land. Includes a Viewer and a Game.\n\n• THE VIEWER - Use the Viewer to look around you and see butterflies. If you touch the screen near a butterfly, it will fly over and land on your finger. It's like being surrounded by friendly butterflies wherever you are! Take a photo of your augmented reality by touching the camera button and then optionally send it as an email. Live Butterflies includes the Monarch Butterfly, the Blue Morpho Butterfly, the Banded King Shoemaker Butterfly, and the Orange Tip Butterfly. In the Viewer, open the menu and choose which butterflies are in your augmented reality.\n\n• THE GAME - Play the Game and catch as many butterflies as you can before time runs out. Use the screen to look around you and touch the screen to catch them! They might be above you, at your feet or even behind you so be sure to look all around.",
+                versions: {
+                    archived: [
+                        { version: "1.4", url: "https://archive.org/download/live-butterflies-v-1.4-i-os-7.1/Live%20Butterflies%20%28V1.4%29%20%28iOS7.1%29.ipa" }
+                    ],
+                    unarchived: []
+                },
+                compatibility: "iOS 7.1 and Later",
+                icon: "cdn/app-icon/live-butterflies.jpeg",
+                featured: false,
+                categories: ["Entertainment", "Simulation", "Games"]
             }
         ];
 
