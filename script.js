@@ -2069,8 +2069,59 @@
                 icon: "cdn/app-icon/live-butterflies.jpeg",
                 featured: false,
                 categories: ["Entertainment", "Simulation", "Games"]
-            }
-        ];
+                },
+                {
+                    id: "santas-reindeer-hunt-mega-3d-christmas-maze",
+                    title: "Santa’s Reindeer Hunt - Mega 3D Christmas Maze",
+                    developer: "DM Applications LLC (TX)",
+                    featuredDescription: "***** Top 20 in US Kids games for iPad!!! Top 40 in US Puzzle games for iPad!! *****",
+                    description: "Santa's lost his reindeer!\n\nSanta’s elves are being very lazy! They don’t want to work making Christmas presents this year so they’ve made a plan to get out of working --- they’ve taken all of the reindeers’ food! So the reindeer have run off to find food and Santa has no reindeer!\n\nIf Santa has no reindeer, the sleigh won’t fly and Santa won’t be able to deliver presents. No reindeer – no need for presents, no work for the elves!\n\nYou have to help Santa find the buckets of hay for the reindeer and return to the corral area with it.\n\nWatch out for the elves! They try to hinder Santa from finding the reindeer - if the elves \"catch\" Santa, he'll slow down. Sometimes they even throw snowballs at him!\n\nGame Features:\n- Puzzle and strategy combined!\n- Wonderful Christmas game\n- Fantastic 3D graphics!\n- Clock doesn’t run out – beat your own time or that of your friends\n- Find jingle bells to decrease your time\n- Level # indicates the number of buckets that must be found on that level\n- Collect all buckets of hay to unlock the next levels\n- Use the joystick for easy control\n- Jump button allows Santa to jump over the river or on to the walrus’ back to move up and down the river.",
+                    versions: {
+                        archived: [
+                            { version: "2.0", url: "https://archive.org/download/santas-reindeer-hunt-mega-3-d-christmas-maze-v-2.0-i-os-4.3/Santa%E2%80%99s%20Reindeer%20Hunt%20-%20Mega%203D%20Christmas%20Maze%20%28V2.0%29%20%28iOS4.3%29.ipa" }
+                        ],
+                        unarchived: []
+                    },
+                    compatibility: "iOS 4.3 and Later",
+                    icon: "cdn/app-icon/santas-reindeer-hunt-mega-3d-christmas-maze.jpg",
+                    featured: false,
+                    categories: ["Entertainment", "Puzzle", "Games"]
+                    },
+                    {
+                        id: "true-or-false-test-your-wits",
+                        title: "True Or False - Test Your Wits!",
+                        developer: "LOTUM media GmbH",
+                        featuredDescription: "***** FROM THE MAKERS OF THE INTERNATIONAL NO. 1 HIT \"4 PICS 1WORD\"",
+                        description: "Decide whether the statements are true or false. But think fast, it's against the clock! Astounding facts on a whole range of topics. Try out your general knowledge and test your wits! But watch out, tricky false statements are mixed in with true facts.\n\n1000'S OF INTERESTING FACTS – BUT ARE THEY TRUE OR FALSE?\nPut your knowledge to the test! Be it geography, science, film, music, sport or any of the many other topics.\n\nGUESS YOUR WAY THROUGH ALL THE LEVELS!\nCountless levels in single-player mode mean the fun never ends – and you'll definitely learn something new along the way!\n\nEXCITING KNOWLEDGE DUELS IN SPLIT-SCREEN MODE!\nChallenge your friends! Two players can battle against each other on the same device.\n\nNO REGISTRATION NECESSARY, NO COMPLICATED RULES!\nJust go for it and have fun! :-)",
+                        versions: {
+                            archived: [
+                                { version: "2.5.0", url: "https://archive.org/download/true-or-false-test-your-wits-v-2.5.0-i-os-6.0/True%20or%20False%20-%20Test%20Your%20Wits%21%20%28V2.5.0%29%20%28iOS6.0%29.ipa" }
+                            ],
+                            unarchived: []
+                        },
+                        compatibility: "iOS 6.0 and Later",
+                        icon: "cdn/app-icon/true-or-false-test-your-wits.jpg",
+                        featured: false,
+                        categories: ["Education", "Trivia", "Puzzle", "Games"]
+                        },
+                        {
+                            id: "tiki-golf-2-adventure-island",
+                            title: "Tiki Golf 2 Adventure Island",
+                            developer: "Arb Studios LLC",
+                            featuredDescription: "Tiki Golf 2 Adventure Island redefines extreme minigolf!",
+                            description: "\"Tiki Golf 2 Adventure Island mixes putt-putt golfing, physics and platform gaming together in one amazing game.\" -AppAdvice.com\n\nTiki Bobby is back and He has brought friends! 4 Playable Tikis! bunches unlockable secret clubs, golf balls and abilities! Ramps, mega power boosts, giant dartboard targets, huge hammers, loop-de-loops, pipes, pineapples, massive tiki totems and more! Exotic vibrant courses that have the iconic mini golf appeal but feel more like water park rides than typical putt putt courses!\n\n4 courses and 72 holes\n\nWorlds/Courses:\n- Beach Sunrise\n- Volcano Trouble\n- Lost Beach\n- Kahunas Mountain\n\nBall Abilities:\n- Slow Motion\n- Ghost, Mega Control\n- Speed, Anti Gravity\n- Jump, Instant Stopping power\n\nClub Abilities:\n- Accuracy\n- Mega Power\n- Amplify\n- Out of Bounds immunity\n- Opposite day\n- Stat bonuses\n\nCustomize your extra bonuses for:\n- Steering\n- Collecting pineapples\n- Going through rings\n- Hitting targets\n- Based on power, speed, luck",
+                            versions: {
+                                archived: [
+                                    { version: "2.0", url: "https://archive.org/download/tiki-golf-2-adventure-island-v-2.0-i-os-5.1/Tiki%20Golf%202%20Adventure%20Island%20%28V2.0%29%20%28iOS5.1%29.ipa" }
+                                ],
+                                unarchived: []
+                            },
+                            compatibility: "iOS 4.3 and Later",
+                            icon: "cdn/app-icon/tiki-golf-2-adventure-island.jpeg",
+                            featured: false,
+                            categories: ["Action", "Sports", "Family", "Games"]
+                        }
+                     ];
 
         // DOM Elements
         const carouselContainer = document.getElementById('carouselContainer');
