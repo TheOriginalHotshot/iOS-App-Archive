@@ -2120,7 +2120,41 @@
                             icon: "cdn/app-icon/tiki-golf-2-adventure-island.jpeg",
                             featured: false,
                             categories: ["Action", "Sports", "Family", "Games"]
-                        }
+                        },
+                        {
+                            id: "abc-phonics-rhyming-words-lite",
+                            title: "ABC Phonics Rhyming Words Lite - For Preschool, Kindergarten, First Grade",
+                            developer: "AbiTalk Incorporated",
+                            featuredDescription: "A fun game for young children to learn and practice phonics by finding pairs of matching words.",
+                            description: "FunRhyming is a Universal App, so it works with both iPhone and iPad.\n\nThis game provides many hours of enjoyment. Children are challenged to win \"jewels\" for successful completion of each level. After collecting enough jewels, they are rewarded with a bonus mini-game, allowing them to trace or color a picture, create sparkles on the screen, and pop bubbles. Your child will be so involved in achieving each goal, that they won't realize how much they are learning.\n\nBy matching rhyming words, this game helps children recognize common word patterns, and understand how the initial consonant, middle vowel, and ending consonant affect pronunciation. They will learn to distinguish between long and short vowel sounds, and they will learn to pronounce consonant combinations, such as \"ch\" and \"sh\". These are all important stepping stones to becoming a proficient reader.\n\nThis game is like having a private tutor to teach your child one on one.\n\nThis is the free version. We also have a paid version which is the same game with additional content.\n\nAbitalk is a member of Moms with Apps, a collaborative group of family-friendly developers seeking to promote quality apps for kids and families.\nRecommended Ages: 4-7\nCategories: Reading, Phonics, Vocabulary\n\nWhen you download and use this app, we don’t require you to provide any information nor do we collect any information from you or about you, your device, or your use of this app.\nThis app complies with the Children’s Online Privacy Protection Act.",
+                            versions: {
+                                archived: [
+                                    { version: "2.02", url: "https://archive.org/download/abc-phonics-rhyming-words-lite-v-2.02-i-os-5.0/ABC%20Phonics%20Rhyming%20Words%20Lite%20%28V2.02%29%20%28iOS5.0%29.ipa" }
+                                ],
+                                unarchived: []
+                            },
+                            compatibility: "iOS 5.0 and Later",
+                            icon: "cdn/app-icon/abc-phonics-rhyming-words-lite.png",
+                            featured: false,
+                            categories: ["Education", "Family", "Games"]
+                        },
+                        {
+                            id: "goodnight-safari",
+                            title: "Goodnight Safari",
+                            developer: "Polk Street Press LLC",
+                            featuredDescription: "Children are at the center of the story as they help the giraffe eat her dinner, the monkey climb to bed, and the elephant kiss goodnight.",
+                            description: "Children are at the center of the story as they help the giraffe eat her dinner, the monkey climb to bed, and the elephant kiss goodnight. Simple vocabulary and intuitive interactivity will engage young children while building their comfort with nighttime preparations. A perfect bedtime or storytime accompaniment for young children.\n\nFeatures:\n** Children help the animals prepare for bedtime through seven interactive scenes.\n\n** Beautiful original artwork by Luciana Navarro Powell invites curious fingers, bringing the African savanna to life in the hands of your child.\n\n** Read along and read alone settings allow children to build early literacy skills or follow along to discover safari animal favorites - from striped zebras to golden lions.\n\n** \"Pick-a-Page\" menu allows you to skip ahead to your favorite scene, or play the same scene over and over again!\n\nMost appropriate for children ages 2-4.\n\n** Optimized for the retina iPad and iPhone5 **\n** \"Apps for Kids,\" \"New and Noteworthy\" and \"What's Hot\" App! **\n** Now with optional activities to practice colors, counting and more (in-app purchase with parent lock)**\n\n\"A simple, lovely lullaby\" - Kirkus Reviews\nFIVE STARS and selected as a 'Staff Favorite' on Famigo!\nFeatured in Publishers Weekly\nKinderTown Approved\n\nFeatured by the iPhone Mom: \"Goodnight Safari is an interactive story that will help children relax instead of hyping them up with loud noises and crazy graphics. When it comes to bedtime stories that’s the type of app I’m looking for!\"\n\n\"With beautiful original artwork by Luciana Navarro this book is true eye candy for any child.\" - Interactive eBooks Review\n\nWe believe that protecting the privacy of our children is of the utmost importance. Please review our detailed privacy policy for more information. We do not display 3rd party ads or collect personally identifiable information.\n\nPlease don't hesitate to contact us with any feedback or questions! support@polkstreetpress.com\n\nPolk Street Press is a proud member of Moms with Apps.",
+                            versions: {
+                                archived: [
+                                    { version: "3.3", url: "https://archive.org/download/goodnight-safari-v-3.3-i-os-4.3/Goodnight%20Safari%20%28V3.3%29%20%28iOS4.3%29.ipa" }
+                                ],
+                                unarchived: []
+                            },
+                            compatibility: "iOS 4.3 and Later",
+                            icon: "cdn/app-icon/goodnight-safari.jpeg",
+                            featured: false,
+                            categories: ["Education", "Books"]
+                        }                       
                      ];
 
         // DOM Elements
