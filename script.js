@@ -2071,7 +2071,7 @@
                 categories: ["Entertainment", "Simulation", "Games"]
                 },
                 {
-                    id: "santas-reindeer-hunt-mega-3d-christmas-maze",
+                    id: "santas-reindeer-hunt",
                     title: "Santa’s Reindeer Hunt - Mega 3D Christmas Maze",
                     developer: "DM Applications LLC (TX)",
                     featuredDescription: "***** Top 20 in US Kids games for iPad!!! Top 40 in US Puzzle games for iPad!! *****",
@@ -2083,7 +2083,7 @@
                         unarchived: []
                     },
                     compatibility: "iOS 4.3 and Later",
-                    icon: "cdn/app-icon/santas-reindeer-hunt-mega-3d-christmas-maze.jpg",
+                    icon: "cdn/app-icon/santas-reindeer-hunt.jpg",
                     featured: false,
                     categories: ["Entertainment", "Puzzle", "Games"]
                     },
