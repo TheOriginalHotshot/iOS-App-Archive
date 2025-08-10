@@ -1261,15 +1261,34 @@
                 description: "Get the GAME OF THE YEAR award-winning puzzler!\n\nHelp Swampy by guiding water to his broken shower. Each level is a challenging physics-based puzzle with amazing life-like mechanics. Cut through dirt and guide fresh water, dirty water, toxic water, steam, and ooze through increasingly challenging scenarios! Every drop counts!\n\nIn this FREE version, play 15+ challenging puzzles featuring Swampy! Want more levels? Get the full version and play up to 500 amazing puzzles featuring Allie, Cranky, Mystery Duck and MORE!\n\nFull Version Features:\n• Original Stories & Characters – Play through 4 unique stories featuring Swampy, Allie, Cranky and Mystery Duck. That’s over 500 amazing puzzles!\n• Innovative Mechanic – See water in various forms and use your creativity to solve the puzzles – totally stimulating!\n• Collectibles, Challenges, and Bonus Levels – Collect special items uniquely designed for each character and complete cool challenges to unlock bonus levels! “Tri-Duck” each level for ultimate bragging rights!\n• Brand New Levels Every Week – Hurry and play before they expire, and be sure to use ‘Photo Finish’ to share how you beat the new levels!\n\nSWAMPY’S STORY\nSwampy the Alligator lives in the sewers under the city. He’s a little different from the other alligators – he’s curious, friendly, and loves taking a nice long shower after a hard day at work. But there’s trouble with the pipes and Swampy needs your help getting water to his shower!\n\nVisit Facebook.com/DisneyMobileGames for cool game tips, news and more!\n\nBefore you download this app, please consider that this app includes advertising, some of which may be targeted to your interests. You may choose to control targeted advertising within our applications by using your mobile device settings (for example, by re-setting your device’s advertising identifier and/or opting out of interest based ads).\n\n• In-app purchases that cost real money\n• The option to accept push notifications to let you know when we have exciting updates like new content\n• Location-based services\n• Advertising for some third parties, including the option to watch ads for rewards\n• As well as advertising for The Walt Disney Family of Companies\n\nPrivacy Policy - https://disneyprivacycenter.com\nChildren’s Privacy Policy - https://disneyprivacycenter.com/kids-privacy-policy/english/\nTerms of Use - https://disneytermsofuse.com\n\nFor additional information about our practices in the United States and Latin America regarding children’s personal information, please read our Children’s Privacy Policy at https://disneyprivacycenter.com/kids-privacy-policy/english/",
                 versions: {
                     archived: [
-                        { version: "1.0.2", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%27s%20My%20Water%20Free%20%5BDisney%5D%20%28v1.0.2%20Univ%20LP%20os40%29.rc333_613.ipa" },
-                        { version: "1.1.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite-iOS4.0-%28V1.1.0%29%28Clutch-2.0.4%29.ipa" },
-                        { version: "1.3.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/WheresMyWaterLite-%28com.disney.SwampyGameLite%29-%28V1.3.1%29%20%28iOS%204.0%29.ipa" },
-                        { version: "1.4.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite%20iOS4.0%20%28V1.4.0%29%20%28Clutch-2.0.4%29.ipa" },
-                        { version: "1.9.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite-iOS4.3%20%28V1.9.0%29%20%28Clutch-2.0.4%29.ipa" },
-                        { version: "1.11.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/com.disney.SwampyGameLite%20%28V1.11.1%29%20-iOS9.0-%28Clutch-2.0.4%29.ipa" }
+                      { version: "1.0.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.0.1%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.0.2", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.0.2%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.1.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.1.0%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.1.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.1.1%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.2.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.2.0%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.2.05", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.2.05%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.2.6", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.2.6%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.3.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.3.1%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.4.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.4.0%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.5.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.5.0%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.5.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.5.1%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.6.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.6.0%29%20%28iOS4.0%29.ipa" },
+                      { version: "1.7.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.7.0%29%20%28iOS4.3%29.ipa" },
+                      { version: "1.8.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.8.0%29%20%28iOS4.3%29.ipa" },
+                      { version: "1.9.0", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.9.0%29%20%28iOS4.3%29.ipa" },
+                      { version: "1.9.1", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.9.1%29%20%28iOS4.3%29.ipa" },
+                      { version: "1.9.2", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.9.2%29%20%28iOS4.3%29.ipa" },
+                      { version: "1.9.4 (64 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.9.4%29%20%28iOS10.0%29%20%2864Bit%29.ipa" },
+                      { version: "1.9.4 (32 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.9.4%29%20%28iOS8.0%29%20%2832Bit%29.ipa" },
+                      { version: "1.10.0 (64 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.10.0%29%20%28iOS10.0%29%20%2864Bit%29.ipa" },
+                      { version: "1.10.0 (32 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.10.0%29%20%28iOS8.0%29%20%2832Bit%29.ipa" },
+                      { version: "1.11.0 (64 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.11.0%29%20%28iOS10.0%29%20%2864Bit%29.ipa" },
+                      { version: "1.11.0 (32 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.11.0%29%20%28iOS8.0%29%20%2832Bit%29.ipa" },
+                      { version: "1.11.1 (64 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.11.1%29%20%28iOS10.0%29%20%2864Bit%29.ipa" },
+                      { version: "1.11.1 (32 bit)", url: "https://archive.org/download/com.disney.-swampy-game-lite-v-1.11.1-i-os-9.0-clutch-2.0.4/Where%E2%80%99s%20My%20Water%3F%20Free%20%28V1.11.1%29%20%28iOS9.0%29%20%2832Bit%29.ipa" }
                     ],
                     unarchived: []
-                },
+                  },
                 compatibility: "iOS 9.0 and Later",
                 icon: "cdn/app-icon/wheres-my-water-lite.png",
                 featured: false,
@@ -2154,8 +2173,25 @@
                             icon: "cdn/app-icon/goodnight-safari.jpeg",
                             featured: false,
                             categories: ["Education", "Books"]
-                        }                       
-                     ];
+                            },
+                            {
+                                id: "copycat-echo-retro-1980s-memory-game",
+                                title: "Copycat Echo - Retro 1980s Memory Game",
+                                developer: "Sipovac Innovation",
+                                featuredDescription: "Enjoy a nostalgic trip back to the 80's with this fun retro game.",
+                                description: "Enjoy a nostalgic trip back to the 80's with this fun retro game. \n\nHere's how you play: watch the colors and mimic the sequence of cool electronic sounds. Every round adds another tone and increases the difficulty.\n\nHow long can you memorize the pattern? How many rounds can you survive? Keep your memory sharp and beat your friends. \n\nWho says a little competition isn’t healthy? Perfect for some quick fun while you’re on the go, this game is also great for warming up for a big study session and for improving hand-eye coordination. Play it with the whole family and use the game to entertain your kids.\n\nBe careful: this game may be simple, but it is extremely addictive!\n\n…….TOP FEATURES…….\n\n+ Beautiful vintage Eighties graphics and sounds\n+ 7 themes with custom sound effects: Classic, Beach, Space, Sports, Guitar, Piano, and Pixel\n+ Lightning-fast game responses\n+ Multiplayer mode for competing against friends\n+ Expert mode for even more challenges\n+ Speed mode for a new level of difficulty\n+ Freestyle mode for just having fun\n+ Cute Kids mode (slower to help them keep up)\n+ Facebook and Twitter for sending challenges to friends\n+ On/Off button for sound\n+ Support for iPhone, iPod, and iPad!\n\nVisit us at BrightNewt.com.\nGive us a like us at https://www.facebook.com/brightnewt.\nFollow us at twitter.com/brightnewt.\n\n-----------------------------------------------\n\nDisclaimer: Copycat Echo is in no way endorsed by or affiliated with Milton Bradley, Hasbro, or the original Simon handheld game.",
+                                versions: {
+                                    archived: [
+                                        { version: "1.60", url: "https://archive.org/download/copycat-echo-retro-1980s-memory-game-v-1.60-i-os-6.1/Copycat%20Echo%20-%20Retro%201980s%20Memory%20Game%20%28V1.60%29%20%28iOS6.1%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 6.1 and Later",
+                                icon: "cdn/app-icon/copycat-echo-retro-1980s-memory-game.jpg",
+                                featured: false,
+                                categories: ["Music", "Puzzle", "Games"]
+                            }                                                   
+                         ];
 
         // DOM Elements
         const carouselContainer = document.getElementById('carouselContainer');
