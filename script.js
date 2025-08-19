@@ -2190,7 +2190,75 @@
                                 icon: "cdn/app-icon/copycat-echo-retro-1980s-memory-game.jpg",
                                 featured: false,
                                 categories: ["Music", "Puzzle", "Games"]
-                            }                                                   
+                            },
+                            {
+                                id: "tiki-golf-hd",
+                                title: "Tiki Golf HD",
+                                developer: "Arb Studios LLC",
+                                featuredDescription: "no description found",
+                                description: "no description found",
+                                versions: {
+                                    archived: [
+                                        { version: "2.0.0", url: "https://archive.org/download/tiki-golf-hd-v-2.0.0-i-os-3.0/Tiki%20Golf%20HD%20%28V2.0.0%29%20%28iOS3.0%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.0 and Later",
+                                icon: "cdn/app-icon/tiki-golf-hd.png",
+                                featured: false,
+                                categories: ["Action", "Sports", "Family", "Games"]
+                            },
+                            {
+                                id: "fox-news-for-ipad",
+                                title: "FOX News For iPad",
+                                developer: "FOX News Digital",
+                                featuredDescription: "Download the first and only news application for your iPad from the #1 name in news, the FOX News Channel.",
+                                description: "Download the first and only news application for your iPad from the #1 name in news, the FOX News Channel. View Happening Now for a quick snapshot of all the latest news in politics, entertainment, health and more! With the FOX News iPad app - receive FOX News Alerts, the live FOX News ticker, fair and balanced headline news stories, live video, FOX News Radio; all for FREE! \n\nApp Highlights:\n\n- Swipe through Happening Now for a quick glance of the latest news.\n\n- Live FOX News Channel ticker.\n\n- Browse all of the most recent articles, videos clips, and slideshows from foxnews.com! \n\n- Sort by content type to find what you’re most interested in. \n\n- Share your favorite information on Facebook, Twitter, or via email. \n\n- Add stories to your Favorites to save for later.\n\n- Watch live coverage of major news events from the FOX News Channel.\n\n- Watch Foxnews.com Live weekdays from 9AM – 3PM ET.\n\n- View video clips from your favorite FOX News programs and find out what’s coming up on FOX News Channel!\n\n- Subscribe to breaking news push alerts and be the first to know when news breaks! \n\n- Listen to FOX News Radio anytime, anywhere.\n\nWe Report. You Decide®… On-The-Go!\n\nHave questions about the FOX News app for iPad? Email us at mobile@foxnews.com. We’d love to hear from you!",
+                                versions: {
+                                    archived: [
+                                        { version: "1.1.21", url: "https://archive.org/download/fox-news-for-i-pad-v-1.1.21-i-os-5.0/FOX%20News%20for%20iPad%20%28V1.1.21%29%20%28iOS5.0%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 5.0 and Later",
+                                icon: "cdn/app-icon/fox-news-for-ipad.png",
+                                featured: false,
+                                categories: ["News"]
+                            },
+                            {
+                                id: "worldly-wise-3000-online",
+                                title: "Worldly Wise 3000 Online",
+                                developer: "Educators Publishing Service",
+                                featuredDescription: "Now you can access the popular Wordly Wise 3000® Online program on your iPad®!",
+                                description: "Now you can access the popular Wordly Wise 3000® Online program on your iPad®! Students can seamlessly transition between activities on the iPad and a computer browser, with all of their results showing up in the teacher’s reports.\n\nWordly Wise 3000® Online is a dynamic and interactive program that helps students in grades 2-12 master the academic vocabulary they encounter in school every day. An appealing student interface increases motivation and provides a variety of types of word interactions. Each activity provides immediate feedback that coaches students towards the correct answer. Engaging lessons give students multiple exposures to each word, leading to long-term retention. Audio support provides extra scaffolding for struggling readers or English language learners.\n\nIMPORTANT!\nInternet connection and a current subscription to Wordly Wise 3000® Online are required to access the program.",
+                                versions: {
+                                    archived: [
+                                        { version: "1.6.7", url: "https://archive.org/download/worldly-wise-3000-online-v-1.6.7-i-os-6.0/Worldly%20Wise%203000%20Online%20%28V1.6.7%29%20%28iOS6.0%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 6.0 and Later",
+                                icon: "cdn/app-icon/worldly-wise-3000-online.jpeg",
+                                featured: false,
+                                categories: ["Education", "Reference"]
+                            },
+                            {
+                                id: "logo-guess-1",
+                                title: "Logo Guess : #1 Logo Guess The World about brand",
+                                developer: "Chaotan Li",
+                                featuredDescription: "Can you guess the logo? Every level is a brand logo. See if you can guess them all!",
+                                description: "Can you guess the logo? Every level is a brand logo. See if you can guess them all! \n\nCan you beat all 800+ brain-tickling in \"Logo Guess The Word\"? \n\nNo signup. No registration. Play the #1 Logo game for FREE :-)",
+                                versions: {
+                                    archived: [
+                                        { version: "1.5", url: "URL_PLACEHOLDER" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 5.0 and Later",
+                                icon: "cdn/app-icon/logo-guess-1.jpeg",
+                                featured: false,
+                                categories: ["Education", "Trivia", "Word", "Games"]
+                            }                                                                                                                                       
                          ];
 
         // DOM Elements
