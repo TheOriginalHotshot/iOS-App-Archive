@@ -76,7 +76,7 @@
                 id: "lightbike-online",
                 title: "LightBike Online",
                 developer: "ArtyPig Entertainment",
-                featuredDescription: "Tron-inspired lightcycle battles",
+                featuredDescription: "Experience the classic Tron lightcycle battle in this multiplayer online game!",
                 description: "Experience the classic Tron lightcycle battle in this multiplayer online game!\nCompete against players worldwide in real-time battles.\nCustomize your lightbike with different colors and trails.\nClimb the global leaderboards and prove your skills.\nSimple controls with intense competitive gameplay.",
                 versions: {
                     archived: [
@@ -86,7 +86,7 @@
                         { version: "1.2.6", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike.v1.2.6.iPhone%20C4iD.ipa" },
                         { version: "1.2.8", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBikeOnline%20v1.2.8%20artypig78.ipa" }
                     ],
-                    unarchived: ["1.0", "1.1", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.7"]
+                    unarchived: ["1.1", "1.2", "1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.7"]
                 },
                 compatibility: "iOS 4.3 and Later",
                 icon: "cdn/app-icon/lightbike-online.jpeg",
