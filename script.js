@@ -80,6 +80,7 @@
                 description: "Experience the classic Tron lightcycle battle in this multiplayer online game!\nCompete against players worldwide in real-time battles.\nCustomize your lightbike with different colors and trails.\nClimb the global leaderboards and prove your skills.\nSimple controls with intense competitive gameplay.",
                 versions: {
                     archived: [
+                        { version: "1.0", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike%20%28V1.0%29%20%28iOS2.2%29.ipa" },
                         { version: "1.1.1", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike_v1.1.1_os22.ipa" },
                         { version: "1.2.5", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike%201.2.5.ipa" },
                         { version: "1.2.6", url: "https://archive.org/download/light-bike-online-v-1.2.8-artypig-78/LightBike.v1.2.6.iPhone%20C4iD.ipa" },
