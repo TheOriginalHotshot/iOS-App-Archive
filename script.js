@@ -2449,6 +2449,12 @@
         
         const APPS_PER_PAGE = 12;
 
+        // Track current search results and page for keyboard navigation
+        let currentSearchFilteredApps = apps;
+        let currentSearchPage = 1;
+        let pageNumberBuffer = '';
+        let pageNumberTimer;
+
         function renderPaginationControls(totalApps, currentPage, onPageChange) {
             const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
             if (totalPages < 2) return '';
@@ -2471,6 +2477,9 @@
         }
 
         function renderSearchResults(filteredApps = [], page = 1) {
+            currentSearchFilteredApps = filteredApps;
+            currentSearchPage = page;
+
             const sortedApps = filteredApps.slice().sort((a, b) =>
                 a.title.localeCompare(b.title)
             );
@@ -2539,7 +2548,19 @@
                 });
             });
         }
-        
+
+        function navigateSearchPage(newPage) {
+            const totalPages = Math.max(1, Math.ceil(currentSearchFilteredApps.length / APPS_PER_PAGE));
+            if (newPage < 1) newPage = 1;
+            if (newPage > totalPages) newPage = totalPages;
+            if (newPage === 1) {
+                setUrlParam('page', '');
+            } else {
+                setUrlParam('page', newPage);
+            }
+            renderSearchResults(currentSearchFilteredApps, newPage);
+        }
+
         // Create a modal for a single app when needed
         function createModal(app) {
             // Create version list items
@@ -2794,10 +2815,33 @@
             
             // Add keyboard navigation
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowRight') {
-                    nextSlide();
-                } else if (e.key === 'ArrowLeft') {
-                    prevSlide();
+                const searchTabActive = document.querySelector('.tab[data-tab="search"]').classList.contains('active');
+                if (searchTabActive && document.activeElement !== searchInput) {
+                    if (e.key === 'ArrowRight') {
+                        pageNumberBuffer = '';
+                        clearTimeout(pageNumberTimer);
+                        navigateSearchPage(currentSearchPage + 1);
+                    } else if (e.key === 'ArrowLeft') {
+                        pageNumberBuffer = '';
+                        clearTimeout(pageNumberTimer);
+                        navigateSearchPage(currentSearchPage - 1);
+                    } else if (/^[0-9]$/.test(e.key)) {
+                        pageNumberBuffer += e.key;
+                        clearTimeout(pageNumberTimer);
+                        pageNumberTimer = setTimeout(() => {
+                            const page = parseInt(pageNumberBuffer, 10);
+                            if (!isNaN(page)) {
+                                navigateSearchPage(page);
+                            }
+                            pageNumberBuffer = '';
+                        }, 500);
+                    }
+                } else {
+                    if (e.key === 'ArrowRight') {
+                        nextSlide();
+                    } else if (e.key === 'ArrowLeft') {
+                        prevSlide();
+                    }
                 }
             });
             
