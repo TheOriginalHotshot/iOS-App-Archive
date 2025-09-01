@@ -2260,7 +2260,42 @@
                                 icon: "cdn/app-icon/logo-guess-1.jpeg",
                                 featured: false,
                                 categories: ["Education", "Trivia", "Word", "Games"]
-                            }                                                                                                                                       
+                            },
+                            {
+                                id: "tiki-golf-3d",
+                                title: "Tiki Golf 3D",
+                                developer: "Arb Studios LLC",
+                                featuredDescription: "Insane Mini Golf in full 3D! Ramps, mega power boosts, moving platform bongos, giant dartboard targets, huge hammers, loop-de-loops, pipes, pineapples and more!",
+                                description: "\"Tiki Golf 3D carries itself well, thanks to good graphics, imaginative settings, a sophisticated physics engine, and great audio.\" -- www.macworld.com\n\n\"The App Store currently contains quite a few mini golf games, but Tiki Golf 3D by Arb Studios could be the most extravagant one yet. Think of it as a cross between mini golf and Super Monkey Ball.\" -- www.appadvice.com \n\n\"If you think you have seen it all when it comes to golf games on iPhone, think again.\nI found Tiki Golf’s graphics to be superb, and the game play to be very exciting.\" -- www.iphoneappsfinder.com\n\n\"The graphics and game play really make this game iWorth It.\" -- www.iworthitappreviews.com\n\n\"Tiki Golf 3D is golf on steroids. If you want a golf game with a whole lot of addictive challenges, you are going to love this.\" -- www.iphoneness.com\n\n\nStory\nInsane Mini Golf in full 3D! Ramps, mega power boosts, moving platform bongos, giant dartboard targets, huge hammers, loop-de-loops, pipes, pineapples and more! Exotic vibrant courses that have the iconic mini golf appeal but feel more like water park rides than typical putt courses. Multiple play modes that keep you coming back for more.\n\nYou are Tiki Bobby and all your prize artifacts have been taken by the Tiki gods Lono and Kahuna. You must travel to their worlds and prove yourself in extreme mini golf to earn them back!! Navigate jumps, bumps and humps in a wacky land of skill, thrills and fun.\n\n\n3 Playable modes; Super Putt Putt minigolf, Pineapple Adventure and Time Trial!\nOnline Leader Boards that will display your Rank worldwide no matter what place you are, so you can track your skills as you improve.\n2 Unlockable Difficulties\n2 Worlds; Lono's Beach and an unlockable Kahuna's Volcano\n18 primary minigolf holes 19 alternate holes\nSpecial control options allow you to drive the ball like a race car using the Accelerometer",
+                                versions: {
+                                    archived: [
+                                        { version: "1.0", url: "https://archive.org/download/tiki-golf-3-d-v-1.0-i-os-2.2.1/Tiki%20Golf%203D%20%28V1.0%29%20%28iOS2.2.1%29.ipa" },
+                                        { version: "3.0", url: "https://archive.org/download/tiki-golf-3-d-v-1.0-i-os-2.2.1/Tiki%20Golf%203D%20%28V3.0%29%20%28iOS2.2.1%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 2.2.1 and Later",
+                                icon: "cdn/app-icon/tiki-golf-3d.png",
+                                featured: false,
+                                categories: ["Entertainment", "Casual", "Sports", "Games"]
+                            },
+                            {
+                                id: "tiki-kart-3d",
+                                title: "Tiki Kart 3D",
+                                developer: "Arb Studios LLC",
+                                featuredDescription: "Extreme 3D Kart Racing, take complete control over the vehicle! Extreme physics, speed, crashes, weapons and more!",
+                                description: "Extreme 3D Kart Racing, take complete control over the vehicle! Extreme physics, speed, crashes, weapons and more!\n\nTiki Bobby has been making friends, enemies, and has even contacted some old buddies from way back, and they have decided to go racing!\n\nFrom the depths of the volcano there has emerged some of the zaniest vehicles one could imagine. Ever thought of slapping some wheels on a giant piece of fruit and taking it for a spin? How about racing around in a turtle shell? Why not go a step further and race around in a fruity tropical drink, umbrella and all. If you would rather be the big bully on the road, why not ride around in big heavy log or a volcano powered lump of rock? We did not forget our traditionalist with a sleek powder keg powered drag racer and Tiki Bobby’s take on what a traditional kart should be.\n\nGo deep into the world of Lonlo’s Volcano like never before. Enjoy the vistas as you barrel down the raceways of 15 fun filled tracks. Hold on tight to your seat as you encounter death defying jumps, spiral through corkscrew turns, speed through boost pads, and go full speed through gravity defying loopedy loops.\n\nSnag a power up pineapple and shuffle through the available gifts to torture your opponents. Send a fireball right up the tailpipe of that guy who cut you off. Plop a puddle of oil or a big glob of goopy tar to discourage the person tailgating you. Fire off a mighty missile to plow its way through the competition. Drop off a mine to create a waiting danger zone. Swipe another drivers kit to anger him then send him to into a rage as you use the item of destruction on him instead. You can even be awarded an extra punch of nitro booster.\n\nBullet points -\n\n8 karts\n15 tracks\nBoosts\nRockets\nLand Mines\nFireballs\nOil slicks\nSticky Tar\nFast paced\nSprings\n3 Levels of difficulty and speed\nEach Kart has its own handling and abilities - Acceleration, Top Speed, Traction, Boost power, Off-road ability.",
+                                versions: {
+                                    archived: [
+                                        { version: "3.2", url: "https://archive.org/download/tiki-kart-3-d-v-3.2-i-os-5.0/Tiki%20Kart%203D%20%28V3.2%29%20%28iOS5.0%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 11.0 and Later",
+                                icon: "cdn/app-icon/tiki-kart-3d.png",
+                                featured: false,
+                                categories: ["Entertainment", "Action", "Racing", "Games"]
+                            }                                                                                                                                                                                  
                          ];
 
         // DOM Elements
