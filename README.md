@@ -1,4 +1,4 @@
-<img align="left" width="90" height="100" src="cdn/icon/white-icon.png">
+<img align="left" width="90" height="100" src="cdn/icon/white-logo.png">
 
 # iOS App Archive
 ---
