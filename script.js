@@ -766,19 +766,19 @@
                 categories: ["Utilities", "Reference"]
             },
             {
-                id: "itrailer-lite",
-                title: "iTrailer Lite",
-                developer: "Developer Unknown",
-                featuredDescription: "no description found",
-                description: "no description found",
+                id: "imovie-trailer-designer-lite",
+                title: "iMovie Trailer Designer Lite",
+                developer: "CoderGrid",
+                featuredDescription: "The perfect companion for your favorite iMovie Trailer.",
+                description: "iMovie Trailer Designer Lite is the perfect companion for your favorite iMovie Trailer.\nNote: iMovie need to be installed!\n\nMake beautiful Trailer using your own music from your iPod Library in just a few Minutes. You can create exiting new Trailer for your iMovie Mobile.\n\nIt is simple and easy to create your own Trailer from your Music in a few simple steps:\nselect Music, start the recording for timing and tap on the slice Button to create a cutting edge on the beat.\n\nYou can use the known Shot Items, Animations and Transitions from iMovie to roundup your lovely Trailer",
                 versions: {
                     archived: [
-                        { version: "1.1", url: "https://archive.org/download/org.esb.trailer.designer.lite-v-1.1-i-os-6.0-clutch-2.0.4/org.esb.trailer.designer.lite%20%28V1.1%29%20-iOS6.0-%28Clutch-2.0.4%29.ipa" }
+                        { version: "1.1", url: "https://archive.org/download/org.esb.trailer.designer.lite-v-1.1-i-os-6.0-clutch-2.0.4/iMovie%20Trailer%20Designer%20Lite%20%28V1.1%29%20%28iOS6.0%29.ipa" }
                     ],
                     unarchived: []
                 },
                 compatibility: "iOS 6.0 and Later",
-                icon: "cdn/app-icon/itrailer-lite.png",
+                icon: "cdn/app-icon/imovie-trailer-designer-lite.png",
                 featured: false,
                 categories: ["Photo & Video", "Entertainment"]
             },
@@ -2295,7 +2295,24 @@
                                 icon: "cdn/app-icon/tiki-kart-3d.png",
                                 featured: false,
                                 categories: ["Entertainment", "Action", "Racing", "Games"]
-                            }                                                                                                                                                                                  
+                            },
+                            {
+                                id: "3d-magic-words",
+                                title: "3D Magic Words",
+                                developer: "Arb Studios LLC",
+                                featuredDescription: "Conjure up some fun with 3D Magic Words! Reveal all the words that you can before time runs out.",
+                                description: "Conjure up some fun with 3D Magic Words! Reveal all the words that you can before time runs out. There are two modes of play, thousands of levels, time bonuses, and hints. Who will levitate to the top of the scoreboard? Ladies and gentlemen, children of all ages, you won't want to miss this addicting word game!\n\n• Fun and colorful 3D to please the eyes\n• Thousands of levels for endless fun\n• Online Leader-boards: See your rank improve as you complete each level\n• 2 Modes of play\n• Beat the clock by getting time bonuses for every correct word\n• Hints to help you when time is running out\n• Family friendly word list so everyone can play\n• Highly addictive and hard to put down\n\n\nStandard Mode\n• Solve the set number of words before opting to move on or staying to finish the level\n• Points rewarded for time left on the clock when a level is fully completed\n• Time awarded for each letter in a correct word\n• Point multipliers for words solved in quick succession\n• Clock resets at the beginning of each level\n• Additional hint awarded for finishing a level\n\nSpeed Mode\n• How long can you survive with 5 minutes and 5 hints\n• Solve the set number of words and push on to the next level\n• Time awarded for each correct letter in a word\n• Point multipliers for words solved in quick succession",
+                                versions: {
+                                    archived: [
+                                        { version: "3.7", url: "https://archive.org/download/3-d-magic-words-v-3.7-i-os-5.0/3D%20Magic%20Words%20%28V3.7%29%20%28iOS5.0%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 10.0 and Later",
+                                icon: "cdn/app-icon/3d-magic-words.png",
+                                featured: false,
+                                categories: ["Education", "Word", "Family", "Games"]
+                            }                                                                                                                                                                                                    
                          ];
 
         // DOM Elements
