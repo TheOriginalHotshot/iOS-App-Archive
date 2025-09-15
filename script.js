@@ -2312,7 +2312,60 @@
                                 icon: "cdn/app-icon/3d-magic-words.png",
                                 featured: false,
                                 categories: ["Education", "Word", "Family", "Games"]
-                            }                                                                                                                                                                                                    
+                            },
+                            {
+                                id: "tiki-golf-2",
+                                title: "Tiki Golf 2",
+                                developer: "Arb Studios LLC",
+                                featuredDescription: "Tiki Golf 2 redefines extreme minigolf!",
+                                description: "Tiki Golf 2 redefines extreme minigolf!\n\n\"Tiki Golf 2 mixes putt-putt golfing, physics and platform gaming together in one amazing game.\" -AppAdvice.com \n\nTiki Bobby is back and He has brought friends! 4 Playable Tikis! bunches unlockable secret clubs, golf balls and abilities! Ramps, mega power boosts, giant dartboard targets, huge hammers, loop-de-loops, pipes, pineapples, massive tiki totems and more! Exotic vibrant courses that have the iconic mini golf appeal but feel more like water park rides than typical putt putt courses!\n\n4 courses and 72 holes\n\nWorlds/Courses\n-Beach Sunrise\n-Volcano Trouble\n-Lost Beach\n-Kahunas Mountain\nBall Abilities\n- Slow Motion\n- Ghost, Mega Control\n- Speed, Anti Gravity\n- Jump, Instant Stopping power\nClub Abilities\n- Accuracy\n- Mega Power\n- Amplify\n- Out of Bounds immunity\n- Opposite day\n- Stat bonuses\nCustomize your extra bonuses for\n- Steering\n- Collecting pineapples\n- going through rings\n- hitting targets\n- based on power\n- speed\n- luck",
+                                versions: {
+                                    archived: [
+                                        { version: "1.0", url: "https://archive.org/download/tiki-golf-2-v-1.0-i-os-3.0/Tiki%20Golf%202%20%28V1.0%29%20%28iOS3.0%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.0 and Later",
+                                icon: "cdn/app-icon/tiki-golf-2.png",
+                                featured: false,
+                                categories: ["Sports", "Family", "Games"]
+                            },
+                            {
+                                id: "steampunk-racing-3d",
+                                title: "Steampunk Racing 3D",
+                                developer: "Arb Studios LLC",
+                                featuredDescription: "Don't just race...ANNIHILATE!",
+                                description: "Don't just race...ANNIHILATE! \nIn the realm of steampunk racing domination and destruction is a way of life. Each day we risk death for the rewards and thrills of our chosen path. We are the racers, the heroes of our war torn world. Our vehicles shield us, our weaponry brings forth our vengeance, the world is our playground, and the corporations that run things are a necessary evil. \nSet in a war-torn and steam-powered industrial world where your very survival depends any means necessary in a no-rules, high stakes, high impact, steam-powered death race. You'll need to choose and customize your vehicle like the 4-Wheel Armored Classic, Heavy Tank Tall Boy, Agile Delivery, 3-Wheel Scarab, Dozenberg, Drag Racer, Zeppelin, Rough Truckin', Brutal Wagon, or the 6-Wheel LG04-Ohzma; each with unique features and capabilities. You'll also need weapons and elemental powers because, let's face it: playing fair is just no fun. Teleport ahead of your enemies, engage force fields, blast your opponents energy with an EMP wave, turn the world upside down or create a gravity bubble with a Gravity Vortex, or deploy our most devastating weapons like missiles, chain guns, high-speed mines and tar, poison fields, fireballs, drone blimp-bombers, satellite ray beams, chainsaws, and vortex technology just to name a few. \nAs you race through your journey through the online tournament circuit, look for big sponsors to make more money but beware as corporations like A.R.B sponsors many racers and are suspected of fixing the races to seize power. Choose your side!\n\n- Customizable vehicles with 30 weapons/abilities\n- Unique physics engine allows for full range of control\n- Realtime Multiplayer modes against 6 players world wide or on your lan\n- Massive Online Tournaments \n- personalize your online experience with facebook\n- 3D\n- HD\n- Upgrade each vehicles armor, top speed, acceleration, control and hit points.\n- 15 tracks\n- 6 different power-ups\n- 5 circuits",
+                                versions: {
+                                    archived: [
+                                        { version: "2.0", url: "https://archive.org/download/steampunk-racing-3-d-v-2.0-i-os-4.3/Steampunk%20Racing%203D%20%28V2.0%29%20%28iOS4.3%29.ipa" }
+                                    ],
+                                    unarchived: [
+                                        { version: "1.0" }
+                                    ]
+                                },
+                                compatibility: "iOS 5.0 and Later",
+                                icon: "cdn/app-icon/steampunk-racing-3d.png",
+                                featured: false,
+                                categories: ["Entertainment", "Action", "Racing", "Games"]
+                            },
+                            {
+                                id: "abcs-alphabet-learning-game",
+                                title: "ABCs: Alphabet Learning Game",
+                                developer: "BFTV, LLC",
+                                featuredDescription: "ABC’s: Alphabet Learning Game – Learning is Fun with BabyFirst",
+                                description: "ABC’s: Alphabet Learning Game – Learning is Fun with BabyFirst\n\nToddlers and tots will love learning about reading and writing with the ABC’s: Alphabet Learning Game. Designed to introduce your little ones to the wonderful world of letters and words, it will help build a love of learning from an early age. With the ABC’s: Alphabet Learning Game you can be certain that your kids are getting the very best start in life. \n\nVocabuLarry the parrot is there to guide your children through the ABC’s: Alphabet Learning Game, giving them their very first chance to test out their reading and writing skills. Colorful and captivating, kids will love the simple navigation system and eye-catching artwork within our brilliant training tools. Take a look at some of the other fantastic features the ABC’s: Alphabet Learning Game has to offer:\n\n• Engaging animations for interactive education\n• Sound out individual letters with exciting audio exercises\n• Faster learning with word association\n• Fully optimized for iOS devices\n\nLearning takes on a whole new dimension with BabyFirst’s collection of high-quality games and entertainment. Developed by professionals in child psychology and education, our global TV network brings your tots and toddlers the very best programs and training games. This means you can be sure your child is getting a formative education whilst they enjoy those all-important early years. \n\nThe ABC’s: Alphabet Learning Game is just one of many fantastic titles from BabyFirst. Each title will help your child get a head start before they begin preschool - and make sure they are having fun at the same time. \n\nDownload the ABC’s: Alphabet Learning Game today and give your kids a great start to their lifelong learning adventure.",
+                                versions: {
+                                    archived: [
+                                        { version: "1.0.1", url: "https://archive.org/download/abcs-alphabet-learning-game-v-1.0.1-i-os-4.0/ABCs%20Alphabet%20Learning%20Game%20%28V1.0.1%29%20%28iOS4.0%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 8.0 and Later",
+                                icon: "cdn/app-icon/abcs-alphabet-learning-game.png",
+                                featured: false,
+                                categories: ["Education", "Word", "Games"]
+                            }                                                                                                                                                                                                                               
                          ];
 
         // DOM Elements
