@@ -2341,7 +2341,7 @@
                                         { version: "2.0", url: "https://archive.org/download/steampunk-racing-3-d-v-2.0-i-os-4.3/Steampunk%20Racing%203D%20%28V2.0%29%20%28iOS4.3%29.ipa" }
                                     ],
                                     unarchived: [
-                                        { version: "1.0" }
+                                        "1.0"
                                     ]
                                 },
                                 compatibility: "iOS 5.0 and Later",
