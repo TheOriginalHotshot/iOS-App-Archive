@@ -2365,7 +2365,30 @@
                                 icon: "cdn/app-icon/abcs-alphabet-learning-game.png",
                                 featured: false,
                                 categories: ["Education", "Word", "Games"]
-                            }                                                                                                                                                                                                                               
+                            },
+                            {
+                                id: "line-birds",
+                                title: "Line Birds",
+                                developer: "Djinnworks GmbH",
+                                featuredDescription: "Guide these little cute birds through a world full of danger.",
+                                description: "Guide these little cute birds through a world full of danger. Unlock new birds as you progress through the game. Each bird has its own special ability from getting invisible or using time warp to a powerful explosion ability.\n\nFrom the makers of Stickman Downhill, Stickman Soccer, Stickman Tennis, Stickman Base Jumper, Stickman Cliff Diving, Stick Stunt Biker, Line Runner, RunStickRun, Rope'n'Fly and more...\n\n• This is the one and only original bird flying app!\n• 10 million addicted players can't be wrong \n• Line birds was the #1 most downloaded application worldwide for long time\n\nFEATURES:\n• 5 different beautiful designed birds to unlock\n• Special abilities for each bird\n• Simple one touch control gameplay\n• Three game modes from easy to hard\n• Various achievements to unlock\n• Full Gamecenter integration\n• Online and Offline leaderboard and highscore system\n\nFeel free to post your ideas, we will try to implement them as soon as possible.\n\nThank you very much for all your support in our games! We would love to hear your suggestions!",
+                                versions: {
+                                    archived: [
+                                        { version: "1.1", url: "https://archive.org/download/line-birds-v-2.4-no-name-cracker-clutch-1.4.1/Line%20Birds%20%28V1.1%29%20%28iOS3.0%29.ipa" },
+                                        { version: "1.7", url: "https://archive.org/download/line-birds-v-2.4-no-name-cracker-clutch-1.4.1/Line%20Birds%20%28V1.7%29%20%28iOS3.0%29.ipa" },
+                                        { version: "2.4", url: "https://archive.org/download/line-birds-v-2.4-no-name-cracker-clutch-1.4.1/Line%20Birds%20%28V2.4%29%20%28iOS5.0%29.ipa" }
+                                    ],
+                                    unarchived: [
+                                        "1.0",
+                                        "3.4",
+                                        "3.5"
+                                    ]
+                                },
+                                compatibility: "iOS 9.0 and Later",
+                                icon: "cdn/app-icon/line-birds.jpeg",
+                                featured: false,
+                                categories: ["Action", "Casual", "Games"]
+                            }                                                                                                                                                                                                                                  
                          ];
 
         // DOM Elements
