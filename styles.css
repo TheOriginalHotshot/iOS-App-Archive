@@ -194,6 +194,8 @@
             text-align: center;
             margin-bottom: 15px;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
         .app-description {
@@ -421,6 +423,8 @@
             font-weight: 600;
             color: var(--text-light);
             margin-bottom: 5px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
         .card-developer {
@@ -714,6 +718,8 @@
             font-weight: 700;
             color: var(--text-light);
             margin-bottom: 5px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
         .modal-developer {
