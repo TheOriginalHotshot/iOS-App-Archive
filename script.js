@@ -1,4 +1,4 @@
-        // App data with download URLs and categories
+          // App data with download URLs and categories
         const apps = [
                             {
                 id: "escape-if-you-can",
@@ -2391,751 +2391,760 @@
                             }                                                                                                                                                                                                                                  
                          ];
 
-        // DOM Elements
-        const carouselContainer = document.getElementById('carouselContainer');
-        const carousel = document.getElementById('carousel');
-        const carouselNav = document.getElementById('carouselNav');
-        const searchResults = document.getElementById('searchResults');
-        const searchContainer = document.getElementById('searchContainer');
-        const searchInput = document.getElementById('searchInput');
-        const cancelSearch = document.getElementById('cancelSearch');
-        const tabs = document.querySelectorAll('.tab');
-        const modalContainer = document.getElementById('modalContainer');
-        
-        // Tab content areas
-        const tabContents = {
-            featured: document.getElementById('featuredContent'),
-            categories: document.getElementById('categoriesContent'),
-            genius: document.getElementById('geniusContent'),
-            search: document.getElementById('searchContent'),
-            updates: document.getElementById('updatesContent')
-        };
-        
-        // Carousel state
-        let currentIndex = 0;
-        let autoSlideInterval;
-        let touchStartX = 0;
-        let touchEndX = 0;
 
-        // Get a deterministic set of random apps for the current day
-        function getDailyRandomApps(appList, count) {
-            const dateStr = new Date().toISOString().slice(0, 10);
-            let seed = 0;
-            for (let i = 0; i < dateStr.length; i++) {
-                seed = (seed << 5) - seed + dateStr.charCodeAt(i);
-                seed |= 0;
-            }
-            function rand() {
-                seed |= 0; seed = seed + 0x6D2B79F5 | 0;
-                let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
-                t ^= t + Math.imul(t ^ t >>> 7, 61 | t);
-                return ((t ^ t >>> 14) >>> 0) / 4294967296;
-            }
-            const list = [...appList];
-            for (let i = list.length - 1; i > 0; i--) {
-                const j = Math.floor(rand() * (i + 1));
-                [list[i], list[j]] = [list[j], list[i]];
-            }
-            return list.slice(0, count);
-        }
-        
-        // Initialize carousel
-        function initCarousel() {
-            // Clear existing items
-            carousel.innerHTML = '';
-            carouselNav.innerHTML = '';
-            
-            // Choose 7 random apps for the carousel each day
-            const featuredApps = getDailyRandomApps(apps, 7);
-            
-            // Create carousel items
-            featuredApps.forEach((app, index) => {
-                const carouselItem = document.createElement('div');
-                carouselItem.className = 'carousel-item';
-                carouselItem.dataset.index = index;
-                
-                carouselItem.innerHTML = `
-                    <div class="app-card">
-                        <div class="app-icon-container">
-                            <div class="app-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                                '<i class="fas fa-mobile-alt"></i>'}
-                            </div>
+  // DOM Elements
+    const carouselContainer = document.querySelector('.carousel-container');
+    const carousel = carouselContainer.querySelector('.carousel');
+    const navDotsContainer = carouselContainer.querySelector('.carousel-nav');
+    const searchContainer = document.querySelector('.search-container');
+    const searchInput = searchContainer.querySelector('.search-input');
+    const cancelSearch = searchContainer.querySelector('.cancel-btn');
+    const searchResults = document.querySelector('.search-results');
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = {
+        featured: document.querySelector('.tab-content[data-tab="featured"]'),
+        categories: document.querySelector('.tab-content[data-tab="categories"]'),
+        genius: document.querySelector('.tab-content[data-tab="genius"]'),
+        search: document.querySelector('.tab-content[data-tab="search"]'),
+        updates: document.querySelector('.tab-content[data-tab="updates"]')
+    };
+    const modalContainer = document.body;
+
+    let currentIndex = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let pageNumberBuffer = '';
+    let pageNumberTimer = null;
+    let currentSearchPage = 1;
+
+    function initCarousel() {
+        const featuredApps = apps.filter(app => app.featured);
+        if (featuredApps.length === 0) return;
+
+        carousel.innerHTML = '';
+        navDotsContainer.innerHTML = '';
+
+        featuredApps.forEach((app, index) => {
+            const item = document.createElement('div');
+            item.className = 'carousel-item';
+            item.innerHTML = `
+                <div class="app-card">
+                    <div class="app-icon-container">
+                        <div class="app-icon">
+                            ${app.icon ? `<img src="`\({app.icon}" alt="\)`{app.title}" loading="lazy" onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
+                            '<i class="fas fa-mobile-alt"></i>'}
                         </div>
-                        <h3 class="app-title">${app.title}</h3>
-                        <div class="app-description">${app.featuredDescription}</div>
-                        <button class="card-button" data-app-id="${app.id}">View Details</button>
                     </div>
-                `;
-                
-                carousel.appendChild(carouselItem);
-                
-                // Create navigation dot
-                const navDot = document.createElement('div');
-                navDot.className = 'nav-dot';
-                navDot.dataset.index = index;
-                navDot.addEventListener('click', () => goToSlide(index));
-                carouselNav.appendChild(navDot);
-            });
-            
-            // Set initial slide
-            updateCarousel();
-            
-            // Start auto slide
-            startAutoSlide();
-            
-            // Add swipe functionality
-            setupSwipe();
-            
-            // Add event listener to carousel buttons
-            document.querySelectorAll('.app-card .card-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    openModal(appId);
-                });
-            });
-        }
-        
-        // Update carousel position
-        function updateCarousel() {
-            const items = document.querySelectorAll('.carousel-item');
-            const dots = document.querySelectorAll('.nav-dot');
-            const itemCount = items.length;
-            
-            items.forEach((item, index) => {
-                item.classList.remove('active', 'prev', 'next');
-                
-                if (index === currentIndex) {
-                    item.classList.add('active');
-                } else if (index === (currentIndex - 1 + itemCount) % itemCount) {
-                    item.classList.add('prev');
-                } else if (index === (currentIndex + 1) % itemCount) {
-                    item.classList.add('next');
-                }
-            });
-            
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-        }
-        
-        // Go to specific slide
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
-            resetAutoSlide();
-        }
-        
-        // Next slide
-        function nextSlide() {
-            const items = document.querySelectorAll('.carousel-item');
-            currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
-        }
-        
-        // Previous slide
-        function prevSlide() {
-            const items = document.querySelectorAll('.carousel-item');
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            updateCarousel();
-        }
-        
-        // Start auto slide
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(nextSlide, 8000);
-        }
-        
-        // Reset auto slide timer
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-        
-        // Setup swipe functionality
-        function setupSwipe() {
-            carouselContainer.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, false);
-            
-            carouselContainer.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, false);
-            
-            function handleSwipe() {
-                if (touchEndX < touchStartX - 50) {
-                    nextSlide();
-                }
-                
-                if (touchEndX > touchStartX + 50) {
-                    prevSlide();
-                }
-                
-                resetAutoSlide();
-            }
-        }
-        
-        const APPS_PER_PAGE = 12;
-
-        // Track current search results and page for keyboard navigation
-        let currentSearchFilteredApps = apps;
-        let currentSearchPage = 1;
-        let pageNumberBuffer = '';
-        let pageNumberTimer;
-
-        function renderPaginationControls(totalApps, currentPage, onPageChange) {
-            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
-            if (totalPages < 2) return '';
-            let html = '<div class="pagination-controls" style="grid-column: 1/-1; text-align: center; margin: 20px 0;">';
-            if (currentPage > 1) {
-                html += `<button class="pagination-btn" data-page="${currentPage - 1}">Previous</button> `;
-            }
-            for (let i = 1; i <= totalPages; i++) {
-                if (i === currentPage) {
-                    html += `<span class="pagination-page current">${i}</span> `;
-                } else {
-                    html += `<button class="pagination-btn" data-page="${i}">${i}</button> `;
-                }
-            }
-            if (currentPage < totalPages) {
-                html += `<button class="pagination-btn" data-page="${currentPage + 1}">Next</button>`;
-            }
-            html += '</div>';
-            return html;
-        }
-
-        function renderSearchResults(filteredApps = [], page = 1) {
-            currentSearchFilteredApps = filteredApps;
-            currentSearchPage = page;
-
-            const sortedApps = filteredApps.slice().sort((a, b) =>
-                a.title.localeCompare(b.title)
-            );
-            searchResults.innerHTML = '';
-            const totalApps = sortedApps.length;
-            const totalPages = Math.max(1, Math.ceil(totalApps / APPS_PER_PAGE));
-            
-            if (page === 1) {
-                setUrlParam('page', '');
-                page = 1;
-            }
-            
-            if (page < 1) page = 1;
-            if (page > totalPages) page = totalPages;
-            
-            const startIdx = (page - 1) * APPS_PER_PAGE;
-            const endIdx = startIdx + APPS_PER_PAGE;
-            const appsToShow = sortedApps.slice(startIdx, endIdx);
-
-            if (appsToShow.length === 0) {
-                searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
-                return;
-            }
-
-            appsToShow.forEach(app => {
-                const appCard = document.createElement('div');
-                appCard.className = 'app-card-grid';
-                appCard.innerHTML = `
-                    <div class="card-icon">
-                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                        '<i class="fas fa-mobile-alt"></i>'}
-                    </div>
-                    <div class="card-name">${app.title}</div>
-                    <div class="card-developer">${app.developer}</div>
+                    <h2 class="app-title">${app.title}</h2>
+                    <p class="app-description">${app.featuredDescription || app.description.split('\n')[0]}</p>
                     <button class="card-button" data-app-id="${app.id}">View Details</button>
-                `;
-                searchResults.appendChild(appCard);
+                </div>
+            `;
+            carousel.appendChild(item);
+
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot';
+            dot.addEventListener('click', () => goToSlide(index));
+            navDotsContainer.appendChild(dot);
+        });
+
+        updateCarousel();
+
+        // Touch swipe
+        carouselContainer.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselContainer.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) nextSlide();
+            if (touchEndX - touchStartX > 50) prevSlide();
+        });
+
+        // Auto-advance every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Add click handlers for view details
+        document.querySelectorAll('.card-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const appId = this.getAttribute('data-app-id');
+                openDetailPage(appId);
             });
+        });
+    }
 
-            searchResults.innerHTML += renderPaginationControls(totalApps, page, (newPage) => {
-                if (newPage === 1) {
-                    setUrlParam('page', '');
-                } else {
-                    setUrlParam('page', newPage);
-                }
-                renderSearchResults(filteredApps, newPage);
-            });
-
-            document.querySelectorAll('.pagination-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const newPage = parseInt(this.getAttribute('data-page'));
-                    if (newPage === 1) {
-                        setUrlParam('page', '');
-                    } else {
-                        setUrlParam('page', newPage);
-                    }
-                    renderSearchResults(filteredApps, newPage);
-                });
-            });
-
-            // Add event listeners to buttons
-            document.querySelectorAll('.card-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    openModal(appId);
-                });
-            });
-        }
-
-        function navigateSearchPage(newPage) {
-            const totalPages = Math.max(1, Math.ceil(currentSearchFilteredApps.length / APPS_PER_PAGE));
-            if (newPage < 1) newPage = 1;
-            if (newPage > totalPages) newPage = totalPages;
-            if (newPage === 1) {
-                setUrlParam('page', '');
-            } else {
-                setUrlParam('page', newPage);
-            }
-            renderSearchResults(currentSearchFilteredApps, newPage);
-        }
-
-        // Create a modal for a single app when needed
-        function createModal(app) {
-            // Create version list items
-            let versionItems = '';
-                
-                // Add archived versions if they exist
-                if (app.versions.archived.length > 0) {
-                    versionItems += `
-                        <div class="version-group">
-                            <h4>Archived Versions</h4>
-                            <ul class="version-list">
-                                ${app.versions.archived.map(v => {
-                                    return `<li>
-                                        <span>${v.version}</span>
-                                        <a href="${v.url}" download class="download-button">
-                                            <i class="fas fa-download"></i> Download IPA
-                                        </a>
-                                    </li>`;
-                                }).join('')}
-                            </ul>
-                        </div>
-                    `;
-                }
-                
-                // Add unarchived versions if they exist
-                if (app.versions.unarchived.length > 0) {
-                    versionItems += `
-                        <div class="version-group">
-                            <h4 class="unarchived-label">Unarchived Versions</h4>
-                            <ul class="version-list">
-                                ${app.versions.unarchived.map(v => `<li>${v}</li>`).join('')}
-                            </ul>
-                        </div>
-                    `;
-                }
-                
-                // Create category tags
-                const categoryTags = app.categories.map(cat =>
-                    `<button class="category-tag category-select-btn" data-category="${cat}">${cat}</button>`
-                ).join('');
-                
-                const modal = document.createElement('div');
-                modal.className = 'modal-overlay';
-                modal.id = `${app.id}Modal`;
-                
-                modal.innerHTML = `
-                    <div class="modal-content">
-                        <button class="close-modal">&times;</button>
-                        <div class="modal-header">
-                            <div class="modal-icon">
-                                ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
-                                '<i class="fas fa-mobile-alt"></i>'}
-                            </div>
-                            <div>
-                                <h2 class="modal-title">${app.title}</h2>
-                                <p class="modal-developer">${app.developer}</p>
-                                <div class="modal-categories">
-                                    ${categoryTags}
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
-                            <p class="compatibility-text">${app.compatibility}</p>
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-align-left"></i> App Store Description</h3>
-                            ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
-                        </div>
-                        
-                        <div class="modal-section">
-                            <h3><i class="fas fa-code-branch"></i> Version History</h3>
-                            <div class="versions-scroll-container">
-                                <div class="versions-container">
-                                    ${versionItems}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-            modalContainer.appendChild(modal);
-
-            modal.querySelector('.close-modal').addEventListener('click', function() {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                setUrlParam('app', '');
-            });
-
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                    setUrlParam('app', '');
-                }
-            });
-
-            // Enable category tag navigation from within the modal
-            modal.querySelectorAll('.modal-categories .category-tag').forEach(tag => {
-                tag.addEventListener('click', () => {
-                    const category = tag.textContent;
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                    setUrlParam('app', '');
-                    const categoryTab = document.querySelector('.tab[data-tab="categories"]');
-                    if (categoryTab) {
-                        categoryTab.click();
-                    }
-                    setUrlParam('category', category);
-                    renderAppsForCategory(category);
-                });
-            });
-
-            return modal;
-        }
-
-        // Handle Escape key to close any active modal
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                    setUrlParam('app', '');
-                });
+    function updateCarousel() {
+        const items = carousel.querySelectorAll('.carousel-item');
+        const dots = navDotsContainer.querySelectorAll('.nav-dot');
+        
+        items.forEach((item, index) => {
+            item.classList.remove('prev', 'active', 'next');
+            if (index === (currentIndex + items.length - 1) % items.length) {
+                item.classList.add('prev');
+            } else if (index === currentIndex) {
+                item.classList.add('active');
+            } else if (index === (currentIndex + 1) % items.length) {
+                item.classList.add('next');
             }
         });
 
-        function openModal(appId) {
-            let modal = document.getElementById(`${appId}Modal`);
-            if (!modal) {
-                const app = apps.find(a => a.id === appId);
-                if (!app) {
-                    alert('App ID not found, please try again later.');
-                    return;
-                }
-                modal = createModal(app);
-            }
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            setUrlParam('app', appId);
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % apps.filter(app => app.featured).length;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + apps.filter(app => app.featured).length) % apps.filter(app => app.featured).length;
+        updateCarousel();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+
+    function renderSearchResults(filteredApps, page = 1) {
+        const appsPerPage = 20;
+        const totalPages = Math.ceil(filteredApps.length / appsPerPage);
+        const start = (page - 1) * appsPerPage;
+        const end = start + appsPerPage;
+        const paginatedApps = filteredApps.slice(start, end);
+
+        searchResults.innerHTML = '';
+
+        if (paginatedApps.length === 0) {
+            const noResults = document.createElement('p');
+            noResults.textContent = 'No apps found.';
+            noResults.style.textAlign = 'center';
+            noResults.style.width = '100%';
+            noResults.style.color = '#aaa';
+            noResults.style.marginTop = '20px';
+            searchResults.appendChild(noResults);
+            return;
         }
-        
-        // Tab switching
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const tabName = this.getAttribute('data-tab');
-                // Update active tab
-                tabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                // Hide all tab content
-                Object.values(tabContents).forEach(content => {
-                    content.classList.remove('active');
-                });
-                // Show/hide views based on tab
-                if (tabName === 'featured') {
-                    carouselContainer.style.display = 'block';
-                    searchContainer.style.display = 'none';
-                    searchResults.classList.remove('active');
-                    tabContents.featured.classList.add('active');
-                } else if (tabName === 'search') {
-                    carouselContainer.style.display = 'none';
-                    searchContainer.style.display = 'block';
-                    searchResults.classList.add('active');
-                    tabContents.search.classList.add('active');
-                    const pageParam = parseInt(getUrlParam('page'));
-                    const page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
-                    if (page === 1) {
-                        setUrlParam('page', '');
-                    } else {
-                        setUrlParam('page', page);
+
+        paginatedApps.forEach(app => {
+            const appCard = document.createElement('div');
+            appCard.className = 'app-card-grid';
+            appCard.innerHTML = `
+                <div class="card-icon">
+                    ${app.icon ? `<img src="`\({app.icon}" alt="\)`{app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
+                    '<i class="fas fa-mobile-alt"></i>'}
+                </div>
+                <div class="card-name">${app.title}</div>
+                <div class="card-developer">${app.developer}</div>
+                <button class="card-button" data-app-id="${app.id}">View Details</button>
+            `;
+            searchResults.appendChild(appCard);
+        });
+
+        // Add pagination if needed
+        if (totalPages > 1) {
+            const pagination = document.createElement('div');
+            pagination.className = 'pagination-controls';
+            pagination.innerHTML = '';
+
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'pagination-btn prev';
+            prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            prevBtn.disabled = page <= 1;
+            prevBtn.addEventListener('click', () => navigateSearchPage(page - 1));
+            pagination.appendChild(prevBtn);
+
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= page - 1 && i <= page + 1)) {
+                    const pageElem = document.createElement(i === page ? 'span' : 'button');
+                    pageElem.className = `pagination-page ${i === page ? 'current' : ''}`;
+                    pageElem.textContent = i;
+                    if (i !== page) {
+                        pageElem.addEventListener('click', () => navigateSearchPage(i));
                     }
-                    renderSearchResults(apps, page);
-                } else if (tabName === 'categories') {
-                    carouselContainer.style.display = 'none';
-                    searchContainer.style.display = 'none';
-                    searchResults.classList.remove('active');
-                    tabContents.categories.classList.add('active');
-                    renderCategoryList();
-                } else {
-                    // For categories, genius, updates
-                    carouselContainer.style.display = 'none';
-                    searchContainer.style.display = 'none';
-                    searchResults.classList.remove('active');
-                    tabContents[tabName].classList.add('active');
+                    pagination.appendChild(pageElem);
+                } else if (i === page - 2 || i === page + 2) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = '...';
+                    ellipsis.className = 'pagination-ellipsis';
+                    pagination.appendChild(ellipsis);
                 }
+            }
+
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'pagination-btn next';
+            nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            nextBtn.disabled = page >= totalPages;
+            nextBtn.addEventListener('click', () => navigateSearchPage(page + 1));
+            pagination.appendChild(nextBtn);
+
+            searchResults.appendChild(pagination);
+        }
+
+        // Add event listeners to view details buttons
+        searchResults.querySelectorAll('.card-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const appId = this.getAttribute('data-app-id');
+                openDetailPage(appId);
             });
         });
+
+        currentSearchPage = page;
+    }
+
+    function navigateSearchPage(page) {
+        const query = getUrlParam('query') || '';
+        setUrlParam('page', page > 1 ? page : '');
         
-        // Search functionality
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            setUrlParam('query', searchTerm);
-            setUrlParam('page', '');
-            if (searchTerm.length === 0) {
-                renderSearchResults(apps, 1);
-                return;
-            }
-            let filteredApps = apps;
-            let devPart = null, catPart = null, namePart = searchTerm;
-            const devMatch = searchTerm.match(/developer:([^ ]+)/);
-            const catMatch = searchTerm.match(/category:([^ ]+)/);
+        let filteredApps = apps;
+        if (query) {
+            let devPart = null, catPart = null, namePart = query;
+            const devMatch = query.match(/developer:([^ ]+)/);
+            const catMatch = query.match(/category:([^ ]+)/);
             if (devMatch) {
-                devPart = devMatch[1].trim();
-                namePart = namePart.replace(devMatch[0], '').trim();
+                devPart = devMatch[1].trim().toLowerCase();
+                namePart = namePart.replace(devMatch[0], '').trim().toLowerCase();
             }
             if (catMatch) {
-                catPart = catMatch[1].trim();
-                namePart = namePart.replace(catMatch[0], '').trim();
+                catPart = catMatch[1].trim().toLowerCase();
+                namePart = namePart.replace(catMatch[0], '').trim().toLowerCase();
             }
-            filteredApps = filteredApps.filter(app => {
+            filteredApps = apps.filter(app => {
                 let matches = true;
-                if (devPart) {
-                    matches = matches && app.developer.toLowerCase().includes(devPart);
-                }
-                if (catPart) {
-                    matches = matches && Array.isArray(app.categories) && app.categories.some(cat => cat.toLowerCase().includes(catPart));
-                }
-                if (namePart) {
-                    matches = matches && app.title.toLowerCase().includes(namePart);
-                }
+                if (devPart) matches = matches && app.developer.toLowerCase().includes(devPart);
+                if (catPart) matches = matches && app.categories.some(cat => cat.toLowerCase().includes(catPart));
+                if (namePart) matches = matches && app.title.toLowerCase().includes(namePart);
                 return matches;
             });
-            renderSearchResults(filteredApps, 1);
-        });
-        
-        // Show cancel button when search input is focused
-        searchInput.addEventListener('focus', function() {
-            cancelSearch.style.display = 'block';
-        });
-        
-        // Hide cancel button when search input is blurred
-        searchInput.addEventListener('blur', function() {
-            if (this.value === '') {
-                cancelSearch.style.display = 'none';
-            }
-        });
-        
-        // Cancel search
-        cancelSearch.addEventListener('click', function() {
-            searchInput.value = '';
-            searchInput.blur();
-            this.style.display = 'none';
-            setUrlParam('query', '');
-            renderSearchResults(apps);
-        });
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            initCarousel();
-            
-            // Add keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                const searchTabActive = document.querySelector('.tab[data-tab="search"]').classList.contains('active');
-                if (searchTabActive && document.activeElement !== searchInput) {
-                    if (e.key === 'ArrowRight') {
-                        pageNumberBuffer = '';
-                        clearTimeout(pageNumberTimer);
-                        navigateSearchPage(currentSearchPage + 1);
-                    } else if (e.key === 'ArrowLeft') {
-                        pageNumberBuffer = '';
-                        clearTimeout(pageNumberTimer);
-                        navigateSearchPage(currentSearchPage - 1);
-                    } else if (/^[0-9]$/.test(e.key)) {
-                        pageNumberBuffer += e.key;
-                        clearTimeout(pageNumberTimer);
-                        pageNumberTimer = setTimeout(() => {
-                            const page = parseInt(pageNumberBuffer, 10);
-                            if (!isNaN(page)) {
-                                navigateSearchPage(page);
-                            }
-                            pageNumberBuffer = '';
-                        }, 500);
-                    }
-                } else {
-                    if (e.key === 'ArrowRight') {
-                        nextSlide();
-                    } else if (e.key === 'ArrowLeft') {
-                        prevSlide();
-                    }
-                }
-            });
-            
-            // Activate featured tab content
-            tabContents.featured.classList.add('active');
-            
-            const queryParam = getUrlParam('query');
-            if (queryParam) {
-                searchInput.value = queryParam;
-                tabs.forEach(tab => {
-                    if (tab.getAttribute('data-tab') === 'search') {
-                        tab.click();
-                    }
-                });
-                let filteredApps;
-                if (queryParam.includes('developer:')) {
-                    const parts = queryParam.split('developer:');
-                    const namePart = parts[0].trim();
-                    const devPart = parts[1].trim();
-                    filteredApps = apps.filter(app => {
-                        const matchesDev = app.developer.toLowerCase().includes(devPart);
-                        const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
-                        return matchesDev && matchesName;
-                    });
-                } else {
-                    filteredApps = apps.filter(app => 
-                        app.title.toLowerCase().includes(queryParam) || 
-                        app.developer.toLowerCase().includes(queryParam)
-                    );
-                }
-                renderSearchResults(filteredApps);
-            }
-            const appParam = getUrlParam('app');
-            if (appParam) {
-                openModal(appParam);
-            }
-            const categoryParam = getUrlParam('category');
-            if (categoryParam) {
-                tabs.forEach(tab => {
-                    if (tab.getAttribute('data-tab') === 'categories') {
-                        tab.click();
-                    }
-                });
-                renderAppsForCategory(categoryParam);
-            }
-        });
+        }
+        renderSearchResults(filteredApps, page);
+        searchResults.scrollIntoView({ behavior: 'smooth' });
+    }
 
-        function setUrlParam(key, value) {
-            const params = new URLSearchParams(window.location.search);
-            if (value && value.length > 0) {
-                params.set(key, value);
-            } else {
-                params.delete(key);
-            }
-            const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
-            window.history.replaceState({}, '', newUrl);
+    function createDetailPage(app) {
+        const detailPage = document.createElement('div');
+        detailPage.className = 'detail-page';
+        detailPage.id = `${app.id}Detail`;
+
+        // Prepare categories
+        let categoriesHtml = '';
+        if (Array.isArray(app.categories) && app.categories.length > 0) {
+            categoriesHtml = `
+                <div class="modal-categories">
+                    ${app.categories.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
+                </div>
+            `;
         }
 
-        function getUrlParam(key) {
-            const params = new URLSearchParams(window.location.search);
-            return params.get(key);
+        // Prepare version items for later modal
+        let archivedVersions = '';
+        if (app.versions.archived && app.versions.archived.length > 0) {
+            archivedVersions = app.versions.archived.map(v => `
+                <li>
+                    <span>Version ${v.version}</span>
+                    <a href="${v.url}" target="_blank" rel="noopener noreferrer">
+                        <button class="download-button">
+                            <i class="fas fa-download"></i> Download IPA
+                        </button>
+                    </a>
+                </li>
+            `).join('');
         }
 
-
-        function getAllCategories() {
-            const categorySet = new Set();
-            apps.forEach(app => {
-                if (Array.isArray(app.categories)) {
-                    app.categories.forEach(cat => categorySet.add(cat));
-                }
-            });
-            return Array.from(categorySet).sort();
+        let unarchivedVersions = '';
+        if (app.versions.unarchived && app.versions.unarchived.length > 0) {
+            unarchivedVersions = app.versions.unarchived.map(v => `
+                <li>Version ${v}</li>
+            `).join('');
         }
 
-        function renderCategoryList() {
-            const categoriesContent = tabContents.categories;
-            categoriesContent.innerHTML = '';
-            const container = document.createElement('div');
-            container.className = 'categories-list-container category-fade-in';
-            
-            const title = document.createElement('h3');
-            title.textContent = 'Browse Apps by Category';
-            title.style.textAlign = 'center';
-            title.style.marginBottom = '20px';
-            container.appendChild(title);
-
-            const categories = getAllCategories();
-            const list = document.createElement('div');
-            list.className = 'categories-list';
-            list.style.display = 'flex';
-            list.style.flexWrap = 'wrap';
-            list.style.gap = '12px';
-            list.style.justifyContent = 'center';
-
-            categories.forEach(cat => {
-                const tag = document.createElement('button');
-                tag.className = 'category-tag category-select-btn';
-                tag.textContent = cat;
-                tag.style.cursor = 'pointer';
-                tag.addEventListener('click', () => {
-                    setUrlParam('category', cat);
-                    renderAppsForCategory(cat);
-                });
-                list.appendChild(tag);
-            });
-            container.appendChild(list);
-            categoriesContent.appendChild(container);
-        }
-
-        function renderAppsForCategory(category) {
-            const categoriesContent = tabContents.categories;
-            categoriesContent.innerHTML = '';
-            
-            const backBtn = document.createElement('button');
-            backBtn.textContent = 'Back to Categories';
-            backBtn.className = 'back-to-categories-btn';
-            backBtn.style.marginBottom = '20px';
-            backBtn.style.display = 'block';
-            backBtn.style.marginLeft = 'auto';
-            backBtn.style.marginRight = 'auto';
-            backBtn.addEventListener('click', () => {
-                setUrlParam('category', '');
-                renderCategoryList();
-            });
-            categoriesContent.appendChild(backBtn);
-
-            const title = document.createElement('h3');
-            title.textContent = `Apps in "${category}"`;
-            title.style.textAlign = 'center';
-            title.style.marginBottom = '20px';
-            categoriesContent.appendChild(title);
-
-            const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
-            if (filteredApps.length === 0) {
-                const noApps = document.createElement('p');
-                noApps.textContent = 'No apps found in this category.';
-                noApps.style.textAlign = 'center';
-                categoriesContent.appendChild(noApps);
-                return;
-            }
-            const grid = document.createElement('div');
-            grid.className = 'category-apps-grid';
-            grid.style.display = 'grid';
-            grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
-            grid.style.gap = '18px';
-            grid.style.justifyItems = 'center';
-            filteredApps.forEach(app => {
-                const appCard = document.createElement('div');
-                appCard.className = 'app-card-grid';
-                appCard.innerHTML = `
-                    <div class="card-icon">
-                        ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
+        detailPage.innerHTML = `
+            <div class="detail-nav">
+                <button class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+            </div>
+            <div class="detail-content">
+                <div class="detail-header">
+                    <div class="detail-icon">
+                        ${app.icon ? `<img src="`\({app.icon}" alt="\)`{app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
                         '<i class="fas fa-mobile-alt"></i>'}
                     </div>
-                    <div class="card-name">${app.title}</div>
-                    <div class="card-developer">${app.developer}</div>
-                    <button class="card-button" data-app-id="${app.id}">View Details</button>
-                `;
-                grid.appendChild(appCard);
-            });
-            categoriesContent.appendChild(grid);
+                    <div class="detail-info">
+                        <h2 class="detail-title">${app.title}</h2>
+                        <p class="detail-developer">${app.developer}</p>
+                        ${categoriesHtml}
+                        <button class="download-btn">Download</button>
+                    </div>
+                </div>
+                
+                <div class="detail-section">
+                    <h3><i class="fas fa-star"></i> Featured Description</h3>
+                    <p>${app.featuredDescription || 'No featured description available.'}</p>
+                </div>
+                
+                <div class="detail-section">
+                    <h3><i class="fas fa-align-left"></i> App Store Description</h3>
+                    ${app.description.split('\n').map(p => `<p>${p}</p>`).join('')}
+                </div>
+                
+                <div class="detail-section">
+                    <h3><i class="fas fa-mobile-alt"></i> Compatibility</h3>
+                    <p class="compatibility-text">${app.compatibility}</p>
+                </div>
+            </div>
+        `;
 
-            categoriesContent.querySelectorAll('.card-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const appId = this.getAttribute('data-app-id');
-                    openModal(appId);
-                });
+        // Add back button listener
+        detailPage.querySelector('.back-btn').addEventListener('click', function() {
+            detailPage.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            setUrlParam('app', '');
+            setTimeout(() => detailPage.remove(), 500); // Wait for transition
+        });
+
+        // Add download button listener
+        detailPage.querySelector('.download-btn').addEventListener('click', function() {
+            openVersionModal(app);
+        });
+
+        // Enable category tag navigation
+        detailPage.querySelectorAll('.modal-categories .category-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                const category = tag.textContent;
+                detailPage.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                setUrlParam('app', '');
+                setTimeout(() => detailPage.remove(), 500);
+                const categoryTab = document.querySelector('.tab[data-tab="categories"]');
+                if (categoryTab) {
+                    categoryTab.click();
+                }
+                setUrlParam('category', category);
+                renderAppsForCategory(category);
+            });
+        });
+
+        return detailPage;
+    }
+
+    function openVersionModal(app) {
+        let modal = document.getElementById(`${app.id}VersionModal`);
+        if (!modal) {
+            modal = createVersionModal(app);
+            modalContainer.appendChild(modal);
+        }
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function createVersionModal(app) {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.id = `${app.id}VersionModal`;
+
+        let archivedVersions = '';
+        if (app.versions.archived && app.versions.archived.length > 0) {
+            archivedVersions = `
+                <div class="version-group">
+                    <h4>Archived Versions</h4>
+                    <ul class="version-list">
+                        ${app.versions.archived.map(v => `
+                            <li>
+                                <span>Version ${v.version}</span>
+                                <a href="${v.url}" target="_blank" rel="noopener noreferrer">
+                                    <button class="download-button">
+                                        <i class="fas fa-download"></i> Download IPA
+                                    </button>
+                                </a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        let unarchivedVersions = '';
+        if (app.versions.unarchived && app.versions.unarchived.length > 0) {
+            unarchivedVersions = `
+                <div class="version-group">
+                    <h4 class="unarchived-label">Unarchived Versions</h4>
+                    <ul class="version-list">
+                        ${app.versions.unarchived.map(v => `<li>Version ${v}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        const versionItems = archivedVersions + unarchivedVersions;
+
+        modal.innerHTML = `
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div class="modal-section">
+                    <h3><i class="fas fa-code-branch"></i> Version History</h3>
+                    <div class="versions-scroll-container">
+                        <div class="versions-container">
+                            ${versionItems}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        modal.querySelector('.close-modal').addEventListener('click', function() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        return modal;
+    }
+
+    // Handle Escape key to close any active modal or detail page
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            document.querySelectorAll('.detail-page.active').forEach(page => {
+                page.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                setUrlParam('app', '');
+                setTimeout(() => page.remove(), 500);
             });
         }
+    });
+
+    function openDetailPage(appId) {
+        let detailPage = document.getElementById(`${appId}Detail`);
+        if (!detailPage) {
+            const app = apps.find(a => a.id === appId);
+            if (!app) {
+                alert('App ID not found, please try again later.');
+                return;
+            }
+            detailPage = createDetailPage(app);
+            document.body.appendChild(detailPage);
+        }
+        detailPage.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        setUrlParam('app', appId);
+    }
+    
+    // Tab switching
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabName = this.getAttribute('data-tab');
+            // Update active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            // Hide all tab content
+            Object.values(tabContents).forEach(content => {
+                content.classList.remove('active');
+            });
+            // Show/hide views based on tab
+            if (tabName === 'featured') {
+                carouselContainer.style.display = 'block';
+                searchContainer.style.display = 'none';
+                searchResults.classList.remove('active');
+                tabContents.featured.classList.add('active');
+            } else if (tabName === 'search') {
+                carouselContainer.style.display = 'none';
+                searchContainer.style.display = 'block';
+                searchResults.classList.add('active');
+                tabContents.search.classList.add('active');
+                const pageParam = parseInt(getUrlParam('page'));
+                const page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
+                if (page === 1) {
+                    setUrlParam('page', '');
+                } else {
+                    setUrlParam('page', page);
+                }
+                renderSearchResults(apps, page);
+            } else if (tabName === 'categories') {
+                carouselContainer.style.display = 'none';
+                searchContainer.style.display = 'none';
+                searchResults.classList.remove('active');
+                tabContents.categories.classList.add('active');
+                renderCategoryList();
+            } else {
+                // For categories, genius, updates
+                carouselContainer.style.display = 'none';
+                searchContainer.style.display = 'none';
+                searchResults.classList.remove('active');
+                tabContents[tabName].classList.add('active');
+            }
+        });
+    });
+    
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        setUrlParam('query', searchTerm);
+        setUrlParam('page', '');
+        if (searchTerm.length === 0) {
+            renderSearchResults(apps, 1);
+            return;
+        }
+        let filteredApps = apps;
+        let devPart = null, catPart = null, namePart = searchTerm;
+        const devMatch = searchTerm.match(/developer:([^ ]+)/);
+        const catMatch = searchTerm.match(/category:([^ ]+)/);
+        if (devMatch) {
+            devPart = devMatch[1].trim();
+            namePart = namePart.replace(devMatch[0], '').trim();
+        }
+        if (catMatch) {
+            catPart = catMatch[1].trim();
+            namePart = namePart.replace(catMatch[0], '').trim();
+        }
+        filteredApps = filteredApps.filter(app => {
+            let matches = true;
+            if (devPart) {
+                matches = matches && app.developer.toLowerCase().includes(devPart);
+            }
+            if (catPart) {
+                matches = matches && Array.isArray(app.categories) && app.categories.some(cat => cat.toLowerCase().includes(catPart));
+            }
+            if (namePart) {
+                matches = matches && app.title.toLowerCase().includes(namePart);
+            }
+            return matches;
+        });
+        renderSearchResults(filteredApps, 1);
+    });
+    
+    // Show cancel button when search input is focused
+    searchInput.addEventListener('focus', function() {
+        cancelSearch.style.display = 'block';
+    });
+    
+    // Hide cancel button when search input is blurred
+    searchInput.addEventListener('blur', function() {
+        if (this.value === '') {
+            cancelSearch.style.display = 'none';
+        }
+    });
+    
+    // Cancel search
+    cancelSearch.addEventListener('click', function() {
+        searchInput.value = '';
+        searchInput.blur();
+        this.style.display = 'none';
+        setUrlParam('query', '');
+        renderSearchResults(apps);
+    });
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+        initCarousel();
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const searchTabActive = document.querySelector('.tab[data-tab="search"]').classList.contains('active');
+            if (searchTabActive && document.activeElement !== searchInput) {
+                if (e.key === 'ArrowRight') {
+                    pageNumberBuffer = '';
+                    clearTimeout(pageNumberTimer);
+                    navigateSearchPage(currentSearchPage + 1);
+                } else if (e.key === 'ArrowLeft') {
+                    pageNumberBuffer = '';
+                    clearTimeout(pageNumberTimer);
+                    navigateSearchPage(currentSearchPage - 1);
+                } else if (/^[0-9]$/.test(e.key)) {
+                    pageNumberBuffer += e.key;
+                    clearTimeout(pageNumberTimer);
+                    pageNumberTimer = setTimeout(() => {
+                        const page = parseInt(pageNumberBuffer, 10);
+                        if (!isNaN(page)) {
+                            navigateSearchPage(page);
+                        }
+                        pageNumberBuffer = '';
+                    }, 500);
+                }
+            } else {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            }
+        });
+        
+        // Activate featured tab content
+        tabContents.featured.classList.add('active');
+        
+        const queryParam = getUrlParam('query');
+        if (queryParam) {
+            searchInput.value = queryParam;
+            tabs.forEach(tab => {
+                if (tab.getAttribute('data-tab') === 'search') {
+                    tab.click();
+                }
+            });
+            let filteredApps;
+            if (queryParam.includes('developer:')) {
+                const parts = queryParam.split('developer:');
+                const namePart = parts[0].trim();
+                const devPart = parts[1].trim();
+                filteredApps = apps.filter(app => {
+                    const matchesDev = app.developer.toLowerCase().includes(devPart);
+                    const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
+                    return matchesDev && matchesName;
+                });
+            } else {
+                filteredApps = apps.filter(app => 
+                    app.title.toLowerCase().includes(queryParam) || 
+                    app.developer.toLowerCase().includes(queryParam)
+                );
+            }
+            renderSearchResults(filteredApps);
+        }
+        const appParam = getUrlParam('app');
+        if (appParam) {
+            openDetailPage(appParam);
+        }
+        const categoryParam = getUrlParam('category');
+        if (categoryParam) {
+            tabs.forEach(tab => {
+                if (tab.getAttribute('data-tab') === 'categories') {
+                    tab.click();
+                }
+            });
+            renderAppsForCategory(categoryParam);
+        }
+    });
+
+    function setUrlParam(key, value) {
+        const params = new URLSearchParams(window.location.search);
+        if (value && value.length > 0) {
+            params.set(key, value);
+        } else {
+            params.delete(key);
+        }
+        const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+        window.history.replaceState({}, '', newUrl);
+    }
+
+    function getUrlParam(key) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(key);
+    }
+
+
+    function getAllCategories() {
+        const categorySet = new Set();
+        apps.forEach(app => {
+            if (Array.isArray(app.categories)) {
+                app.categories.forEach(cat => categorySet.add(cat));
+            }
+        });
+        return Array.from(categorySet).sort();
+    }
+
+    function renderCategoryList() {
+        const categoriesContent = tabContents.categories;
+        categoriesContent.innerHTML = '';
+        const container = document.createElement('div');
+        container.className = 'categories-list-container category-fade-in';
+        
+        const title = document.createElement('h3');
+        title.textContent = 'Browse Apps by Category';
+        title.style.textAlign = 'center';
+        title.style.marginBottom = '20px';
+        container.appendChild(title);
+
+        const categories = getAllCategories();
+        const list = document.createElement('div');
+        list.className = 'categories-list';
+        list.style.display = 'flex';
+        list.style.flexWrap = 'wrap';
+        list.style.gap = '12px';
+        list.style.justifyContent = 'center';
+
+        categories.forEach(cat => {
+            const tag = document.createElement('button');
+            tag.className = 'category-tag category-select-btn';
+            tag.textContent = cat;
+            tag.style.cursor = 'pointer';
+            tag.addEventListener('click', () => {
+                setUrlParam('category', cat);
+                renderAppsForCategory(cat);
+            });
+            list.appendChild(tag);
+        });
+        container.appendChild(list);
+        categoriesContent.appendChild(container);
+    }
+
+    function renderAppsForCategory(category) {
+        const categoriesContent = tabContents.categories;
+        categoriesContent.innerHTML = '';
+        
+        const backBtn = document.createElement('button');
+        backBtn.textContent = 'Back to Categories';
+        backBtn.className = 'back-to-categories-btn';
+        backBtn.style.marginBottom = '20px';
+        backBtn.style.display = 'block';
+        backBtn.style.marginLeft = 'auto';
+        backBtn.style.marginRight = 'auto';
+        backBtn.addEventListener('click', () => {
+            setUrlParam('category', '');
+            renderCategoryList();
+        });
+        categoriesContent.appendChild(backBtn);
+
+        const title = document.createElement('h3');
+        title.textContent = `Apps in "${category}"`;
+        title.style.textAlign = 'center';
+        title.style.marginBottom = '20px';
+        categoriesContent.appendChild(title);
+
+        const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
+        if (filteredApps.length === 0) {
+            const noApps = document.createElement('p');
+            noApps.textContent = 'No apps found in this category.';
+            noApps.style.textAlign = 'center';
+            categoriesContent.appendChild(noApps);
+            return;
+        }
+        const grid = document.createElement('div');
+        grid.className = 'category-apps-grid';
+        grid.style.display = 'grid';
+        grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
+        grid.style.gap = '18px';
+        grid.style.justifyItems = 'center';
+        filteredApps.forEach(app => {
+            const appCard = document.createElement('div');
+            appCard.className = 'app-card-grid';
+            appCard.innerHTML = `
+                <div class="card-icon">
+                    ${app.icon ? `<img src="`\({app.icon}" alt="\)`{app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
+                    '<i class="fas fa-mobile-alt"></i>'}
+                </div>
+                <div class="card-name">${app.title}</div>
+                <div class="card-developer">${app.developer}</div>
+                <button class="card-button" data-app-id="${app.id}">View Details</button>
+            `;
+            grid.appendChild(appCard);
+        });
+        categoriesContent.appendChild(grid);
+
+        categoriesContent.querySelectorAll('.card-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const appId = this.getAttribute('data-app-id');
+                openDetailPage(appId);
+            });
+        });
+    }
