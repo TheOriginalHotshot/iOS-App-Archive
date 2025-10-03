@@ -2388,7 +2388,111 @@
                                 icon: "cdn/app-icon/line-birds.jpeg",
                                 featured: false,
                                 categories: ["Action", "Casual", "Games"]
-                            }                                                                                                                                                                                                                                  
+                            },
+                            {
+                                id: "flight-sites",
+                                title: "Flight Sites",
+                                developer: "Sojern Inc",
+                                featuredDescription: "Quick links to airlines, flight info, and things to do at your destination.",
+                                description: "Want to find the gate number for your flight? Wondering what to do in the city you are going to tonight? Have quick links to 17 of the top U.S. airlines plus a lot more at your fingertips with Flight Sites.\n\nFlight Sites organizes highly used airline web pages for mobile travelers all in one place. You can quickly tap to check-in, find flight status, frequent flier info, or even book a flight directly with your airline. Plus just a quick tap will call them for you. No more searching for numbers or links.\n\nWith our city search you can find restaurants, events, attractions, weather and more for almost every destination across the U.S. We provide everything you would need to know – phone numbers, addresses, descriptions, hours, show times, and ticket purchasing info. All is updated continuously so it is the latest available. \n\nThis application is a must-have for both the leisure and business traveler. Try it on a trip and you will see for yourself.",
+                                versions: {
+                                    archived: [
+                                        { version: "1.7.2", url: "https://archive.org/download/flight-sites-v-1.7.2-i-os-3.1.3/Flight%20Sites%20%28V1.7.2%29%20%28iOS3.1.3%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.1.3 and Later",
+                                icon: "cdn/app-icon/flight-sites.png",
+                                featured: false,
+                                categories: ["Entertainment", "Travel"]
+                            },
+                            {
+                                id: "klaus",
+                                title: "Klaus",
+                                developer: "ROOT9 MediaLab GmbH",
+                                featuredDescription: "Help Klaus keep it together on his wobbly walk home after a wild night.",
+                                description: "Does this sound familiar to you? You're on your way home from a place where as far as you can remember a great party happened last night. And although it's already light out, you can't find your way which unfortunately is the least of your problems since you'd be happy if you could at least walk straight and stop wondering if you lost your clothes in this awful Poker game or if the tall blond took them (and if yes, where is she now?).\n\nSo, if you have been there too, help Klaus to keep it up.\n\nCaution: Motion control might evoke some memories! ;-)",
+                                versions: {
+                                    archived: [
+                                        { version: "1.3", url: "https://archive.org/download/klaus-v-1.3-i-os-2.1/Klaus%20%28V1.3%29%20%28iOS2.1%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iPhoneOS 2.1 and Later",
+                                icon: "cdn/app-icon/klaus.png",
+                                featured: false,
+                                categories: ["Action", "Lifestyle", "Games"]
+                            },
+                            {
+                                id: "drunken-klaus-3d",
+                                title: "Drunken Klaus 3D",
+                                developer: "ROOT9 MediaLab GmbH",
+                                featuredDescription: "Tilt to guide Klaus along the shore—keep him steady after one drink too many.",
+                                description: "Guide Klaus on his way to Candy by using your iPhone’s motion sensor. Try keeping a straight line and keep Klaus from stumbling along the sea. . \n\nImagine this: The sun is rising into the blue sky above you, there’s the most beautiful beach beneath you and in your hand: a cold bottle of rum. That’s just perfect, right? Well, not for poor Klaus. After what seems to have been a long evening, all he wants is to do is go to bed, which could prove difficult since he has emptied a few drinks too many. \n\nAnd you remember what they always say, right? 'Don’t drink and dive!'\n\nIf you’re one of the 750.000 people who downloaded the first Klaus-game, you’ll most certainly enjoy the sequel. It features Klaus in all his drunken glory jumping over fish and getting performance points for graceful moves. Collecting bottles gets him smashed, energy drinks lower his alcohol level. You choose your own level of difficulty by making him drink as much as you want before you start. \n\nSo go and meet Klaus, he’s counting on you. \n\nCheers!",
+                                versions: {
+                                    archived: [
+                                        { version: "1.03", url: "https://archive.org/download/drunken-klaus-3-d-v-1.03-i-os-2.2.1/Drunken%20Klaus%203D%20%28V1.03%29%20%28iOS2.2.1%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iPhoneOS 2.2.1 and Later",
+                                icon: "cdn/app-icon/drunken-klaus-3d.png",
+                                featured: false,
+                                categories: ["Entertainment", "Action", "Adventure", "Games"]
+                            },
+                            {
+                                id: "4-bugs",
+                                title: "4 Bugs",
+                                developer: "ROOT9 MediaLab GmbH",
+                                featuredDescription: "Spot the four differences between two nearly identical images—500 pics, 2-player mode, and gambling twists!",
+                                description: "Welcome 4bugs to your iPhone!\n\nThe makers of Yetisports challenge you with a bunch of hairy bugs on your iPhone. Watch out! 4bugs is based on a newspaper classic, it’s a picture hunt game with certain twists. Each round you are presented with two nearly identical images. Your job is to spot the 4 differences! Of course, there’s lots of stuff that sets this version aside from the picture hunt in your local newspaper or even other games. There are 500 pictures, a two player mode and the possibility to gamble. Are you sure that you are fast enough? Decrease the timer to increase your reward! \n\nThe funky 4bugs invade your iPhone in the DELUXE version with 500 stunning pictures and lots of extra animations featuring the funky’n hairy game characters.\n\nNever before have bugs been so welcome on the iPhone!\n\nTags: picture hunt, photo (hunt), (photo) play, find it, find the difference, \nbrain (training) game, picture quiz, \nclassics",
+                                versions: {
+                                    archived: [
+                                        { version: "1.0", url: "https://archive.org/download/4-bugs-v-1.0-i-os-2.2/4Bugs%20%28V1.0%29%20%28iOS2.2%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iPhoneOS 2.2 and Later",
+                                icon: "cdn/app-icon/4-bugs.png",
+                                featured: false,
+                                categories: ["Entertainment", "Family", "Puzzle", "Games"]
+                            },
+                            {
+                                id: "zombie-cookin",
+                                title: "Zombie Cookin’",
+                                developer: "Beeline Interactive, Inc",
+                                featuredDescription: "Run a gruesome kitchen as a zombie chef—master recipes, harvest disgusting ingredients, and upgrade your macabre eatery.",
+                                description: "Download the @FreeAppADay Store App and wish for more top rated apps like Zombie Cookin to be featured on FAAD!\n------------------------\n\nPLEASE NOTE: Zombie Cookin’ is free to play, but charges real money for additional in-app content. You may lock out the ability to purchase in-app content by adjusting your device’s settings. \n\nAdditional Note: Zombie Cookin’ requires an iPhone 3GS, iPod Third Generation, iPad or later device to run. \n------------------------ \n\nA dash of kitchen simulation, a smattering of social elements and a heaping spoonful of Zombies. Play as a Zombie Chef and cook Zombie Food, prepare ingredients and put them in the stove or oven for just the right amount of time.\n\nWhile Zombie Cookin’ is free to play, players can accelerate gameplay or acquire unique items by purchasing “Bones,” the game’s in app premium currency\n------------------------ \n\nFeatures: \n- Master more than 50 recipes\n- Send your zombie hoard out to discover macabre, unusual and downright disgusting ingredients.\n- 18 finger cleaving, brain scooping mini games.\n- Decorate and increase the efficiency of your kitchen with better stoves, windows, floor coverings and more.\n------------------------ \n\nADDITIONAL NOTES: \n\niOS will keep you logged on for 15 minutes after an initial in-app purchase. Additional purchases won’t require a re-entry of the password during this 15 minute interval. This is a function of the iOS software and not within our control. \n\nPlayers having trouble getting into their game after an update should reset their device. Hold the power button and follow the instructions on screen. If you have any further trouble, contact support@beeline-i.com for help. \n------------------------ \n\nFollow us on Twitter: www.twitter.com/BeelineGames \nFollow us on Facebook: www.facebook.com/BeelineGames \nFollow us on Youtube: www.youtube.com/BeelineGames",
+                                versions: {
+                                    archived: [
+                                        { version: "1.0.4", url: "https://archive.org/download/zombie-cookin-v-1.0.4-i-os-4.3/Zombie%20Cookin%20%28V1.0.4%29%20%28iOS4.3%29.ipa" }
+                                    ],
+                                    unarchived: []
+                                },
+                                compatibility: "iOS 4.3 and Later",
+                                icon: "cdn/app-icon/zombie-cookin.jpg",
+                                featured: false,
+                                categories: ["Entertainment", "Action", "Games", "Simulation"]
+                            },
+                            {
+                                id: "4bugs-oktoberfest",
+                                title: "4Bugs Oktoberfest",
+                                developer: "ROOT9 MediaLab GmbH",
+                                featuredDescription: "Spot the 4 differences across authentic Oktoberfest scenes with 170 photos, a two-player mode, and gamble-for-time challenges.",
+                                description: "Get the “4bugs Oktoberfest edition” for your iPhone! \n\nRight on time for the worlds biggest beer festival, the makers of Yetisports provide you with a brandnew “4bugs Oktoberfest edition” for your iPhone. Beer tent spirit guaranteed!\n\n4bugs is based on a newspaper classic, a picture hunt game with certain twists. Each round you are presented with two nearly identical Oktoberfest images. Your job is to spot the 4 differences! Of course, there’s lots of stuff that sets this version aside from the picture hunt in your local newspaper or even other games. There are 170 original Munich Oktoberfest pictures, a two player mode and the possibility to gamble. \n\nAre you sure that you are fast enough? Decrease the timer to increase your reward!",
+                                versions: {
+                                  archived: [
+                                    { version: "1.1", url: "https://archive.org/download/4-bugs-oktoberfest-v-1.1-i-os-2.2/4Bugs%20Oktoberfest%20%28V1.1%29%20%28iOS2.2%29.ipa" }
+                                  ],
+                                  unarchived: [
+                                      "1.0"
+                                  ]
+                                },
+                                compatibility: "iPhoneOS 2.2 and Later",
+                                icon: "cdn/app-icon/4bugs-oktoberfest.png",
+                                featured: false,
+                                categories: ["Entertainment", "Action", "Puzzle", "Games"]
+                              }                                                                                                                                                                                                                                                                                                                                                                                     
                          ];
 
         // DOM Elements
