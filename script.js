@@ -2927,7 +2927,7 @@
             if (!modal) {
                 const app = apps.find(a => a.id === appId);
                 if (!app) {
-                    alert('App ID not found, please try again later.');
+                    alert('App ID not found, please try again with a different app ID.');
                     return;
                 }
                 modal = createModal(app);
