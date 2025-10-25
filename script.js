@@ -2983,40 +2983,56 @@
             });
         });
         
+        function filterAppsByQuery(query) {
+            const normalizedQuery = (query || '').toLowerCase();
+            if (normalizedQuery.trim().length === 0) {
+                return apps;
+            }
+
+            let devPart = null;
+            let catPart = null;
+            let namePart = normalizedQuery;
+
+            const devMatch = normalizedQuery.match(/developer:"([^"]+)"/);
+            if (devMatch) {
+                devPart = devMatch[1].trim();
+                namePart = namePart.replace(devMatch[0], '').trim();
+            }
+
+            const catMatch = normalizedQuery.match(/category:"([^"]+)"/);
+            if (catMatch) {
+                catPart = catMatch[1].trim();
+                namePart = namePart.replace(catMatch[0], '').trim();
+            }
+
+            namePart = namePart.replace(/\s+/g, ' ').trim();
+
+            return apps.filter(app => {
+                let matches = true;
+
+                if (devPart) {
+                    matches = matches && app.developer.toLowerCase().includes(devPart);
+                }
+
+                if (catPart) {
+                    const appCategories = Array.isArray(app.categories) ? app.categories : [];
+                    matches = matches && appCategories.some(cat => cat.toLowerCase().includes(catPart));
+                }
+
+                if (namePart) {
+                    matches = matches && app.title.toLowerCase().includes(namePart);
+                }
+
+                return matches;
+            });
+        }
+
         // Search functionality
         searchInput.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
             setUrlParam('query', searchTerm);
             setUrlParam('page', '');
-            if (searchTerm.length === 0) {
-                renderSearchResults(apps, 1);
-                return;
-            }
-            let filteredApps = apps;
-            let devPart = null, catPart = null, namePart = searchTerm;
-            const devMatch = searchTerm.match(/developer:([^ ]+)/);
-            const catMatch = searchTerm.match(/category:([^ ]+)/);
-            if (devMatch) {
-                devPart = devMatch[1].trim();
-                namePart = namePart.replace(devMatch[0], '').trim();
-            }
-            if (catMatch) {
-                catPart = catMatch[1].trim();
-                namePart = namePart.replace(catMatch[0], '').trim();
-            }
-            filteredApps = filteredApps.filter(app => {
-                let matches = true;
-                if (devPart) {
-                    matches = matches && app.developer.toLowerCase().includes(devPart);
-                }
-                if (catPart) {
-                    matches = matches && Array.isArray(app.categories) && app.categories.some(cat => cat.toLowerCase().includes(catPart));
-                }
-                if (namePart) {
-                    matches = matches && app.title.toLowerCase().includes(namePart);
-                }
-                return matches;
-            });
+            const filteredApps = filterAppsByQuery(searchTerm);
             renderSearchResults(filteredApps, 1);
         });
         
@@ -3088,23 +3104,8 @@
                         tab.click();
                     }
                 });
-                let filteredApps;
-                if (queryParam.includes('developer:')) {
-                    const parts = queryParam.split('developer:');
-                    const namePart = parts[0].trim();
-                    const devPart = parts[1].trim();
-                    filteredApps = apps.filter(app => {
-                        const matchesDev = app.developer.toLowerCase().includes(devPart);
-                        const matchesName = namePart ? app.title.toLowerCase().includes(namePart) : true;
-                        return matchesDev && matchesName;
-                    });
-                } else {
-                    filteredApps = apps.filter(app => 
-                        app.title.toLowerCase().includes(queryParam) || 
-                        app.developer.toLowerCase().includes(queryParam)
-                    );
-                }
-                renderSearchResults(filteredApps);
+                const filteredApps = filterAppsByQuery(queryParam);
+                renderSearchResults(filteredApps, 1);
             }
             const appParam = getUrlParam('app');
             if (appParam) {
