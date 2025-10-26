@@ -2571,7 +2571,116 @@
                                 icon: "cdn/app-icon/teo-and-bianca-halloween-coloring-book.jpg",
                                 featured: false,
                                 categories: ["Entertainment", "Games"]
-                              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                              },
+                              {
+                                id: "piperlime",
+                                title: "Piperlime",
+                                developer: "Gap Inc",
+                                featuredDescription: "We’re Piperlime, a fresh online shop for women, men and kids.",
+                                description: "We’re Piperlime, a fresh online shop for women, men and kids. Just think of us as your insider’s guide to the hottest shoes, clothing and accessories.\n\nShop Piperlime (and all the Gap Inc. brands) with our new, easy-to-use app. You can find, share and buy…whenever and wherever it’s most convenient for you.\n\nApp Features:\n\nBrowse: See the latest shoes, apparel, handbags and jewelry. Get detailed descriptions. Find available colors. Check your size too.\n\nSearch: Have a specific item in mind? Use our simple search tool to find it at any of the Gap Inc. brands.\n\nShare: Email your favorite items. Send them to your friends, family (or even yourself).\n\nBuy: You can add products from Piperlime, Banana Republic, Gap, Old Navy and Athleta to your shopping bag and checkout all at once. You can even use your existing log-in and access saved credit card and address info. How simple is that?",
+                                versions: {
+                                  archived: [
+                                    { version: "1.1", url: "https://archive.org/download/piperlime-gap-inc.-v-1.1-lp-os-30.rc-333-613/Piperlime%20%5BGap%20Inc.%5D%20%28v1.1%20LP%20os30%29.rc333_613.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "Unknown",
+                                icon: "cdn/app-icon/piperlime.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },
+                              {
+                                id: "spot-a-cop",
+                                title: "Spot A Cop",
+                                developer: "SpotACop.com LLC",
+                                featuredDescription: "No description found.",
+                                description: "no description found",
+                                versions: {
+                                  archived: [
+                                    { version: "1.1", url: "https://archive.org/download/spot-a-cop-spot-acop.com-llc-v-1.1-os-312.rc-333-616/Spot%20A%20Cop%20%5BSpotACop.com%20LLC%5D%20%28v1.1%20os312%29.rc333_616.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.1 and Later",
+                                icon: "cdn/app-icon/spot-a-cop.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },
+                              {
+                                id: "igorilla",
+                                title: "iGorilla!",
+                                developer: "Ezone.com",
+                                featuredDescription: "Repeats everything you say in a super deep bass Gorilla voice!",
+                                description: "Repeats everything you say in a super deep bass Gorilla voice!\n\nJust talk into the microphone and iGorilla instantly repeats what you say in a deep gorilla voice! No buttons to press, no waiting for processing, just instant voice changing fun and quick laughs!\n\nUses for iGorilla:\n\n- you'll always have a friend when you need one\n- freak out your friends\n- liven up a boring meeting\n- win your next gadget battle: \"Can your phone do this?\"\n- a great addition to your magic act\n- great conversation starter\n- keep the kiddies busy\n\nScenario 1 - \"Get the Bully\": Next time a bully starts teasing you, pull out your iPhone and hold up iGorilla - everything the bully says gets repeated back to him!\n\nScenario 2 - \"Impress the girl\": Say some witty pickup line into iGorilla, walk up to the girl and press the repeat button, imagine how impressed she'll be!\n\nScenario 3 - \"Annoy Your Siblings\": Let iGorilla take the hard work out of annoying your brother or sister with the copy-cat treatment, just hold him up and let him work his magic - \"Stop copying me\", \"No, you stop copying me.\", \"No you\", \"No YOU!\", etc, etc\n\nPlease add your ideas to the comments section!\n\niGorilla from Ezone the creators of iPhone games Crazy Snowboard, Crazy Turkey Blast, Scarecrow, Galactic Gunner, and iPhone toys Mr Repeaty, Crazy Dummy, Crazy Lighter, and Crazy Pumpkin - download them today!",
+                                versions: {
+                                  archived: [
+                                    { version: "Unknown", url: "https://archive.org/download/com.ezone.igorilla-ios2.0-clutch-2.0.4/com.ezone.iGorilla-iOS2.0-%28Clutch-2.0.4%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "Unknown",
+                                icon: "cdn/app-icon/igorilla.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },
+                              {
+                                id: "long-multiplication-drills",
+                                title: "Long Multiplication Drills",
+                                developer: "Power Math Apps LLC",
+                                featuredDescription: "Carryout Multiplications step by step",
+                                description: "Carryout Multiplications step by step \n\nThis Application enables you to solve multiplication problems step by step, just as you would do it on a sheet of paper. Being able to carry out the multiplication step by step is the key feature of this application. \n\nThe application surface area represents a worksheet that’s touch enabled. As you start to do the multiplication you touch areas on the screen to highlight it and then use the keypad to enter the numbers. The idea is to enable long multiplications where you go digit by digit line by line also entering any carry forwards to solve the problem. \n\n\nHow the application works \n\nWhen you start the application it presents a screen where you choose the type of multiplications you like to practice. You could choose number of digits that you want for multiplicand as well as the multiplier and also set the range for the numbers; also you could choose if you want the application to present numbers that would result in rounding. Once set, the application presents questions that are generated randomly using the above criteria. \n\nAs guidance, if the user is a kindergartener and wants to practice basic multiplication facts, you might choose to start with one digit and may set your multiplier limit to the same number say 4 to practice multiplying by 4 (see the screenshot below). As you start to get more comfortable with your basic one digit multiplications you could start to turn it up a notch by increasing the digits on the first number (multiplicand) and also introduce the rounding. \n\nIf the user is in higher grades and has basic multiplication facts squared away, he or she could start with multiple digits on the second number (multiplier) and you will be presented with the worksheet that will allow you to do multiline multiplications (see the screen shot below). \n\nPractice, Practice, Practice \n\nIsn’t that we have heard so many times about Math? Should I really have to carry my workbooks everywhere, isn’t it really so cumbersome to do your workbooks when you are in the car with your parents. With the fabulous technology in your hand you have this fabulous application that I am confident will provide you the tool that you are looking for to improve your grades and become more confident. \n\nFinally \n\nAs you can see this application doesn’t become obsolete after just one grade, it is something that you really want to keep with you for quite many years. \nI am very confident that this tool will prove to be a tool that will truly help you learning multiplications and give you the edge that you are looking for in your classroom. \n\n*****Testimonials***** \n\nThese are from my three testers for this application, \nMy 6 year old daughter says she has just moved to two digit level. \nI myself am having fun with four digit multiplication, what a great brain exercise. Didn’t know what the calculators and computers have done to my mathematical ability (grin).",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/long-multiplication-drills-power-math-apps-v-1.0-os-40.rc-333-616/Long%20Multiplication%20Drills%20%5BPower%20Math%20Apps%5D%20%28v1.0%20os40%29.rc333_616.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iOS 4.0 and Later",
+                                icon: "cdn/app-icon/long-multiplication-drills.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },
+                              {
+                                id: "hotels-near-me",
+                                title: "Hotels Near Me",
+                                developer: "BluMedialab.com",
+                                featuredDescription: "Save up to 50 percent with Hotels Near Me app.",
+                                description: "Save up to 50 percent with Hotels Near Me app. Get cheap hotel rooms and the best deal on your next hotel booking. Read thousands of reviews for over 2,000,000+ hotels in 225+ countries anywhere in the world or near you. Book early for the best price. Free cancellation available for most hotels. Download Hotels Near Me now.\n\nAlso the best place to book your Apartments, Resorts, Villas, Vacation Homes, Hostels, B&B's and Guest houses.\n\nSit back and relax and easily search for hotels or use our advanced search:\n- search destinations (like airports, cities, regions etc)\n- search hotel names\n- search nearby\n- search on hotel stars\n- search on facilities\n- sort based on any criteria\n\nYou are not alone: thousands of users each month use Hotels Near Me to get the best hotel deals. Don't pay too much. Download the app now!\n\nFind hotels in 130,000+ cities like Adelaide, Amsterdam, Auckland, Bangkok, Barcelona, Budapest, Cancun, Cape Town, Chicago, Copenhagen, Dubai, Dublin, Genting Highlands, Hanoi, Hong Kong, Honolulu, Istanbul, Ko Phi Phi Don, Kuala Lumpur, Las Vegas, London, Los Angeles, Luton, Macau, Manchester, Miami, Milan, New York, New York City, Orlando, Oslo, Paris, Punta Cana, Riga, Riyadh, Rome, San Francisco, Seattle, Seoul, Shanghai, Sharm el Sheikh, Singapore, Sofia, Stockholm, Sydney, Taipei, Tokyo, Trinidad, Trondheim, Tunis, Vancouver, Vienna, Warsaw, Washington DC, Yangon, Zurich, etc!",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/hotels-near-me-1.0/HotelsNearMe%201.0.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "1.0.7",
+                                    "3.0.1",
+                                    "3.0.2",
+                                    "3.0.3",
+                                    "4.0",
+                                    "4.1",
+                                    "4.2",
+                                    "4.3",
+                                    "4.4",
+                                    "4.5",
+                                    "4.6",
+                                    "4.7",
+                                    "4.8",
+                                    "5.1",
+                                    "5.2",
+                                    "5.3",
+                                    "5.4",
+                                    "5.5",
+                                    "5.6",
+                                    "6.0",
+                                    "6.1",
+                                    "6.3",
+                                    "7.0"
+                                  ]
+                                },
+                                compatibility: "Unknown",
+                                icon: "cdn/app-icon/hotels-near-me.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                          ];
 
         // DOM Elements
