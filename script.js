@@ -1709,7 +1709,7 @@
                 compatibility: "iOS 5.0 and Later",
                 icon: "cdn/app-icon/travelocity-for-ipad.png",
                 featured: false,
-                categories: ["iOS", "Travel"]
+                categories: ["Travel"]
             },
             {
                 id: "cardstar",
@@ -1726,7 +1726,7 @@
                 compatibility: "iPhoneOS 2.0 and Later",
                 icon: "cdn/app-icon/cardstar.png",
                 featured: false,
-                categories: ["iOS"]
+                categories: ["NoCategoryAssignedApps"]
             },
             {
                 id: "can-you-escape-deluxe",
