@@ -3404,11 +3404,7 @@
                 return;
             }
             const grid = document.createElement('div');
-            grid.className = 'category-apps-grid';
-            grid.style.display = 'grid';
-            grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
-            grid.style.gap = '18px';
-            grid.style.justifyItems = 'center';
+            grid.className = 'category-apps-grid search-results active category-fade-in';
             filteredApps.forEach(app => {
                 const appCard = document.createElement('div');
                 appCard.className = 'app-card-grid';
