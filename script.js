@@ -2503,7 +2503,75 @@
                                 icon: "cdn/app-icon/4bugs-oktoberfest.png",
                                 featured: false,
                                 categories: ["Entertainment", "Action", "Puzzle", "Games"]
-                              }                                                                                                                                                                                                                                                                                                                                                                                     
+                              },
+                              {
+                                id: "halloween-counting-and-words-games",
+                                title: "Halloween counting & words games",
+                                developer: "IKIDSPAD LLC",
+                                featuredDescription: "8 spooky learning mini-games for young kids: counting, matching, unscrambling words, puzzles, simple math, and more—perfect for Halloween.",
+                                description: "Fun and free iPad app that generates 8 different learning games for young children to celebrate Halloween and learn at the same time. It’s child-friendly and easy to use on the iPad.\n\nThe 8 games are:\n•Counting game: count Halloween ghosts, pumpkins, and witches up to 20\n•Unscramble game: unscramble Halloween words and enjoy funny or scary Halloween pictures. \n•Matching game: count number of same kind of images and draw lines to connect to the correct number. \n•Missing letters game: read Halloween pictures and fill in the missing letter to the Halloween vocabulary. \n•Numbers game: number recognition game for young kids to learn numbers. \n•Puzzle game: Halloween picture slide puzzle. \n•Math game: fun math games for players to build up counting and number sense. \n•Observation game: read pictures and odd one out. Fun and challenging Halloween games for kids and adults. \n\nThis Halloween app can generate hundreds of unique fun games for young students from preschool to 1st grade practice words, letters, counting, matching, sorting, and spelling for the Halloween holiday!",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/halloween-counting-words-games-v-1.0-i-os-3.2/Halloween%20counting%20%26%20words%20games%20%28V1.0%29%20%28iOS3.2%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.2 and Later",
+                                icon: "cdn/app-icon/halloween-counting-and-words-games.jpg",
+                                featured: false,
+                                categories: ["Education", "Family", "Games"]
+                              },
+                              {
+                                id: "halloween",
+                                title: "Halloween",
+                                developer: "Trivial Technology",
+                                featuredDescription: "no description found",
+                                description: "no description found",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0.1", url: "https://archive.org/download/halloween-v-1.0.1-i-os-2.0/Halloween%20%28V1.0.1%29%20%28iOS2.0%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 2.0 and Later",
+                                icon: "cdn/app-icon/halloween.png",
+                                featured: false,
+                                categories: ["Family", "Entertainment", "Games"]
+                              },
+                              {
+                                id: "halloween-mahjong",
+                                title: "Halloween Mahjong",
+                                developer: "24/7 Games LLC",
+                                featuredDescription: "Trick or Treat every day with Halloween Mahjong! This incredible seasonal value works on both your iPad and iPhone--there's no better deal out there!",
+                                description: "Trick or Treat every day with Halloween Mahjong! This incredible seasonal value works on both your iPad and iPhone--there's no better deal out there! \n\nEnjoy all 13 of our amazingly fun and festive Mahjong Solitaire layouts with beautiful, easy-to-read tiles and all the best features: \n\n* 13 Spooky Layouts \n* Fun Halloween Artwork and Sounds\n* Hint Button \n* Shuffle Button \n* Undo Button \n* Simple interface (great for kids!)",
+                                versions: {
+                                  archived: [
+                                    { version: "1.33", url: "https://archive.org/download/halloween-mahjong-v-1.33-i-os-4.3/Halloween%20Mahjong%20%28V1.33%29%20%28iOS4.3%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "Unknown",
+                                icon: "cdn/app-icon/halloween-mahjong.png",
+                                featured: false,
+                                categories: ["Entertainment", "Puzzle", "Games"]
+                              },
+                              {
+                                id: "teo-and-bianca-halloween-coloring-book",
+                                title: "Teo & Bianca Halloween Coloring Book",
+                                developer: "Portegno Apps",
+                                featuredDescription: "Our beloved friends from KidsMag, Teo & Bianca are here to celebrate Halloween!",
+                                description: "Our beloved friends from KidsMag, Teo & Bianca are here to celebrate Halloween!\n\nTeo & Bianca Halloween Coloring Book is a fun holiday-theme coloring activity for kids. This app will keep your children busy using a variety of bright colors and enjoying lots of fun pictures. This App will help them develop their creativity.\n\nThis coloring book includes 15 super cute pictures to color and lots of bright colors to choose from.\n\nEasy to use interface and a super realistic painting engine you children will enjoy to use.\n\nIf you like Teo & Bianca join them on\n** KidsMag with Teo & Bianca **, the best iPad interactive Magazine for kids!\n\n** More cool apps from Portegno Apps at the App Store! **\n\n- Princess Activity Cards\n- iPuzzle Words - Transportation\n- Fairies Activity Cards\n- iWash my Dogs\n\n****************************************\nFollow us on Facebook for news and promo codes, LIKE our page at:\nwww.facebook.com/portegnoapps\n***************************************\nFollow us on Twitter for the latest news:\nhttps://twitter.com/Portegno_Apps",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/teo-bianca-halloween-coloring-book-v-1.0-i-os-3.2/Teo%20%26%20Bianca%20Halloween%20Coloring%20Book%20%28V1.0%29%20%28iOS3.2%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.2 and Later",
+                                icon: "cdn/app-icon/teo-and-bianca-halloween-coloring-book.jpg",
+                                featured: false,
+                                categories: ["Entertainment", "Games"]
+                              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
                          ];
 
         // DOM Elements
