@@ -748,6 +748,51 @@
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
         }
 
+        #categoriesContent .category-select-btn {
+            background: var(--button-bg);
+            border: none;
+            color: var(--text-light);
+            padding: 12px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 170px;
+            text-align: center;
+        }
+
+        #categoriesContent .category-select-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            border-radius: 12px 12px 0 0;
+        }
+
+        #categoriesContent .category-select-btn:hover {
+            background: linear-gradient(145deg, #5a5a5c, #4a4a4c);
+            transform: translateY(-2px);
+            box-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        #categoriesContent .category-select-btn:active {
+            transform: translateY(1px);
+            box-shadow:
+                0 1px 2px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
         .modal-section {
             margin-bottom: 20px;
         }
