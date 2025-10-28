@@ -3465,12 +3465,8 @@
             categoriesContent.innerHTML = '';
             
             const backBtn = document.createElement('button');
-            backBtn.textContent = 'Back to Categories';
             backBtn.className = 'back-to-categories-btn';
-            backBtn.style.marginBottom = '20px';
-            backBtn.style.display = 'block';
-            backBtn.style.marginLeft = 'auto';
-            backBtn.style.marginRight = 'auto';
+            backBtn.innerHTML = '<i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>Back to Categories</span>';
             backBtn.addEventListener('click', () => {
                 setUrlParam('category', '');
                 renderCategoryList();
