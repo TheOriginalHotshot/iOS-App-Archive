@@ -987,7 +987,7 @@
                 compatibility: "iPhoneOS 2.0 and Later",
                 icon: "cdn/app-icon/dashbuster.png",
                 featured: false,
-                categories: [" Entertainment", "Lifestyle"]
+                categories: ["Entertainment", "Lifestyle"]
             },
             {
                 id: "the-iron-horse",
