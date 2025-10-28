@@ -2680,7 +2680,95 @@
                                 icon: "cdn/app-icon/hotels-near-me.png",
                                 featured: false,
                                 categories: ["NoCategoryAssignedApps"]
-                              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                              },
+                              {
+                                id: "gator-alley",
+                                title: "Gator Alley",
+                                developer: "Adam Schwartz",
+                                featuredDescription: "Drag to survive in a swamp full of hungry gators—how long can you last?",
+                                description: "Watch out! You wandered into Gator Alley! How long will you be able to stay in gator alley without being eaten by an alligator?\n\nThe object of the game is to drag your finger around the screen, avoiding the gators that are swimming in the swamp. The amount of gators will slowly increase and they will become smarter hunters (so you better be good at hiding).\n\nThe game displays your high score (how long you can survive in the swamp). Your life will slowly decrease from 100% to 0% as the gators touch you. Try to grab a frog and it will increase your life by 25%. Make sure not lift that finger up to early or you will drown!\n\n“Think Pac-man, but no mazes and whole lot more fun!”\n\n\"Gator Alley puts you in the pond with the alligators. You, the avatar, are swimming, moving to keep yourself alive. The concept is brilliant.\" - iPhone App Cafe\n\n---------------------------------------------------------------\nVisit our website:\nwww.LLLoInc.com\n\nFollow us on Facebook:\nhttp://www.facebook.com/pages/Lllo-Inc/121798457895653\n\nFollow us on Twitter:\n@LLLoInc\nhttp://twitter.com/#!/LLLOInc",
+                                versions: {
+                                  archived: [
+                                    { version: "1.1", url: "https://archive.org/download/alley-gator-1.0-hexhammer/Gator%20Alley-%28com.schwats.gator%29-1.1-%28iOS_3.0%29-bdc1f42f4ee896659f2b299d58957c15.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "1.0"
+                                  ]
+                                },
+                                compatibility: "iPhoneOS 3.0 and Later",
+                                icon: "cdn/app-icon/gator-alley.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },
+                              {
+                                id: "gorillaz-escape-to-plastic-beach",
+                                title: "Gorillaz - Escape to Plastic Beach",
+                                developer: "Matmi",
+                                featuredDescription: "Tilt-controlled 3D action over Plastic Beach with music and voices by Gorillaz.",
+                                description: "Matmi and the Gorillaz join forces to bring “Escape From Plastic Beach”, the latest Gorillaz game, to the iPhone, iPad, and iPod Touch.\n\nReviews:\n\n‘If you enjoy the Gorillaz universe (and who doesn't?), you'll get a snapshot of entertainment out of the game... it pushes forward the bands' weird narrative and adds yet another layer to their increasingly labyrinthine collection of mediums they dabble in.’\nBy Thorin Klosowski - blogs.westword.com\n\n‘You’ll find yourself smack dab in the middle of hectic battles against ships, planes, and who knows what-else as you swoop, glide, and bank furiously around the visually pleasant 3D environments.’\n\nBy iPhoneapples\n\n‘…this game gets an A+ for imagination.  It might be strange imagination, but thought was obviously put into the app... If you are looking for a novel app to show off to your iPad friends, Gorillaz-Escape to Plastic Beach is a good choice\"\n\nBy iPadGames.org\n\nAbout the game:\n\nEscape to Plastic Beach is a 3D action game in which Murdoc floats and fights above Plastic Beach HQ on his Doom Glider to foil 2D’s repeated escape attempts whilst battling ghost pirate ships, and a mix of other hazards and obstacles.\n\nDesigned especially for the tilt controls of the iPhone, iPad and iPod Touch, and featuring eight exciting levels of gun-toting, gliding actions in full 3D, as well as designs from Jamie Hewlett, and music and voice-overs from the band themselves, “Escape From Plastic Beach” is a must-have app for any Gorillaz fan.\n\n“Escape to Plastic” Beach Features\n\nEight Exciting Levels – Fight, fly and fire your way through eight levels of Gorillaz action with varied goals and missions and a whole bundle of hazards and enemies to deal with.\n\nAmazing 3D graphics – Plastic Beach is recreated in full 3D, with designs from Jamie Hewlett, designer of the Gorillaz.\n\nAwesome Sounds – Gorillaz soundtrack from the Plastic Beach album and voiceovers from the band themselves!\n\nGlobal Scoreboard – Compete against your friends or even total strangers by posting your score.\n\nMade by Matmi\n(Winners of best mobile game of the year 2009 at the Roses awards)",
+                                versions: {
+                                  archived: [
+                                    { version: "1.1", url: "https://archive.org/download/gorillaz-escape-to-plastic-beach-v-1.1-i-os-3.2/Gorillaz%20-%20Escape%20to%20Plastic%20Beach%20%28V1.1%29%20%28iOS3.2%29.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "1.0"
+                                  ]
+                                },
+                                compatibility: "iPhoneOS 3.1 and Later",
+                                icon: "cdn/app-icon/gorillaz-escape-to-plastic-beach.png",
+                                featured: false,
+                                categories: ["Action", "Music", "Games"]
+                              },
+                              {
+                                id: "sale-custom-hypnosis-bundle-package",
+                                title: "(SALE) - Custom Hypnosis: Bundle Package",
+                                developer: "Dataware Corporation",
+                                featuredDescription: "All-in-one customizable hypnosis bundle with multiple sessions, inductions, and relaxing background tracks.",
+                                description: "*For those wanting the exam edition that purchased our bundle pack, please email us at support@ipzndevelopment.com*\n\n------------------------------------------\nCustom Hypnosis: Bundle\n\nGet the best of all Custom Hypnosis Editions all-in-one.\n\nThis powerful application coaches your mind on how to achieve personal benefits such as weight loss, stress relief, improving self esteem, quit smoking and more.\n\nFull list of sessions included are:\n\n- Quit Smoking\n- Exercise More\n- Eat Healthy\n- Improve your Mood\n- Stress Management\n- Restful Sleep\n- Achieve Weight Loss\n- Eat Right II\n- Exercise II\n- Commitment to Exercise\n- Manage Temptations\n- Eliminate Cravings\n- Eliminate Panic Attacks\n- Be Assertive\n- Be Happy\n- Be Organized\n- Love your Body\n- Speak in Public with Confidence\n\n- More to Come!\n\nEnter into hypnosis using any 4 inductions of your choice:\n\n- Warm Blanket Approach\n- Peaceful Day Approach\n- Beautiful Light Approach\n- Beautiful Cloud Approach\n\nSelect from 9 relaxing background songs of your choice:\n- Numinous Shine\n- Overheat\n- Piano\n- Revival\n- Fluid Scape\n- Frozen Star\n- Lasting Hope\n- Deliberate\n- Sovereign\n\nFind the motivation you need to be a better, stronger and happier person! Take control of your own destiny. You have the power. Use it anytime, anywhere, day or night with Custom Hypnosis: Bundle Edition!",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0.2", url: "https://archive.org/download/custom-hypnosis-bundle-package-v-1.0.2-i-os-3.0/Custom%20Hypnosis%20Bundle%20Package%20%28V1.0.2%29%20%28iOS3.0%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.0 and Later",
+                                icon: "cdn/app-icon/sale-custom-hypnosis-bundle-package.png",
+                                featured: false,
+                                categories: ["Entertainment", "Health & Fitness"]
+                              },
+                              {
+                                id: "skylanders-lost-islands",
+                                title: "Skylanders Lost Islands",
+                                developer: "Activision Publishing Inc",
+                                featuredDescription: "Build and evolve your Skylands, collect 160+ Skylanders, import physical figures, and send them on quests in this free-to-play adventure.",
+                                description: "Portal Masters, we want to thank you for being valued fans and let you know that as of November 1st, Skylanders Lost Islands will no longer be available to play.\n\n***More than 4 million downloads!*** \n\nCapture Evil. Unleash Good. \n\nFind new Trap Masters, other new Skylanders and Trappable Villains now in Skylanders Lost Islands™! \n\nPlay for FREE as you explore the Skylands, build your own kingdom and embark on incredible quests with your Skylanders in this amazing new adventure. \n\nMore than a simple “builder” game, Skylanders Lost Islands™ is all about collecting and evolving your collection of Skylanders. As you progress, build up your islands to unlock Skylanders and then send them on exciting quests and adventures to increase their rank. What’s more, bring your physical Skylanders figures into the game! Unlock them and add them to your in-game collection for even more adventuring fun!\n\nSkylanders Lost Islands™ is easy to pick up and play, even if you haven’t played Skylanders Spyro’s Adventure®, Skylanders Giants™, Skylanders SWAP Force™, or Skylanders Trap Team™ . \n\nKEY FEATURES: \no Build, evolve and customize Skylands islands of your own design\no Unlock over 160 unique Skylanders and rank them up to help you in your goals including the brand new Skylanders Trap Team™ ! \no Welcome new Companions to your islands and Trap Villains to unlock their unique gameplay perks. \no Help characters on your islands and earn rewards along the way as you send Skylanders on amazing adventures and feats! \no Explore many islands full of surprise and mystery\no Level up through the game to unlock new items and customize your islands\no Supports your physical Skylanders Spyro’s Adventure®, Skylanders Giants™ Skylanders SWAP Force™, and Skylanders Trap Team™ toy collection — import them into the game to bring them to life in Skylanders Lost Islands™ \no Amazing art and HD graphics optimized for the Retina display\no Play with your friends via Facebook and Game Center to get exclusive rewards*\no Play in English, French, German, Italian and Spanish languages\no More features added all the time!\no Play for FREE!\n\n*Due to privacy concerns, some features are not available to all users.\n\nSkylanders Lost Islands™ is completely free-to-play, but some in-game items can be purchased using real money. If you don’t want to use this feature, please disable in-app purchases.\n\nVisit the Official Skylanders Lost Islands™ forums at: http://community.activision.com/community/activision/skylanders_lost_islands\n\nNote: Version 2.0.0 and beyond not supported on iPhone 3GS, iPod Touch 3, iPod Touch 4, iPad 1, or older devices. \n\nBe sure to also check out Skylanders Trap Team™, Skylanders Collection Vault™, Skylanders Cloud Patrol™, and Skylanders Battlegrounds™! \n\n©2012-2014 Activision Publishing, Inc. SKYLANDERS LOST ISLANDS, SKYLANDERS BATTLEGROUNDS, SKYLANDERS CLOUD PATROL, SKYLANDERS COLLECTION VAULT, SKYLANDERS SPYRO’S ADVENTURE, SKYLANDERS GIANTS, SKYLANDERS SWAP FORCE, SKYLANDERS TRAP TEAM and ACTIVISION are trademarks of Activision Publishing, Inc",
+                                versions: {
+                                  archived: [
+                                    { version: "2.0.1", url: "https://archive.org/download/com.activision.skylanders.lostislands-v-2.0.1-i-os-7.1-clutch-2.0.4/com.activision.skylanders.lostislands%20%28V2.0.1%29%20-iOS7.1-%28Clutch-2.0.4%29.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "1.1.0",
+                                    "1.1.1",
+                                    "1.2.0",
+                                    "1.3.0",
+                                    "1.4.0",
+                                    "1.5.0",
+                                    "1.5.1",
+                                    "1.5.2",
+                                    "1.6.0",
+                                    "1.7.0",
+                                    "1.8.0",
+                                    "1.9.1",
+                                    "1.9.2",
+                                    "1.9.3",
+                                    "2.0.0"
+                                  ]
+                                },
+                                compatibility: "iOS 7.1 and Later",
+                                icon: "cdn/app-icon/skylanders-lost-islands.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
                          ];
 
         // DOM Elements
