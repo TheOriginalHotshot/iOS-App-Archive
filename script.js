@@ -3008,7 +3008,7 @@
             const appsToShow = sortedApps.slice(startIdx, endIdx);
 
             if (appsToShow.length === 0) {
-                searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found. Try a different search term.</p>';
+                searchResults.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 20px; color: #aaa;">No apps found, Please try a different search term.</p>';
                 return;
             }
 
