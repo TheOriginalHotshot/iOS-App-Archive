@@ -18,7 +18,7 @@
                 categories: ["Puzzle", "Adventure"]
             },
             {
-                id: "jelly-car-3-lite",
+                id: "jellycar-3-lite",
                 title: "JellyCar 3 Lite",
                 developer: "Disney",
                 featuredDescription: "This Disney Classic Now on iOS App Archive",
@@ -94,8 +94,8 @@
                 categories: ["Racing", "Action"]
             },
             {
-                id: "jelly-car-2",
-                title: "Jelly Car 2",
+                id: "jellycar-2",
+                title: "JellyCar 2",
                 developer: "Disney",
                 featuredDescription: "New Levels Now Available, Download Now!",
                 description: "The sequel to the original jelly physics driving game!\nNew vehicles with unique jelly properties.\nMore challenging levels and obstacles.\nColorful, squishy environments to explore.\nSimple one-touch controls.\nFun for all ages with surprising depth.",
@@ -375,7 +375,7 @@
                 categories: ["Photo & Video", "Entertainment"]
             },
             {
-                id: "jelly-car",
+                id: "jellycar",
                 title: "JellyCar",
                 developer: "Walaber",
                 featuredDescription: "Put a New Car in your garage! JellyCar 3 is now available!",
@@ -1394,7 +1394,7 @@
                 categories: ["Games"]
             },
             {
-                id: "jelly-car-3",
+                id: "jellycar-3",
                 title: "JellyCar 3",
                 developer: "Disney",
                 featuredDescription: "IT’S A WHOLE NEW JELLY WORLD! NEW UPDATE!",
@@ -1413,7 +1413,7 @@
                 categories: ["Entertainment", "Casual", "Puzzle", "Games"]
             },
             {
-                id: "jelly-car-2-on-ipad",
+                id: "jellycar-2-on-ipad",
                 title: "JellyCar 2 on iPad",
                 developer: "Disney",
                 featuredDescription: "JELLYCAR 2! NOW EVEN SQUISHIER ON IPAD!",
