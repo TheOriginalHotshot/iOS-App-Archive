@@ -3480,7 +3480,9 @@
             categoriesContent.appendChild(title);
 
             const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
-            if (filteredApps.length === 0) {
+            const sortedApps = filteredApps.slice().sort((a, b) => a.title.localeCompare(b.title));
+
+            if (sortedApps.length === 0) {
                 const noApps = document.createElement('p');
                 noApps.textContent = 'No apps found in this category.';
                 noApps.style.textAlign = 'center';
@@ -3489,7 +3491,7 @@
             }
             const grid = document.createElement('div');
             grid.className = 'category-apps-grid search-results active category-fade-in';
-            filteredApps.forEach(app => {
+            sortedApps.forEach(app => {
                 const appCard = document.createElement('div');
                 appCard.className = 'app-card-grid';
                 appCard.innerHTML = `
