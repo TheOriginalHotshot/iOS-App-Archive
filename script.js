@@ -3235,6 +3235,12 @@
                     searchContainer.style.display = 'block';
                     searchResults.classList.add('active');
                     tabContents.search.classList.add('active');
+                    const queryParam = getUrlParam('query');
+                    if (queryParam !== null) {
+                        searchInput.value = queryParam;
+                    }
+                    const searchTerm = queryParam !== null ? queryParam : searchInput.value;
+                    const filteredApps = filterAppsByQuery(searchTerm);
                     const pageParam = parseInt(getUrlParam('page'));
                     const page = (!isNaN(pageParam) && pageParam >= 1) ? pageParam : 1;
                     if (page === 1) {
@@ -3242,13 +3248,18 @@
                     } else {
                         setUrlParam('page', page);
                     }
-                    renderSearchResults(apps, page);
+                    renderSearchResults(filteredApps, page);
                 } else if (tabName === 'categories') {
                     carouselContainer.style.display = 'none';
                     searchContainer.style.display = 'none';
                     searchResults.classList.remove('active');
                     tabContents.categories.classList.add('active');
-                    renderCategoryList();
+                    const categoryParam = getUrlParam('category');
+                    if (categoryParam) {
+                        renderAppsForCategory(categoryParam);
+                    } else {
+                        renderCategoryList();
+                    }
                 } else {
                     // For categories, genius, updates
                     carouselContainer.style.display = 'none';
@@ -3480,7 +3491,9 @@
             categoriesContent.appendChild(title);
 
             const filteredApps = apps.filter(app => Array.isArray(app.categories) && app.categories.includes(category));
-            if (filteredApps.length === 0) {
+            const sortedApps = filteredApps.slice().sort((a, b) => a.title.localeCompare(b.title));
+
+            if (sortedApps.length === 0) {
                 const noApps = document.createElement('p');
                 noApps.textContent = 'No apps found in this category.';
                 noApps.style.textAlign = 'center';
@@ -3489,7 +3502,7 @@
             }
             const grid = document.createElement('div');
             grid.className = 'category-apps-grid search-results active category-fade-in';
-            filteredApps.forEach(app => {
+            sortedApps.forEach(app => {
                 const appCard = document.createElement('div');
                 appCard.className = 'app-card-grid';
                 appCard.innerHTML = `
