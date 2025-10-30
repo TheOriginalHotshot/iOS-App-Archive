@@ -2768,7 +2768,182 @@
                                 icon: "cdn/app-icon/skylanders-lost-islands.png",
                                 featured: false,
                                 categories: ["NoCategoryAssignedApps"]
-                              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                              },
+                              {
+                                id: "mu-scare-101",
+                                title: "MU Scare 101",
+                                developer: "Disney",
+                                featuredDescription: "Record and tweak custom ‘scares,’ remote-trigger phrases, and grade your fright skills—works standalone or with Monsters University Speak-N-Scare figures.",
+                                description: "Become a student of scares and screams with the MU Scare 101 App, and graduate with horrors from Monsters University! The frightfully fun App can be used on its own, but for A+ results, use it to bring the four Monsters University Speak-N-Scare action figures to life.\n\nSCARE BOOSTER\n•Mike Wazowski, Sulley, Squishy and Art can each be given their own unique Scares. Use the Scare Booster to record up to 5 custom Scares.\n\n•For extra chills, add special effects to your Scare by making it squeakier, deeper, more growly, or spookier by adding echo . . . echo . . . echo . . .!\n\n•Transfer up to 5 of your custom Scares to your Speak-N-Scare monster and you'll be on course for major frights!\n\nSCARE EXAM\n•Take the Scare Exam by using the App to rate your Scares. Get top marks for Scariness, Ferocity, Loudness and Pitch and you might have a career as a Future Top Scarer, just like Sulley!\n\nSCARE REMOTE\n•Use the Scare Remote feature to make your Speak-N-Scare monster speak over 40 individual phrases from the Monsters University universe.\n\n•Go on a haunting trip around campus by remotely triggering the 3 pre-recorded Scares or choose from your own custom Scares, once you've transferred them to your Speak-N-Scare monster.\n\nCompatibility\nWorks with iPhone 3GS®, iPhone 4®, iPhone4S®, iPhone 5®, iPod touch® (4th generation), iPod touch® (5th generation), & iPad®.\n\nRequires iOS 4.3 or later.\n\nMonsters University Speak-N-Scare action figures are available exclusively at Disney Stores and DisneyStore.com.\n\nTo learn more about Monster University Speak-N-Scare action figures or the MU Scare 101 App, please go here.\n\nwww.disneystore.com/muspeaknscare\n\nIf you like the Monster University Speak-N-Scare action figures and the MU Scare 101 App, then feel free to rate and review us.\n\nWe look into all issues that our users report. If you experience any problems please contact us at:\n\nhttp://aimg.disneystore.com/content/global/guest_services10/contact.html\n\nFor additional information about our practices in the United States and Latin America regarding children’s personal information, please read our Children’s Privacy Policy at https://disneyprivacycenter.com/kids-privacy-policy/english/.",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/com.disney.muscare-101-v-1.0-i-os-4.3-clutch-2.0.4/com.disney.muscare101%20%28V1.0%29%20-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iOS 4.3 and Later",
+                                icon: "cdn/app-icon/mu-scare-101.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "fun-run-multiplayer-race",
+                                title: "Fun Run - Multiplayer Race",
+                                developer: "Dirtybit",
+                                featuredDescription: "Online real-time multiplayer racing with friends and players worldwide.",
+                                description: "** Over 50 million players worldwide! **\n** #1 in 10 countries! **\n** Best of 2013 Free Apps by Apple in 10 countries **\n\n* Race against your friends or random people in real-time!\n\nFun Run is an online real-time multiplayer game for smart phones and tablets. You can be anywhere in the world and play with up to four players simultaneously. Play with your friends or get matched with random players from around the world!\n\n\"All the cutest, furriest creatures of the forest are out running. For you to remain a cool critter, it is essential that you finish the race before your furry friends. No amount of force is excessive.\"",
+                                versions: {
+                                  archived: [
+                                    { version: "1.2", url: "https://archive.org/download/no.dirtybit.funrun-v-2.24.1-i-os-6.0-clutch-2.0.4/Fun%20Run-v1.2-%28Clutch-1.3%29.ipa" },
+                                    { version: "1.7.1", url: "https://archive.org/download/no.dirtybit.funrun-v-2.24.1-i-os-6.0-clutch-2.0.4/Fun%20Run-v1.7.1--iOS4.3-%28Clutch-1.4.6%29.ipa" },
+                                    { version: "2.24.1", url: "https://archive.org/download/no.dirtybit.funrun-v-2.24.1-i-os-6.0-clutch-2.0.4/no.dirtybit.funrun%20%28V2.24.1%29%20-iOS6.0-%28Clutch-2.0.4%29.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "1.0",
+                                    "2.7",
+                                    "2.8",
+                                    "2.8.1",
+                                    "2.8.2",
+                                    "2.9",
+                                    "2.10",
+                                    "2.11",
+                                    "2.12",
+                                    "2.12.1",
+                                    "2.13",
+                                    "2.14",
+                                    "2.15",
+                                    "2.16",
+                                    "2.16.1",
+                                    "2.17",
+                                    "2.18",
+                                    "2.19",
+                                    "2.20",
+                                    "2.20.3",
+                                    "2.21",
+                                    "2.22",
+                                    "2.23",
+                                    "2.24"
+                                  ]
+                                },
+                                compatibility: "iOS 6.0 and Later",
+                                icon: "cdn/app-icon/fun-run-multiplayer-race.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "bike-race-free",
+                                title: "Bike Race Free - by Top Free Games",
+                                developer: "Top Free Games",
+                                featuredDescription: "Simple, fast-paced physics bike racing with jumps, loops, and multiplayer.",
+                                description: "App Store Game of the Year in selected countries. 200+ MILLION USERS!\n\nDrive your bike through amazing tracks with jumps and loops in this simple and fast-paced physics-based game.\n\nMultiplayer! Challenge your Facebook friends.\n\nTilt your device to lean your bike and touch the screen to accelerate/brake. \n\nFeatures: \n- Single and multiplayer modes\n- Earn stars to unlock new levels \n- Dozen addictive worlds\n- Hundreds of challenging tracks \n- Simple controls\n\nBy the creators of the #1 game in the app store Racing Penguin\nFree for a limited time!\n\nNote: On the user created levels section, if you want to play more than 3 featured levels per day, you will need to buy a level pack. You can play unlimited free levels created by you or your friends if you have the code. You can also play unlimited free levels shared publicly on the internet by other users. Levels can not be created on a mobile device, instead go to www.bikerace.com\n\nBike Race Plus subscription\n- Bike Race Plus subscription has a Free Trial option that lasts 7 days. After that, this option costs $7.99 per week, auto renewable.\n- Payment will be charged to iTunes Account at confirmation of purchase\n- Subscription automatically renews for the same price and duration period as the original \"one week\"/\"one month\"/\"one year\" package unless auto-renew is turned off at least 24-hours before the end of the current period\n- Account will be charged for renewal within 24-hours prior to the end of the current period at the cost of the chosen package (weekly, monthly or yearly package)\n- Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's iTunes Account Settings after purchase\n- No cancellation of the current subscription is allowed during active subscription period\n- You may cancel a subscription during its free trial period via the subscription setting through your iTunes account. This must be done 24 hours before the end of the subscription period to avoid being charged. Please visit http://support.apple.com/kb/ht4098 for more information\n- You may turn off the auto-renewal of your subscription via your iTunes Account Settings. However, you are not able to cancel the current subscription during its active period\n- Any unused portion of a free-trial period, will be forfeited when the user purchases a Bike Race Plus subscription\n- Subscription prices and durations: weekly $7.99 | monthy $19.99 | yearly $99.99\n\nLinks to our Terms of Service and Privacy Policy can be found below\nPrivacy Policy: https://www.topfreegames.com/games/bikeracepro/legal/privacy\nTerms of Use: https://www.topfreegames.com/games/bikeracepro/legal/tos\n\n* Prices are equal to the value that \"Apple's App Store Pricing Matrix\" determines as the equivalent of the subscription price in $ USD",
+                                versions: {
+                                  archived: [
+                                    { version: "1.9.2", url: "https://archive.org/download/com.topfreegames.bikeracefree-v-1.9.2-i-os-4.0-clutch-2.0.4/com.topfreegames.bikeracefree%20%28V1.9.2%29%20-iOS4.0-%28Clutch-2.0.4%29.ipa" },
+                                    { version: "2.8.1", url: "https://archive.org/download/com.topfreegames.bikeracefree-v-1.9.2-i-os-4.0-clutch-2.0.4/BikeRaceTFG-v2.8.1--iOS4.3-%28Clutch-1.4.6%29.ipa" },
+                                    { version: "3.3", url: "https://archive.org/download/com.topfreegames.bikeracefree-v-1.9.2-i-os-4.0-clutch-2.0.4/com.topfreegames.bikeracefree%20%28V3.3%29%20-iOS5.0-%28Clutch-2.0.4%29.ipa" },
+                                    { version: "4.4", url: "https://archive.org/download/com.topfreegames.bikeracefree-v-1.9.2-i-os-4.0-clutch-2.0.4/BikeRaceTFG-v4.4--iOS5.0-%28Clutch-1.4.6%29.ipa" },
+                                    { version: "6.0", url: "https://archive.org/download/com.topfreegames.bikeracefree-v-1.9.2-i-os-4.0-clutch-2.0.4/BikeRaceTFG-v6.0--iOS6.0-%28Clutch-1.4.6%29.ipa" },
+                                    { version: "6.5.4", url: "https://archive.org/download/com.topfreegames.bikeracefree-v-1.9.2-i-os-4.0-clutch-2.0.4/BikeRaceTFG-%28com.topfreegames.bikeracefree%29-562-%28V6.5.4%29-84bb679d29dbdfd3ac8838fd701374ec.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "7.13",
+                                    "7.13.1",
+                                    "7.13.2",
+                                    "7.13.3",
+                                    "7.15.1",
+                                    "7.15.2",
+                                    "7.15.3",
+                                    "7.15.5",
+                                    "7.15.6",
+                                    "7.15.7",
+                                    "7.15.9",
+                                    "7.15.10",
+                                    "7.15.11",
+                                    "7.15.13",
+                                    "7.15.14",
+                                    "7.15.15",
+                                    "7.16",
+                                    "7.18",
+                                    "7.18.1",
+                                    "8.1",
+                                    "8.1.1",
+                                    "8.2",
+                                    "8.2.1",
+                                    "8.3.0",
+                                    "8.3.1"
+                                  ]
+                                },
+                                compatibility: "iOS 4.0 and Later",
+                                icon: "cdn/app-icon/bike-race-free.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "stair-dismount-lite-universal",
+                                title: "Stair Dismount Lite Universal",
+                                developer: "Secret Exit Ltd",
+                                featuredDescription: "Try the physics-based dismount experience with a free lite edition.",
+                                description: "The first step in life-long learning!\n\nIf you are the cautious type, protective of your property and the warden of your well-being, we understand. An investment into something new and potentially dangerous can be a devastating mistake with tremendous repercussions.\n\nBut fear not! We have made Dismounting a FREE dive into the unknown. The exhilarating experience of exponential acceleration is just a click away!\n\nTry now and be the envy of your social circles by simulating somersaults and posting photographic proof!\n\nFor plausible deniability, the Lite version provides a COMPLIMENTARY MONOCLE AND MOUSTACHE with every exertion of extroversion!\n\nAnd should you feel fortified by this foray into foreign frolics, more and MORE can be had by purchasing the legendary, classic, renowned and revered - Stair Dismount FULL version.",
+                                versions: {
+                                  archived: [
+                                    { version: "1.3.1", url: "https://archive.org/download/com.secretexit.sdtlite-v-1.3.1-i-os-3.1-clutch-2.0.4/com.secretexit.sdtlite%20%28V1.3.1%29%20-iOS3.1-%28Clutch-2.0.4%29.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.1 and Later",
+                                icon: "cdn/app-icon/stair-dismount-lite-universal.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "stair-dismount",
+                                title: "Stair Dismount",
+                                developer: "Secret Exit Ltd",
+                                featuredDescription: "Lovingly accurate ragdoll impacts across 20+ locales and photo face swaps.",
+                                description: "Perform mad acrobatics, witness bone-cracking impacts and lose a limb or few in this lovingly accurate ragdoll simulation. With Mr. Dismount and his agile friends, bodily harm can be supremely stress-relieving. \n\nName aside, Stair Dismount is not only about stairs any more. The game has over 20 free locales: towers, ski slopes, airports, pyramids, bumper cars and much more. Compete against the world for high scores in maximum damage!\n\nUse photos of your friends and share your acts of loving kindness!\n\nFeatures:\n- The crunchiest sound effects ever heard in a digital entertainment product\n- Select faces from the device Photo Library\n- Multiple inspiring locations for rapid descent\n\nThe most convincing personal impact simulation seen on the App Store!\n\n*Winner of Technical Achievement category in IGF Mobile 2010!*\n\nFollow us on Twitter at twitter.com/secretexit\n\nDismounting is not to be attempted at home or outside, and should be left to trained professionals. Secret Exit does not recommend or condone dismount attempts outside 3D computer simulations.",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/Stair%20Dismount%20v1.0%20%28iPhoneOS%203.0%29%20%282009-08-05%29.ipa" },
+                                    { version: "1.0.1", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/Stair%20Dismount%20v1.0.1%20%28iPhoneOS%203.1%29%20%282009-10-07%29.ipa" },
+                                    { version: "1.1.0", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/Dismount-%28com.secretexit.sdt%29-1.1.0-%28iOS_3.1%29-68863c7bbb5cb627db44ec86aa209aee.ipa" },
+                                    { version: "1.2.5", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/Dismount-%28com.secretexit.sdt%29-1.2.5-%28iOS_3.1%29-7a43a93b15dc9f21524485f18cda4157.ipa" },
+                                    { version: "1.3.1", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/Stair%20Dismount%20v1.3.1%20%28iPhone%20OS%203.1%29%20%282010-05-10%29.ipa" },
+                                    { version: "1.7.0", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/com.secretexit.sdt%20%28V1.7.0%29%20-iOS3.1-%28Clutch-2.0.4%29.ipa" },
+                                    { version: "2.1.7", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/com.secretexit.sdt%20%28V2.1.7%29%20-iOS3.1-%28Clutch-2.0.4%29.ipa" },
+                                    { version: "2.5.1", url: "https://archive.org/download/stair-dismount-v-1.0-i-phone-os-3.0-2009-08-05/Stair%20Dismount%20v2.5.1%20%28iOS%204.0%29%20%282012-02-02%29.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "2.5.2",
+                                    "2.5.3",
+                                    "2.5.4",
+                                    "2.5.5",
+                                    "2.5.6",
+                                    "2.5.7",
+                                    "2.6.0",
+                                    "2.7.0",
+                                    "2.7.1",
+                                    "2.7.2",
+                                    "2.7.3",
+                                    "2.7.4",
+                                    "2.7.5",
+                                    "2.7.6",
+                                    "2.7.7",
+                                    "2.8.0",
+                                    "2.8.2",
+                                    "2.8.3",
+                                    "2.8.4",
+                                    "2.8.5",
+                                    "2.8.6",
+                                    "2.8.7",
+                                    "2.9.0",
+                                    "2.10.0"
+                                  ]
+                                },
+                                compatibility: "iPhoneOS 3.0 and Later",
+                                icon: "cdn/app-icon/stair-dismount.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
                          ];
 
         // DOM Elements
