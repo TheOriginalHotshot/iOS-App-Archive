@@ -8,9 +8,16 @@
                 description: "Can You Escape - Deluxe - Out Now!\nAdvance to the next floor by solving the puzzles!\nYou can pick certain items up and use them from your inventory.\nKeep the Escape If You Can app, so we can notify you of new levels.\n9 floors available at the moment!\nSmartphone puzzles! Addicting mini puzzles!\nGorgeous graphics and different themed floors!\nConstant updates of New Floors!\nit's FREE!",
                 versions: {
                     archived: [
-                        { version: "1.3.3", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/com.dozengames.FloorsEscape-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                        { version: "1.0", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.0%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.1", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.1%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.2", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.2%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.2.1", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.2.1%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.3", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.3%29%20%28iOS4.0%29.ipa" },
+                        { version: "1.3.1", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.3.1%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.3.2", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.3.2%29%20%28iOS4.3%29.ipa" },
+                        { version: "1.3.3", url: "https://archive.org/download/com.dozengames.floorsescape-ios4.3-clutch-2.0.4_202412/Escape%20If%20You%20Can%20%28V1.3.3%29%20%28iOS4.3%29.ipa" }
                     ],
-                    unarchived: ["1.0.0", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.3.2"]
+                    unarchived: []
                 },
                 compatibility: "iOS 4.3 and Later",
                 icon: "cdn/app-icon/escape-if-you-can.jpg",
