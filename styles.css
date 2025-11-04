@@ -815,6 +815,13 @@
             line-height: 1.5;
             color: #ccc;
             margin-bottom: 12px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .modal-section a {
+            word-break: break-word;
+            overflow-wrap: anywhere;
         }
 
         /* Version History */
