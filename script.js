@@ -2951,6 +2951,183 @@
                                 icon: "cdn/app-icon/stair-dismount.png",
                                 featured: false,
                                 categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "stupid-zombies",
+                                title: "Stupid Zombies",
+                                developer: "GameResort LLC",
+                                featuredDescription: "One man, one shotgun... and lots of stupid zombies. Survive 960 levels with limited ammo.",
+                                description: "One man, one shotgun... and lots of stupid zombies.\n\nThose undead creatures are back, and you are humanity's last hope to keep them brainless. But beware, ammo is limited. You will have to get crafty and use the straight bullets, grenades, split, buck and laser shots in the most effective way possible to survive all 960 levels.\n\nWeekly VIP club subscription + Monthly VIP club subscription: Payment will be charged to your account at purchase confirmation. Your membership subscription will automatically renew if you don't turn off your membership subscription at least 24 hours before the renewal date. The account is charged for renewal within 24-hours before the end of the current period. Any unused portion of the free trial will be forfeited when a subscription is purchased. You can manage your subscription and turn off auto-renewal by going to your Account Settings after purchase.\n\nPrivacy Policy: http://www.gameresort.com/privacy/\nTerms of service: http://www.gameresort.com/terms-of-service/",
+                                versions: {
+                                  archived: [
+                                    { version: "1.9.9", url: "https://archive.org/download/com.gameresort.stupidzombies-ios4.3-clutch-2.0.4/com.gameresort.stupidzombies%20%28V1.9.9%29%20-iOS4.3-%28Clutch-2.0.4%29.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "2.0.1",
+                                    "2.0.2",
+                                    "2.0.4",
+                                    "3.0.1",
+                                    "3.1.0",
+                                    "3.1.1",
+                                    "3.2.0",
+                                    "3.2.1",
+                                    "3.2.4",
+                                    "3.2.5",
+                                    "3.2.6",
+                                    "3.2.7",
+                                    "3.2.8",
+                                    "3.2.9",
+                                    "3.2.10",
+                                    "3.3.0",
+                                    "3.3.1",
+                                    "3.3.2",
+                                    "3.3.3",
+                                    "3.3.4",
+                                    "3.3.5",
+                                    "3.4.4",
+                                    "3.5.0",
+                                    "3.5.1",
+                                    "3.5.3"
+                                  ]
+                                },
+                                compatibility: "iOS 5.0 and Later",
+                                icon: "cdn/app-icon/stupid-zombies.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "peg-jump",
+                                title: "Peg Jump",
+                                developer: "Seventy Nine Lines",
+                                featuredDescription: "The Original Peg Jump. Classic peg solitaire game with triangle and English boards.",
+                                description: "The Original Peg Jump. Downloaded by Millions.\n\nPeg Jump provides that old fashioned family fun - on your iPhone and iPad!\n\nPeg Jump is sure to bring back those childhood memories. Whether it's laying in your grandparent's living room, watching Judge Wapner on The People's Court™, or waiting for your Chicken n' Dumplins at your local Cracker Barrel™. Peg Solitaire has been a family favorite for years! \n\nThis little game is simple, yet surprisingly challenging. \n\nMoves are made similar to checkers, by \"jumping\" pegs to remove them. Can YOU leave only one peg?\n\nAlready know how to solve the famous triangle puzzle? Give the english board a try! The Peg Jump Pro add-on provides a new board, 30 new challenging puzzles, and has all the Peg Jump fun, without the ads.",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0.2", url: "https://archive.org/download/peg-jump/PegJump%20%28V1.0.2%29.ipa" },
+                                    { version: "3.2.1", url: "https://archive.org/download/peg-jump/com.4YFS5PEKPD.PegJump%20%28V3.2.1%29%20-iOS5.0-%28Clutch-2.0.4%29.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "1.0",
+                                    "1.2",
+                                    "1.3",
+                                    "1.3.1",
+                                    "1.4",
+                                    "3.0",
+                                    "3.0.1",
+                                    "3.2",
+                                    "3.8.2",
+                                    "3.8.3"
+                                  ]
+                                },
+                                compatibility: "iPhoneOS 2.0 and Later",
+                                icon: "cdn/app-icon/peg-jump.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "mega-jump-2",
+                                title: "Mega Jump 2",
+                                developer: "Get Set Games",
+                                featuredDescription: "The spectacular sequel to the #1 hit Mega Jump! Bigger, better and more mega than ever before!",
+                                description: "The spectacular sequel to the #1 hit Mega Jump! Bigger, better and more mega than ever before! \n\nWith over 4 million downloads and counting, hitting #1 on iPhone in 38 countries and #1 on iPad in 54 countries, Mega Jump 2 is soaring through the charts!\n\n\"The definition of a wonderfully fun and simple arcade game that perfects the addictive 'just one more go' mentality\" - Gamezebo\n\n\"Possibly the most fun I've had in an endless jumping game. Mega Jump 2 certainly doesn't disappoint in the entertainment department\" - 148Apps\n\n\"The vibrant graphics, new endless gameplay and adventures ... make it a pleasure\" - App Advice\n\n\"Get Set Games has done it again ... Mega Jump 2 is a mega-fun game\" - Apps Rumours\n\nAmazing Features:\n- Activate the crazy Mega Mode!\n- Hundreds of awesome Missions!\n- Every character has special powers!\n- Unlock secret characters!\n- Grab Lucky Prizes to win awesome items!\n- Brand new game engine with amazing effects!\n- So much more!\n\nHelp Redford and his forest friends jump, boost and smash to the top, grabbing tons of treasure along the way! Mega Jump 2 is everything you love about the original and much, much more!\n\nActivate the Mega Fever Mode for huge points and crazy coins! Collect monster eggs to unlock secret characters with special powers! Play hundreds of fun adventures! Boost with Mega powerups and take on brand-new bad guys! Challenge your friends and brag about your new high score!\n\nGrab Mega Jump 2 and start a brand new jumping journey! \n\nThanks to all the Mega Jumpers out there!\n\nJoin us on the Mega Jump Facebook page:\nhttp://www.facebook.com/MegaJump\n\nFollow us on Twitter:\nhttp://twitter.com/MegaJumpGame",
+                                versions: {
+                                  archived: [
+                                    { version: "1.2.1", url: "https://archive.org/download/mega-jump-2-1.2.1/Mega%20Jump%202%201.2.1.ipa" }
+                                  ],
+                                  unarchived: [
+                                    "1.0.0",
+                                    "1.0.1",
+                                    "1.0.2",
+                                    "1.1.0",
+                                    "1.1.1",
+                                    "1.2.0",
+                                    "1.3.0"
+                                  ]
+                                },
+                                compatibility: "iOS 7.0 and Later",
+                                icon: "cdn/app-icon/mega-jump-2.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "mega-jump",
+                                title: "Mega Jump",
+                                developer: "Get Set Games",
+                                featuredDescription: "A standard-bearer for mobile gaming. 40 Million Players! Epic jumping journey with coins, powerups, and monsters.",
+                                description: "\"A standard-bearer for mobile gaming.\" - Destructoid\n\n40 Million Players! Now with glorious retina artwork for iPad and iPhone 5! \n\n\"The best casual endless game in the App Store\" - AppAdvice.com\n\n\"Incredibly addictive\" - Gamezebo\n\n\"Superb\" - Slide to Play\n\nGet ready to blast off on an epic jumping journey with Mega Jump! \n\nCollect coins, grab crazy powerups, and dodge monsters to boost yourself to the edge of the universe and beyond!\n\nMega Jump has it all:\n\n- Eye-popping cartoon graphics and gorgeous hand-painted backdrops!\n\n- Four incredible worlds to explore!\n\n- Amazing upgradable powerups! \n\n- Turn into a Balloon, become a Coin Magnet or zap enemies with the Power Shield!\n\n- Grab the Super Nova Boost and hang on for a fiery ride!\n\n- Unlock all kinds of awesome and hilarious characters to play with!\n\n- New limited-time characters added every month!\n\n- Dozens of unlockable achievements!\n\n- Online worldwide leaderboards with Game Center!\n\nWhat are you waiting for? Grab Mega Jump and start jumping! \n\nHonors:\n\nMega Jump has 40 million players and counting, and reached the #1 App spot in 28 countries! \n\nThanks to all the Mega Jumpers out there!\n\nJoin us on the Mega Jump Facebook page:\nhttp://www.facebook.com/MegaJump\n\nFollow us on Twitter:\nhttp://twitter.com/getsetgames\n\n\nPlease note: Apple is not a sponsor of any promotion",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0.6", url: "https://archive.org/download/com.getsetgames.megajump-ios4.3-clutch-2.0.4-2/Mega%20Jump-%28com.getsetgames.megajump%29-1.0.6-%28iOS_5.0%29-e8ff0424cc2495f0f2a1042f80984157.ipa" },
+                                    { version: "2.0", url: "https://archive.org/download/com.getsetgames.megajump-ios4.3-clutch-2.0.4-2/Mega_Jump_v2.0_os30.ipa" },
+                                    { version: "2.0.2", url: "https://archive.org/download/com.getsetgames.megajump-ios4.3-clutch-2.0.4-2/Mega_Jump_v2.0.2_os30.ipa" },
+                                    { version: "12.0.0", url: "https://archive.org/download/com.getsetgames.megajump-ios4.3-clutch-2.0.4-2/Mega%20Jump%2012.0.0.ipa" },
+                                    { version: "16.0.2", url: "https://archive.org/download/com.getsetgames.megajump-ios4.3-clutch-2.0.4-2/com.getsetgames.megajump-iOS3.0-%28Clutch-2.0.4%29.ipa" },
+                                    { version: "17.0.4", url: "https://archive.org/download/com.getsetgames.megajump-ios4.3-clutch-2.0.4-2/Mega%20Jump-v17.0.4-%28Clutch-1.3%29.ipa" },
+                                    { version: "20.0.0", url: "https://archive.org/download/com.getsetgames.megajump-ios4.3-clutch-2.0.4-2/com.getsetgames.megajump-iOS4.3-%28Clutch-2.0.4%29-2.ipa" },
+                                    { version: "21.0.4", url: "https://theoriginalhotshot.github.io/iOS-App-Archive/cdn/linknotfound.txt" }
+                                  ],
+                                  unarchived: [
+                                    "11.0.0",
+                                    "12.0.1",
+                                    "13.0.0",
+                                    "13.0.1",
+                                    "14.0.0",
+                                    "15.0.0",
+                                    "15.0.1",
+                                    "16.0.0",
+                                    "16.0.1",
+                                    "16.0.3",
+                                    "16.0.4",
+                                    "17.0.1",
+                                    "17.0.2",
+                                    "17.0.3",
+                                    "19.0.0",
+                                    "20.1.0",
+                                    "21.0.0",
+                                    "21.0.1",
+                                    "21.0.2",
+                                    "21.0.3"
+                                  ]
+                                },
+                                compatibility: "iOS 5.0 and Later",
+                                icon: "cdn/app-icon/mega-jump.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "are-you-smarter-than-a-5th-grader-2010-lite",
+                                title: "ARE YOU SMARTER THAN A 5TH GRADER 2010 LITE",
+                                developer: "Beeline Interactive, Inc",
+                                featuredDescription: "No description found.",
+                                description: "No description found.",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/5th-grader-2010-lite-1.0/5th%20Grader%202010%20LITE%201.0.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.0 and Later",
+                                icon: "cdn/app-icon/are-you-smarter-than-a-5th-grader-2010-lite.jpeg",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
+                              },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                              {
+                                id: "are-you-smarter-than-a-5th-grader-2010",
+                                title: "ARE YOU SMARTER THAN A 5TH GRADER 2010",
+                                developer: "Capcom Interactive, Inc",
+                                featuredDescription: "Based on the hit show. Answer up to eleven questions and work your way to the $1 million question.",
+                                description: "Go To The Head Of The Class\n\nBased on the hit show, ARE YOU SMARTER THAN A 5TH GRADER? 2010 features all the charm, humor and deceptively difficult questions that make the television show a household name. In the game, players are asked a series of up to eleven questions ranging from subjects like U.S. history, math or social studies. Perform well, and you can work you way to the $1 million question. Choke and you'll be forced to utter the unenviable phrase \"I am not smarter than a 5th grader. \n------------------------------------------------\nFeatures:\nOptimized for iPhone game play!\nPlay your own music through integrated iPod functionality.\nLock in your answer, or \"peek,\" \"copy\" and \"save\" just like on the show.\nPost your favorite scores directly to your Facebook page.\nSee who's top of the class with online leaderboards. \nQuestion upgrade packs available through In App purchase.\n------------------------------------------------\nFollow us on Twitter: https://twitter.com/CapcomMobile\nFollow us on Facebook: http://www.facebook.com/CapcomMobile",
+                                versions: {
+                                  archived: [
+                                    { version: "1.0", url: "https://archive.org/download/are-you-smarter-than-a-5-th-grader-2010-capcom-interactive-inc.-v-1.0.2-os-30.rc-333-616/ARE%20YOU%20SMARTER%20THAN%20A%205TH%20GRADER%202010%201.0.0.ipa" },
+                                    { version: "1.0.2", url: "https://archive.org/download/are-you-smarter-than-a-5-th-grader-2010-capcom-interactive-inc.-v-1.0.2-os-30.rc-333-616/ARE%20YOU%20SMARTER%20THAN%20A%205TH%20GRADER%202010%20%5BCapcom%20Interactive%20Inc.%5D%20%28v1.0.2%20os30%29.rc333_616.ipa" }
+                                  ],
+                                  unarchived: []
+                                },
+                                compatibility: "iPhoneOS 3.0 and Later",
+                                icon: "cdn/app-icon/are-you-smarter-than-a-5th-grader-2010.png",
+                                featured: false,
+                                categories: ["NoCategoryAssignedApps"]
                               }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
                          ];
 
