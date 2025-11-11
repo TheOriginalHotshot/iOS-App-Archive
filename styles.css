@@ -36,7 +36,7 @@ body {
     color: #e0e0e0;
 }
 
-/* Engraved text effect for all text elements */
+/* Enhanced engraved text effect for all text elements */
 body, 
 header, 
 .logo h1, 
@@ -62,15 +62,20 @@ header,
 .back-to-categories-btn {
     color: #ffffff;
     text-shadow: 
-        0px -1px 0px rgba(0, 0, 0, 0.3),
-        0px 1px 0px rgba(255, 255, 255, 0.1);
+        0px -2px 1px rgba(0, 0, 0, 0.4),
+        0px 1px 1px rgba(255, 255, 255, 0.15),
+        0px 2px 3px rgba(0, 0, 0, 0.5),
+        inset 0px 0.5px 0px rgba(255, 255, 255, 0.08);
 }
 
 /* Glossy Header */
 header {
     background: var(--header-bg);
     height: 60px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -88,8 +93,8 @@ header:after {
     left: 0;
     right: 0;
     height: 30px;
-    background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
-    opacity: 0.3;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), transparent);
+    opacity: 0.4;
     border-radius: 0 0 50% 50% / 20%;
     pointer-events: none;
 }
@@ -113,16 +118,19 @@ header:after {
     font-size: 28px;
     margin-right: 12px;
     color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0px -1px 1px rgba(0, 0, 0, 0.4),
+        0px 1px 1px rgba(255, 255, 255, 0.15);
 }
 
 .logo h1 {
     font-size: 24px;
     font-weight: 600;
     text-shadow: 
-        0px -1px 0px rgba(0, 0, 0, 0.4),
-        0px 1px 0px rgba(255, 255, 255, 0.15),
-        0 1px 2px rgba(0, 0, 0, 0.5);
+        0px -2px 1px rgba(0, 0, 0, 0.5),
+        0px 1px 1px rgba(255, 255, 255, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Featured Carousel */
@@ -158,7 +166,10 @@ header:after {
     border-radius: 24px;
     overflow: hidden;
     background: var(--card-gradient-light);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     border: 2px dashed rgba(255, 255, 255, 0.2);
 }
 
@@ -172,7 +183,10 @@ header:after {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     z-index: 3;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .carousel-item.next {
@@ -202,7 +216,10 @@ header:after {
     height: 130px;
     border-radius: 22px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     background: #2a2a2c;
     display: flex;
     align-items: center;
@@ -227,9 +244,9 @@ header:after {
     text-align: center;
     margin-bottom: 15px;
     text-shadow: 
-        0px -1px 0px rgba(0, 0, 0, 0.4),
-        0px 1px 0px rgba(255, 255, 255, 0.15),
-        0 2px 6px rgba(0, 0, 0, 0.8);
+        0px -2px 1px rgba(0, 0, 0, 0.5),
+        0px 1px 1px rgba(255, 255, 255, 0.2),
+        0 3px 6px rgba(0, 0, 0, 0.8);
     overflow-wrap: anywhere;
     word-break: break-word;
 }
@@ -257,7 +274,8 @@ header:after {
     font-size: 16px;
     box-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
     width: 100%;
     position: relative;
@@ -265,8 +283,8 @@ header:after {
     margin-top: 15px;
     border-radius: 12px;
     text-shadow: 
-        0px -1px 0px rgba(0, 0, 0, 0.5),
-        0px 1px 0px rgba(255, 255, 255, 0.15);
+        0px -2px 1px rgba(0, 0, 0, 0.6),
+        0px 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 .app-card .card-button:before {
@@ -276,7 +294,7 @@ header:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     border-radius: 12px 12px 0 0;
 }
 
@@ -285,14 +303,16 @@ header:after {
     transform: translateY(-2px);
     box-shadow: 
         0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .app-card .card-button:active {
     transform: translateY(1px);
     box-shadow: 
         0 1px 2px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Carousel Navigation */
@@ -344,7 +364,11 @@ header:after {
     background: rgba(60, 60, 62, 0.8);
     color: white;
     font-size: 16px;
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 
+        inset 0 1px 4px rgba(0, 0, 0, 0.3), 
+        0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     text-shadow: 
         0px -1px 0px rgba(0, 0, 0, 0.3),
@@ -354,7 +378,11 @@ header:after {
 .search-input:focus {
     outline: none;
     background: rgba(70, 70, 72, 0.9);
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 2px var(--accent);
+    box-shadow: 
+        inset 0 1px 4px rgba(0, 0, 0, 0.3), 
+        0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .search-input::placeholder {
@@ -378,12 +406,20 @@ header:after {
     overflow: hidden;
     box-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     text-shadow: 
         0px -1px 0px rgba(0, 0, 0, 0.5),
         0px 1px 0px rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(0, 0, 0, 0.3);
-    display: none;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cancel-btn.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .cancel-btn:before {
@@ -393,7 +429,7 @@ header:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     border-radius: 20px 20px 0 0;
 }
 
@@ -402,14 +438,16 @@ header:after {
     transform: translateY(-2px);
     box-shadow: 
         0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .cancel-btn:active {
     transform: translateY(1px);
     box-shadow: 
         0 1px 2px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Search Results */
@@ -432,7 +470,10 @@ header:after {
     border-radius: 16px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
@@ -442,7 +483,10 @@ header:after {
 
 .app-card-grid:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 
+        0 12px 24px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .card-icon {
@@ -451,7 +495,10 @@ header:after {
     border-radius: 18px;
     margin: 0 auto 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     background: #2a2a2c;
     display: flex;
     align-items: center;
@@ -495,7 +542,8 @@ header:after {
     font-size: 14px;
     box-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
     width: 100%;
     position: relative;
@@ -514,7 +562,7 @@ header:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     border-radius: 10px 10px 0 0;
 }
 
@@ -523,17 +571,19 @@ header:after {
     transform: translateY(-2px);
     box-shadow: 
         0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .card-button:active {
     transform: translateY(1px);
     box-shadow: 
         0 1px 2px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Enhanced Bottom Navigation Bar with glossy and engraved effects */
+/* Enhanced Bottom Navigation Bar with deeper engraved effect and embossed icons */
 .bottom-bar {
     position: fixed;
     bottom: 0;
@@ -545,7 +595,8 @@ header:after {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 
         0 -4px 12px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
     z-index: 100;
 }
 
@@ -566,6 +617,10 @@ header:after {
     padding: 6px 0;
     min-width: 0;
     overflow: hidden;
+    text-shadow: 
+        0px -2px 1px rgba(0, 0, 0, 0.5),
+        0px 1px 1px rgba(255, 255, 255, 0.1),
+        inset 0px 0.5px 0px rgba(255, 255, 255, 0.08);
 }
 
 .tab::before {
@@ -575,8 +630,8 @@ header:after {
     left: 0;
     right: 0;
     height: 30px;
-    background: linear-gradient(rgba(255, 255, 255, 0.15), transparent);
-    opacity: 0.3;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0.4;
     border-radius: 0 0 50% 50% / 20%;
     pointer-events: none;
 }
@@ -588,10 +643,10 @@ header:after {
     box-shadow: 
         inset 0 10px 10px rgba(0, 0, 0, 0.4),
         inset 0 -2px 4px rgba(255, 255, 255, 0.05);
-}
-
-.tab.active.genius {
-    border-top: 3px solid transparent;
+    text-shadow: 
+        0px -2px 1px rgba(0, 0, 0, 0.6),
+        0px 1px 1px rgba(255, 255, 255, 0.15),
+        inset 0px 0.5px 0px rgba(255, 255, 255, 0.1);
 }
 
 .tab:not(:last-child) {
@@ -601,13 +656,26 @@ header:after {
 .tab i {
     font-size: 22px;
     margin-bottom: 4px;
+    text-shadow: 
+        0px -1px 0px rgba(0, 0, 0, 0.6),
+        0px 1px 1px rgba(255, 255, 255, 0.3),
+        inset 0px 0.5px 0px rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 2;
 }
 
+/* Removed Genius tab orange effect */
 .tab.genius i {
-    color: var(--genius-color);
+    color: #ffffff;
 }
 
-/* Engraved effect for active tab (replaces the blue line) */
+/* Enhanced glossy effect on active tabs */
+.tab.active::before {
+    opacity: 0.6;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
+}
+
+/* Deeper engraved effect for active tab */
 .tab.active::after {
     content: '';
     position: absolute;
@@ -615,23 +683,10 @@ header:after {
     left: 0;
     right: 0;
     height: 3px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     box-shadow: 
-        inset 0 1px 2px rgba(0, 0, 0, 0.3),
-        0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.tab.active.genius::after {
-    background: rgba(255, 159, 10, 0.2);
-    box-shadow: 
-        inset 0 1px 2px rgba(0, 0, 0, 0.3),
-        0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-/* Enhanced glossy effect on active tabs */
-.tab.active::before {
-    opacity: 0.5;
-    background: linear-gradient(rgba(255, 255, 255, 0.25), transparent);
+        inset 0 1px 2px rgba(0, 0, 0, 0.4),
+        0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 /* Tab Content Areas */
@@ -652,9 +707,9 @@ header:after {
     color: #ddd;
     font-size: 24px;
     text-shadow: 
-        0px -1px 0px rgba(0, 0, 0, 0.4),
-        0px 1px 0px rgba(255, 255, 255, 0.15),
-        0 1px 3px rgba(0,0,0,0.5);
+        0px -2px 1px rgba(0, 0, 0, 0.5),
+        0px 1px 1px rgba(255, 255, 255, 0.2),
+        0 2px 4px rgba(0,0,0,0.6);
 }
 
 .placeholder-content {
@@ -665,7 +720,10 @@ header:after {
     color: #999;
     font-size: 18px;
     border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .placeholder-content i {
@@ -707,7 +765,10 @@ header:after {
     overflow-y: auto;
     transform: rotateY(90deg) scale(0.8);
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     padding: 25px;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -736,7 +797,8 @@ header:after {
     justify-content: center;
     box-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     overflow: hidden;
     text-shadow: 
@@ -751,7 +813,7 @@ header:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     border-radius: 50% 50% 0 0;
 }
 
@@ -760,14 +822,16 @@ header:after {
     transform: translateY(-2px);
     box-shadow: 
         0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .close-modal:active {
     transform: translateY(1px);
     box-shadow: 
         0 1px 2px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .modal-header {
@@ -784,7 +848,10 @@ header:after {
     border-radius: 18px;
     overflow: hidden;
     margin-right: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     background: #2a2a2c;
     display: flex;
     align-items: center;
@@ -810,8 +877,8 @@ header:after {
     overflow-wrap: anywhere;
     word-break: break-word;
     text-shadow: 
-        0px -1px 0px rgba(0, 0, 0, 0.4),
-        0px 1px 0px rgba(255, 255, 255, 0.15);
+        0px -2px 1px rgba(0, 0, 0, 0.5),
+        0px 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 .modal-developer {
@@ -837,7 +904,9 @@ header:after {
     font-weight: 500;
     color: #ddd;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 #categoriesContent .category-select-btn {
@@ -851,7 +920,8 @@ header:after {
     font-size: 15px;
     box-shadow:
         0 2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
     position: relative;
     overflow: hidden;
@@ -869,7 +939,7 @@ header:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     border-radius: 12px 12px 0 0;
 }
 
@@ -878,14 +948,16 @@ header:after {
     transform: translateY(-2px);
     box-shadow:
         0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 #categoriesContent .category-select-btn:active {
     transform: translateY(1px);
     box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .modal-section {
@@ -927,6 +999,9 @@ header:after {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 12px;
+    box-shadow: 
+        inset 0 1px 2px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .versions-container {
@@ -940,7 +1015,9 @@ header:after {
     border-radius: 10px;
     padding: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 
+        inset 0 1px 2px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .version-group h4 {
@@ -993,7 +1070,8 @@ header:after {
     overflow: hidden;
     box-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     text-shadow: 
         0px -1px 0px rgba(0, 0, 0, 0.5),
         0px 1px 0px rgba(255, 255, 255, 0.15);
@@ -1011,7 +1089,7 @@ header:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     border-radius: 5px 5px 0 0;
 }
 
@@ -1020,14 +1098,16 @@ header:after {
     transform: translateY(-2px);
     box-shadow: 
         0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .download-button:active {
     transform: translateY(1px);
     box-shadow: 
         0 1px 2px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Scrollbar styling */
@@ -1310,7 +1390,8 @@ header:after {
     font-weight: 600;
     box-shadow:
         0 2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
@@ -1333,7 +1414,7 @@ header:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     border-radius: inherit;
 }
 .back-to-categories-btn:hover, .back-to-categories-btn:focus {
@@ -1341,13 +1422,15 @@ header:after {
     transform: translateY(-2px);
     box-shadow:
         0 4px 8px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 .back-to-categories-btn:active {
     transform: translateY(1px);
     box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 .back-to-categories-btn i,
 .back-to-categories-btn span {
