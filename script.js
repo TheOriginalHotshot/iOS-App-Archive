@@ -605,7 +605,6 @@
             }
             searchInput.value = '';
             searchInput.blur();
-            cancelSearch.classList.remove('visible');
             setUrlParam('query', '');
             renderSearchResults(apps);
         });
