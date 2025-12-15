@@ -504,6 +504,7 @@
                         setUrlParam('page', page);
                     }
                     renderSearchResults(filteredApps, page);
+                    updateCancelVisibility();
                 } else if (tabName === 'categories') {
                     carouselContainer.style.display = 'none';
                     searchContainer.style.display = 'none';
@@ -569,7 +570,16 @@
             });
         }
 
-         // Search functionality
+        function updateCancelVisibility() {
+            const hasText = searchInput.value.trim().length > 0;
+            if (document.activeElement === searchInput || hasText) {
+                cancelSearch.classList.add('visible');
+            } else {
+                cancelSearch.classList.remove('visible');
+            }
+        }
+
+        // Search functionality
         searchInput.addEventListener('input', function() {
             if (!appsLoaded) {
                 return;
@@ -579,20 +589,15 @@
             setUrlParam('page', '');
             const filteredApps = filterAppsByQuery(searchTerm);
             renderSearchResults(filteredApps, 1);
+            updateCancelVisibility();
         });
-        
+
         // Show cancel button when search input is focused
-        searchInput.addEventListener('focus', function() {
-            cancelSearch.style.display = 'block';
-        });
-        
+        searchInput.addEventListener('focus', updateCancelVisibility);
+
         // Hide cancel button when search input is blurred
-        searchInput.addEventListener('blur', function() {
-            if (this.value === '') {
-                cancelSearch.style.display = 'none';
-            }
-        });
-        
+        searchInput.addEventListener('blur', updateCancelVisibility);
+
         // Cancel search
         cancelSearch.addEventListener('click', function() {
             if (!appsLoaded) {
@@ -600,7 +605,7 @@
             }
             searchInput.value = '';
             searchInput.blur();
-            this.style.display = 'none';
+            cancelSearch.classList.remove('visible');
             setUrlParam('query', '');
             renderSearchResults(apps);
         });
