@@ -570,11 +570,11 @@
         }
 
          // Search functionality
-         searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', function() {
             if (!appsLoaded) {
                 return;
             }
-            const searchTerm = this.value.toLowerCase();
+            const searchTerm = this.value;
             setUrlParam('query', searchTerm);
             setUrlParam('page', '');
             const filteredApps = filterAppsByQuery(searchTerm);
