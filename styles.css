@@ -717,6 +717,11 @@ header:after {
     border-radius: 16px;
     padding: 40px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     color: #999;
     font-size: 18px;
     border: 1px solid rgba(255,255,255,0.1);
@@ -728,7 +733,6 @@ header:after {
 
 .placeholder-content i {
     font-size: 48px;
-    margin-bottom: 20px;
     display: block;
     color: #666;
 }
