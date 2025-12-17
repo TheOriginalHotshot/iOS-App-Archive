@@ -5298,5 +5298,31 @@
             "Casual",
             "Games"
         ]
+    },
+    {
+        "id": "aquarium-maker",
+        "title": "Aquarium Maker",
+        "developer": "Sunstorm Interactive",
+        "featuredDescription": "Create an ultra realistic fish aquarium with endless combinations of fish, plants, and accessories.",
+        "description": "Create an ultra realistic fish aquarium for your iPhone, iPod touch, or iPad with so much variety that no two will be alike!  No other app will compare to Aquarium Maker if realistic fish and tank supplies are your priority!  Give it a try; you’ll be hooked!\n\nTo begin, choose a background and gravel.  You will be amazed how different a background will look by simply changing the gravel color!\n\nNow you can start placing the accessories in the aquarium.  Start with a large assortment of corals and rocks and placed wherever you want.  Then find the plants that will live with the fish.  These items will create the ultimate color contrast and realistic beauty for your aquarium, and the combinations are endless!\n\nNext, you will want to decorate with a pirate ship, a treasure chest, or even an old, broken-down car!  If you want to add a bubbler, there are four settings to choose from, and they even sound like real bubbles!\n\nOf course, we wouldn’t forget the jokesters who love to use their sense of humor with the Maker Apps! We've included a joke items category where you can use goofy stuff like a scuba diving cat to raise an eyebrow!\n\nFinally, it’s time to select the fish!  The vibrant, realistic-looking saltwater AND freshwater fish will amaze your eyes as you place them in your aquarium!  Not only do they look beautiful, but they swim too!\n\nYou will be so proud of your stunning aquarium, you will want to save it and load it later to show friends.  You can also email it to friends or post it on your Facebook page!\n\nIf you have always wanted an aquarium and pet fish… or even if you haven’t, this is the app for you! Nature’s beauty is a wonderful way to pass the time and promote creativity!\n\nThis FREE version of Aquarium Maker includes a SAMPLING of aquarium making items.  If you want access to ALL of the items, you have to BUY the content packs. Aquarium Supplies content pack gives you access to all of the tank making items! Freshwater Fish content pack gives you access to 8 different fish for your tank! And, Saltwater Fish content pack gives you access to 8 beautiful and exotic fish",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0.0",
+                    "url": "https://archive.org/download/aquarium-maker-sunstorm-interactive-v-1.00-lp-os-30.rc-333-616/Aquarium%20Maker%20%5BSunstorm%20Interactive%5D%20%28v1.00%20LP%20os30%29.rc333_616.ipa"
+                },
+                {
+                    "version": "1.0.1",
+                    "url": "https://archive.org/download/aquarium-maker-sunstorm-interactive-v-1.00-lp-os-30.rc-333-616/Aquarium%20Maker%201.01.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iPhoneOS 3.0 and Later",
+        "icon": "cdn/app-icon/aquarium-maker.png",
+        "featured": false,
+        "categories": [
+            "NoCategoryAssignedApps"
+        ]
     }
 ]
