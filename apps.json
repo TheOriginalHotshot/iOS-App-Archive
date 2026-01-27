@@ -5363,9 +5363,7 @@
                 }
             ],
             "unarchived": [
-                {
-                    "version": "1.0"
-                }
+                "1.0"
             ]
         },
         "compatibility": "iPhoneOS 3.0 and Later",
@@ -5417,9 +5415,7 @@
                 }
             ],
             "unarchived": [
-                {
-                    "version": "1.0.0"
-                }
+                "1.0.0"
             ]
         },
         "compatibility": "iOS 4.1 and Later",
@@ -5456,24 +5452,12 @@
                 }
             ],
             "unarchived": [
-                {
-                    "version": "1.0"
-                },
-                {
-                    "version": "1.0.1"
-                },
-                {
-                    "version": "3.1.1"
-                },
-                {
-                    "version": "1.4.2"
-                },
-                {
-                    "version": "4.3.4"
-                },
-                {
-                    "version": "4.4.1"
-                }
+                "1.0",
+                "1.0.1",
+                "3.1.1",
+                "1.4.2",
+                "4.3.4",
+                "4.4.1"
             ]
         },
         "compatibility": "iOS 4.3 and Later",
@@ -5523,15 +5507,9 @@
                 }
             ],
             "unarchived": [
-                {
-                    "version": "1.4.2"
-                },
-                {
-                    "version": "2.0.0"
-                },
-                {
-                    "version": "4.4.1"
-                }
+                "1.4.2",
+                "2.0.0",
+                "4.4.1"
             ]
         },
         "compatibility": "iOS 4.3 and Later",
@@ -5649,6 +5627,138 @@
             "Casual",
             "Board",
             "Games"
+        ]
+    },
+    {
+        "id": "touch-physics",
+        "title": "Touch Physics",
+        "developer": "Gamez 4 Touch",
+        "featuredDescription": "Draw shapes with a crayon that come to life on your iPhone / iPod touch.",
+        "description": "Draw shapes with a crayon that come to life on your iPhone / iPod touch. These shapes interact with the wheel, causing it to move according to physical laws. When it reaches the star, the level is complete.\n\nBeware, this is not as simple as it sounds! Levels progress in difficulty, do you dare to compete? Addictive fun and fury all in one package.\n\n\n\"Game of the Year Award for iPhone\" - haz.de\n\n\"As scientifically fascinating as the original\" Bronze Award (Touch Physics 2) - Pocket Gamer\n\n\"Draw your way to victory\" - iPhone Games Directory\n\n\"Top 100 iPhone Games 2009 Award\" - iLounge\n\n\"Hottest Award\" - iPhone Apps Plus\n\n\"Very very cool game, good mind teaser\" - Today in iPhone\n\n\"Painfully addictive\" - MacBreak Weekly\n\n\"Touch Physics is a fantastic game. Great value for the price\" - 148Apps\n\n\"One more reason to keep touching my iPhone\" - TouchMyApps\n\n\"One of the very best inexpensive games we've seen on the iPhone to date\" - iLounge\n\n\nAre you up to the challenge? Can you take on the laws of physics to complete all 50 levels? Touch Physics is an innovative game that allows you to be in control of the wheel's destiny. Change the laws of physics to suit your game play!\n\nA video of Touch Physics in action can be seen at: http://www.gamez4touch.com/\n\n\nCUSTOMER COMMENTS:\n\n- Great job, this game is AMAZING !\n- Dare I say it, ADDICTIVE !!!\n- I love this game !\n- Light-hearted fun that is hard to put down\n- High production values, stylish\n- I can't put this down !\n- Challenging, but quite fun and entertaining !\n- Entertained for hours\n- Highly recommend buying this one\n- It's incredibly addictive and I love it !\n- Wow !\n\n\nFEATURES:\n\n- Simple and intuitive control\n- Real physics modeling\n- Realistic crayon drawing\n- Alter gravity, friction and elasticity\n- Automatic save and resume\n- Shake to reset\n- Relaxing music\n- Choose your own music\n- Retina display\n- Import levels from Touch Physics HD\n\n\nLANGUAGES:\n\nEnglish",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.1.0",
+                    "url": "https://archive.org/download/touch-physics-v-2.4.0-i-os-3.1.2/Touch%20Physics%20%28V2.1.0%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "2.4.0",
+                    "url": "https://archive.org/download/touch-physics-v-2.4.0-i-os-3.1.2/Touch%20Physics%20%28V2.4.0%29%20%28iOS3.1.2%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0.0",
+                "2.0.0",
+                "2.3.0",
+                "2.3.1"
+            ]
+        },
+        "compatibility": "iPhoneOS 3.1.2 and Later",
+        "icon": "cdn/app-icon/touch-physics.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Strategy",
+            "Puzzle",
+            "Games"
+        ]
+    },
+    {
+        "id": "nok-hockey",
+        "title": "Nok Hockey",
+        "developer": "TNT Apps Inc",
+        "featuredDescription": "Nok Hockey is an electronic version of the real-life hockey board-game made by Carrom.",
+        "description": "Nok Hockey is an electronic version of the real-life hockey board-game made by Carrom. The same game played in camps and schools around the world. This game is meant to replicate what it's like to play the board game. We limited the fancy special effects so that when you play Nok Hockey on your iPhone or iPad, it looks and feels like the real life board game.\n\nIt will test your shooting and angle skills as you try to find the correct angle and speed to shoot off the boards and score a goal! First one to 5 wins!\n\nPLAYING TIP: \nTO SHOOT: PUT YOUR FINGER BEHIND THE PUCK (not on it) AND SWIPE YOUR FINGER THROUGH THE PUCK IN THE DIRECTION YOU WANT IT TO TRAVEL.\n\nThere are 3 different playing modes of the game: \n1. Player vs. Player \n2. Player vs. Computer\n3. Shootout Mode\n\nIn the Player vs. Player mode, you can play hockey against someone else using the same device. But score quickly, because the first person to score 5 goals wins!\n\nIn the Player vs. Computer mode, you can select how good the Computer is: easy, intermediate, or difficult. But be careful, when you select a difficult computer opponent, the goals come quickly so make sure you can score quickly too! And also, the first to score 5 goals wins!\n\nIn the Shootout mode, you have the opportunity improve and test your shooting skills. The computer will randomly select 10 different shots on the board for you to shoot from. Your objective is to score as many of the 10 shots as possible. Then, play again to see if you can beat your score. \n\nAnd just a TIP, when taking a shot, be sure to put your finger BEHIND THE PUCK (not on the puck), and then with one motion, move your finger over and passed the puck. But find the right speed and correct angle. You will need these to be just right to score!!\n\nNOK HOCKEY by TNT APPS.....\nHE SHOOTS, HE SCORES!!!\nSHE SHOOTS, SHE SCORES!!!\n\nwww.tandtapps.com\ntandtapps@gmail.com",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0",
+                    "url": "https://archive.org/download/nok-hockey-v-1.0-i-os-3.0/Nok%20Hockey%20%28V1.0%29%20%28iOS3.0%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.2",
+                "2.1",
+                "3.1"
+            ]
+        },
+        "compatibility": "iOS 8.0 and Later",
+        "icon": "cdn/app-icon/nok-hockey.png",
+        "featured": false,
+        "categories": [
+            "Sports",
+            "Board",
+            "Games"
+        ]
+    },
+    {
+        "id": "icee-snowboarding",
+        "title": "ICEE Snowboarding",
+        "developer": "Sunstorm Interactive",
+        "featuredDescription": "Get ready to swipe out! ICEE Bear is going snowboarding!",
+        "description": "Get ready to swipe out! ICEE Bear is going snowboarding! \n\nGuide ICEE Bear down the slopes in exciting 3D snowboarding action!\n\nSee how fast you can go in race mode or how long you can go before you take a tumble in \"freezestyle\" mode. Either way you can jump off ramps and perform tricks while in the air, \"grind\" the guard rails, pick up fruits for bonus points and ICEE Drinks for speed boosts. However you play ICEE Bear Snowboarding, you are sure to have a blast! \n\n• Snowboarding fun for all ages!\n\n• Cool 3d graphics and cartoon style!\n\n• Simple tilt and touch screen controls \n\n• Two different play modes \n\n• Upgrade to faster snowboards that give higher bonuses\n\n• Four different racing tracks and a freezestyle zone!",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0.3",
+                    "url": "https://archive.org/download/icee-snowboarding-v-1.0.3-i-os-3.0_202601/ICEE%20Snowboarding%20%28V1.0.3%29%20%28iOS3.0%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iPhoneOS 3.0 and Later",
+        "icon": "cdn/app-icon/icee-snowboarding.jpeg",
+        "featured": false,
+        "categories": [
+            "Family",
+            "Games"
+        ]
+    },
+    {
+        "id": "dominos-pizza-hero",
+        "title": "Domino's Pizza Hero",
+        "developer": "Domino’s Pizza LLC",
+        "featuredDescription": "Rise through the pizza-making ranks and become a Pizza Hero in this popular game from Domino’s Pizza!",
+        "description": "Rise through the pizza-making ranks and become a Pizza Hero in this popular game from Domino’s Pizza!\n\nMake top quality virtual pizzas by kneading dough, spreading sauce, sprinkling cheese, placing toppings and more as you race against the clock.\n\nCompete against other pizza makers on the Game Center Leaderboards. \n\nShare your achievements, scores, and pizza-maker profile on Facebook and Twitter.Enough thinking",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.1.1",
+                    "url": "https://archive.org/download/dominos-pizza-hero-v-1.1.1-i-os-4.0_202601/Domino%27s%20Pizza%20Hero%20%28V1.1.1%29%20%28iOS4.0%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 4.0 and Later",
+        "icon": "cdn/app-icon/dominos-pizza-hero.png",
+        "featured": false,
+        "categories": [
+            "Casual",
+            "Lifestyle",
+            "Games",
+            "Simulation"
+        ]
+    },
+    {
+        "id": "carl-laser-draw",
+        "title": "Carl Laser Draw",
+        "developer": "Tayasui.com",
+        "featuredDescription": "Choose a laser and start making wonderful glowing paint with crazy sound effects!",
+        "description": "Choose a laser and start making wonderful glowing paint with crazy sound effects!\nChoose between plenty of different tools and create smashing strokes and shapes.\n\nGreat realistic sound effects, your drawing sparks and hums!\n\nCarl laser draw is a really joy to use and will entertain you for hours!\n\nFEATURES: \n• funtastic drawing tools \n• Magical shapes \n• Share on Facebook Wall \n• Email your drawings \n• Save and load drawin\n\nSpecifically designed for kids, laser draw makes great drawings and enable you to share them easily with parents and friends. \n\n------------ Also Enjoy ------------ \n• Talking Carl : The best Talking App for iPhone \n• Playing Carl : Play the silliest instruments with Carl \n• Mr Poo : The punching ball Poo \n• Talking Gugl: Carl silly little brother \n• Sleeping Carl: Fall asleep instantly while listen to Carl snoring \n• Greeting Carl: Send greetings ands Cards with Carl.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.5",
+                    "url": "https://archive.org/download/carl-laser-draw-v-1.5-i-os-5.0/Carl%20Laser%20Draw%20%28V1.5%29%20%28iOS5.0%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 5.0 and Later",
+        "icon": "cdn/app-icon/carl-laser-draw.png",
+        "featured": false,
+        "categories": [
+            "Entertainment"
         ]
     }
 ]
