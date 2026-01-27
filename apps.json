@@ -5348,5 +5348,307 @@
         "categories": [
             "NoCategoryAssignedApps"
         ]
+    },
+    {
+        "id": "teletubbies-my-first-app",
+        "title": "Teletubbies: My First App",
+        "developer": "DHX Media (Toronto) Ltd",
+        "featuredDescription": "Make this your toddlers’ First App!",
+        "description": "Teletubbies is all about fun for the youngest of children and here is their first opportunity to take an interactive journey with the Teletubbies and become immersed in fun experiences from the TV show via App technology. Make this your toddlers’ First App!\nChildren can choose to interact with the game as much as they’d like. Whether they want to make Tubby Custard, chase the Teletubbies up and down hills, or find funny noises, it’s up to them.\n\n•All the characters from the TV show - Tinky Winky, Dipsy, Laa-Laa, Po and even the Noo Noo. Features the original music and voices\n•Has a dedicated ‘Parent’s Zone’ that allows parents to customize the app specifically for their children including length of play and access to other content\n•Designed to give universal satisfaction for children with complexity being tailored specifically to their level of engagement\n•Range of fun games to play – Tubby Hello/Bye Bye, Tubby Custard, Musical Hills and Running\n\nTechnical Support: games.support@bbc.com",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.1",
+                    "url": "https://archive.org/download/teletubbies-my-first-app-v-1.1-i-os-3.0/Teletubbies%20My%20First%20App%20%28V1.1%29%20%28iOS3.0%29.ipa"
+                }
+            ],
+            "unarchived": [
+                {
+                    "version": "1.0"
+                }
+            ]
+        },
+        "compatibility": "iPhoneOS 3.0 and Later",
+        "icon": "cdn/app-icon/teletubbies-my-first-app.png",
+        "featured": false,
+        "categories": [
+            "Entertainment", 
+            "Games"
+        ]
+    },
+    {
+        "id": "teletubbies-my-first-app-hd",
+        "title": "Teletubbies: My First App HD",
+        "developer": "DHX Media (Toronto) Ltd",
+        "featuredDescription": "Make this your toddlers’ First App!",
+        "description": "Teletubbies is all about fun for the youngest of children and here is their first opportunity to take an interactive journey with the Teletubbies and become immersed in fun experiences from the TV show via App technology. Make this your toddlers’ First App!\nChildren can choose to interact with the game as much as they’d like. Whether they want to make Tubby Custard, chase the Teletubbies up and down hills, or find funny noises, it’s up to them.\n\n•All the characters from the TV show - Tinky Winky, Dipsy, Laa-Laa, Po and even the Noo Noo. Features the original music and voices\n•Has a dedicated ‘Parent’s Zone’ that allows parents to customize the app specifically for their children including length of play and access to other content\n•Designed to give universal satisfaction for children with complexity being tailored specifically to their level of engagement\n•Range of fun games to play – Tubby Hello/Bye Bye, Tubby Custard, Musical Hills and Running\n\nTechnical Support: games.support@bbc.com",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0",
+                    "url": "https://archive.org/download/teletubbies-my-first-app-hd-v-1.0-i-os-3.2/Teletubbies%20-%20My%20First%20App%20HD%20%20%28V1.0%29%20%28iOS3.2%29.ipa"
+                },
+                {
+                    "version": "1.1",
+                    "url": "https://archive.org/download/teletubbies-my-first-app-hd-v-1.0-i-os-3.2/Teletubbies%20-%20My%20First%20App%20HD%20%28V1.1%29%20%28iOS3.2%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iPhoneOS 3.2 and Later",
+        "icon": "cdn/app-icon/teletubbies-my-first-app-hd.png",
+        "featured": false,
+        "categories": [
+            "Entertainment", 
+            "Games"
+        ]
+    },
+    {
+        "id": "hubblesite",
+        "title": "HubbleSite",
+        "developer": "Stsci",
+        "featuredDescription": "Help choose the world’s most popular Hubble images.",
+        "description": "HubbleSite, the online home of NASA’s Hubble Space Telescope, invites you to help choose the world’s most popular Hubble images. Get wallpaper, Hubble facts, and more.\n\nHubble’s vast collection of images awaits your critical and discerning eye. Become part of the Hubble mission by voting for the most spectacular and awe-inspiring sights from Hubble’s archive.\n\nThe app provides a selection of Hubble wallpaper images, chosen and edited for visually stunning results on the iPhone and iPod Touch. Plus, get facts about Hubble history; the telescope; and the scientific discoveries it’s revealed, from the age of the universe to the mysterious force known as dark energy. The app has been optimized for iPhone and iPod Touch’s Retina display.\n\nFor over 20 years, Hubble has orbited the Earth, beaming home images of celestial splendor. Join in the excitement of the Hubble mission.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.3.1",
+                    "url": "https://archive.org/download/hubble-site-v-1.3.1-i-os-4.1/HubbleSite%20%28V1.3.1%29%20%28iOS4.1%29.ipa"
+                }
+            ],
+            "unarchived": [
+                {
+                    "version": "1.0.0"
+                }
+            ]
+        },
+        "compatibility": "iOS 4.1 and Later",
+        "icon": "cdn/app-icon/hubblesite.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Education"
+        ]
+    },
+    {
+        "id": "touch-hockey-fs5",
+        "title": "Touch Hockey: FS5",
+        "developer": "FlipSide5 Inc",
+        "featuredDescription": "Play against your friends over Bluetooth and WiFi!",
+        "description": "Play against your friends over Bluetooth and WiFi! Touch Hockey outclasses every air hockey game available on the iPhone and iPod touch with the fastest animations possible!\n\nOne of the only 10 games your iPhone needs.\n-gizmodo.com \n\n“it's a great game, and it's definitely worth downloading, playing, and having on your iPhone.”\n-What’s On iPhone.com\n\n“Touch Hockey is a highly polished air hockey game for the iPhone and iPod Touch. It looks great, and the gameplay is completely customizable.” 4.5 out of 5 stars\n- appstoreapps.com\n\n“Overall Touch Hockey is a must download. It’s simple priceless fun. I am giving Touch Hockey a 5 out of 5 stars”\n-everydaygamers.com\n\n“We found this game to be a great time killer”\n-iphone-apps.toptenreviews.com\n\nDownload the most popular iPhone air hockey game ever! See why Touch Hockey has been installed over 25 million devices!! \n\n- Smoothest animations and most responsive hockey game! \n- Multi-player Bluetooth and WiFi local network support!!\n- Real-time 3D mallets!\n- 3 levels for 'smart' one-player game play!\n- 4 game length settings!\n- Instant Replay!",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.1.0",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20%28V1.1.0%29%20%28iOS2.1%29.ipa"
+                },
+                {
+                    "version": "4.3.0",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20%28V4.3.0%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "4.3.5",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20%28V4.3.5%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "5.0.0",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20%28V5.0.0%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": [
+                {
+                    "version": "1.0"
+                },
+                {
+                    "version": "1.0.1"
+                },
+                {
+                    "version": "3.1.1"
+                },
+                {
+                    "version": "1.4.2"
+                },
+                {
+                    "version": "4.3.4"
+                },
+                {
+                    "version": "4.4.1"
+                }
+            ]
+        },
+        "compatibility": "iOS 4.3 and Later",
+        "icon": "cdn/app-icon/touch-hockey-fs5.png",
+        "featured": false,
+        "categories": [
+            "Sports",
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "touch-hockey-fs5-free",
+        "title": "Touch Hockey: FS5 (FREE)",
+        "developer": "FlipSide5 Inc",
+        "featuredDescription": "Touch Hockey outclasses every air hockey game available on the iPhone and iPod touch and it's FREE!",
+        "description": "Play against your friends over Bluetooth and WiFi! Touch Hockey outclasses every air hockey game available on the iPhone and iPod touch with the fastest animations possible and it's FREE!\n\nOne of the only 10 games your iPhone needs.\n\n-gizmodo.com \n\n“it's a great game, and it's definitely worth downloading, playing, and having on your iPhone.”\n-What’s On iPhone.com\n\n“Touch Hockey is a highly polished air hockey game for the iPhone and iPod Touch. It looks great, and the gameplay is completely customizable.” 4.5 out of 5 stars\n- appstoreapps.com\n\n“Overall Touch Hockey is a must download. It’s simple priceless fun. I am giving Touch Hockey a 5 out of 5 stars”\n-everydaygamers.com\n\n“We found this game to be a great time killer”\n-iphone-apps.toptenreviews.com\n\nDownload the most popular iPhone air hockey game ever! See why Touch Hockey has been installed over 25 million devices!! \n\n- Smoothest animations and most responsive hockey game! \n- Multi-player Bluetooth and WiFi local network support!!\n- Real-time 3D mallets!\n- 3 levels for 'smart' one-player game play!\n- 4 game length settings!\nInstant Replay!\n\nNotes: Displays ads after 4 minutes of game play.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0.0",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-free-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20FREE%20%28V1.0.0%29%20%28iOS2.0%29.ipa"
+                },
+                {
+                    "version": "3.1.1",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-free-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20FREE%20%28V3.1.1%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "3.1.2",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-free-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20FREE%20%28V3.1.2%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "4.2.1",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-free-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20FREE%20%28V4.2.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "4.4.0",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-free-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20FREE%20%28V4.4.0%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "4.4.2",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-free-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20FREE%20%28V4.4.2%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "5.0.0",
+                    "url": "https://archive.org/download/touch-hockey-fs-5-free-v-5.0.0-i-os-4.3/Touch%20Hockey%20FS5%20FREE%20%28V5.0.0%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": [
+                {
+                    "version": "1.4.2"
+                },
+                {
+                    "version": "2.0.0"
+                },
+                {
+                    "version": "4.4.1"
+                }
+            ]
+        },
+        "compatibility": "iOS 4.3 and Later",
+        "icon": "cdn/app-icon/touch-hockey-fs5-free.png",
+        "featured": false,
+        "categories": [
+            "Sports",
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "touch-hockey-2-hd",
+        "title": "Touch Hockey 2 HD",
+        "developer": "FlipSide5 Inc",
+        "featuredDescription": "Touch Hockey 2 HD version 2.0 is loaded with brand new features!",
+        "description": "Touch Hockey 2 HD version 2.0 is loaded with brand new features, you can now:\n\nCompete for the highest score on each table!\nEarn Coins to buy all the fantastic content!\nUnlimited Online Plays for Free!\nDo-Overs to recover high score opportunities!\nGreat new Bumper and Glow Tables!\nPowerful new Champion Paddle!\n\nThe verdict is in, Touch Hockey 2 is simply the best:\n\nTouch Hockey 2 is easily the best air hockey game in the App Store.\n- APPLE'N'APPS\n\n...the very best version available is Touch Hockey 2 HD. ....Even if you’ve never played real air hockey, I can promise that you’ll be mesmerized by this expertly designed game.\n- Adrenaline Vault, Top Games of 2012\n\n\nPraise for Touch Hockey and Touch Hockey Extreme:\nOne of the only 10 games your iPhone needs.\n-gizmodo.com \n\n4.5 out of 5 mice.\n-Macworld\n\n“Touch Hockey is a highly polished air hockey game for the iPhone and iPod Touch. It looks great, and the gameplay is completely customizable.” 4.5 out of 5 stars\n- appstoreapps.com\n\n“Overall Touch Hockey is a must download. It’s simple priceless fun. I am giving Touch Hockey a 5 out of 5 stars”\n-everydaygamers.com\n\nTouch Hockey 2 Features:\n\n- All new Bumper Table offers great new challenges.\n- Fantastic new Glow Theme.\n- New Champion Paddle is the best yet!\n- Online play against your friends or the world!\n- Head to head online play over Wi-Fi and you can give it a try over 3G! \n- Head to head local play over Bluetooth!\n- Head to head play on the same device!\n- Over 20 fantastic paddles to choose from!\n- Choose from 8 beautifully crafted tables!\n- Play in 3 gorgeously rendered exotic environments\n\n\nPlease reach us on our facebook page if you have any comments or problems with Touch Hockey 2: facebook.com/flipside5",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.2.5",
+                    "url": "https://archive.org/download/touch-hockey-2-hd-v-2.2.5-i-os-4.3/Touch%20Hockey%202%20HD%20%28V2.2.5%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0.0",
+                "2.0.0"
+            ]
+        },
+        "compatibility": "Unknown",
+        "icon": "cdn/app-icon/touch-hockey-2-hd.png",
+        "featured": false,
+        "categories": [
+            "Sports",
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "touch-hockey-2",
+        "title": "Touch Hockey 2",
+        "developer": "FlipSide5 Inc",
+        "featuredDescription": "Touch Hockey 2 now supports iPhone 6 and iOS 8! Recent new features includes:",
+        "description": "Touch Hockey 2 now supports iPhone 6 and iOS 8! Recent new features includes:\n\nGame Center challenges!\nCompete for the highest score on each table!\nEarn Coins to buy all the fantastic content!\nUnlimited Online Plays for Free!\nDo-Overs to recover high score opportunities!\nGreat new Bumper and Glow Tables!\nPowerful new Champion Paddle!\n\nThe verdict is in, Touch Hockey 2 is simply the best:\n\nTouch Hockey 2 is easily the best air hockey game in the App Store.\n- APPLE'N'APPS\n\n...the very best version available is Touch Hockey 2 HD. ....Even if you’ve never played real air hockey, I can promise that you’ll be mesmerized by this expertly designed game.\n- Adrenaline Vault, Top Games of 2012\n\n\nPraise for Touch Hockey and Touch Hockey Extreme:\nOne of the only 10 games your iPhone needs.\n-gizmodo.com \n\n4.5 out of 5 mice.\n-Macworld\n\n“Touch Hockey is a highly polished air hockey game for the iPhone and iPod Touch. It looks great, and the gameplay is completely customizable.” 4.5 out of 5 stars\n- appstoreapps.com\n\n“Overall Touch Hockey is a must download. It’s simple priceless fun. I am giving Touch Hockey a 5 out of 5 stars”\n-everydaygamers.com\n\nTouch Hockey 2 Features:\n\n- All new Bumper Table offers great new challenges.\n- Fantastic new Glow Theme.\n- New Champion Paddle is the best yet!\n- Online play against your friends or the world!\n- Head to head online play over Wi-Fi and you can give it a try over 3G! \n- Head to head local play over Bluetooth!\n- Head to head play on the same device!\n- Over 20 fantastic paddles to choose from!\n- Choose from 8 beautifully crafted tables!\n- Play in 3 gorgeously rendered exotic environments\n\n\nPlease reach us on our facebook page if you have any comments or problems with Touch Hockey 2: facebook.com/flipside5",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.2.6",
+                    "url": "https://archive.org/download/touch-hockey-2-v-2.2.6-i-os-4.3/Touch%20Hockey%202%20%28V2.2.6%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0.0",
+                "1.0.1",
+                "2.2.4",
+                "2.2.9"
+            ]
+        },
+        "compatibility": "iOS 7.0 and Later",
+        "icon": "cdn/app-icon/touch-hockey-2.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Casual",
+            "Sports",
+            "Games"
+        ]
+    },
+    {
+        "id": "touch-hockey-extreme-fs5",
+        "title": "Touch Hockey Extreme: FS5",
+        "developer": "FlipSide5 Inc",
+        "featuredDescription": "\"FlipSide5 took an already great game and tailored it perfectly for Apple’s new device.\"",
+        "description": "\"FlipSide5 took an already great game and tailored it perfectly for Apple’s new device.\"\n-Macworld\n\n16 Million people can’t be wrong! The most popular arcade game on the iPhone is now available for the iPad with enhanced 3D graphics. Touch Hockey Extreme simply outclasses every air hockey game available on the iPad with head to head over Wi-Fi and enhanced multi-touch gesture recognition. Touch Hockey Extreme showcases the iPad’s revolutionary features!\n\nOne of the only 10 games your iPhone needs.\n-gizmodo.com \n\n“it's a great game, and it's definitely worth downloading, playing, and having on your iPhone.”\n-What’s On iPhone.com\n\n“Touch Hockey is a highly polished air hockey game for the iPhone and iPod Touch. It looks great, and the gameplay is completely customizable.” 4.5 out of 5 stars\n- appstoreapps.com\n\n“Overall Touch Hockey is a must download. It’s simple priceless fun. I am giving Touch Hockey a 5 out of 5 stars”\n-everydaygamers.com\n\n“We found this game to be a great time killer”\n-iphone-apps.toptenreviews.com\n\nDownload the most popular iPhone air hockey game ever! See why Touch Hockey has been installed over 25 million devices!! \n\n- Smoothest animations and most responsive hockey game! \n- Multi-player WiFi local network support!!\n- Real-time 3D mallets!\n- Multiple difficulty settings!\n- 4 game length settings!\n- Instant Replay!",
+        "versions": {
+            "archived": [
+                {
+                    "version": "4.1.0",
+                    "url": "https://archive.org/download/touch-hockey-extreme-fs-5-v-4.1.0-i-os-3.2/Touch%20Hockey%20Extreme%20FS5%20%28V4.1.0%29%20%28iOS3.2%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0.0"
+            ]
+        },
+        "compatibility": "Unknown",
+        "icon": "cdn/app-icon/touch-hockey-extreme-fs5.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Action",
+            "Sports",
+            "Games"
+        ]
+    },
+    {
+        "id": "3d-ball-free",
+        "title": "3D Ball Free",
+        "developer": "Multi Touch Studio",
+        "featuredDescription": "Download and Play your new game \"3D Ball FREE\".",
+        "description": "Download and Play your new game \"3D Ball FREE\".\n\nUnlock new challenges and experience the real 3D experience!\nMove the ball and roll it down to the destination. Enjoy a real 3D maze game with twists and fun! Avoid the fall and cross the obstacles to win. Have Fun!\n\nGame Features:\n\n*It's a FREE game!\n*Excellent HD graphics and cool gameplay.\n*Amazing 3D environment!\n*Exciting and Fun levels!\n*In-game score & achievements. \n*Share your best score on leader board.\n*Compatible with all tabs and mobile devices.\n*Best HD game-play in tablets.\n\nEnjoy an amazing 3D environment puzzle game in Arcade Category NOW!\n\nHow to Play:-\n-Use joy stick to move into all direction.\n\nCheck out our free games previews, game trailers, videos and more free apps in the future.\nGame Videos and Trailers:-\nhttp://www.youtube.com/user/gamesgeni?feature=watch\nLike us on Facebook:-\nhttps://www.facebook.com/timuzsolutions\n\nThis game is suitable for all kind of genres from kids, girls and boys of all ages. Install and Play your new game in arcade game category ñ ì3D BALL FREEî.\n\nIf you have any problem in installation, please report to us. We will try to fix it as soon as possible.Enough thinking",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0",
+                    "url": "https://archive.org/download/3-d-ball-free-v-1.0-i-os-4.3/3D%20Ball%20Free%20%28V1.0%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 4.3 and Later",
+        "icon": "cdn/app-icon/3d-ball-free.png",
+        "featured": false,
+        "categories": [
+            "Casual",
+            "Board",
+            "Games"
+        ]
     }
 ]
