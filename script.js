@@ -520,6 +520,7 @@
 
         function openModal(appId) {
             let modal = document.getElementById(`${appId}Modal`);
+            let createdNow = false;
             if (!modal) {
                 const app = apps.find(a => a.id === appId);
                 if (!app) {
@@ -527,10 +528,19 @@
                     return;
                 }
                 modal = createModal(app);
+                createdNow = true;
             }
-            modal.classList.add('active');
             document.body.style.overflow = 'hidden';
             setUrlParam('app', appId);
+
+            if (createdNow) {
+                modal.offsetHeight;
+                requestAnimationFrame(() => {
+                    modal.classList.add('active');
+                });
+            } else {
+                modal.classList.add('active');
+            }
         }
         
         // Tab switching
