@@ -1,6 +1,75 @@
         let apps = [];
         let appsLoaded = false;
 
+        function escapeHtml(value) {
+            return String(value ?? '')
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;');
+        }
+
+        function normalizeDeviceName(device) {
+            const d = String(device ?? '').trim().toLowerCase();
+            if (!d) return null;
+            if (d === 'iphone') return 'iPhone';
+            if (d === 'ipad') return 'iPad';
+            if (d === 'ipod touch' || d === 'ipodtouch' || d === 'ipod') return 'iPod Touch';
+            return null;
+        }
+
+        function getAppDevices(app) {
+            const raw = app?.devices;
+            const list = Array.isArray(raw) ? raw : (raw ? [raw] : []);
+            const normalized = list
+                .map(normalizeDeviceName)
+                .filter(Boolean);
+            return Array.from(new Set(normalized));
+        }
+
+        function renderDeviceIcons(app) {
+            const devices = getAppDevices(app);
+            if (devices.length === 0) return '';
+
+            const hasIPhone = devices.includes('iPhone');
+            const hasIPod = devices.includes('iPod Touch');
+            const hasIPad = devices.includes('iPad');
+
+            const deviceIconParts = [];
+
+            if (hasIPhone || hasIPod) {
+                const label = (hasIPhone && hasIPod) ? 'iPhone & iPod Touch' : (hasIPod ? 'iPod Touch' : 'iPhone');
+                deviceIconParts.push({
+                    iconClass: 'fa-solid fa-mobile-screen-button',
+                    extraClass: 'device-icon-iphone',
+                    label
+                });
+            }
+
+            if (hasIPad) {
+                deviceIconParts.push({
+                    iconClass: 'fa-solid fa-tablet-screen-button',
+                    extraClass: 'device-icon-ipad',
+                    label: 'iPad'
+                });
+            }
+
+            const icons = deviceIconParts.map(({ iconClass, extraClass, label }) => {
+                return `<span class="device-icon ${extraClass}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}"><i class="${iconClass}" aria-hidden="true"></i></span>`;
+            }).join('');
+
+            return `<span class="device-icons" aria-hidden="true">${icons}</span>`;
+        }
+
+        function renderAppTitle(app) {
+            return `${escapeHtml(app?.title)}`;
+        }
+
+        function renderAppTitleWithDevices(app) {
+            return `${escapeHtml(app?.title)}${renderDeviceIcons(app)}`;
+        }
+
         async function fetchAppsData() {
             const response = await fetch('apps.json');
             if (!response.ok) {
@@ -93,7 +162,7 @@
                                 '<i class="fas fa-mobile-alt"></i>'}
                             </div>
                         </div>
-                        <h3 class="app-title">${app.title}</h3>
+                        <h3 class="app-title">${renderAppTitle(app)}</h3>
                         <div class="app-description">${app.featuredDescription}</div>
                         <button class="card-button" data-app-id="${app.id}">View Details</button>
                     </div>
@@ -271,7 +340,7 @@
                         ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\\'fas fa-mobile-alt\\'></i>'">` : 
                         '<i class="fas fa-mobile-alt"></i>'}
                     </div>
-                    <div class="card-name">${app.title}</div>
+                    <div class="card-name">${renderAppTitle(app)}</div>
                     <div class="card-developer">${app.developer}</div>
                     <button class="card-button" data-app-id="${app.id}">View Details</button>
                 `;
@@ -374,7 +443,7 @@
                                 '<i class="fas fa-mobile-alt"></i>'}
                             </div>
                             <div>
-                                <h2 class="modal-title">${app.title}</h2>
+                                <h2 class="modal-title">${renderAppTitleWithDevices(app)}</h2>
                                 <p class="modal-developer">${app.developer}</p>
                                 <div class="modal-categories">
                                     ${categoryTags}
@@ -796,7 +865,7 @@
                         ${app.icon ? `<img src="${app.icon}" alt="${app.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<i class=\'fas fa-mobile-alt\'></i>'">` : 
                         '<i class="fas fa-mobile-alt"></i>'}
                     </div>
-                    <div class="card-name">${app.title}</div>
+                    <div class="card-name">${renderAppTitle(app)}</div>
                     <div class="card-developer">${app.developer}</div>
                     <button class="card-button" data-app-id="${app.id}">View Details</button>
                 `;

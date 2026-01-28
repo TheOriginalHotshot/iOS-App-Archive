@@ -5760,5 +5760,38 @@
         "categories": [
             "Entertainment"
         ]
+    },
+    {
+        "id": "fishbowl-racer",
+        "title": "Fishbowl Racer",
+        "developer": "Donut Games",
+        "featuredDescription": "Note! ANNOYINGLY HARD, don't proceed if you have a bad temper!",
+        "description": "Note! ANNOYINGLY HARD, don't proceed if you have a bad temper!\n\n* * * * * * * * * * * * * * * * * * * * * * * *\n\nTHE ULTIMATE TEST: Can you do 2 things simultaneously?\n\nControl a fishbowl on top of a JOLTING CART, and a starving GOLDFISH trying to snatch fish food from the shelves, both at the same time!\n\nChallenge your friends and prove once and for all, who has the better simultaneous capacity: MEN or WOMEN?\n\n* * * * * * * * * * * * * * * * * * * * * * * *\n\n- Achievements\n- Game Center support\n- MFi controller support\n- ION Arcade controller support\n- Universal App (iPad, iPhone, iPod Touch)\n- Donut Games' Collectors Icon #31\n\n* * * * * * * * * * * * * * * * * * * * * * * *\n\nWHAT REVIEWERS SAY:\n\n- APPLE: Promoted as \"New and noteworthy\", Feb 2012\n\n- ARCADELIFE review: \"Excellent game. Once you start getting into the ‘shelf combos’ it’s just a whole new level of genius. I don’t know who they've got working at Donut Games, designing this stuff, but they’re bloody good at it.\"\n\n- FAN reviews: \"I love this game so much, it's so addicting I can't put it down!\", \"This game rocks!\"\n\n- TOUCH ARCADE forums: \"It's great to see an endless runner that is challenging, so you're not running forever...\", \"Very nice game indeed.\"\n\n- MACWORLD idg: \"iOS game of the day\"\n\n- APPS ON TAPP: \"Top 5 High-Scoring Endless Runners\"\n\n- TECHAHOLIKA: \"Incredibly simple and impressive gameplay, it’s an endless runner that is quite unlike any other.\"\n\n* * * * * * * * * * * * * * * * * * * * * * * *\n\nEnjoy another Donut Games release!Enough thinking",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.00",
+                    "url": "https://archive.org/download/fishbowl-racer-v-1.00-i-os-3.0/Fishbowl%20Racer%20%28V1.00%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.02.1",
+                    "url": "https://archive.org/download/fishbowl-racer-v-1.00-i-os-3.0/Fishbowl%20Racer%20%28V1.02.1%29%20%28iOS5.0%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.01",
+                "1.02",
+                "1.03"
+            ]
+        },
+        "compatibility": "iOS 8.0 and Later",
+        "devices": ["iPhone", "iPad", "iPod Touch"],
+        "icon": "cdn/app-icon/fishbowl-racer.png",
+        "featured": false,
+        "categories": [
+            "Family", 
+            "Casual",
+            "Games"
+        ]
     }
 ]

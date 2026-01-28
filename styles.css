@@ -251,6 +251,32 @@ header:after {
     word-break: break-word;
 }
 
+.device-icons {
+    display: none;
+}
+.device-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.modal-title .device-icons {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin-left: 8px;
+    white-space: nowrap;
+    color: rgba(190, 190, 190, 0.9);
+    font-size: 0.52em;
+    position: relative;
+    top: -0.55em;
+    opacity: 1;
+}
+.modal-title .device-icons i {
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.45));
+}
+
 .app-description {
     font-size: 16px;
     color: var(--text-medium);
