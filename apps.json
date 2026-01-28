@@ -5730,6 +5730,7 @@
             "unarchived": []
         },
         "compatibility": "iOS 4.0 and Later",
+        "devices": ["iPad"],
         "icon": "cdn/app-icon/dominos-pizza-hero.png",
         "featured": false,
         "categories": [
@@ -5755,6 +5756,11 @@
             "unarchived": []
         },
         "compatibility": "iOS 5.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
         "icon": "cdn/app-icon/carl-laser-draw.png",
         "featured": false,
         "categories": [
@@ -5785,12 +5791,337 @@
             ]
         },
         "compatibility": "iOS 8.0 and Later",
-        "devices": ["iPhone", "iPad", "iPod Touch"],
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
         "icon": "cdn/app-icon/fishbowl-racer.png",
         "featured": false,
         "categories": [
             "Family", 
             "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "drawing-with-carl-free",
+        "title": "Drawing With Carl FREE",
+        "developer": "Tayasui",
+        "featuredDescription": "Simply the best drawing App for kids in the Appstore. it's ***** Stars and featured by Apple all over the world!",
+        "description": "Simply the best drawing App for kids in the Appstore. it's ***** Stars and featured by Apple all over the world!\nMaking beautiful drawings has never been so easy thanks to Carl. \nYou can even play with talking stickers that repeat anything you say with a funny voice! \n\nEnjoy many powerful and easy to use tools that helps you make great drawings.\nCreate your own set with Talking Carl and draw Talking heads! \nExplore creative drawing with Mirror painting. \nEasily share your drawings and vote for the Best ones. \n\nWrite tour name with letter stickers \nDraw mustaches or funny eyes over your photos. \nAdd stickers of Carl and his friends over your pictures. \nShare your creations on FaceBook or by email. \nSave to the photo Album. \n\nFEATURES: \n• Easy and fun drawing tools \n• The real talking Carl available as a talking sticker \n• Magical pattern paint bucket \n• Mirror drawing \n• Cool stickers of Carl and friends \n• Share on Facebook Wall \n• Email your drawings \n• Import from photo libraty \n• Save and load \n• iPad compatible \n\nSpecifically designed for kids, Drawing with Carl help you make great drawings and share them with your parents and friends.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "5.1",
+                    "url": "https://archive.org/download/drawing-with-carl-free-v-5.1-i-os-7.0/Drawing%20With%20Carl%20FREE%20%28V5.1%29%20%28iOS7.0%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0",
+                "2.0"
+            ]
+        },
+        "compatibility": "Unknown",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/drawing-with-carl-free.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Education"
+        ]
+    },
+    {
+        "id": "greeting-carl",
+        "title": "Greeting Carl",
+        "developer": "Tayasui",
+        "featuredDescription": "Email postcards to friends and family!",
+        "description": "Email postcards to friends and family!\nSend your wishes with Talking Carl : Merry Christmas, Happy New year, valentine's day, happy birthday... there is a card for every opportunity.\n\nChoose a background and personalize your postcard with your text.\n\nSend them by email.\nPost them on Facebook.\nSave to your photo library.\n\nAvailable now:\n• Merry Christmas\n• Happy new year\n• Happy Birthday\n• Happy Valentine\n• Small talk\n\nAnd many more to comes....\n\nAs usual with Carl, a very simple and intuitive interface that should allow anybody to create great Postcards!\nFind your favorite characters: Carl, Gugl, Carla, Mr Goo and more...",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.2",
+                    "url": "https://archive.org/download/greeting-carl-v-1.2-i-os-5.0/Greeting%20Carl%20%28V1.2%29%20%28iOS5.0%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0"
+            ]
+        },
+        "compatibility": "iOS 5.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/greeting-carl.png",
+        "featured": false,
+        "categories": [
+            "Entertainment"
+        ]
+    },
+    {
+        "id": "pat-the-cat",
+        "title": "Pat the Cat",
+        "developer": "Tayasui",
+        "featuredDescription": "Enter a Magical World of Fun and Smiles, take a magical journey into the cute world of Pat the Cat and his friends!",
+        "description": "Enter a Magical World of Fun and Smiles, take a magical journey into the cute world of Pat the Cat and his friends!\n\nWith hundreds animations, 4 lovely characters with their own unique characters and charm, Pat the cat is really an interactive cartoon.\nInteract with this cute pets and watch them play, dance, jump, talk and much, much more.\n\nFEATURES:\n• Hundreds of Gorgeous Animations\n• 4 of the cutest characters you can enjoy on iPhone\n• Dozens of cute sound effects\n\nACTIONS: \nCatch fishs, chase butterflies, share love, jump, fly, run and dance, there is always something new to discover with Pat the Cat.\n\n************************** \nIN DETAIL:\n- Interact with four unforgettable cats: Pat the Cat, Patty, Piracat and Tangerine.\n- Switch between cats at any time\n- Interact with each cat directly using a variety of gestures\n- Use the ‘magic’ button for a different surprise reaction each time.\n- Speak to the cats and have them repeat your words in their own unique voices.\n- Watch the cats perform a variety of entertaining, playful and hilarious actions – like jumping, kissing, throwing, hiding, running away and more.\n- Listen to the enchanting sound effects, cute voices and watch animation at its finest.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.1",
+                    "url": "https://archive.org/download/pat-the-cat-v-2.1-i-os-6.0/Pat%20the%20Cat%20%28V2.1%29%20%28iOS6.0%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "Unknown",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/pat-the-cat.png",
+        "featured": false,
+        "categories": [
+            "Entertainment"
+        ]
+    },
+    {
+        "id": "ragdoll-mayhem-lite",
+        "title": "Ragdoll Mayhem Lite",
+        "developer": "Tayasui.com",
+        "featuredDescription": "Ragboy is the best buddy ever and he's a real punching ball: Poke him, drag him, smack him and he will jump and yell all over the place.",
+        "description": "Ragboy is the best buddy ever and he's a real punching ball: Poke him, drag him, smack him and he will jump and yell all over the place.\n\nThis Lite edition is limited to the first weapons but all are unlockable through In App Purchase.\n\nRag can handle all the blows, he's the coolest Character ever on an iPhone! Kick him as much as you can, make great scores and challenge your friends.\n\n------------- WEAPONS ------------ \n• 44 Magnum\n• FireBall\n• Acid Bottle\n• Mine\n• BasketBall\n• Dynamite \n• Shuriken \n• Lightning \n• Uzi machine gun \n• Bomb \n• Grenads \n• Taser\n• Basketball\n• Martian Ray Gun\n• Dynamite\n• Axe\n• And many more to comes...\n\n------------- FEATURES ------------ \n• Talk to him and he'll repeat your words with a funny voice. \n• Tap him or poke his eyes and he will shout and yell. \n• Explode Him with dynamites, grenads and bombs! \n• Throw at him shuriken and darts, and many deadly weapons. \n• More than 100s different sound samples and voices. \n\n------------ Also Enjoy ------------ \n• Talking Carl : The best Talking App for iPhone \n• Playing Carl : Play the silliest instruments with Carl \n• Drawing with Carl : Fun and creative drawing with Carl \n• Pat the Cat: The cuttest friend to have in your pocket. \n• Talking Gugl: Carl silly little brother \n• Sleeping Carl: Fall asleep instantly while listen to Carl snoring \n• Greeting Carl: Send greetings ands Cards with Carl.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.4",
+                    "url": "https://archive.org/download/ragdoll-mayhem-lite-v-1.4-i-os-5.1/Ragdoll%20Mayhem%20Lite%20%28V1.4%29%20%28iOS5.1%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0"
+            ]
+        },
+        "compatibility": "iOS 5.1 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/ragdoll-mayhem-lite.png",
+        "featured": false,
+        "categories": [
+            "Entertainment"
+        ]
+    },
+    {
+        "id": "smack-that-gugl-2",
+        "title": "Smack That Gugl 2",
+        "developer": "Tayasui",
+        "featuredDescription": "Gugl is back for revenge! You smacked him, now you'll have to slice, pile, explode and crush him and his new friends.",
+        "description": "Gugl is back for revenge! You smacked him, now you'll have to slice, pile, explode and crush him and his new friends.\n8 new types of Gugls, hundreds of stages, three levels of difficulty and an endless mode. Smack II is hours of frenzy fun.\nGo berserk with your friends for the world record!\n\nFeatures:\n-----------------------\n8 new kind of Gugls\nHysterical gameplay\n3 difficulties for all ages\n216 stages\nEndless Mode\nUnlock any level with stars: you are never stuck\ngreat 3D rendering\nFresh voices and sound design\nCool background music\nLeaderboards\n\nPlenty of new types of Gugls:\n- Pipo and Pipi must be sliced.\n- Spikey: watch out this one stings!\n- With Cyclop you need two to make one.\n- Connect three Blocky to blow them up!\n- Plump is rolling and very hard to catch!\n- Wu is very shy and lives in a hole.\nAlso new bonus:\n- Stars to unlock levels if you're stuck\n- Bombs to explode every Gugls at once\nAnd always our old chaps from Smack that Gugl:\n- Green Gugl, your regular buddy\n- Quicky, this one is always in a hurry\n- Bumpy is stubborn, you need to smack him twice\n- Plague is to be avoided at all cost\n- Blinky is badly mixed and splits in two\n\nThink you got it, wait and see how crazy the rhythm can be as the stages goes up: hey big chef, can you pancake them all?!",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.0",
+                    "url": "https://archive.org/download/smack-that-gugl-2-v-3.0-i-os-5.0/Smack%20That%20Gugl%202%20%28V2.0%29%20%28iOS5.0%29.ipa"
+                },
+                {
+                    "version": "3.0",
+                    "url": "https://archive.org/download/smack-that-gugl-2-v-3.0-i-os-5.0/Smack%20That%20Gugl%202%20%28V3.0%29%20%28iOS5.0%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 5.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/smack-that-gugl-2.png",
+        "featured": false,
+        "categories": [
+            "Action",
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "annoying-orange-run",
+        "title": "Annoying Orange Run",
+        "developer": "Alan Aquino",
+        "featuredDescription": "See The Annoying Orange in action, Run for his life, saving his fruit friends, chase by a knife and monsters on his never ending adventure run.",
+        "description": "See The Annoying Orange in action, Run for his life, saving his fruit friends, chase by a knife and monsters on his never ending adventure run.\n\n\"An Orange @ 99 cents Takes the Doctors Away!\"",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0",
+                    "url": "https://archive.org/download/annoying-orange-run-v-1.0-i-os-4.3/Annoying%20Orange%20Run%20%28V1.0%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 4.3 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/annoying-orange-run.jpeg",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Action",
+            "Adventure",
+            "Games"
+        ]
+    },
+    {
+        "id": "furbacca",
+        "title": "Furbacca",
+        "developer": "Hasbro Inc",
+        "featuredDescription": "• Your favorite interactive Wookiee – introducing FURBACCA! Play activities, explore the galaxy, and hatch virtual FURBLINGS themed as classic STAR WARS™ characters by using your FURBACCA with the app!",
+        "description": "• Your favorite interactive Wookiee – introducing FURBACCA! Play activities, explore the galaxy, and hatch virtual FURBLINGS themed as classic STAR WARS™ characters by using your FURBACCA with the app!\nOwners of the FURBACCA toy (sold separately) can perform these heroic virtual activities with the app:\n• Feed FURBACCA over a dozen STAR WARS™ themed foods to find out what he likes… or dislikes!\n• Clean FURBACCA with his awesome Lightsaber-themed shower! Find out what happens when you give FURBACCA a Dark Side shower!\n• Call in Furbacca to unleash his epic Bowcaster skills in the Droid Blasting challenge!\nNOTE: FURBACCA toys are sold separately. Previous generation FURBY products are not compatible with the Furbacca App. Continue to use the appropriate app for your FURBY or FURBY BOOM toy.\nSupported iOS Devices:\n• iPhone 4, 5, 6, 6+, or newer\n• iPad 2, 3, 4, or newer\n• iPad Air 1, 2, or newer\n• iPad Mini 1, 2, 3, or newer\n• iPod Touch 5 or newer\nNOTE: iOS device must be running iOS 7.0 or later.\nThe FURBACCA app is subject to the App Store terms and conditions. Check Furby.com for details. Make sure your device supports this app before downloading. Other devices may be compatible but are not supported. Updates affect compatibility.\nADVICE TO PARENTS\nThe FURBACCA app requires an Internet connection (3G, 4G, LTE, or WiFi) for download, updates, and access to certain information such as the User Agreement. Kids, ask a parent first before downloading.\nHasbro and all related logos are trademarks of Hasbro, Inc. © 2015 Hasbro. All Rights Reserved.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.1.3",
+                    "url": "https://archive.org/download/furbacca-v-1.1.3-i-os-9.0/Furbacca%20%28V1.1.3%29%20%28iOS9.0%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0",
+                "1.1.2"
+            ]
+        },
+        "compatibility": "iOS 7.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/furbacca.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Family",
+            "Games"
+        ]
+    },
+    {
+        "id": "talking-santa-for-ipad-hd",
+        "title": "Talking Santa for iPad HD",
+        "developer": "Outfit7 Limited",
+        "featuredDescription": "Talking Santa is packed with countless hours of holiday fun for the entire family!",
+        "description": "Talking Santa is packed with countless hours of holiday fun for the entire family! Speak into your microphone and listen to Santa repeat your special holiday message aloud.\n\nJoined by the lovable characters from the Talking Tom and Friends collection, Talking Santa enables you to create and share joyous 3D video animation greetings and Christmas cards that will warm the hearts of everyone on your wish-list!\n\nSEND PERSONALIZED CHRISTMAS CARDS\nShare customized Christmas cards by email, Facebook or YouTube!\n\nAWESOME NEW CONTENT: Talking Santa now features a whole new shopping mall scene where Ginger, Talking Tom's little nephew gets to meet Santa.\n\nYou can unlock this shopping mall scene with an in-app purchase. Talking Santa meets Ginger is not just in-app purchase, it's like having a whole new app!\n\nThis app is PRIVO certified. The PRIVO safe harbor seal indicates Outfit7 has established COPPA compliant privacy practices to protect your child’s personal information. Our apps do not allow younger children to share their information.\n\nHOW TO PLAY\n\nSANTA SCENE\n- Talk to Santa and he will repeat your words.\n- Poke, swipe or tickle Santa to see his various reactions.\n- Run Santa over with a huge snowball.\n- Give Santa milk & cookies.\n- Touch the bag to see your gifts.\n- Press the card buttons to send customized Santa Christmas cards.\n- Press the Ginger button to switch to a whole new app (available as an in-app purchase).\n\nGINGER SCENE\n- Poke or tickle Ginger and see what happens.\n- Poke the toy train and make it go off tracks.\n- Ring the bell on the Christmas tree by shaking your device or by poking the bell.\n- Press the train whistle button to hear the whistle blow.\n- Press the cat paw button to see Ginger annoy Santa in different ways.\n- Press the fire button and see how Ginger lights Santa's hat on fire.\n- Press the gift button and Ginger will give Santa a ticking present. ;-)\n- Press the card button to send customized Ginger Christmas cards.\n- Press the Santa button to go back to the original Santa scene.\n- Record videos and upload them to YouTube & Facebook or send them by email.\n\nEnjoy countless hours of holiday fun with Santa & Ginger.\n\nThis app contains:\n- Promotion of Outfit7's products and contextual advertising\n- Links that direct customers to our websites and other Outfit7 apps\n- Personalization of content to entice users to play the app again\n- Watching videos of Outfit7's animated characters via You Tube integration\n- The option to make in-app purchases\n\nTerms of use: http://outfit7.com/eula-ios/\nPrivacy policy: http://outfit7.com/privacy-policy/",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0",
+                    "url": "https://archive.org/download/talking-santa-for-i-pad-hd-v-3.4-i-os-6.0/Talking%20Santa%20for%20iPad%20HD%20%28V1.0%29%20%28iOS3.2%29.ipa"
+                },
+                {
+                    "version": "3.3",
+                    "url": "https://archive.org/download/talking-santa-for-i-pad-hd-v-3.4-i-os-6.0/Talking%20Santa%20for%20iPad%20HD%20%28V3.3%29%20%28iOS5.0%29.ipa"
+                },
+                {
+                    "version": "3.4",
+                    "url": "https://archive.org/download/talking-santa-for-i-pad-hd-v-3.4-i-os-6.0/Talking%20Santa%20for%20iPad%20HD%20%28V3.4%29%20%28iOS6.0%29.ipa"
+                }
+            ],
+            "unarchived": [
+                "1.0.2",
+                "3.0",
+                "3.0.1",
+                "3.1.1",
+                "3.2.1"
+            ]
+        },
+        "compatibility": "iOS 6.0 and Later",
+        "devices": [
+            "iPad"
+        ],
+        "icon": "cdn/app-icon/talking-santa-for-ipad-hd.png",
+        "featured": false,
+        "categories": [
+            "Entertainment"
+        ]
+    },
+    {
+        "id": "talking-santa-for-iphone",
+        "title": "Talking Santa for iPhone",
+        "developer": "Outfit7 Limited",
+        "featuredDescription": "Talking Santa is packed with countless hours of holiday fun for the entire family! Speak into your microphone and listen to Santa repeat your special holiday message aloud.",
+        "description": "Talking Santa is packed with countless hours of holiday fun for the entire family! Speak into your microphone and listen to Santa repeat your special holiday message aloud.\n\n\nJoined by the lovable characters from the Talking Tom and Friends collection, Talking Santa enables you to create and share joyous 3D video animation greetings and Christmas cards that will warm the hearts of everyone on your wish-list!\n\nSEND PERSONALIZED CHRISTMAS CARDS\nShare customized Christmas cards by MMS, email, Facebook, Twitter or YouTube!\n\nAWESOME NEW CONTENT: Talking Santa now features a whole new shopping mall scene where Ginger, Talking Tom's little nephew gets to meet Santa.\n\nYou can unlock this shopping mall scene with an in-app purchase. Talking Santa meets Ginger is not just in-app purchase, it's like having a whole new app!\n\nThis app is PRIVO certified. The PRIVO safe harbor seal indicates Outfit7 has established COPPA compliant privacy practices to protect your child’s personal information. Our apps do not allow younger children to share their information.\n\nHOW TO PLAY\n\nSANTA SCENE\n- Talk to Santa and he will repeat your words.\n- Poke, swipe or tickle Santa to see his various reactions.\n- Run Santa over with a huge snowball.\n- Give Santa milk & cookies.\n- Touch the bag to see your gifts.\n- Press the card buttons to send customized Santa Christmas cards.\n- Press the Ginger button to switch to a whole new app (available as an in-app purchase).\n\nGINGER SCENE\n- Poke or tickle Ginger and see what happens.\n- Poke the toy train and make it go off tracks.\n- Ring the bell on the Christmas tree by shaking your device or by poking the bell.\n- Press the train whistle button to hear the whistle blow.\n- Press the cat paw button to see Ginger annoy Santa in different ways.\n- Press the fire button and see how Ginger lights Santa's hat on fire.\n- Press the gift button and Ginger will give Santa a ticking present. ;-)\n- Press the card button to send customized Ginger Christmas cards.\n- Press the Santa button to go back to the original Santa scene.\n- Record videos and upload them to YouTube & Facebook or send them by email or MMS.\n\nEnjoy countless hours of holiday fun with Talking Santa & Ginger.\n\nThis app contains:\n- Promotion of Outfit7's products and contextual advertising\n- Links that direct customers to our websites and other Outfit7 apps\n- Personalization of content to entice users to play the app again\n- Watching videos of Outfit7's animated characters via You Tube integration\n- The option to make in-app purchases\n\nTerms of use: http://outfit7.com/eula-ios/\nPrivacy policy: http://outfit7.com/privacy-policy/",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V1.0%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.0.1",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V1.0.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.0.2",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V1.0.2%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "2.0",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V2.0%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "3.0",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.0%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "3.0.1",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.0.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "3.1",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.1%29%20%28iOS4.3%29.ipa"
+                },
+                {
+                    "version": "3.1.1",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.1.1%29%20%28iOS4.3%29.ipa"
+                },
+                {
+                    "version": "3.2",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.2%29%20%28iOS5.0%29.ipa"
+                },
+                {
+                    "version": "3.2.1",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.2.1%29%20%28iOS5.0%29.ipa"
+                },
+                {
+                    "version": "3.3",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.3%29%20iOS5.0%29.ipa"
+                },
+                {
+                    "version": "3.4",
+                    "url": "https://archive.org/download/talking-santa-for-i-phone-v-3.1-i-os-4.3/Talking%20Santa%20for%20iPhone%20%28V3.4%29%20%28iOS6.0%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 6.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/talking-santa-for-iphone.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
             "Games"
         ]
     }
