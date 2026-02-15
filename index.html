@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iOS App Archive - Archiving Every Delisted iOS App from the most well known to the most Obscure">
+    <meta name="keywords" content="iOS, app archive, IPA, iOS apps, app icons, download, iOS software, iOS games, iOS app collection, legacy apps, iOS archive, IPA archive">
+    <meta name="author" content="Hotshot">
+    <meta property="og:title" content="iOS App Archive">
+    <meta property="og:description" content="Archiving Every Delisted iOS App from the most well known to the most Obscure">
+    <meta property="og:image" content="https://theoriginalhotshot.github.io/iOS-App-Archive/cdn/icon/logo.png">
+    <meta property="og:url" content="https://theoriginalhotshot.github.io/iOS-App-Archive/">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>iOS App Archive</title>
+    <link rel="icon" href="cdn/icon/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="download-icon-container">
+                <i class="fas fa-cloud-download-alt download-icon"></i>
+                <div class="loading-bar"></div>
+            </div>
+            <p class="loading-text">Loading iOS App Archive...</p>
+        </div>
+    </div>
+
+    <!-- Glossy Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="cdn/icon/white-logo.png" alt="iOS App Archive Logo" style="height: 64px; width: 64px; margin-right: 10px;">
+                <a href="https://theoriginalhotshot.github.io/iOS-App-Archive/" style="text-decoration: none; color: inherit;"><h1>iOS App Archive</h1></a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Featured Carousel -->
+    <div class="carousel-container" id="carouselContainer">
+        <div class="carousel" id="carousel">
+            <!-- Carousel items will be added here -->
+        </div>
+        <div class="carousel-nav" id="carouselNav">
+            <!-- Navigation dots will be added here -->
+        </div>
+    </div>
+    
+    <!-- Search Container -->
+    <div class="search-container" id="searchContainer">
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search apps...">
+            <button class="cancel-btn" id="cancelSearch">Cancel</button>
+        </div>
+        <div class="search-instructions" style="margin-top: 10px; color: #aaa; font-size: 13px; text-align: left;">
+            search <b>developer:"{developer-name}"</b> to find apps from a specific developer (for example, <b><a href="https://theoriginalhotshot.github.io/iOS-App-Archive/?query=developer%3A%22Disney%22" style="color: inherit; text-decoration: underline;">developer:"Disney"</a></b> or <b><a href="https://theoriginalhotshot.github.io/iOS-App-Archive/?query=Jelly+developer%3A%22Disney%22" style="color: inherit; text-decoration: underline;">Jelly developer:"Disney"</a></b>)<br><br>
+            search <b>category:"{category-name}"</b> to find apps from a specific category (for example, <b><a href="https://theoriginalhotshot.github.io/iOS-App-Archive/?query=category%3A%22Games%22" style="color: inherit; text-decoration: underline;">category:"Games"</a></b> or <b><a href="https://theoriginalhotshot.github.io/iOS-App-Archive/?query=iBeer+category%3A%22Beer%22" style="color: inherit; text-decoration: underline;">iBeer category:"Beer"</a></b>)
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Results View -->
+        <div class="search-results" id="searchResults">
+            <!-- Search results will be loaded here -->
+        </div>
+    </div>
+    
+    <!-- Tab Content Areas -->
+    <div class="tab-content" id="featuredContent">
+        <!-- Featured content is already displayed above -->
+    </div>
+    
+    <div class="tab-content" id="categoriesContent">
+        <div class="placeholder-content">
+            <i class="fas fa-th-large"></i>
+            <h3>App Categories</h3>
+            <p>Browse apps by category</p>
+        </div>
+    </div>
+    
+    <div class="tab-content" id="geniusContent">
+        <!-- Genius recommendations will be populated by JavaScript -->
+    </div>
+    
+    <div class="tab-content" id="searchContent">
+        <!-- Search content will be displayed here -->
+    </div>
+    
+    <div class="tab-content" id="updatesContent">
+        <!-- News content will be populated by JavaScript -->
+    </div>
+    
+    <!-- Modal Container -->
+    <div id="modalContainer"></div>
+    
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-bar">
+        <div class="tab active" data-tab="featured">
+            <i class="fas fa-star"></i>
+            <span>Featured</span>
+        </div>
+        <div class="tab" data-tab="categories">
+            <i class="fas fa-th-large"></i>
+            <span>Categories</span>
+        </div>
+        <div class="tab genius" data-tab="genius">
+            <i class="fas fa-lightbulb"></i>
+            <span>Genius</span>
+        </div>
+        <div class="tab" data-tab="search">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </div>
+        <div class="tab" data-tab="updates">
+            <i class="fas fa-newspaper"></i>
+            <span>News</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
