@@ -6124,5 +6124,416 @@
             "Entertainment",
             "Games"
         ]
+    },
+    {
+        "id": "recording-pro",
+        "title": "Recording Pro",
+        "developer": "Linfei Ltd",
+        "featuredDescription": "The easiest voice recorder ever!",
+        "description": "The easiest voice recorder ever!\nThe common choice of 60 millions users!\n\nVoice Recorder Pro is designed to meet all your recording needs and help you work efficiently, including Audio Recording, Playback, Management, Sharing, Editing, and more. Let everything be in perfect order.\n\nThere are many recording modes in the app, such as \u201cStart recording at the scheduled time\u201d, \u201cRecord via Bluetooth device\u201d, \u201cRecord and mix selected audio or video\u201d, also \u201cRecord only when speaking\u201d will not record the blank sound and save the storage.\n\nMany professional audio editing functions such as trim, split, merge, mix, change pitch, change speed, increase volume, etc are presented to users in a compact and intuitive way.\n\nVoice Recorder Pro supports iPhone, iPad, Mac, and Apple Watch, you can sync recordings between different devices via iCloud.\n\n\nRECORDING\n\u2022 Record and Mix a Selected Audio or Video\n\u2022 Record and Mix the Current Playing Sound\n\u2022 Start Recording at the Scheduled Time\n\u2022 Record via Bluetooth Headset\n\u2022 Record Only When Speaking\n\u2022 Mark Important Moments\n\nAUDIO EDIT\n\u2022 Trim\n\u2022 Split\n\u2022 Merge\n\u2022 Mix\n\u2022 Change Pitch\n\u2022 Change Speed\n\u2022 Increase Volume\n\nSHARE & EXPORT\n\u2022 Save to Album\n\u2022 iTunes File Sharing\n\u2022 iCloud Drive\n\u2022 Add Reminder\n\u2022 Make a Ringtone\n\u2022 Transcribe\n\nFORMATS\nMP3, M4A, AAC, MP4, CAF, AIFC, AIFF, WAV, AMR",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.0",
+                    "url": "https://archive.org/download/recording-pro-voice-recorder-hd-v-2.0-i-os-4.0/Recording%20Pro%20%28Voice%20Recorder%20HD%20%2B%29%20%28V2.0%29%20%28iOS4.0%29.ipa"
+                },
+                {
+                    "version": "3.0.0",
+                    "url": "https://archive.org/download/recording-pro-voice-recorder-hd-v-2.0-i-os-4.0/Recording%20Pro%20%28Voice%20Recorder%20HD%20%2B%29%20%28V3.0.0%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 9.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/recording-pro.png",
+        "featured": false,
+        "categories": [
+            "Utilities",
+            "Productivity"
+        ]
+    },
+    {
+        "id": "tower-bloxx-deluxe-3d-free",
+        "title": "Tower Bloxx Deluxe 3D FREE",
+        "developer": "RockYou Inc",
+        "featuredDescription": "Tower Bloxx has gone LIVE with new update!",
+        "description": "Tower Bloxx has gone LIVE with new update! Compete against your friends on Facebook, iPhone and iPod touch. Tower Bloxx is an award-winning and highly addictive game with over 4 million players on Facebook and other gaming platforms.\n\n-----------------------------------------\nCheck out our latest games:\nKitchen Scramble\nBingo Bling\n3D Mini Golf Challenge\nZombie Lane\nDownload the Free Version now!\n\nNEW SOCIAL UPDATE\nCompete with friends on Facebook, iPhone and iPod touch to see who dominates in tower building. Also, beat the score of Trip Hawkins, to unlock an achievement and get a virtual high-five. Check out other fun surprises and features in this update and start playing with friends now!\n\nGAME REVIEW\nIGN gives 8.5/10 and says “the game perfectly blends action -based puzzling with strategy to make a very compelling play that gamers of all stripes will love.”\n\nReach the skies in a wacky skyscraper construction game that tests your reflexes and puzzle skills! Play against your friends, connect to Facebook, post scores, and more! The Free Version lets players try out several game modes; including tower heights and building types. To get the full Tower Bloxx Live experience, download the premium version and get all four game modes, three building districts, unlimited hours of play in the Quick Game Mode and more!\n\nBUY THE FULL VERSION & GET:\n• Notify your friends when you beat their score with Apple’s push notification feature\n• 4 fun game modes with high replay value:\n(1) Party Multiplayer Game\n(2) Quick Game\n(3) Time Challenge\n(4) City Building Mode w/ 3 unique districts\n• Battle others in real life with Party Multiplayer Game mode\n• Beat our CEO’s score and get the special achievement “I Beat Trip” badge\n• High quality production and full 3D visuals with cut-scenes\n• Great controls - gently slide or tap your fingers on the screen to drop the floors\n• Compare your big tower to the most famous world structures\n• Track your progress and performance\n• Excellent music and sound effects\n\nAWARD WINNING GAMEPLAY:\n• Meffy Award for Best Mobile Game\n• Mobies Award for Best Puzzle Game\n• IGN Winner for Biggest Surprise\n• IGN Review: 9 out of 10!\n• PocketGamer Review: 9 out of 10!\n\nMORE FUN ON APPLE APP STORE\nCheck out RockYou’s hottest games: Kitchen Scramble,Bingo Blingo,Zombie Lane, 3D Rollercoaster Rush, 3D Mini Golf Challenge, Tower Bloxx Deluxe 3D, 3D Brick Breaker Revolution and Millionaire City.\n\nAll trademarks referenced herein are the property of their respective owners.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.0.21",
+                    "url": "https://archive.org/download/tower-bloxx-deluxe-3-d-free-v-2.0.21-i-os-2.2/Tower%20Bloxx%20Deluxe%203D%20FREE%20%28V2.0.21%29%20%28iOS2.2%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 5.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/tower-bloxx-deluxe-3d-free.png",
+        "featured": false,
+        "categories": [
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "fruit-ninja",
+        "title": "Fruit Ninja",
+        "developer": "Halfbrick Studios",
+        "featuredDescription": "Slice fruit, don’t slice bombs – that’s all you need to know to get started with addictive Fruit Ninja action!",
+        "description": "Slice fruit, don’t slice bombs – that’s all you need to know to get started with addictive Fruit Ninja action!\n\nBefore you know it, you’ll be exploring the thrills of Classic mode, the chill of Zen mode, and building your skills in Arcade mode. Slice for a high score, use special bananas to maximum effect, and go wild on the multi-slice Pomegranate!\n\nExperiment with over 40 blades and their unique effects on gameplay. Want a ten-fruit Great Wave? Want to try out fruit-bouncing Cloud Blades? Or swirling tornados for epic combos? Mix and match your gear, experiment with all the powers and find what works for you!\n\nThere has never been a better time to play Fruit Ninja, so choose your blade, cut loose - and see what’s new in the game that started it all!\n\nWHAT'S HALFBRICK+\n\nHalfbrick+ is a mobile games subscription service featuring:\n\n● Exclusive access to the highest-rated games\n● No ads or in app purchases\n● Brought to you by the makers of Award-winning mobile games\n● Regular updates and new games\n● Curated by hand - for gamers by gamers!\n\nStart your One Month free trial and play all our games without ads, in app purchases, and fully unlocked games! Your subscription will auto-renew after 30 days, or save money with an annual membership!\n\nIf you have any questions, please contact our support team https://support.halfbrick.com\n\n****************************************\nView our privacy policy at https://halfbrick.com/hbpprivacy\n\nView our terms of service at https://www.halfbrick.com/terms-of-service",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.0%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "1.01",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.01%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "1.01.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.01.1%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "1.2",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.2%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "1.2.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.2.1%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "1.3",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.3%29%20%28iOS2.2.1%29.ipa"
+                },
+                {
+                    "version": "1.3.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.3.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.3.2",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.3.2%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.4",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.4%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.4.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.4.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.5",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.5%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.6",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.6%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.6.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.6.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.7",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.7%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.7.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.7.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.7.4",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.7.4%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.8.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.8.0%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.8.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.8.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.8.2",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.8.2%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.8.4",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.8.4%29%20%28iOS4.3%29.ipa"
+                },
+                {
+                    "version": "1.8.8",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.8.8%29%20%28iOS5.0%29.ipa"
+                },
+                {
+                    "version": "1.9.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.9.0%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "1.9.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.9.1%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "1.9.2",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.9.2%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "1.9.5",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.9.5%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "1.9.6",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V1.9.6%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.0.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.0.0%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.1.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.1.0%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.1.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.1.1%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.2.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.0%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.2.3",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.3%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.2.4",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.4%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.2.5",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.5%29%20%28iOS6.0%29.ipa"
+                },
+                {
+                    "version": "2.2.7",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.7%29%20%28iOS10.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.2.7",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.7%29%20%28iOS6.0%29%20%2832Bit%29.ipa"
+                },
+                {
+                    "version": "2.2.8",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.8%29%20%28iOS10.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.2.8",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.2.8%29%20%28iOS6.0%29%20%2832Bit%29.ipa"
+                },
+                {
+                    "version": "2.3.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.3.0%29%20%28iOS6.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.3.3",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.3.3%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.3.4",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.3.4%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.3.8",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.3.8%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.3.9",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.3.9%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.4.0",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.4.0%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.4.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.4.1%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.4.2",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.4.2%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.4.3",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.4.3%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.4.4",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.4.4%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "2.4.6",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28V2.4.6%29%20%28iOS7.0%29%20%2864Bit%29.ipa"
+                },
+                {
+                    "version": "3.0.1",
+                    "url": "https://archive.org/download/fruit-ninja-v-2.3.0-i-os-6.0/Fruit%20Ninja%20%28Fruit%20Ninja%20Classic%29%20%28V3.0.1%29%20%28iOS13.0%29%20%2864Bit%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 14.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/fruit-ninja.png",
+        "featured": false,
+        "categories": [
+            "Entertainment",
+            "Action",
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "fruit-ninja-puss-in-boots-hd-free",
+        "title": "Fruit Ninja: Puss In Boots HD Free",
+        "developer": "Halfbrick Studios",
+        "featuredDescription": "Welcome to Fruit Ninja: Puss in Boots Free, a delicious taste of the newest game from Halfbrick, the creators of the original iOS smash hit Fruit Ninja!",
+        "description": "Welcome to Fruit Ninja: Puss in Boots Free, a delicious taste of the newest game from Halfbrick, the creators of the original iOS smash hit Fruit Ninja!\n\nThis free download offers a select numbers of challenges from the all-new Bandito mode, where fruit meets fairytales and the path to glory is yours for the taking! Each stage thrusts you into never-seen-before fruit frenzy adventure: Massive fruit from the Giant's castle, precision and timing challenges, all-out fruit onslaughts with new obstacles And for the first time EVER: Throw down against the most-requested addition in Fruit Ninja history - the tomato!\n\nAlso available is a selection of Stash items to customize your game, unlockable by completing a range of exciting challenges in Bandito mode!\n\nFruit Ninja: Puss in Boots Free is just a taste of the full game, which has been described as \"endless fun\" and \"simply awesome\" by millions of Fruit Ninja fans worldwide. Now you can see for yourself what makes this combination of classic fairytales and juicy slicing so legendary - absolutely free!\n\nStay juicy, amigos!\n\n***\n\nIMPORTANT NOTICE TO PARENTS\n\nThis game may contain:\n\n- Promotional material for Halfbrick products and trusted business partners.\n- Links to external social networking sites intended for users over the age of 13.\n- Direct links to the internet which may open the default web browser on your device.\n\nPrivacy Policy: http://www.halfbrick.com/pp\nTerms of Service: http://www.halfbrick.com/tos",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0.0",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-hd-free-v-1.0.4-i-os-6.1/Fruit%20Ninja%20-%20Puss%20in%20Boots%20HD%20Free%20%28V1.0.0%29%20%28iOS5.0%29.ipa"
+                },
+                {
+                    "version": "1.0.1",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-hd-free-v-1.0.4-i-os-6.1/Fruit%20Ninja%20-%20Puss%20in%20Boots%20HD%20Free%20%28V1.0.1%29%20%28iOS5.1%29.ipa"
+                },
+                {
+                    "version": "1.0.4",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-hd-free-v-1.0.4-i-os-6.1/Fruit%20Ninja%20-%20Puss%20in%20Boots%20HD%20Free%20%28V1.0.4%29%20%28iOS6.1%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "Unknown",
+        "devices": [
+            "iPad"
+        ],
+        "icon": "cdn/app-icon/fruit-ninja-puss-in-boots-hd-free.jpg",
+        "featured": false,
+        "categories": [
+            "Action",
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "fruit-ninja-puss-in-boots-hd",
+        "title": "Fruit Ninja: Puss In Boots HD",
+        "developer": "Halfbrick Studios",
+        "featuredDescription": "En garde!",
+        "description": "En garde! Fruit meets fairytales in the juiciest iPhone game this year - Fruit Ninja: Puss in Boots!\n\nThe suave fruit-slashing swashbuckler, Puss in Boots, faces a challenge that would make Sensei proud. His search for the Magic Beans brings him to developer Halfbrick's legendary hit game Fruit Ninja. Prepare for a journey full of familiar and fruit slicing action he encounters a huge variety of new and exciting challenges!\n\nFruit Ninja: Puss in Boots features the all-new Bandito mode! Slice through a series of increasingly exciting challenges to become the greatest Fruit Ninja warrior ever! Each stage thrusts you into never-seen-before fruit frenzy adventure: Massive fruit from the Giant's castle, precision and timing challenges, all-out fruit onslaughts with new obstacles And for the first time EVER: Throw down against the most-requested addition in Fruit Ninja history - the tomato!\n\nReal Banditos must put their best blade forward because scoring is based on the number of fruit sliced, ninja reflexes and slicing efficiency. A true produce warrior can attain massive high scores and upload their best to Global Leaderboards to compare against friends and the best players online!\n\nBring your blade to Desperado mode - an enhanced and re-mastered version of the Classic Fruit Ninja game that introduced 400 million players to the world's biggest dojo! But this time, you will face even more fruit, unique waves and Puss in Boots' elusive Magic Beans from the DreamWorks Animation feature film!\n\nFinally, bask in the fruit-stained glory of Puss in Boots' own exclusive ninja Stash, featuring a whole range of unique customizable content, including new backgrounds and blades with elements from both the film and Fruit Ninja.\n\nStay juicy, amigos!\n\n***\n\nIMPORTANT NOTICE TO PARENTS\n\nThis game may contain:\n\n- Promotional material for Halfbrick products and trusted business partners.\n- Links to external social networking sites intended for users over the age of 13.\n- Direct links to the internet which may open the default web browser on your device.\n\nPrivacy Policy: http://www.halfbrick.com/pp\nTerms of Service: http://www.halfbrick.com/tos",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0.0",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-hd-v-1.0.1-i-os-3.2/Fruit%20Ninja%20-%20Puss%20In%20Boots%20HD%20%28V1.0.0%29%20%28iOS3.2%29.ipa"
+                },
+                {
+                    "version": "1.0.1",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-hd-v-1.0.1-i-os-3.2/Fruit%20Ninja%20-%20Puss%20In%20Boots%20HD%20%28V1.0.1%29%20%28iOS3.2%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "Unknown",
+        "devices": [
+            "iPad"
+        ],
+        "icon": "cdn/app-icon/fruit-ninja-puss-in-boots-hd.png",
+        "featured": false,
+        "categories": [
+            "Games"
+        ]
+    },
+    {
+        "id": "fruit-ninja-puss-in-boots-free",
+        "title": "Fruit Ninja: Puss In Boots Free",
+        "developer": "Halfbrick Studios",
+        "featuredDescription": "Welcome to Fruit Ninja: Puss in Boots Free, a delicious taste of the newest game from Halfbrick, the creators of the original iOS smash hit Fruit Ninja!",
+        "description": "Welcome to Fruit Ninja: Puss in Boots Free, a delicious taste of the newest game from Halfbrick, the creators of the original iOS smash hit Fruit Ninja!\n\nThis free download offers a select numbers of challenges from the all-new Bandito mode, where fruit meets fairytales and the path to glory is yours for the taking! Each stage thrusts you into never-seen-before fruit frenzy adventure: Massive fruit from the Giant's castle, precision and timing challenges, all-out fruit onslaughts with new obstacles And for the first time EVER: Throw down against the most-requested addition in Fruit Ninja history - the tomato!\n\nAlso available is a selection of Stash items to customize your game, unlockable by completing a range of exciting challenges in Bandito mode!\n\nFruit Ninja: Puss in Boots Free is just a taste of the full game, which has been described as \"endless fun\" and \"simply awesome\" by millions of Fruit Ninja fans worldwide. Now you can see for yourself what makes this combination of classic fairytales and juicy slicing so legendary - absolutely free!\n\nStay juicy, amigos!\n\n***\n\nIMPORTANT NOTICE TO PARENTS\n\nThis game may contain:\n\n- Promotional material for Halfbrick products and trusted business partners.\n- Links to external social networking sites intended for users over the age of 13.\n- Direct links to the internet which may open the default web browser on your device.\n\nPrivacy Policy: http://www.halfbrick.com/pp\nTerms of Service: http://www.halfbrick.com/tos",
+        "versions": {
+            "archived": [
+                {
+                    "version": "1.0.0",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-free-v-1.0.4-i-os-4.3/Fruit%20Ninja%20-%20Puss%20In%20Boots%20Free%20%28V1.0.0%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.0.1",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-free-v-1.0.4-i-os-4.3/Fruit%20Ninja%20-%20Puss%20In%20Boots%20Free%20%28V1.0.1%29%20%28iOS3.0%29.ipa"
+                },
+                {
+                    "version": "1.0.4",
+                    "url": "https://archive.org/download/fruit-ninja-puss-in-boots-free-v-1.0.4-i-os-4.3/Fruit%20Ninja%20-%20Puss%20In%20Boots%20Free%20%28V1.0.4%29%20%28iOS4.3%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "Unknown",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/fruit-ninja-puss-in-boots-free.png",
+        "featured": false,
+        "categories": [
+            "Action",
+            "Casual",
+            "Games"
+        ]
+    },
+    {
+        "id": "rilakkuma-touch",
+        "title": "Rilakkuma Touch!",
+        "developer": "Imagineer Co Ltd",
+        "featuredDescription": "Thanks to you, Rilakkuma Touch! has surpassed 1,500,000 downloads!",
+        "description": "Thanks to you, Rilakkuma Touch! has surpassed 1,500,000 downloads!\n\nYou can now buy Rilakkuma Touch! + (Plus) through In-App Purchase within Rilakkuma Touch! (Free).\n\nAs before, you can pat Rilakkuma on the head, tickle his feet, and interact with him, while enjoying his adorable expressions and behavior in Rilakkuma Touch! (Free). Many snacks and items are available in the paid version Rilakkuma Touch! + (Plus), allowing for even greater interaction with Rilakkuma. Have fun with Rilakkuma Touch! + (Plus), loaded with an additional wide variety of reactions.\n\nIn response to fan requests, we have added Korilakkuma and Kiiroitori! You can have fun with their uniquely cute behavior!\n\nRilakkuma Touch! + (Plus) can be bought within the Rilakkuma Touch! (Free) app.\n\n*** Language\nJapanese/English/Chinese\n\n***Compatible Device\nCompatible with iPhone 4/4S, iPhone 5/5s/5c iPhone6/6 Plus iPad and iPod touch 4th generation and up.\n\nNote: Due to system memory issues, this application cannot operate properly on earlier models than those stated above.\n\n***Restriction on Use\nThe reproduction of the illustrations and images used in this application, without consent, is strictly prohibited.\nCopyrights of the illustrations and images are held by San-X Co., Ltd.",
+        "versions": {
+            "archived": [
+                {
+                    "version": "2.0.5",
+                    "url": "https://archive.org/download/rilakkuma-touch-v-2.0.5-i-os-4.1/%20%20%20%20Rilakkuma%20Touch%21%20%28V2.0.5%29%20%28iOS4.1%29.ipa"
+                }
+            ],
+            "unarchived": []
+        },
+        "compatibility": "iOS 5.0 and Later",
+        "devices": [
+            "iPhone",
+            "iPad",
+            "iPod Touch"
+        ],
+        "icon": "cdn/app-icon/rilakkuma-touch.png",
+        "featured": false,
+        "categories": [
+            "Family",
+            "Games"
+        ]
     }
 ]
